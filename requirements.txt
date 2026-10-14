@@ -1,0 +1,11 @@
+# PFAS pipeline (orca_work/)
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+rdkit
+
+# Nitride oxidation (Matlantis_Round_2/) -- run inside the Matlantis environment
+ase
+pfp-api-client
