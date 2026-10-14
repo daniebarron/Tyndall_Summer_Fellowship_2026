@@ -1,0 +1,69 @@
+filename,stem,csv_name,smiles,n_modes,freq_min_cm1,freq_max_cm1
+10-2_FTCA_10-2_FDEA.out,10-2_FTCA_10-2_FDEA,10:2 FTCA (10:2 FDEA),C(C(=O)O)C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F,108,12.046342,3656.002306
+10-2_FTS_Fluorotelomer_sulfonate.out,10-2_FTS_Fluorotelomer_sulfonate,10:2 FTS (Fluorotelomer sulfonate),C(CS(=O)(=O)O)C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F,120,2.922656,3672.3557200000005
+2233-TFPA_3H-Tetrafluoropropanoic_acid.out,2233-TFPA_3H-Tetrafluoropropanoic_acid,"2,2,3,3-TFPA (3H-Tetrafluoropropanoic acid)",C(C(C(=O)O)(F)F)(F)F,27,50.531184,3651.7048480000003
+2333-TFPA_2H-Tetrafluoropropanoic_acid.out,2333-TFPA_2H-Tetrafluoropropanoic_acid,"2,3,3,3-TFPA (2H-Tetrafluoropropanoic acid)",C(C(=O)O)(C(F)(F)F)F,27,41.3402,3654.5890480000003
+3-3_FTCA_Fluorotelomer_carboxylic_acid_freq.out,3-3_FTCA_Fluorotelomer_carboxylic_acid,3:3 FTCA (Fluorotelomer carboxylic acid),C(CC(C(C(F)(F)F)(F)F)(F)F)C(=O)O,54,13.180794,3660.520886
+4-2_FTS_Fluorotelomer_sulfonate.out,4-2_FTS_Fluorotelomer_sulfonate,4:2 FTS (Fluorotelomer sulfonate),C(CS(=O)(=O)O)C(C(C(C(F)(F)F)(F)F)(F)F)(F)F,66,15.603522000000002,3670.24064
+5-3_FTCA_Fluorotelomer_carboxylic_acid.out,5-3_FTCA_Fluorotelomer_carboxylic_acid,5:3 FTCA (Fluorotelomer carboxylic acid),C(CC(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)C(=O)O,72,18.545406,3661.3957600000003
+6-2_Cl-PFAES_9-chlorohexadecafluoro-3-oxanonane-1-sulfonate.out,6-2_Cl-PFAES_9-chlorohexadecafluoro-3-oxanonane-1-sulfonate,6:2 Cl-PFAES (9-chlorohexadecafluoro-3-oxanonane-1-sulfonate),C(C(C(C(F)(F)Cl)(F)F)(F)F)(C(C(OC(C(F)(F)S(=O)(=O)[O-])(F)F)(F)F)(F)F)(F)F.[K+],84,20.247084,1367.9664460000001
+6-2_FTAB_Capstone_B_freq.out,6-2_FTAB_Capstone_B,6:2 FTAB (Capstone B),C[N+](C)(CCCNS(=O)(=O)CCC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F)CC(=O)[O-],156,3.489882,3464.8856
+6-2_FTCA_6-2_FHEA.out,6-2_FTCA_6-2_FHEA,6:2 FTCA (6:2 FHEA),OC(=O)CC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,72,13.305776,3656.7906540000004
+6-2_FTOH_Fluorotelomer_alcohol.out,6-2_FTOH_Fluorotelomer_alcohol,6:2 FTOH (Fluorotelomer alcohol),OCCC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,75,19.266456,3730.232
+6-2_FTS_Fluorotelomer_sulfonate_freq.out,6-2_FTS_Fluorotelomer_sulfonate,6:2 FTS (Fluorotelomer sulfonate),C(CS(=O)(=O)O)C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F,84,15.228576,3672.6345260000003
+6-2_FTUCA_2H-Perfluoro-2-octenoic_acid.out,6-2_FTUCA_2H-Perfluoro-2-octenoic_acid,6:2 FTUCA (2H-Perfluoro-2-octenoic acid),OC(=O)\C=C(/F)\C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,66,7.9027080000000005,3662.780176
+6-2_diPAP_freq.out,6-2_diPAP,6:2 diPAP,C(COP(=O)(O)OCCC(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F,162,4.1628620000000005,3722.7042380000003
+7-3_FTCA_Fluorotelomer_carboxylic_acid.out,7-3_FTCA_Fluorotelomer_carboxylic_acid,7:3 FTCA (Fluorotelomer carboxylic acid),C(CC(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)C(=O)O,90,14.065282000000002,3660.886218
+8-2_Cl-PFAES_11-chloroeicosafluoro-3-oxaundecane-1-sulfonate.out,8-2_Cl-PFAES_11-chloroeicosafluoro-3-oxaundecane-1-sulfonate,8:2 Cl-PFAES (11-chloroeicosafluoro-3-oxaundecane-1-sulfonate),C(C(C(C(C(F)(F)Cl)(F)F)(F)F)(F)F)(C(C(C(OC(C(F)(F)S(=O)(=O)[O-])(F)F)(F)F)(F)F)(F)F)(F)F.[K+],102,10.950346000000001,1343.296922
+8-2_FTCA_8-2_FOEA.out,8-2_FTCA_8-2_FOEA,8:2 FTCA (8:2 FOEA),C(C(=O)O)C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F,90,19.199158,3655.954236
+8-2_FTOH_Fluorotelomer_alcohol.out,8-2_FTOH_Fluorotelomer_alcohol,8:2 FTOH (Fluorotelomer alcohol),OCCC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,93,18.199302,3731.6933280000003
+8-2_FTS_Fluorotelomer_sulfonate.out,8-2_FTS_Fluorotelomer_sulfonate,8:2 FTS (Fluorotelomer sulfonate),FC(CCS(=O)(=O)O)(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F,102,14.574824000000001,3647.7823359999998
+8-2_FTUCA_2H-Perfluoro-2-decenoic_acid_freq.out,8-2_FTUCA_2H-Perfluoro-2-decenoic_acid,8:2 FTUCA (2H-Perfluoro-2-decenoic acid),C(=C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F)C(=O)O,84,18.362740000000002,3662.40523
+8-2_diPAP.out,8-2_diPAP,8:2 diPAP (Fluorotelomer phosphate diester),C(COP(=O)(O)OCCC(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F,197,4.0955639999999995,3702.322558
+C6O4_Perfluoro5-methoxy13dioxolan4yloxyHAc.out,C6O4_Perfluoro5-methoxy13dioxolan4yloxyHAc,"C6O4 (Perfluoro([5-methoxy1,3dioxolan4yl]oxy)HAc)",C(=O)(C(OC1(C(OC(O1)(F)F)(OC(F)(F)F)F)F)(F)F)O,60,11.959816,3650.695378
+DONA_Dodecafluoro-3H-48-dioxanonanoate.out,DONA_Dodecafluoro-3H-48-dioxanonanoate,"DONA (Dodecafluoro-3H-4,8-dioxanonanoate)",C(OC(C(C(OC(C(C(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F,69,12.978900000000001,3656.05999
+DPOSA_Capstone_A_6-2_FTNO.out,DPOSA_Capstone_A_6-2_FTNO,DPOSA Capstone A (6:2 FTNO),C[N+](C)([O-])CCCNS(=O)(=O)CCC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,141,13.007742,3433.620872
+EtFOSAA_N-ethylperfluorooctanesulfonamido-HAc.out,EtFOSAA_N-ethylperfluorooctanesulfonamido-HAc,EtFOSAA (N-ethylperfluorooctanesulfonamido-HAc),CCN(CC(=O)O)S(=O)(=O)C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F,123,8.902564,3660.96313
+EtFOSA_N-ethylperfluorooctanesulfonamide.out,EtFOSA_N-ethylperfluorooctanesulfonamide,EtFOSA (N-ethylperfluorooctanesulfonamide),CCNS(=O)(=O)C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F,105,12.623182000000002,3492.3527980000003
+EtFOSE_N-ethylperfluorooctanesulfonamido-ethanol.out,EtFOSE_N-ethylperfluorooctanesulfonamido-ethanol,EtFOSE (N-ethylperfluorooctanesulfonamido-ethanol),CCN(CCO)S(=O)(=O)C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F,126,8.02769,3759.6604540000003
+HFPO-DA_GenX.out,HFPO-DA_GenX,HFPO-DA (GenX),C(=O)(C(C(F)(F)F)(OC(C(C(F)(F)F)(F)F)(F)F)F)[O-],54,16.978324,1828.2463100000002
+HFPO-TA.out,HFPO-TA,HFPO-TA,OC(=O)C(F)(OC(F)(F)C(F)(OC(F)(F)C(F)(F)C(F)(F)F)C(F)(F)F)C(F)(F)F,87,11.440660000000001,3653.012352
+MeFOSAA_N-methylperfluorooctanesulfonamid-HAc_freq.out,MeFOSAA_N-methylperfluorooctanesulfonamid-HAc,MeFOSAA (N-methylperfluorooctanesulfonamid-HAc),CN(CC(=O)O)S(=O)(=O)C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F,114,8.979476,3658.8095940000003
+MeFOSA_N-methylperfluorooctansulfonamide.out,MeFOSA_N-methylperfluorooctansulfonamide,MeFOSA (N-methylperfluorooctansulfonamide),CNS(=O)(=O)C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F,96,24.121526,3493.621846
+MeFOSE_N-methylperfluorooctanesulfonamido-ethanol_freq.out,MeFOSE_N-methylperfluorooctanesulfonamido-ethanol,MeFOSE (N-methylperfluorooctanesulfonamido-ethanol),CN(CCO)S(=O)(=O)C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F,117,17.314814000000002,3647.349706
+NFDHA_Nonafluoro-36-dioxaheptanoic_acid.out,NFDHA_Nonafluoro-36-dioxaheptanoic_acid,"NFDHA (Nonafluoro-3,6-dioxaheptanoic acid)",C(=O)(C(F)(F)OC(C(F)(F)OC(F)(F)F)(F)F)O,51,19.228,3658.636542
+PFBA_Perfluorobutanoic_acid.out,PFBA_Perfluorobutanoic_acid,PFBA (Perfluorobutanoic acid),C(=O)(C(C(C(F)(F)F)(F)F)(F)F)O,36,28.582422,3650.58001
+PFBSA_Perfluorobutane_sulfonamide.out,PFBSA_Perfluorobutane_sulfonamide,PFBSA (Perfluorobutane sulfonamide),C(C(C(F)(F)S(=O)(=O)N)(F)F)(C(F)(F)F)(F)F,51,34.80268,3577.628978
+PFBS_Perfluorobutanesulfonic_acid.out,PFBS_Perfluorobutanesulfonic_acid,PFBS (Perfluorobutanesulfonic acid),C(C(C(F)(F)S(=O)(=O)O)(F)F)(C(F)(F)F)(F)F,48,39.215506,3657.396336
+PFDA_Perfluorodecanoic_acid.out,PFDA_Perfluorodecanoic_acid,PFDA (Perfluorodecanoic acid),C(=O)(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O,90,22.679426,3650.7626760000003
+PFDS_Perfluorodecanesulfonic_acid.out,PFDS_Perfluorodecanesulfonic_acid,PFDS (Perfluorodecanesulfonic acid),C(C(C(C(C(C(F)(F)S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F,102,10.450417999999999,3658.059702
+PFDoA_Perfluorododecanoic_acid.out,PFDoA_Perfluorododecanoic_acid,PFDoA (Perfluorododecanoic acid),C(=O)(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O,108,16.603378,3651.73369
+PFDoS_Perfluorododecane_sulfonic_acid.out,PFDoS_Perfluorododecane_sulfonic_acid,PFDoS (Perfluorododecane sulfonic acid),C(C(C(C(C(C(C(F)(F)S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F,120,6.768256,3650.330046
+PFECHS_Perfluoro-4-ethylcyclohexanesulfonate.out,PFECHS_Perfluoro-4-ethylcyclohexanesulfonate,PFECHS (Perfluoro-4-ethylcyclohexanesulfonate),C1(C(C(C(C(C1(F)F)(F)F)(F)S(=O)(=O)O)(F)F)(F)F)(C(C(F)(F)F)(F)F)F,78,29.063122,3647.0997420000003
+PFEESA_Perfluoro-2-ethoxyethane-sulfonic_acid_freq.out,PFEESA_Perfluoro-2-ethoxyethane-sulfonic_acid,PFEESA (Perfluoro-(2-ethoxyethane)-sulfonic acid),C(C(F)(F)F)(OC(C(F)(F)S(=O)(=O)O)(F)F)(F)F,51,21.227712,3658.261596
+PFEtS_Perfluoroethanesulfonic_acid.out,PFEtS_Perfluoroethanesulfonic_acid,PFEtS (Perfluoroethanesulfonic acid),OS(=O)(=O)C(F)(F)C(F)(F)F,30,45.03197600000001,3657.482862
+PFHpA_Perfluoroheptanoic_acid.out,PFHpA_Perfluoroheptanoic_acid,PFHpA (Perfluoroheptanoic acid),C(=O)(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O,63,30.889782000000004,3650.6857640000003
+PFHpS_Perfluoroheptanesulfonic_acid.out,PFHpS_Perfluoroheptanesulfonic_acid,PFHpS (Perfluoroheptanesulfonic acid),C(C(C(C(F)(F)F)(F)F)(F)F)(C(C(C(F)(F)S(=O)(=O)O)(F)F)(F)F)(F)F,75,25.23675,3655.4446940000003
+PFHxA_Perfluorohexanoic_acid.out,PFHxA_Perfluorohexanoic_acid,PFHxA (Perfluorohexanoic acid),C(=O)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)O,54,30.793642000000002,3650.58001
+PFHxDA_Perfluorohexadecanoic_acid.out,PFHxDA_Perfluorohexadecanoic_acid,PFHxDA (Perfluorohexadecanoic acid),C(=O)(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O,144,4.691632,3650.560782
+PFHxSA_Perfluorohexanesulfonamide.out,PFHxSA_Perfluorohexanesulfonamide,PFHxSA (Perfluorohexanesulfonamide),C(C(C(C(F)(F)S(=O)(=O)N)(F)F)(F)F)(C(C(F)(F)F)(F)F)(F)F,69,33.158686,3569.7070420000005
+PFHxS_Perfluorohexanesulfonic_acid.out,PFHxS_Perfluorohexanesulfonic_acid,PFHxS (Perfluorohexanesulfonic acid),C(C(C(C(F)(F)S(=O)(=O)O)(F)F)(F)F)(C(C(F)(F)F)(F)F)(F)F,66,12.940444000000001,3657.232898
+PFMBA_Perfluoro-4-methoxybutanoic_acid.out,PFMBA_Perfluoro-4-methoxybutanoic_acid,PFMBA (Perfluoro-4-methoxybutanoic acid),C(=O)(C(C(C(OC(F)(F)F)(F)F)(F)F)(F)F)O,48,23.688896,3651.051096
+PFMPA_Perfluoro-3-methoxypropionic_acid.out,PFMPA_Perfluoro-3-methoxypropionic_acid,PFMPA (Perfluoro-3-methoxypropionic acid),C(=O)(C(C(OC(F)(F)F)(F)F)(F)F)O,39,27.8806,3649.032156
+PFNA_Perfluorononanoic_acid.out,PFNA_Perfluorononanoic_acid,PFNA (Perfluorononanoic acid),C(=O)(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O,80,31.899252,3650.9934120000003
+PFNS_Perfluorononane_sulfonic_acid.out,PFNS_Perfluorononane_sulfonic_acid,PFNS (Perfluorononane sulfonic acid),C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F,93,13.411529999999999,3655.415852
+PFOA_Perfluorooctanoic_acid.out,PFOA_Perfluorooctanoic_acid,PFOA (Perfluorooctanoic acid),C(=O)(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O,72,27.621022,3651.1856920000005
+PFODA_Perfluorooctadecanoic_acid.out,PFODA_Perfluorooctadecanoic_acid,PFODA (Perfluorooctadecanoic acid),C(=O)(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O,162,4.210932,3650.032012
+PFOSA_Perfluorooctanesulfonamide.out,PFOSA_Perfluorooctanesulfonamide,PFOSA (Perfluorooctanesulfonamide),C(C(C(C(C(F)(F)S(=O)(=O)N)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)(F)F,87,23.958088000000004,3580.868896
+PFOS_Perfluorooctanesulfonic_acid.out,PFOS_Perfluorooctanesulfonic_acid,PFOS (Perfluorooctanesulfonic acid),C(C(C(C(C(F)(F)S(=O)(=O)O)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)(F)F,84,14.026826,3655.031292
+PFPeA_Perfluoropentanoic_acid.out,PFPeA_Perfluoropentanoic_acid,PFPeA (Perfluoropentanoic acid),C(=O)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)O,45,27.967126,3651.7817600000003
+PFPeS_Perfluoropentane_sulfonic_acid.out,PFPeS_Perfluoropentane_sulfonic_acid,PFPeS (Perfluoropentane sulfonic acid),C(C(C(F)(F)F)(F)F)(C(C(F)(F)S(=O)(=O)O)(F)F)(F)F,57,34.023946,3657.521318
+PFPrA_Perfluoropropionic_acid.out,PFPrA_Perfluoropropionic_acid,PFPrA (Perfluoropropionic acid),C(=O)(C(C(F)(F)F)(F)F)O,27,37.936844,3650.897272
+PFPrS_Perfluoropropanesulfonic_acid_freq.out,PFPrS_Perfluoropropanesulfonic_acid,PFPrS (Perfluoropropanesulfonic acid),C(C(F)(F)F)(C(F)(F)S(=O)(=O)O)(F)F,39,39.696206000000004,3656.184972
+PFTeDA_Perfluorotetradecanoic_acid.out,PFTeDA_Perfluorotetradecanoic_acid,PFTeDA (Perfluorotetradecanoic acid),C(=O)(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O,126,16.8245,3651.272218
+PFTrDA_Perfluorotridecanoic_acid.out,PFTrDA_Perfluorotridecanoic_acid,PFTrDA (Perfluorotridecanoic acid),C(=O)(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O,117,8.969862000000001,3650.185836
+PFTrDS_Perfluorotridecane_sulfonic_acid.out,PFTrDS_Perfluorotridecane_sulfonic_acid,PFTrDS (Perfluorotridecane sulfonic acid),C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(C(F)(F)S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F,129,7.181658,3655.7619560000003
+PFUdA_Perfluoroundecanoic_acid.out,PFUdA_Perfluoroundecanoic_acid,PFUdA (Perfluoroundecanoic acid),C(=O)(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O,99,11.075328,3651.2433760000004
+PFUnDS_Perfluoroundecane_sulfonic_acid.out,PFUnDS_Perfluoroundecane_sulfonic_acid,PFUnDS (Perfluoroundecane sulfonic acid),C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F,111,8.296882000000002,3655.646588
+TFA.out,TFA,TFA,C(=O)(C(F)(F)F)O,18,30.159118000000003,3655.213958
+TFMS.out,TFMS,TFMS,C(F)(F)(F)S(=O)(=O)O,21,46.377936000000005,3657.7328260000004

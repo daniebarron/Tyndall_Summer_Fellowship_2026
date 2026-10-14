@@ -1,0 +1,42 @@
+# ============================================================
+# Tyndall Summer Fellowship 2026 - .gitignore
+# Keep in repo: inputs (.inp), outputs (.out), geometries (.xyz),
+# Hessians (.hess), spectra/CSVs, logs, scripts.
+# Full raw data is backed up on institute storage, not in git.
+# ============================================================
+
+# --- MD / simulation output (Matlantis, ASE, DeepMD) ---
+*.traj
+
+# --- ORCA wavefunction, density and scratch files ---
+*.gbw
+*.densities
+*.tmp
+*.ges
+*.scfp
+*.engrad
+*.prop
+*.cis
+*.bas*
+*.zip
+
+# --- ORCA parallel scratch files (numbered extensions) ---
+# Check a few with `Get-ChildItem -Recurse -File -Include *.0,*.1`
+# before relying on these.
+*.0
+*.1
+*.2
+*.3
+
+# --- Python ---
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+venv/
+.venv/
+
+# --- OS / editor junk ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/

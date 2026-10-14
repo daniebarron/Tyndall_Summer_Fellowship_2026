@@ -1,0 +1,36 @@
+# TMS (tetramethylsilane, Si(CH3)4) NMR reference calculation
+# PBE0/def2-TZVP GIAO — same level as PFAS dataset
+# 1H  chemical shift reference: δ(H) = σ(TMS_H)  - σ(molecule_H)
+# 13C chemical shift reference: δ(C) = σ(TMS_C)  - σ(molecule_C)
+# Experimental δ(TMS) = 0 ppm for both 1H and 13C by convention
+#
+# Geometry: Td symmetry, Si-C = 1.876 Å, C-H = 1.091 Å
+# (standard geometry; small deviations have negligible effect on reference shielding)
+
+! NMR PBE0 def2-TZVP def2/J RIJCOSX NormalPrint TightSCF
+
+%pal
+  nprocs 4
+end
+
+%maxcore 4000
+
+* xyz 0 1
+  Si    0.00000000    0.00000000    0.00000000
+  C     1.08300000    1.08300000    1.08300000
+  C    -1.08300000   -1.08300000    1.08300000
+  C    -1.08300000    1.08300000   -1.08300000
+  C     1.08300000   -1.08300000   -1.08300000
+  H     0.62500000    2.04900000    1.08300000
+  H     2.04900000    0.62500000    1.08300000
+  H     1.08300000    1.08300000    2.17400000
+  H    -0.62500000   -2.04900000    1.08300000
+  H    -2.04900000   -0.62500000    1.08300000
+  H    -1.08300000   -1.08300000    2.17400000
+  H    -0.62500000    2.04900000   -1.08300000
+  H    -2.04900000    0.62500000   -1.08300000
+  H    -1.08300000    1.08300000   -2.17400000
+  H     0.62500000   -2.04900000   -1.08300000
+  H     2.04900000   -0.62500000   -1.08300000
+  H     1.08300000   -1.08300000   -2.17400000
+*

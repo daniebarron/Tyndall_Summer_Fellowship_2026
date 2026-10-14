@@ -1,0 +1,68 @@
+10:2 FTS (Fluorotelomer sulfonate),C(CS(=O)(=O)O)C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F
+"2,2,3,3-TFPA (3H-Tetrafluoropropanoic acid)",C(C(C(=O)O)(F)F)(F)F
+"2,3,3,3-TFPA (2H-Tetrafluoropropanoic acid)",C(C(=O)O)(C(F)(F)F)F
+3:3 FTCA (Fluorotelomer carboxylic acid),C(CC(C(C(F)(F)F)(F)F)(F)F)C(=O)O
+4:2 FTS (Fluorotelomer sulfonate),C(CS(=O)(=O)O)C(C(C(C(F)(F)F)(F)F)(F)F)(F)F
+5:3 FTCA (Fluorotelomer carboxylic acid),C(CC(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)C(=O)O
+6:2 Cl-PFAES (9-chlorohexadecafluoro-3-oxanonane-1-sulfonate),C(C(C(C(F)(F)Cl)(F)F)(F)F)(C(C(OC(C(F)(F)S(=O)(=O)[O-])(F)F)(F)F)(F)F)(F)F.[K+]
+6:2 FTAB (Capstone B),C[N+](C)(CCCNS(=O)(=O)CCC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F)CC(=O)[O-]
+6:2 FTOH (Fluorotelomer alcohol),OCCC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+6:2 FTS (Fluorotelomer sulfonate),C(CS(=O)(=O)O)C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F
+6:2 FTUCA (2H-Perfluoro-2-octenoic acid),OC(=O)\C=C(/F)\C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+7:3 FTCA (Fluorotelomer carboxylic acid),C(CC(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)C(=O)O
+8:2 Cl-PFAES (11-chloroeicosafluoro-3-oxaundecane-1-sulfonate),C(C(C(C(C(F)(F)Cl)(F)F)(F)F)(F)F)(C(C(C(OC(C(F)(F)S(=O)(=O)[O-])(F)F)(F)F)(F)F)(F)F)(F)F.[K+]
+8:2 diPAP (Fluorotelomer phosphate diester),C(COP(=O)(O)OCCC(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F
+8:2 FTOH (Fluorotelomer alcohol),OCCC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+8:2 FTS (Fluorotelomer sulfonate),FC(CCS(=O)(=O)O)(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F
+8:2 FTUCA (2H-Perfluoro-2-decenoic acid),C(=C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)F)C(=O)O
+"C6O4 (Perfluoro([5-methoxy1,3dioxolan4yl]oxy)HAc)",C(=O)(C(OC1(C(OC(O1)(F)F)(OC(F)(F)F)F)F)(F)F)O
+"DONA (Dodecafluoro-3H-4,8-dioxanonanoate)",C(OC(C(C(OC(C(C(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F
+EtFOSA (N-ethylperfluorooctanesulfonamide),CCNS(=O)(=O)C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F
+EtFOSAA (N-ethylperfluorooctanesulfonamido-HAc),CCN(CC(=O)O)S(=O)(=O)C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F
+EtFOSE (N-ethylperfluorooctanesulfonamido-ethanol),CCN(CCO)S(=O)(=O)C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F
+HFPO-DA (GenX),C(=O)(C(C(F)(F)F)(OC(C(C(F)(F)F)(F)F)(F)F)F)[O-]
+HFPO-TA,OC(=O)C(F)(OC(F)(F)C(F)(OC(F)(F)C(F)(F)C(F)(F)F)C(F)(F)F)C(F)(F)F
+MeFOSA (N-methylperfluorooctansulfonamide),CNS(=O)(=O)C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F
+MeFOSAA (N-methylperfluorooctanesulfonamid-HAc),CN(CC(=O)O)S(=O)(=O)C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F
+MeFOSE (N-methylperfluorooctanesulfonamido-ethanol),CN(CCO)S(=O)(=O)C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F
+"NFDHA (Nonafluoro-3,6-dioxaheptanoic acid)",C(=O)(C(F)(F)OC(C(F)(F)OC(F)(F)F)(F)F)O
+PFHxS (Perfluorohexanesulfonic acid),C(C(C(C(F)(F)S(=O)(=O)O)(F)F)(F)F)(C(C(F)(F)F)(F)F)(F)F
+PFNA (Perfluorononanoic acid),C(=O)(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O
+PFOA (Perfluorooctanoic acid),C(=O)(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O
+PFOS (Perfluorooctanesulfonic acid),C(C(C(C(C(F)(F)S(=O)(=O)O)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)(F)F
+PFBA (Perfluorobutanoic acid),C(=O)(C(C(C(F)(F)F)(F)F)(F)F)O
+PFBS (Perfluorobutanesulfonic acid),C(C(C(F)(F)S(=O)(=O)O)(F)F)(C(F)(F)F)(F)F
+PFBSA (Perfluorobutane sulfonamide),C(C(C(F)(F)S(=O)(=O)N)(F)F)(C(F)(F)F)(F)F
+PFDA (Perfluorodecanoic acid),C(=O)(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O
+PFDoA (Perfluorododecanoic acid),C(=O)(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O
+PFDoS (Perfluorododecane sulfonic acid),C(C(C(C(C(C(C(F)(F)S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F
+PFDS (Perfluorodecanesulfonic acid),C(C(C(C(C(C(F)(F)S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F
+PFECHS (Perfluoro-4-ethylcyclohexanesulfonate),C1(C(C(C(C(C1(F)F)(F)F)(F)S(=O)(=O)O)(F)F)(F)F)(C(C(F)(F)F)(F)F)F
+PFEESA (Perfluoro-(2-ethoxyethane)-sulfonic acid),C(C(F)(F)F)(OC(C(F)(F)S(=O)(=O)O)(F)F)(F)F
+PFEtS (Perfluoroethanesulfonic acid),OS(=O)(=O)C(F)(F)C(F)(F)F
+PFHpA (Perfluoroheptanoic acid),C(=O)(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O
+PFHpS (Perfluoroheptanesulfonic acid),C(C(C(C(F)(F)F)(F)F)(F)F)(C(C(C(F)(F)S(=O)(=O)O)(F)F)(F)F)(F)F
+PFHxA (Perfluorohexanoic acid),C(=O)(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)O
+PFHxDA (Perfluorohexadecanoic acid),C(=O)(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O
+PFHxSA (Perfluorohexanesulfonamide),C(C(C(C(F)(F)S(=O)(=O)N)(F)F)(F)F)(C(C(F)(F)F)(F)F)(F)F
+PFMBA (Perfluoro-4-methoxybutanoic acid),C(=O)(C(C(C(OC(F)(F)F)(F)F)(F)F)(F)F)O
+PFMPA (Perfluoro-3-methoxypropionic acid),C(=O)(C(C(OC(F)(F)F)(F)F)(F)F)O
+PFNS (Perfluorononane sulfonic acid),C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(F)(F)S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F
+PFODA (Perfluorooctadecanoic acid),C(=O)(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O
+PFOSA (Perfluorooctanesulfonamide),C(C(C(C(C(F)(F)S(=O)(=O)N)(F)F)(F)F)(F)F)(C(C(C(F)(F)F)(F)F)(F)F)(F)F
+PFPeA (Perfluoropentanoic acid),C(=O)(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)O
+PFPeS (Perfluoropentane sulfonic acid),C(C(C(F)(F)F)(F)F)(C(C(F)(F)S(=O)(=O)O)(F)F)(F)F
+PFPrA (Perfluoropropionic acid),C(=O)(C(C(F)(F)F)(F)F)O
+PFPrS (Perfluoropropanesulfonic acid),C(C(F)(F)F)(C(F)(F)S(=O)(=O)O)(F)F
+PFTeDA (Perfluorotetradecanoic acid),C(=O)(C(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O
+PFTrDA (Perfluorotridecanoic acid),C(=O)(C(C(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O
+PFTrDS (Perfluorotridecane sulfonic acid),C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(C(F)(F)S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F
+PFUdA (Perfluoroundecanoic acid),C(=O)(C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)O
+PFUnDS (Perfluoroundecane sulfonic acid),C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(C(C(C(C(C(F)(F)S(=O)(=O)O)(F)F)(F)F)(F)F)(F)F)(F)F
+TFA,C(=O)(C(F)(F)F)O
+TFMS,C(F)(F)(F)S(=O)(=O)O
+10:2 FTCA (10:2 FDEA),C(C(=O)O)C(C(C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F
+8:2 FTCA (8:2 FOEA),C(C(=O)O)C(C(C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F
+6:2 FTCA (6:2 FHEA),OC(=O)CC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F
+6:2 diPAP,C(COP(=O)(O)OCCC(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F)C(C(C(C(C(C(F)(F)F)(F)F)(F)F)(F)F)(F)F)(F)F
+DPOSA Capstone A (6:2 FTNO),C[N+](C)([O-])CCCNS(=O)(=O)CCC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F

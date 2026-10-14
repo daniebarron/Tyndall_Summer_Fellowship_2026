@@ -1,0 +1,9 @@
+{
+  "seed": 4,
+  "temperature": 363,
+  "base_directory": "/home/jovyan/Matlantis/VN_111/363K",
+  "md_steps": 8000,
+  "n_o_per_round": 10,
+  "max_rounds": 40,
+  "timestamp": "2026-08-16T16:45:56.101423"
+}

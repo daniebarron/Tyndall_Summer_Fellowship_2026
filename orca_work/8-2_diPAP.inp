@@ -1,0 +1,9 @@
+! PBE0 def2-SVP def2/J RIJCOSX Opt Freq D3BJ TightSCF
+
+%pal
+  nprocs 16
+end
+
+%maxcore 4000
+
+* xyzfile 0 1 8-2_diPAP.xyz

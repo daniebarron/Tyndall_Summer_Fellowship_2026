@@ -1,0 +1,95 @@
+
+============================================================
+TASK 1 — Spectral Library Matching (Cosine Similarity)
+============================================================
+
+  [IR only]
+    Mean NN cosine similarity: 0.9377
+    Min / Max: 0.7179 / 0.9875
+
+  [IR + NMR]
+    Mean NN cosine similarity: 0.9182
+    Min / Max: 0.5318 / 0.9858
+
+  Saved: task1_library_matching.png
+
+============================================================
+TASK 2 — Functional Group Classification
+============================================================
+
+  Label counts (68 molecules):
+    carboxylic_acid       35+ / 33-
+    sulfonic_acid         21+ / 47-
+    sulfonamide           11+ / 57-
+    ether                 10+ / 58-
+    alcohol               37+ / 31-
+    phosphate              2+ / 66-
+    chlorinated            2+ / 66-
+
+  [IR only]  RF + PCA(20) LOO:
+    carboxylic_acid       acc=0.90  bal_acc=0.90  CM=[TN=30 FP=3 FN=4 TP=31]
+    sulfonic_acid         acc=0.93  bal_acc=0.88  CM=[TN=47 FP=0 FN=5 TP=16]
+    sulfonamide           acc=0.94  bal_acc=0.85  CM=[TN=56 FP=1 FN=3 TP=8]
+    ether                 acc=0.90  bal_acc=0.69  CM=[TN=57 FP=1 FN=6 TP=4]
+    alcohol               acc=0.85  bal_acc=0.85  CM=[TN=27 FP=4 FN=6 TP=31]
+    phosphate             SKIPPED
+    chlorinated           SKIPPED
+
+  [IR + NMR]  RF + PCA(20) LOO:
+    carboxylic_acid       acc=0.88  bal_acc=0.88  CM=[TN=30 FP=3 FN=5 TP=30]
+    sulfonic_acid         acc=0.90  bal_acc=0.87  CM=[TN=44 FP=3 FN=4 TP=17]
+    sulfonamide           acc=0.87  bal_acc=0.70  CM=[TN=54 FP=3 FN=6 TP=5]
+    ether                 acc=0.90  bal_acc=0.73  CM=[TN=56 FP=2 FN=5 TP=5]
+    alcohol               acc=0.87  bal_acc=0.86  CM=[TN=24 FP=7 FN=2 TP=35]
+    phosphate             SKIPPED
+    chlorinated           SKIPPED
+
+  Saved: task2_functional_groups.png, task2_functional_groups_nmr.png, task2_comparison.png
+  Saved: task2_feature_importance.png
+
+============================================================
+TASK 3 — Spectrum Prediction from Molecular Descriptors
+============================================================
+
+  RDKit descriptor matrix: (68, 18)
+  Descriptors: ['mol_weight', 'n_atoms', 'n_heavy', 'n_F', 'n_C', 'n_O', 'n_S', 'n_N', 'n_P', 'n_Cl', 'frac_F', 'n_rings', 'n_rot_bonds', 'tpsa', 'logp', 'n_CF2', 'n_CF3', 'n_CF2_chain']
+
+  Spectral PCA: 15 components explain 86.0% variance
+
+  [RDKit descriptors only]
+    Mean cosine sim:  0.9243 ± 0.0642
+    Mean Pearson r:   0.9145 ± 0.0729
+    Best:  PFTrDS  r=0.980
+    Worst: 2,2,3,3-TFPA  r=0.589
+
+  Combined descriptor matrix (RDKit + NMR): (68, 27)
+
+  [RDKit + NMR descriptors]
+    Mean cosine sim:  0.9211 ± 0.0826
+    Mean Pearson r:   0.9106 ± 0.0947
+    Best:  PFTrDS  r=0.979
+    Worst: 2,2,3,3-TFPA  r=0.380
+
+  Saved: task3_pca_variance.png
+  Saved: task3_spectrum_prediction_rdkit.png, task3_spectrum_prediction_rdkit_nmr.png
+
+============================================================
+COMPARISON: IR only  vs  IR + NMR
+============================================================
+
+  Metric                             IR only      IR + NMR           Δ
+  ----------------------------  ------------  ------------  ----------
+
+  Task 1 — Library matching
+    Mean NN cosine sim                  0.9377        0.9182   ▼ -0.0195
+
+  Task 2 — FG classification
+    carboxylic_acid                      0.897         0.883   ▼ -0.0140
+    sulfonic_acid                        0.881         0.873   ▼ -0.0080
+    sulfonamide                          0.855         0.701   ▼ -0.1540
+    ether                                0.691         0.733   ▲ +0.0420
+    alcohol                              0.854         0.860   ▲ +0.0060
+
+  Task 3 — Spectrum prediction
+    Mean cosine sim                     0.9243        0.9211   ▼ -0.0032
+    Mean Pearson r                      0.9145        0.9106   ▼ -0.0039

@@ -1,0 +1,4 @@
+filename,stem,csv_name,smiles,n_modes,freq_min_cm1,freq_max_cm1
+6_2_FTAB_protonated_ir.out,6_2_FTAB_protonated_ir,6:2 FTAB (protonated),FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)CCS(=O)(=O)NCCC[N+](C)(C)CC(=O)O,159,12.873146,3633.909334
+6_2_FTSA_ir.out,6_2_FTSA_ir,6:2 FTSA,FC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)CCS(=O)(=O)O,84,16.016924,3671.942318
+DONA_3H_interior_ir.out,DONA_3H_interior_ir,DONA (3H interior),OC(=O)C(F)(F)C(F)OC(F)(F)C(F)(F)OC(F)(F)C(F)(F)F,69,13.988370000000002,3652.6374060000003

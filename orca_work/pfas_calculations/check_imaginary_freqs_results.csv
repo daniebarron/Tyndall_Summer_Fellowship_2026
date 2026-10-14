@@ -1,0 +1,79 @@
+name,status,n_imaginary,imaginary_freqs_cm-1,n_low_real,low_real_freqs_cm-1,n_modes,normal_termination,notes,path
+10-2_FTCA_10-2_FDEA,PASS,0,,2,12.53; 19.83,114,True,"2 low real freq(s) (<20.0 cm⁻¹): 12.53, 19.83",pfas_calculations\10-2_FTCA_10-2_FDEA\10-2_FTCA_10-2_FDEA.out
+10-2_FTS_Fluorotelomer_sulfonate,PASS,0,,2,3.04; 13.42,126,True,"2 low real freq(s) (<20.0 cm⁻¹): 3.04, 13.42",pfas_calculations\10-2_FTS_Fluorotelomer_sulfonate\10-2_FTS_Fluorotelomer_sulfonate.out
+2233-TFPA_3H-Tetrafluoropropanoic_acid,PASS,0,,0,,33,True,,pfas_calculations\2233-TFPA_3H-Tetrafluoropropanoic_acid\2233-TFPA_3H-Tetrafluoropropanoic_acid.out
+2333-TFPA_2H-Tetrafluoropropanoic_acid,PASS,0,,0,,33,True,,pfas_calculations\2333-TFPA_2H-Tetrafluoropropanoic_acid\2333-TFPA_2H-Tetrafluoropropanoic_acid.out
+3-3_FTCA_Fluorotelomer_carboxylic_acid,ERROR,0,,0,,0,False,No VIBRATIONAL FREQUENCIES block found,pfas_calculations\3-3_FTCA_Fluorotelomer_carboxylic_acid\3-3_FTCA_Fluorotelomer_carboxylic_acid.out
+3-3_FTCA_Fluorotelomer_carboxylic_acid_freq,PASS,0,,1,13.71,60,True,1 low real freq(s) (<20.0 cm⁻¹): 13.71,pfas_calculations\3-3_FTCA_Fluorotelomer_carboxylic_acid\3-3_FTCA_Fluorotelomer_carboxylic_acid_freq.out
+4-2_FTS_Fluorotelomer_sulfonate,PASS,0,,1,16.23,72,True,1 low real freq(s) (<20.0 cm⁻¹): 16.23,pfas_calculations\4-2_FTS_Fluorotelomer_sulfonate\4-2_FTS_Fluorotelomer_sulfonate.out
+5-3_FTCA_Fluorotelomer_carboxylic_acid,PASS,0,,1,19.29,78,True,1 low real freq(s) (<20.0 cm⁻¹): 19.29,pfas_calculations\5-3_FTCA_Fluorotelomer_carboxylic_acid\5-3_FTCA_Fluorotelomer_carboxylic_acid.out
+6-2_Cl-PFAES_9-chlorohexadecafluoro-3-oxanonane-1-sulfonate,PASS,0,,0,,90,True,,pfas_calculations\6-2_Cl-PFAES_9-chlorohexadecafluoro-3-oxanonane-1-sulfonate\6-2_Cl-PFAES_9-chlorohexadecafluoro-3-oxanonane-1-sulfonate.out
+6-2_FTAB_Capstone_B,ERROR,0,,0,,0,False,No VIBRATIONAL FREQUENCIES block found,pfas_calculations\6-2_FTAB_Capstone_B\6-2_FTAB_Capstone_B.out
+6-2_FTAB_Capstone_B_freq,PASS,0,,4,3.63; 9.63; 14.69; 19.43,162,True,"4 low real freq(s) (<20.0 cm⁻¹): 3.63, 9.63, 14.69, 19.43",pfas_calculations\6-2_FTAB_Capstone_B\6-2_FTAB_Capstone_B_freq.out
+6-2_FTCA_6-2_FHEA,PASS,0,,1,13.84,78,True,1 low real freq(s) (<20.0 cm⁻¹): 13.84,pfas_calculations\6-2_FTCA_6-2_FHEA\6-2_FTCA_6-2_FHEA.out
+6-2_FTOH_Fluorotelomer_alcohol,PASS,0,,0,,81,True,,pfas_calculations\6-2_FTOH_Fluorotelomer_alcohol\6-2_FTOH_Fluorotelomer_alcohol.out
+6-2_FTS_Fluorotelomer_sulfonate,ERROR,0,,0,,0,False,No VIBRATIONAL FREQUENCIES block found,pfas_calculations\6-2_FTS_Fluorotelomer_sulfonate\6-2_FTS_Fluorotelomer_sulfonate.out
+6-2_FTS_Fluorotelomer_sulfonate_freq,PASS,0,,1,15.84,90,True,1 low real freq(s) (<20.0 cm⁻¹): 15.84,pfas_calculations\6-2_FTS_Fluorotelomer_sulfonate\6-2_FTS_Fluorotelomer_sulfonate_freq.out
+6-2_FTUCA_2H-Perfluoro-2-octenoic_acid,PASS,0,,1,8.22,72,True,1 low real freq(s) (<20.0 cm⁻¹): 8.22,pfas_calculations\6-2_FTUCA_2H-Perfluoro-2-octenoic_acid\6-2_FTUCA_2H-Perfluoro-2-octenoic_acid.out
+6-2_diPAP,ERROR,0,,0,,0,False,No VIBRATIONAL FREQUENCIES block found,pfas_calculations\6-2_diPAP\6-2_diPAP.out
+6-2_diPAP_freq,PASS,0,,2,4.33; 12.13,168,True,"2 low real freq(s) (<20.0 cm⁻¹): 4.33, 12.13",pfas_calculations\6-2_diPAP\6-2_diPAP_freq.out
+7-3_FTCA_Fluorotelomer_carboxylic_acid,PASS,0,,1,14.63,96,True,1 low real freq(s) (<20.0 cm⁻¹): 14.63,pfas_calculations\7-3_FTCA_Fluorotelomer_carboxylic_acid\7-3_FTCA_Fluorotelomer_carboxylic_acid.out
+8-2_Cl-PFAES_11-chloroeicosafluoro-3-oxaundecane-1-sulfonate,PASS,0,,2,-4.25; 9.59,108,True,"2 low real freq(s) (<20.0 cm⁻¹): -4.25, 9.59",pfas_calculations\8-2_Cl-PFAES_11-chloroeicosafluoro-3-oxaundecane-1-sulfonate\8-2_Cl-PFAES_11-chloroeicosafluoro-3-oxaundecane-1-sulfonate.out
+8-2_FTCA_8-2_FOEA,FAIL,1,-5.62,1,17.99,96,True,1 low real freq(s) (<20.0 cm⁻¹): 17.99,pfas_calculations\8-2_FTCA_8-2_FOEA\8-2_FTCA_8-2_FOEA.out
+8-2_FTOH_Fluorotelomer_alcohol,PASS,0,,1,18.93,99,True,1 low real freq(s) (<20.0 cm⁻¹): 18.93,pfas_calculations\8-2_FTOH_Fluorotelomer_alcohol\8-2_FTOH_Fluorotelomer_alcohol.out
+8-2_FTS_Fluorotelomer_sulfonate,PASS,0,,1,15.16,108,True,1 low real freq(s) (<20.0 cm⁻¹): 15.16,pfas_calculations\8-2_FTS_Fluorotelomer_sulfonate\8-2_FTS_Fluorotelomer_sulfonate.out
+8-2_FTUCA_2H-Perfluoro-2-decenoic_acid,ERROR,0,,0,,0,False,No VIBRATIONAL FREQUENCIES block found,pfas_calculations\8-2_FTUCA_2H-Perfluoro-2-decenoic_acid\8-2_FTUCA_2H-Perfluoro-2-decenoic_acid.out
+8-2_FTUCA_2H-Perfluoro-2-decenoic_acid_freq,PASS,0,,1,19.10,90,True,1 low real freq(s) (<20.0 cm⁻¹): 19.10,pfas_calculations\8-2_FTUCA_2H-Perfluoro-2-decenoic_acid\8-2_FTUCA_2H-Perfluoro-2-decenoic_acid_freq.out
+8-2_diPAP_Fluorotelomer_phosphate_diester,ERROR,0,,0,,0,False,No VIBRATIONAL FREQUENCIES block found,pfas_calculations\8-2_diPAP_Fluorotelomer_phosphate_diester\8-2_diPAP_Fluorotelomer_phosphate_diester.out
+8-2_diPAP_restart,FAIL,3,-43.63; -36.60; -6.37,4,6.47; 7.47; 13.00; 17.10,201,True,"4 low real freq(s) (<20.0 cm⁻¹): 6.47, 7.47, 13.00, 17.10",pfas_calculations\8-2_diPAP_Fluorotelomer_phosphate_diester\8-2_diPAP_restart.out
+C6O4_Perfluoro5-methoxy13dioxolan4yloxyHAc,PASS,0,,1,12.44,66,True,1 low real freq(s) (<20.0 cm⁻¹): 12.44,pfas_calculations\C6O4_Perfluoro5-methoxy13dioxolan4yloxyHAc\C6O4_Perfluoro5-methoxy13dioxolan4yloxyHAc.out
+DONA_Dodecafluoro-3H-48-dioxanonanoate,PASS,0,,1,13.50,75,True,1 low real freq(s) (<20.0 cm⁻¹): 13.50,pfas_calculations\DONA_Dodecafluoro-3H-48-dioxanonanoate\DONA_Dodecafluoro-3H-48-dioxanonanoate.out
+DPOSA_Capstone_A_6-2_FTNO,PASS,0,,1,13.53,147,True,1 low real freq(s) (<20.0 cm⁻¹): 13.53,pfas_calculations\DPOSA_Capstone_A_6-2_FTNO\DPOSA_Capstone_A_6-2_FTNO.out
+EtFOSAA_N-ethylperfluorooctanesulfonamido-HAc,PASS,0,,2,9.26; 15.73,129,True,"2 low real freq(s) (<20.0 cm⁻¹): 9.26, 15.73",pfas_calculations\EtFOSAA_N-ethylperfluorooctanesulfonamido-HAc\EtFOSAA_N-ethylperfluorooctanesulfonamido-HAc.out
+EtFOSA_N-ethylperfluorooctanesulfonamide,PASS,0,,1,13.13,111,True,1 low real freq(s) (<20.0 cm⁻¹): 13.13,pfas_calculations\EtFOSA_N-ethylperfluorooctanesulfonamide\EtFOSA_N-ethylperfluorooctanesulfonamide.out
+EtFOSE_N-ethylperfluorooctanesulfonamido-ethanol,PASS,0,,2,8.35; 14.79,132,True,"2 low real freq(s) (<20.0 cm⁻¹): 8.35, 14.79",pfas_calculations\EtFOSE_N-ethylperfluorooctanesulfonamido-ethanol\EtFOSE_N-ethylperfluorooctanesulfonamido-ethanol.out
+HFPO-DA_GenX,PASS,0,,1,17.66,60,True,1 low real freq(s) (<20.0 cm⁻¹): 17.66,pfas_calculations\HFPO-DA_GenX\HFPO-DA_GenX.out
+HFPO-TA,PASS,0,,1,11.90,93,True,1 low real freq(s) (<20.0 cm⁻¹): 11.90,pfas_calculations\HFPO-TA\HFPO-TA.out
+MeFOSAA_N-methylperfluorooctanesulfonamid-HAc,ERROR,0,,0,,0,False,No VIBRATIONAL FREQUENCIES block found,pfas_calculations\MeFOSAA_N-methylperfluorooctanesulfonamid-HAc\MeFOSAA_N-methylperfluorooctanesulfonamid-HAc.out
+MeFOSAA_N-methylperfluorooctanesulfonamid-HAc_freq,PASS,0,,2,9.34; 19.54,120,True,"2 low real freq(s) (<20.0 cm⁻¹): 9.34, 19.54",pfas_calculations\MeFOSAA_N-methylperfluorooctanesulfonamid-HAc\MeFOSAA_N-methylperfluorooctanesulfonamid-HAc_freq.out
+MeFOSA_N-methylperfluorooctansulfonamide,PASS,0,,0,,102,True,,pfas_calculations\MeFOSA_N-methylperfluorooctansulfonamide\MeFOSA_N-methylperfluorooctansulfonamide.out
+MeFOSE_N-methylperfluorooctanesulfonamido-ethanol,ERROR,0,,0,,0,False,No VIBRATIONAL FREQUENCIES block found,pfas_calculations\MeFOSE_N-methylperfluorooctanesulfonamido-ethanol\MeFOSE_N-methylperfluorooctanesulfonamido-ethanol.out
+MeFOSE_N-methylperfluorooctanesulfonamido-ethanol_freq,PASS,0,,1,18.01,123,True,1 low real freq(s) (<20.0 cm⁻¹): 18.01,pfas_calculations\MeFOSE_N-methylperfluorooctanesulfonamido-ethanol\MeFOSE_N-methylperfluorooctanesulfonamido-ethanol_freq.out
+NFDHA_Nonafluoro-36-dioxaheptanoic_acid,PASS,0,,0,,57,True,,pfas_calculations\NFDHA_Nonafluoro-36-dioxaheptanoic_acid\NFDHA_Nonafluoro-36-dioxaheptanoic_acid.out
+PFBA_Perfluorobutanoic_acid,PASS,0,,0,,42,True,,pfas_calculations\PFBA_Perfluorobutanoic_acid\PFBA_Perfluorobutanoic_acid.out
+PFBSA_Perfluorobutane_sulfonamide,PASS,0,,0,,57,True,,pfas_calculations\PFBSA_Perfluorobutane_sulfonamide\PFBSA_Perfluorobutane_sulfonamide.out
+PFBS_Perfluorobutanesulfonic_acid,PASS,0,,0,,54,True,,pfas_calculations\PFBS_Perfluorobutanesulfonic_acid\PFBS_Perfluorobutanesulfonic_acid.out
+PFDA_Perfluorodecanoic_acid,PASS,0,,0,,96,True,,pfas_calculations\PFDA_Perfluorodecanoic_acid\PFDA_Perfluorodecanoic_acid.out
+PFDS_Perfluorodecanesulfonic_acid,PASS,0,,1,10.87,108,True,1 low real freq(s) (<20.0 cm⁻¹): 10.87,pfas_calculations\PFDS_Perfluorodecanesulfonic_acid\PFDS_Perfluorodecanesulfonic_acid.out
+PFDoA_Perfluorododecanoic_acid,PASS,0,,2,17.27; 18.15,114,True,"2 low real freq(s) (<20.0 cm⁻¹): 17.27, 18.15",pfas_calculations\PFDoA_Perfluorododecanoic_acid\PFDoA_Perfluorododecanoic_acid.out
+PFDoS_Perfluorododecane_sulfonic_acid,PASS,0,,2,7.04; 18.84,126,True,"2 low real freq(s) (<20.0 cm⁻¹): 7.04, 18.84",pfas_calculations\PFDoS_Perfluorododecane_sulfonic_acid\PFDoS_Perfluorododecane_sulfonic_acid.out
+PFECHS_Perfluoro-4-ethylcyclohexanesulfonate,PASS,0,,0,,84,True,,pfas_calculations\PFECHS_Perfluoro-4-ethylcyclohexanesulfonate\PFECHS_Perfluoro-4-ethylcyclohexanesulfonate.out
+PFEESA_Perfluoro-2-ethoxyethane-sulfonic_acid,ERROR,0,,0,,0,False,No VIBRATIONAL FREQUENCIES block found,pfas_calculations\PFEESA_Perfluoro-2-ethoxyethane-sulfonic_acid\PFEESA_Perfluoro-2-ethoxyethane-sulfonic_acid.out
+PFEESA_Perfluoro-2-ethoxyethane-sulfonic_acid_freq,PASS,0,,0,,57,True,,pfas_calculations\PFEESA_Perfluoro-2-ethoxyethane-sulfonic_acid\PFEESA_Perfluoro-2-ethoxyethane-sulfonic_acid_freq.out
+PFEtS_Perfluoroethanesulfonic_acid,PASS,0,,0,,36,True,,pfas_calculations\PFEtS_Perfluoroethanesulfonic_acid\PFEtS_Perfluoroethanesulfonic_acid.out
+PFHpA_Perfluoroheptanoic_acid,PASS,0,,0,,69,True,,pfas_calculations\PFHpA_Perfluoroheptanoic_acid\PFHpA_Perfluoroheptanoic_acid.out
+PFHpS_Perfluoroheptanesulfonic_acid,PASS,0,,0,,81,True,,pfas_calculations\PFHpS_Perfluoroheptanesulfonic_acid\PFHpS_Perfluoroheptanesulfonic_acid.out
+PFHxA_Perfluorohexanoic_acid,PASS,0,,0,,60,True,,pfas_calculations\PFHxA_Perfluorohexanoic_acid\PFHxA_Perfluorohexanoic_acid.out
+PFHxDA_Perfluorohexadecanoic_acid,PASS,0,,3,4.88; 9.66; 13.28,150,True,"3 low real freq(s) (<20.0 cm⁻¹): 4.88, 9.66, 13.28",pfas_calculations\PFHxDA_Perfluorohexadecanoic_acid\PFHxDA_Perfluorohexadecanoic_acid.out
+PFHxSA_Perfluorohexanesulfonamide,PASS,0,,0,,75,True,,pfas_calculations\PFHxSA_Perfluorohexanesulfonamide\PFHxSA_Perfluorohexanesulfonamide.out
+PFHxS_Perfluorohexanesulfonic_acid,PASS,0,,1,13.46,72,True,1 low real freq(s) (<20.0 cm⁻¹): 13.46,pfas_calculations\PFHxS_Perfluorohexanesulfonic_acid\PFHxS_Perfluorohexanesulfonic_acid.out
+PFMBA_Perfluoro-4-methoxybutanoic_acid,PASS,0,,0,,54,True,,pfas_calculations\PFMBA_Perfluoro-4-methoxybutanoic_acid\PFMBA_Perfluoro-4-methoxybutanoic_acid.out
+PFMPA_Perfluoro-3-methoxypropionic_acid,PASS,0,,0,,45,True,,pfas_calculations\PFMPA_Perfluoro-3-methoxypropionic_acid\PFMPA_Perfluoro-3-methoxypropionic_acid.out
+PFNA_Perfluorononanoic_acid,PASS,0,,1,0.20,87,True,1 low real freq(s) (<20.0 cm⁻¹): 0.20,pfas_calculations\PFNA_Perfluorononanoic_acid\PFNA_Perfluorononanoic_acid.out
+PFNS_Perfluorononane_sulfonic_acid,PASS,0,,1,13.95,99,True,1 low real freq(s) (<20.0 cm⁻¹): 13.95,pfas_calculations\PFNS_Perfluorononane_sulfonic_acid\PFNS_Perfluorononane_sulfonic_acid.out
+PFOA_Perfluorooctanoic_acid,PASS,0,,0,,78,True,,pfas_calculations\PFOA_Perfluorooctanoic_acid\PFOA_Perfluorooctanoic_acid.out
+PFODA_Perfluorooctadecanoic_acid,PASS,0,,4,4.38; 8.58; 17.75; 19.76,168,True,"4 low real freq(s) (<20.0 cm⁻¹): 4.38, 8.58, 17.75, 19.76",pfas_calculations\PFODA_Perfluorooctadecanoic_acid\PFODA_Perfluorooctadecanoic_acid.out
+PFOSA_Perfluorooctanesulfonamide,PASS,0,,0,,93,True,,pfas_calculations\PFOSA_Perfluorooctanesulfonamide\PFOSA_Perfluorooctanesulfonamide.out
+PFOS_Perfluorooctanesulfonic_acid,PASS,0,,1,14.59,90,True,1 low real freq(s) (<20.0 cm⁻¹): 14.59,pfas_calculations\PFOS_Perfluorooctanesulfonic_acid\PFOS_Perfluorooctanesulfonic_acid.out
+PFPeA_Perfluoropentanoic_acid,PASS,0,,0,,51,True,,pfas_calculations\PFPeA_Perfluoropentanoic_acid\PFPeA_Perfluoropentanoic_acid.out
+PFPeS_Perfluoropentane_sulfonic_acid,PASS,0,,0,,63,True,,pfas_calculations\PFPeS_Perfluoropentane_sulfonic_acid\PFPeS_Perfluoropentane_sulfonic_acid.out
+PFPrA_Perfluoropropionic_acid,PASS,0,,0,,33,True,,pfas_calculations\PFPrA_Perfluoropropionic_acid\PFPrA_Perfluoropropionic_acid.out
+PFPrS_Perfluoropropanesulfonic_acid,ERROR,0,,0,,0,False,No VIBRATIONAL FREQUENCIES block found,pfas_calculations\PFPrS_Perfluoropropanesulfonic_acid\PFPrS_Perfluoropropanesulfonic_acid.out
+PFPrS_Perfluoropropanesulfonic_acid_freq,PASS,0,,0,,45,True,,pfas_calculations\PFPrS_Perfluoropropanesulfonic_acid\PFPrS_Perfluoropropanesulfonic_acid_freq.out
+PFTeDA_Perfluorotetradecanoic_acid,PASS,0,,2,17.50; 19.11,132,True,"2 low real freq(s) (<20.0 cm⁻¹): 17.50, 19.11",pfas_calculations\PFTeDA_Perfluorotetradecanoic_acid\PFTeDA_Perfluorotetradecanoic_acid.out
+PFTrDA_Perfluorotridecanoic_acid,PASS,0,,2,9.33; 17.47,123,True,"2 low real freq(s) (<20.0 cm⁻¹): 9.33, 17.47",pfas_calculations\PFTrDA_Perfluorotridecanoic_acid\PFTrDA_Perfluorotridecanoic_acid.out
+PFTrDS_Perfluorotridecane_sulfonic_acid,PASS,0,,2,7.47; 19.47,135,True,"2 low real freq(s) (<20.0 cm⁻¹): 7.47, 19.47",pfas_calculations\PFTrDS_Perfluorotridecane_sulfonic_acid\PFTrDS_Perfluorotridecane_sulfonic_acid.out
+PFUdA_Perfluoroundecanoic_acid,PASS,0,,1,11.52,105,True,1 low real freq(s) (<20.0 cm⁻¹): 11.52,pfas_calculations\PFUdA_Perfluoroundecanoic_acid\PFUdA_Perfluoroundecanoic_acid.out
+PFUnDS_Perfluoroundecane_sulfonic_acid,PASS,0,,2,8.63; 16.26,117,True,"2 low real freq(s) (<20.0 cm⁻¹): 8.63, 16.26",pfas_calculations\PFUnDS_Perfluoroundecane_sulfonic_acid\PFUnDS_Perfluoroundecane_sulfonic_acid.out
+TFA,PASS,0,,0,,24,True,,pfas_calculations\TFA\TFA.out
+TFMS,PASS,0,,0,,27,True,,pfas_calculations\TFMS\TFMS.out

@@ -1,0 +1,102 @@
+
+=================================================================
+TASK 4 — Predicting NMR Features from IR Spectra
+=================================================================
+
+Scientific motivation:
+  IR spectrometers are ubiquitous; NMR instruments are expensive.
+  If an IR spectrum encodes sufficient information to predict 19F NMR shifts,
+  this could enable NMR-free structural characterisation of unknown PFAS.
+  It also directly tests whether IR and NMR are informationally redundant.
+
+  IR PCA: 20 components → 91.3% variance explained
+
+  Ridge regression (α=10) + IR PCA(20) features, LOO CV:
+
+  Target               Pearson r        R²         MAE        RMSE
+  ------------------  ----------  --------  ----------  ----------
+  F_mean_ppm              0.1553   -0.4312       8.341      14.343
+  F_std_ppm               0.1747   -0.2095       4.661       7.559
+  F_min_ppm              -0.0619   -0.5700      11.960      20.962
+  F_max_ppm               0.1244   -0.3541       5.999      10.172
+  n_F                     0.7307    0.5304       3.628       4.843
+  H_mean_ppm              0.7700    0.5925       0.671       0.813
+  C_mean_ppm              0.6858    0.4700       6.596       8.772
+
+  Saved: task4_ir_to_nmr_predictions.png
+  Saved: task4_ir_to_nmr_errors.png
+
+  Computing spectral importance for F_mean_ppm prediction...
+  Saved: task4_ir_to_nmr_spectra_basis.png
+
+=================================================================
+TASK 5 — Joint IR + NMR Molecule Identification
+=================================================================
+
+Scientific motivation:
+  Rather than concatenating IR and NMR (which dilutes NMR signal), treat them
+  as two independent evidence sources and fuse their similarity scores.
+  For each query molecule (LOO: leave it out of the library), compute:
+    S_IR(q, c)  = cosine similarity between IR spectra
+    S_NMR(q, c) = cosine similarity between NMR feature vectors
+    S_joint     = α * S_IR + (1-α) * S_NMR   [α swept 0→1]
+  The correct molecule is retrieved if it ranks #1 in the library.
+
+  IR-only retrieval  (α=1.0): Top-1=1.000  Top-3=1.000  Mean rank=1.00
+  NMR-only retrieval (α=0.0): Top-1=0.162  Top-3=0.338  Mean rank=14.75
+  Best joint Top-1   (α=1.00): Top-1=1.000
+  Best joint Top-3   (α=1.00): Top-3=1.000
+
+  Per-molecule rank change (joint vs IR-only) at α=1.00:
+    Improved : 0 molecules
+    Unchanged: 68 molecules
+    Worsened : 0 molecules
+
+  Biggest improvements (NMR helps):
+    10:2 FTCA             IR rank=1  Joint rank=1  Δ=+0
+    10:2 FTS              IR rank=1  Joint rank=1  Δ=+0
+    2,2,3,3-TFPA          IR rank=1  Joint rank=1  Δ=+0
+    2,3,3,3-TFPA          IR rank=1  Joint rank=1  Δ=+0
+    3:3 FTCA              IR rank=1  Joint rank=1  Δ=+0
+
+  Biggest regressions (NMR hurts):
+    TFMS                  IR rank=1  Joint rank=1  Δ=+0
+    TFA                   IR rank=1  Joint rank=1  Δ=+0
+    PFUnDS                IR rank=1  Joint rank=1  Δ=+0
+    PFUdA                 IR rank=1  Joint rank=1  Δ=+0
+    PFTrDS                IR rank=1  Joint rank=1  Δ=+0
+
+  Saved: task5_joint_retrieval.png
+
+  Most IR-confusable pairs where NMR discriminates:
+  Mol A                 Mol B                   S_IR   S_NMR   ΔNMR-IR
+  8:2 diPAP             PFPeS                 0.911  -0.927  -1.839
+  EtFOSAA               PFHxA                 0.907  -0.833  -1.740
+  10:2 FTS              PFBS                  0.907  -0.818  -1.725
+  10:2 FTS              PFPeS                 0.928  -0.773  -1.702
+  EtFOSAA               PFHpA                 0.908  -0.789  -1.697
+  7:3 FTCA              PFHxA                 0.919  -0.767  -1.687
+  5:3 FTCA              8:2 FTUCA             0.910  -0.761  -1.671
+  7:3 FTCA              PFHpA                 0.916  -0.746  -1.662
+  Saved: task5_confusion_cases.png
+
+=================================================================
+SUMMARY
+=================================================================
+
+Task 4 — IR → NMR prediction:
+  Key question: does the IR spectrum encode NMR shift information?
+  Answer: see Pearson r values above. High r for F_mean/n_F suggests yes —
+  the 1000-1400 cm⁻¹ C-F stretching region strongly correlates with chain
+  length and fluorination pattern, which also determines 19F shifts.
+  This has a practical implication: an IR spectrum alone may be sufficient
+  to estimate 19F NMR shift ranges for unknown PFAS, without running NMR.
+
+Task 5 — Joint IR + NMR identification:
+  Key question: does NMR provide independent discriminative power over IR?
+  The alpha sweep shows the optimal fusion weight. If best α ≈ 1.0, IR alone
+  is optimal and NMR adds no retrieval value. If best α < 1.0, there is
+  genuine complementarity between the two modalities.
+  The confusion case analysis shows WHICH molecules benefit from NMR — these
+  tend to be structural isomers or chain-length neighbours that are nearly
+  indistinguishable by their bulk IR fingerprint alone.

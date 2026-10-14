@@ -1,0 +1,214 @@
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            adacompute04
+  Device name:           irdma0
+  Device vendor ID:      0x8086
+  Device vendor part ID: 5522
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+No OpenFabrics connection schemes reported that they were able to be
+used on a specific port.  As such, the openib BTL (OpenFabrics
+support) will be disabled for this port.
+
+  Local host:           adacompute04
+  Local device:         irdma1
+  Local port:           1
+  CPCs attempted:       rdmacm, udcm
+--------------------------------------------------------------------------
+[adacompute04:2724881] 7 more processes have sent help message help-mpi-btl-openib.txt / no device params found
+[adacompute04:2724881] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[adacompute04:2724881] 3 more processes have sent help message help-mpi-btl-openib-cpc-base.txt / no cpcs for port
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            adacompute04
+  Device name:           irdma0
+  Device vendor ID:      0x8086
+  Device vendor part ID: 5522
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+No OpenFabrics connection schemes reported that they were able to be
+used on a specific port.  As such, the openib BTL (OpenFabrics
+support) will be disabled for this port.
+
+  Local host:           adacompute04
+  Local device:         irdma1
+  Local port:           1
+  CPCs attempted:       rdmacm, udcm
+--------------------------------------------------------------------------
+[adacompute04:2724897] 7 more processes have sent help message help-mpi-btl-openib.txt / no device params found
+[adacompute04:2724897] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[adacompute04:2724897] 3 more processes have sent help message help-mpi-btl-openib-cpc-base.txt / no cpcs for port
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            adacompute04
+  Device name:           irdma0
+  Device vendor ID:      0x8086
+  Device vendor part ID: 5522
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+No OpenFabrics connection schemes reported that they were able to be
+used on a specific port.  As such, the openib BTL (OpenFabrics
+support) will be disabled for this port.
+
+  Local host:           adacompute04
+  Local device:         irdma1
+  Local port:           1
+  CPCs attempted:       rdmacm, udcm
+--------------------------------------------------------------------------
+[adacompute04:2724916] 7 more processes have sent help message help-mpi-btl-openib.txt / no device params found
+[adacompute04:2724916] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[adacompute04:2724916] 3 more processes have sent help message help-mpi-btl-openib-cpc-base.txt / no cpcs for port
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            adacompute04
+  Device name:           irdma0
+  Device vendor ID:      0x8086
+  Device vendor part ID: 5522
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+No OpenFabrics connection schemes reported that they were able to be
+used on a specific port.  As such, the openib BTL (OpenFabrics
+support) will be disabled for this port.
+
+  Local host:           adacompute04
+  Local device:         irdma1
+  Local port:           1
+  CPCs attempted:       rdmacm, udcm
+--------------------------------------------------------------------------
+[adacompute04:2726418] 7 more processes have sent help message help-mpi-btl-openib.txt / no device params found
+[adacompute04:2726418] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[adacompute04:2726418] 3 more processes have sent help message help-mpi-btl-openib-cpc-base.txt / no cpcs for port
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            adacompute04
+  Device name:           irdma0
+  Device vendor ID:      0x8086
+  Device vendor part ID: 5522
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+No OpenFabrics connection schemes reported that they were able to be
+used on a specific port.  As such, the openib BTL (OpenFabrics
+support) will be disabled for this port.
+
+  Local host:           adacompute04
+  Local device:         irdma1
+  Local port:           1
+  CPCs attempted:       rdmacm, udcm
+--------------------------------------------------------------------------
+[adacompute04:2726926] [[16644,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
+[adacompute04:2726926] 7 more processes have sent help message help-mpi-btl-openib.txt / no device params found
+[adacompute04:2726926] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[adacompute04:2726926] 2 more processes have sent help message help-mpi-btl-openib-cpc-base.txt / no cpcs for port
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            adacompute04
+  Device name:           irdma0
+  Device vendor ID:      0x8086
+  Device vendor part ID: 5522
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+[adacompute04:2727051] [[16769,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+[adacompute04:2727051] [[16769,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
+--------------------------------------------------------------------------
+No OpenFabrics connection schemes reported that they were able to be
+used on a specific port.  As such, the openib BTL (OpenFabrics
+support) will be disabled for this port.
+
+  Local host:           adacompute04
+  Local device:         irdma1
+  Local port:           1
+  CPCs attempted:       rdmacm, udcm
+--------------------------------------------------------------------------
+[adacompute04:2727051] 7 more processes have sent help message help-mpi-btl-openib.txt / no device params found
+[adacompute04:2727051] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[adacompute04:2727051] 1 more process has sent help message help-mpi-btl-openib-cpc-base.txt / no cpcs for port
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            adacompute04
+  Device name:           irdma0
+  Device vendor ID:      0x8086
+  Device vendor part ID: 5522
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+No OpenFabrics connection schemes reported that they were able to be
+used on a specific port.  As such, the openib BTL (OpenFabrics
+support) will be disabled for this port.
+
+  Local host:           adacompute04
+  Local device:         irdma1
+  Local port:           1
+  CPCs attempted:       rdmacm, udcm
+--------------------------------------------------------------------------
+[adacompute04:2727086] [[16804,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+[adacompute04:2727086] 7 more processes have sent help message help-mpi-btl-openib.txt / no device params found
+[adacompute04:2727086] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[adacompute04:2727086] 2 more processes have sent help message help-mpi-btl-openib-cpc-base.txt / no cpcs for port

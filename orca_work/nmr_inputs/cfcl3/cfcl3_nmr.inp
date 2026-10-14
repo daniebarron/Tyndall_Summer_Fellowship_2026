@@ -1,0 +1,23 @@
+# CFCl3 NMR reference calculation
+# PBE0/def2-TZVP GIAO — same level as PFAS dataset
+# 19F chemical shift reference: δ(F) = σ(CFCl3) - σ(molecule)
+# Experimental δ(CFCl3) = 0 ppm by convention
+#
+# Geometry: experimental/standard CFCl3 structure
+# C-Cl = 1.767 Å, Cl-C-Cl = 111.3° (C3v symmetry)
+
+! NMR PBE0 def2-TZVP def2/J RIJCOSX NormalPrint TightSCF
+
+%pal
+  nprocs 4
+end
+
+%maxcore 4000
+
+* xyz 0 1
+  C     0.00000000    0.00000000    0.00000000
+  F     0.00000000    0.00000000    1.33200000
+  Cl    1.56800000    0.00000000   -0.44400000
+  Cl   -0.78400000    1.35760000   -0.44400000
+  Cl   -0.78400000   -1.35760000   -0.44400000
+*

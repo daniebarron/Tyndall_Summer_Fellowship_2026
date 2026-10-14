@@ -1,0 +1,9 @@
+{
+  "seed": 3,
+  "temperature": 1023,
+  "base_directory": "/home/jovyan/Matlantis/ZrN_110/1023K",
+  "md_steps": 8000,
+  "n_o_per_round": 6,
+  "max_rounds": 40,
+  "timestamp": "2026-08-15T09:56:03.348744"
+}

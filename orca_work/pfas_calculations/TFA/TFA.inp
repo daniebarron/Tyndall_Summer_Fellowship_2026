@@ -1,0 +1,27 @@
+! PBE0 def2-SVP def2/J RIJCOSX Opt Freq D3BJ TightSCF
+
+%pal
+  nprocs 4
+End
+
+%maxcore 3000
+
+%geom
+  TolE    1e-4
+  TolRMSG 1e-2
+  TolMaxG 3e-2
+  TolRMSD 1e-3
+  TolMaxD 3e-3
+End
+
+# Molecule: TFA
+* xyz 0 1
+  C       0.567338     0.275270     0.042165
+  O       1.123454     1.306974     0.398919
+  C      -0.936055    -0.020517     0.060429
+  F      -1.350147    -0.713905    -1.038163
+  F      -1.297881    -0.766970     1.142379
+  F      -1.695840     1.109696     0.104406
+  O       1.334038    -0.760965    -0.387583
+  H       2.255094    -0.429582    -0.322553
+*

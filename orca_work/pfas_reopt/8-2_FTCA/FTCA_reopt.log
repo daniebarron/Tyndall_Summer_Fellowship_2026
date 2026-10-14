@@ -1,0 +1,4 @@
+sh: line 1: mpirun: command not found
+[file orca_tools/qcmsg.cpp, line 394]: 
+  .... aborting the run
+

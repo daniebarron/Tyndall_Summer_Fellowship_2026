@@ -1,0 +1,2002 @@
+*************************************************
+******************* ORCA 6.1.1 ******************
+*************************************************
+$Calculation_Status
+   &GeometryIndex 9
+   &version [&Type "String"] "6.1.1"
+   &progName [&Type "String"] "LeanSCF"
+   &Status [&Type "String"] "NORMAL TERMINATION"
+$End
+$Geometry
+   &GeometryIndex 1
+   &NAtoms [&Type "Integer"] 12
+   &NCorelessECP [&Type "Integer"] 0
+   &NGhostAtoms [&Type "Integer"] 0
+   &CartesianCoordinates [&Type "Coordinates", &Dim(12,4), &Units "Bohr"] 
+              O     -2.460141857172    2.329949175175   -1.680883050231
+              S     -2.027940703356   -0.639137503836   -1.064526194939
+              O     -3.514669511136   -1.224003962833    1.152116890972
+              O     -2.546664857939   -1.885512044643   -3.450766532191
+              C      1.334605853999   -0.647637491987   -0.435033853290
+              F      2.591377667994    0.923289953416   -2.072598711353
+              F      2.375529369525   -2.990582313785   -0.801557575321
+              C      1.706456714001    0.201469372316    2.257933601937
+              F      0.716510450664    2.509577092835    2.732661152670
+              F      4.217675978847    0.379118746713    2.800708301027
+              F      0.738710953285   -1.430789134763    3.970278702572
+              H     -3.131448168986    2.474261890844   -3.408332731854
+$End
+$SCF_Mulliken_Population_Analysis
+   &GeometryIndex 1
+   &NAtoms [&Type "Integer"] 12
+   &ATNO [&Type "ArrayOfIntegers", &Dim (12,1)] 
+                                                         0
+
+0                                                        8
+1                                                       16
+2                                                        8
+3                                                        8
+4                                                        6
+5                                                        9
+6                                                        9
+7                                                        6
+8                                                        9
+9                                                        9
+10                                                       9
+11                                                       1
+   &AtomicCharges [&Type "ArrayOfDoubles", &Dim (12,1)] 
+                                                         0
+
+0                                     -3.4222345349823335e-01
+1                                      8.7459669624823810e-01
+2                                     -3.7661830425940579e-01
+3                                     -4.2703249100565976e-01
+4                                      3.1106824969797664e-01
+5                                     -1.7581111426773610e-01
+6                                     -1.6869488067993110e-01
+7                                      5.6788857502207701e-01
+8                                     -1.6248638167035878e-01
+9                                     -1.7953829641596286e-01
+10                                    -1.5983380674201442e-01
+11                                     2.3868520757104472e-01
+   &Method [&Type "String"] "SCF"
+   &Level [&Type "String"] "Relaxed density"
+   &Mult [&Type "Integer"] 1
+   &State [&Type "Integer"] -1
+   &Irrep [&Type "Integer"] 0
+$End
+$SCF_Loewdin_Population_Analysis
+   &GeometryIndex 1
+   &NAtoms [&Type "Integer"] 12
+   &ATNO [&Type "ArrayOfIntegers", &Dim (12,1)] 
+                                                         0
+
+0                                                        8
+1                                                       16
+2                                                        8
+3                                                        8
+4                                                        6
+5                                                        9
+6                                                        9
+7                                                        6
+8                                                        9
+9                                                        9
+10                                                       9
+11                                                       1
+   &AtomicCharges [&Type "ArrayOfDoubles", &Dim (12,1)] 
+                                                         0
+
+0                                     -2.4425992269631180e-01
+1                                      1.1463940981010889e+00
+2                                     -4.2925656921245547e-01
+3                                     -4.7045946686854911e-01
+4                                      5.5068837235507928e-03
+5                                     -5.9629332529731016e-02
+6                                     -5.2102253248932584e-02
+7                                      1.4418117128216501e-01
+8                                     -4.6109275309362374e-02
+9                                     -6.0966751934959262e-02
+10                                    -4.3408157020914828e-02
+11                                     1.1010957571443958e-01
+   &Method [&Type "String"] "SCF"
+   &Level [&Type "String"] "Relaxed density"
+   &Mult [&Type "Integer"] 1
+   &State [&Type "Integer"] -1
+   &Irrep [&Type "Integer"] 0
+$End
+$SCF_Mayer_Population_Analysis
+   &GeometryIndex 1
+   &NAtoms [&Type "Integer"] 12 "Total number of atoms"
+   &NBondOrdersPrint [&Type "Integer"] 11 "The number of bond orders larger than threshold"
+   &bondThresh [&Type "Double"]       1.0000000000000001e-01  "The threshold for printing"
+   &components [&Type "ArrayOfIntegers", &Dim (11,4)] "The indices and atomic numbers of the bonding atoms"
+                                                         0                           1                           2                           3
+
+0                                                        0                           8                           1                          16
+1                                                        0                           8                          11                           1
+2                                                        1                          16                           2                           8
+3                                                        1                          16                           3                           8
+4                                                        1                          16                           4                           6
+5                                                        4                           6                           5                           9
+6                                                        4                           6                           6                           9
+7                                                        4                           6                           7                           6
+8                                                        7                           6                           8                           9
+9                                                        7                           6                           9                           9
+10                                                       7                           6                          10                           9
+   &BondOrders [&Type "ArrayOfDoubles", &Dim (11,1)] "The bond orders"
+                                                         0
+
+0                                      9.8231321714689757e-01
+1                                      9.2049201590311647e-01
+2                                      1.7995785783254328e+00
+3                                      1.7472834187134012e+00
+4                                      7.6231704012240042e-01
+5                                      1.0704600963429682e+00
+6                                      1.0924282770352325e+00
+7                                      8.6224633184157573e-01
+8                                      1.1242629289101060e+00
+9                                      1.1126077851798750e+00
+10                                     1.1241687058602057e+00
+   &ATNO [&Type "ArrayOfIntegers", &Dim (12,1)] "Atomic number of the elements"
+                                                         0
+
+0                                                        8
+1                                                       16
+2                                                        8
+3                                                        8
+4                                                        6
+5                                                        9
+6                                                        9
+7                                                        6
+8                                                        9
+9                                                        9
+10                                                       9
+11                                                       1
+   &NA [&Type "ArrayOfDoubles", &Dim (12,1)] "Mulliken gross atomic population"
+                                                         0
+
+0                                      8.3422234534982298e+00
+1                                      1.5125403303751765e+01
+2                                      8.3766183042594022e+00
+3                                      8.4270324910056544e+00
+4                                      5.6889317503020198e+00
+5                                      9.1758111142677450e+00
+6                                      9.1686948806799293e+00
+7                                      5.4321114249779248e+00
+8                                      9.1624863816703588e+00
+9                                      9.1795382964159593e+00
+10                                     9.1598338067420215e+00
+11                                     7.6131479242895550e-01
+   &ZA [&Type "ArrayOfDoubles", &Dim (12,1)] "Total nuclear charge"
+                                                         0
+
+0                                      8.0000000000000000e+00
+1                                      1.6000000000000000e+01
+2                                      8.0000000000000000e+00
+3                                      8.0000000000000000e+00
+4                                      6.0000000000000000e+00
+5                                      9.0000000000000000e+00
+6                                      9.0000000000000000e+00
+7                                      6.0000000000000000e+00
+8                                      9.0000000000000000e+00
+9                                      9.0000000000000000e+00
+10                                     9.0000000000000000e+00
+11                                     1.0000000000000000e+00
+   &QA [&Type "ArrayOfDoubles", &Dim (12,1)] "Mulliken gross atomic charge"
+                                                         0
+
+0                                     -3.4222345349822980e-01
+1                                      8.7459669624823455e-01
+2                                     -3.7661830425940224e-01
+3                                     -4.2703249100565444e-01
+4                                      3.1106824969798019e-01
+5                                     -1.7581111426774498e-01
+6                                     -1.6869488067992933e-01
+7                                      5.6788857502207524e-01
+8                                     -1.6248638167035878e-01
+9                                     -1.7953829641595931e-01
+10                                    -1.5983380674202152e-01
+11                                     2.3868520757104450e-01
+   &VA [&Type "ArrayOfDoubles", &Dim (12,1)] "Mayer's total valence"
+                                                         0
+
+0                                      2.0545970646193492e+00
+1                                      5.3697283496350217e+00
+2                                      2.0544863994426299e+00
+3                                      1.9916469662417544e+00
+4                                      4.0272916565298624e+00
+5                                      1.1619277162744641e+00
+6                                      1.1782210412617831e+00
+7                                      4.3036517113896506e+00
+8                                      1.1892526758227291e+00
+9                                      1.1716107577372457e+00
+10                                     1.1874483068102046e+00
+11                                     9.9509239899985891e-01
+   &BVA [&Type "ArrayOfDoubles", &Dim (12,1)] "Mayer's bonded valence"
+                                                         0
+
+0                                      2.0545970646193297e+00
+1                                      5.3697283496349657e+00
+2                                      2.0544863994426343e+00
+3                                      1.9916469662417686e+00
+4                                      4.0272916565298482e+00
+5                                      1.1619277162744446e+00
+6                                      1.1782210412617777e+00
+7                                      4.3036517113896480e+00
+8                                      1.1892526758227042e+00
+9                                      1.1716107577372412e+00
+10                                     1.1874483068101860e+00
+11                                     9.9509239899985524e-01
+   &FA [&Type "ArrayOfDoubles", &Dim (12,1)] "Mayer's free valence"
+                                                         0
+
+0                                      0.0000000000000000e+00
+1                                      0.0000000000000000e+00
+2                                      0.0000000000000000e+00
+3                                      0.0000000000000000e+00
+4                                      0.0000000000000000e+00
+5                                      0.0000000000000000e+00
+6                                      0.0000000000000000e+00
+7                                      0.0000000000000000e+00
+8                                      0.0000000000000000e+00
+9                                      0.0000000000000000e+00
+10                                     0.0000000000000000e+00
+11                                     0.0000000000000000e+00
+   &Method [&Type "String"] "SCF"
+   &Level [&Type "String"] "Relaxed density"
+   &Mult [&Type "Integer"] 1
+   &State [&Type "Integer"] -1
+   &Irrep [&Type "Integer"] 0
+$End
+$SCF_Energy
+   &GeometryIndex 1
+   &Method [&Type "String"] "SCF"
+   &totalEnergy [&Type "ArrayOfDoubles", &Dim (1,1)] "Total energy of each state"
+                                                         0
+
+0                                     -1.1981266824194468e+03
+   &Mult [&Type "ArrayOfIntegers", &Dim (1,1)] "Multiplicity of each state"
+                                                         0
+
+0                                                        1
+$End
+$DFT_Energy
+   &GeometryIndex 1
+   &nAlphaEl [&Type "Integer"] 49
+   &nBetaEl [&Type "Integer"] 49
+   &nTotalEl [&Type "Integer"] 98
+   &finalEn [&Type "Double"]      -1.1981266824194468e+03  "No Van der Waals correction"
+   &eExchange [&Type "Double"]      -8.2929196410280852e+01
+   &eCorr [&Type "Double"]      -3.5197133705047730e+00
+   &eXC [&Type "Double"]      -8.6448909780785627e+01
+   &eCNL [&Type "Double"]       0.0000000000000000e+00
+$End
+$SCF_Timings
+   &GeometryIndex 1
+   &TOTAL [&Type "Double"]       1.4750000000000000e+01
+   &PREP [&Type "Double"]       1.8400000000000000e-01
+   &FOCK [&Type "Double"]       1.2796999999999997e+01
+   &DENS [&Type "Double"]       2.7700000000000102e-01
+   &ETOT [&Type "Double"]       1.4400000000000102e-01
+   &POP [&Type "Double"]       7.5000000000001066e-02
+   &TRAFO [&Type "Double"]       6.6999999999999726e-02
+   &DIIS [&Type "Double"]       3.3999999999999986e-01
+   &SOSCF [&Type "Double"]       3.5900000000000176e-01
+   &XC [&Type "Double"]       2.7659999999999991e+00
+   &FOCKSTART [&Type "Double"]       2.4000000000000993e-02
+   &INT_BF [&Type "Double"]       8.4299999999999264e-01
+   &INT_DENS [&Type "Double"]       5.0700000000001433e-01
+   &INT_DENSIO [&Type "Double"]       2.6066860999999957e+04
+   &INT_FUNC [&Type "Double"]       1.1799999999999744e-01
+   &INT_POT [&Type "Double"]       6.6899999999999582e-01
+   &INT_POTIO [&Type "Double"]       4.7000000000002595e-02
+   &INT_SUM [&Type "Double"]       3.8999999999998813e-02
+   &SPLITRIJ [&Type "Double"]       1.1500000000000012e+00
+   &COSX [&Type "Double"]       9.1530000000000022e+00
+$End
+$VdW_Correction
+   &GeometryIndex 1
+   &vdW [&Type "Double"]      -1.0255404503642132e-02
+$End
+$Single_Point_Data
+   &GeometryIndex 1
+   &FinalEnergy [&Type "Double"]      -1.1981369378239503e+03  "Final single point energy"
+   &Converged [&Type "Boolean"] true
+$End
+$SCF_Nuc_Gradient
+   &GeometryIndex 1
+   &NAtoms [&Type "Integer"] 12
+   &gradNorm [&Type "Double"]       1.5239147252648133e-01
+   &grad [&Type "ArrayOfDoubles", &Dim (36,1)] 
+                                                         0
+
+0                                     -6.0249171271628665e-03
+1                                     -1.5086630319893462e-03
+2                                     -2.1117963828472920e-03
+3                                      6.8245471180994527e-02
+4                                     -6.8301950839029599e-03
+5                                      3.6960600509414743e-02
+6                                     -2.1501301321051543e-02
+7                                      5.4763601588667067e-04
+8                                      8.6596048159726211e-04
+9                                     -1.4493135474611941e-02
+10                                     8.8375360122685716e-03
+11                                    -4.6670063382706489e-03
+12                                    -4.8149376581145285e-02
+13                                     9.4815186298970785e-03
+14                                     2.9683348886083222e-02
+15                                     2.4666349804291166e-02
+16                                     1.5470871951193229e-02
+17                                    -2.4841621633965187e-02
+18                                     2.5775687134622229e-02
+19                                    -2.8543523327373616e-02
+20                                    -1.1083884042390659e-02
+21                                    -3.3788713677555135e-02
+22                                    -1.8467676879054134e-02
+23                                    -7.4177498940252870e-02
+24                                    -4.0843489796268144e-03
+25                                     2.5927188796796171e-02
+26                                     1.6371080944624937e-02
+27                                     2.4464932516135181e-02
+28                                     3.8530608475196536e-03
+29                                     1.5141539751829339e-02
+30                                    -7.5111650249737203e-03
+31                                    -1.3443505315031246e-02
+32                                     2.7898134428536336e-02
+33                                    -7.5994824597501922e-03
+34                                     4.6757513506934132e-03
+35                                    -1.0038857551760060e-02
+   &Method [&Type "String"] "SCF"
+   &Level [&Type "String"] "Relaxed density"
+   &Mult [&Type "Integer"] 1
+   &State [&Type "Integer"] 0
+   &Irrep [&Type "Integer"] 0
+$End
+$Geometry
+   &GeometryIndex 2
+   &NAtoms [&Type "Integer"] 12
+   &NCorelessECP [&Type "Integer"] 0
+   &NGhostAtoms [&Type "Integer"] 0
+   &CartesianCoordinates [&Type "Coordinates", &Dim(12,4), &Units "Bohr"] 
+              O     -2.475565874579    2.336046655051   -1.690750126776
+              S     -2.137205091549   -0.647050895249   -1.141841780304
+              O     -3.579663201181   -1.303444533060    1.071983820550
+              O     -2.462121830219   -1.963149661472   -3.522302407998
+              C      1.254822919741   -0.619492532800   -0.372470171827
+              F      2.441438308015    0.930317520473   -1.982600928722
+              F      2.203346890147   -2.932769605943   -0.728101437409
+              C      1.782479351026    0.227231429709    2.337771157914
+              F      0.772928006965    2.482106574187    2.786337767541
+              F      4.283167129957    0.403442609879    2.678414277112
+              F      0.903636680653   -1.425018117029    4.006910766154
+              H     -2.987261399251    2.511784335706   -3.443350936237
+$End
+$SCF_Energy
+   &GeometryIndex 2
+   &Method [&Type "String"] "SCF"
+   &totalEnergy [&Type "ArrayOfDoubles", &Dim (1,1)] "Total energy of each state"
+                                                         0
+
+0                                     -1.1981439297190238e+03
+   &Mult [&Type "ArrayOfIntegers", &Dim (1,1)] "Multiplicity of each state"
+                                                         0
+
+0                                                        1
+$End
+$DFT_Energy
+   &GeometryIndex 2
+   &nAlphaEl [&Type "Integer"] 49
+   &nBetaEl [&Type "Integer"] 49
+   &nTotalEl [&Type "Integer"] 98
+   &finalEn [&Type "Double"]      -1.1981439297190238e+03  "No Van der Waals correction"
+   &eExchange [&Type "Double"]      -8.2982189241551723e+01
+   &eCorr [&Type "Double"]      -3.5248581550226756e+00
+   &eXC [&Type "Double"]      -8.6507047396574393e+01
+   &eCNL [&Type "Double"]       0.0000000000000000e+00
+$End
+$SCF_Timings
+   &GeometryIndex 2
+   &TOTAL [&Type "Double"]       1.3843999999999999e+01
+   &PREP [&Type "Double"]       1.7199999999999999e-01
+   &FOCK [&Type "Double"]       1.1891000000000000e+01
+   &DENS [&Type "Double"]       2.7300000000000146e-01
+   &ETOT [&Type "Double"]       1.3400000000000079e-01
+   &TRAFO [&Type "Double"]       4.7999999999999599e-02
+   &DIIS [&Type "Double"]       2.6700000000000013e-01
+   &SOSCF [&Type "Double"]       3.6100000000000065e-01
+   &XC [&Type "Double"]       2.4269999999999992e+00
+   &FOCKSTART [&Type "Double"]       2.1000000000003127e-02
+   &INT_BF [&Type "Double"]       7.3499999999999166e-01
+   &INT_DENS [&Type "Double"]       4.2200000000000326e-01
+   &INT_DENSIO [&Type "Double"]       2.1985280999999999e+04
+   &INT_FUNC [&Type "Double"]       1.1400000000000232e-01
+   &INT_POT [&Type "Double"]       6.1700000000000133e-01
+   &INT_POTIO [&Type "Double"]       4.5999999999996044e-02
+   &INT_SUM [&Type "Double"]       2.5999999999998913e-02
+   &SPLITRIJ [&Type "Double"]       1.0829999999999980e+00
+   &COSX [&Type "Double"]       8.7509999999999994e+00
+$End
+$VdW_Correction
+   &GeometryIndex 2
+   &vdW [&Type "Double"]      -1.0222495218964319e-02
+$End
+$Single_Point_Data
+   &GeometryIndex 2
+   &FinalEnergy [&Type "Double"]      -1.1981541522142429e+03  "Final single point energy"
+   &Converged [&Type "Boolean"] true
+$End
+$SCF_Nuc_Gradient
+   &GeometryIndex 2
+   &NAtoms [&Type "Integer"] 12
+   &gradNorm [&Type "Double"]       5.1183540452589348e-02
+   &grad [&Type "ArrayOfDoubles", &Dim (36,1)] 
+                                                         0
+
+0                                      2.3496661560277085e-04
+1                                      3.0521944251653593e-03
+2                                     -4.2858668231960367e-03
+3                                      2.2679248145763723e-02
+4                                      7.0410081273630267e-04
+5                                      1.2558547113247314e-02
+6                                     -7.7018985051030379e-03
+7                                     -1.3985528052573050e-03
+8                                     -5.8356996336122156e-04
+9                                     -5.9243152700104249e-03
+10                                    -1.1165478754063755e-03
+11                                    -3.6982708395367609e-03
+12                                    -1.9817774254828294e-02
+13                                     3.9440778052889152e-03
+14                                     1.1021308435833873e-02
+15                                     6.9755306862797307e-03
+16                                     2.7294260176257475e-04
+17                                    -5.2747351042681271e-03
+18                                     9.8743584564879843e-03
+19                                    -3.2851523869873674e-03
+20                                    -4.7557605233233867e-03
+21                                    -1.3641002151526771e-02
+22                                    -5.0871969777656449e-03
+23                                    -2.4433207770933687e-02
+24                                     2.0603366278331461e-04
+25                                     6.3742850361554974e-03
+26                                     4.2983149560944824e-03
+27                                     9.1057445229622627e-03
+28                                     6.6875509970038569e-04
+29                                     5.4043649576907020e-03
+30                                    -6.2523375257832292e-05
+31                                    -3.7419511763702173e-03
+32                                     8.3764698556662055e-03
+33                                    -1.9283685559198008e-03
+34                                    -3.8695462679122131e-04
+35                                     1.3724057969785009e-03
+   &Method [&Type "String"] "SCF"
+   &Level [&Type "String"] "Relaxed density"
+   &Mult [&Type "Integer"] 1
+   &State [&Type "Integer"] 0
+   &Irrep [&Type "Integer"] 0
+$End
+$Geometry
+   &GeometryIndex 3
+   &NAtoms [&Type "Integer"] 12
+   &NCorelessECP [&Type "Integer"] 0
+   &NGhostAtoms [&Type "Integer"] 0
+   &CartesianCoordinates [&Type "Coordinates", &Dim(12,4), &Units "Bohr"] 
+              O     -2.525405917121    2.326432448700   -1.623593122299
+              S     -2.174887060275   -0.663826575471   -1.170144209656
+              O     -3.566415714014   -1.406473514654    1.043217929234
+              O     -2.410209607173   -1.947689535566   -3.572725510888
+              C      1.241138049611   -0.627512739839   -0.360794884870
+              F      2.395326907351    0.906340279319   -1.981216311614
+              F      2.098968701097   -2.962159358442   -0.665019329986
+              C      1.809509612790    0.256675745603    2.356078709943
+              F      0.777047704895    2.493685886921    2.750553828981
+              F      4.293969250516    0.438106861357    2.625381974250
+              F      0.933256017052   -1.384277968577    4.008204024871
+              H     -2.872296055002    2.570702250098   -3.409943097967
+$End
+$SCF_Energy
+   &GeometryIndex 3
+   &Method [&Type "String"] "SCF"
+   &totalEnergy [&Type "ArrayOfDoubles", &Dim (1,1)] "Total energy of each state"
+                                                         0
+
+0                                     -1.1981463336633319e+03
+   &Mult [&Type "ArrayOfIntegers", &Dim (1,1)] "Multiplicity of each state"
+                                                         0
+
+0                                                        1
+$End
+$DFT_Energy
+   &GeometryIndex 3
+   &nAlphaEl [&Type "Integer"] 49
+   &nBetaEl [&Type "Integer"] 49
+   &nTotalEl [&Type "Integer"] 98
+   &finalEn [&Type "Double"]      -1.1981463336633319e+03  "No Van der Waals correction"
+   &eExchange [&Type "Double"]      -8.3000199563476713e+01
+   &eCorr [&Type "Double"]      -3.5267849447374866e+00
+   &eXC [&Type "Double"]      -8.6526984508214198e+01
+   &eCNL [&Type "Double"]       0.0000000000000000e+00
+$End
+$SCF_Timings
+   &GeometryIndex 3
+   &TOTAL [&Type "Double"]       1.3696999999999999e+01
+   &PREP [&Type "Double"]       1.8900000000000000e-01
+   &FOCK [&Type "Double"]       1.1838000000000003e+01
+   &DENS [&Type "Double"]       2.4900000000000055e-01
+   &ETOT [&Type "Double"]       1.2799999999999900e-01
+   &TRAFO [&Type "Double"]       5.6000000000000938e-02
+   &DIIS [&Type "Double"]       2.5899999999999923e-01
+   &SOSCF [&Type "Double"]       3.5599999999999987e-01
+   &XC [&Type "Double"]       2.5420000000000007e+00
+   &FOCKSTART [&Type "Double"]       4.3000000000001898e-02
+   &INT_BF [&Type "Double"]       8.5300000000000264e-01
+   &INT_DENS [&Type "Double"]       4.4899999999999984e-01
+   &INT_DENSIO [&Type "Double"]       2.2493837999999996e+04
+   &INT_FUNC [&Type "Double"]       1.0899999999999510e-01
+   &INT_POT [&Type "Double"]       6.2599999999998790e-01
+   &INT_POTIO [&Type "Double"]       5.0000000000008704e-02
+   &INT_SUM [&Type "Double"]       5.3999999999998050e-02
+   &SPLITRIJ [&Type "Double"]       1.0750000000000006e+00
+   &COSX [&Type "Double"]       8.4100000000000001e+00
+$End
+$VdW_Correction
+   &GeometryIndex 3
+   &vdW [&Type "Double"]      -1.0230797955395448e-02
+$End
+$Single_Point_Data
+   &GeometryIndex 3
+   &FinalEnergy [&Type "Double"]      -1.1981565644612874e+03  "Final single point energy"
+   &Converged [&Type "Boolean"] true
+$End
+$SCF_Nuc_Gradient
+   &GeometryIndex 3
+   &NAtoms [&Type "Integer"] 12
+   &gradNorm [&Type "Double"]       8.3881045745688044e-03
+   &grad [&Type "ArrayOfDoubles", &Dim (36,1)] 
+                                                         0
+
+0                                      4.0354027027725385e-03
+1                                      2.1435062579336500e-03
+2                                      2.3389351372782348e-04
+3                                      1.5462443830037711e-03
+4                                      1.7746742215046549e-03
+5                                      1.2298047972896637e-03
+6                                     -2.2813564958793154e-04
+7                                     -1.6786318346468832e-03
+8                                     -8.0442307172659154e-04
+9                                     -9.9205883309013820e-04
+10                                    -1.9819773372263317e-03
+11                                    -2.3749911842072365e-04
+12                                    -1.5157267412280440e-03
+13                                     1.2643998273387903e-04
+14                                     5.9562765674486394e-04
+15                                    -9.5692909983058686e-04
+16                                    -9.0273685489445266e-04
+17                                     1.4106980668802062e-03
+18                                     4.9725766382259593e-04
+19                                     2.4736583861489476e-03
+20                                    -3.3144316920863002e-04
+21                                    -1.6842731226011333e-03
+22                                     1.3721071873510600e-03
+23                                     1.1582649502010203e-03
+24                                     8.7848898397961466e-04
+25                                    -2.1066450704268426e-03
+26                                    -1.4549220354159898e-03
+27                                    -2.4832444808409659e-04
+28                                    -7.4879044100815148e-04
+29                                    -3.6999048601491429e-04
+30                                     2.8845909714081180e-04
+31                                     6.8692008602182913e-04
+32                                    -1.5307152745677541e-03
+33                                    -1.6204049660984174e-03
+34                                    -1.1585246399650807e-03
+35                                     1.0070425793746699e-04
+   &Method [&Type "String"] "SCF"
+   &Level [&Type "String"] "Relaxed density"
+   &Mult [&Type "Integer"] 1
+   &State [&Type "Integer"] 0
+   &Irrep [&Type "Integer"] 0
+$End
+$Geometry
+   &GeometryIndex 4
+   &NAtoms [&Type "Integer"] 12
+   &NCorelessECP [&Type "Integer"] 0
+   &NGhostAtoms [&Type "Integer"] 0
+   &CartesianCoordinates [&Type "Coordinates", &Dim(12,4), &Units "Bohr"] 
+              O     -2.586367017250    2.313983327565   -1.578570174471
+              S     -2.197853561381   -0.677393667801   -1.179265194029
+              O     -3.586619583397   -1.464876928694    1.019743140212
+              O     -2.404435260848   -1.914449550708   -3.607029081268
+              C      1.227897713745   -0.644863195296   -0.358530923446
+              F      2.388561055308    0.860263564094   -2.003683045419
+              F      2.055149050159   -2.996735378235   -0.628411725645
+              C      1.814791227607    0.274306175381    2.352767509787
+              F      0.745265826259    2.496679618504    2.748939676621
+              F      4.296570470742    0.506449147839    2.587076882942
+              F      0.992322198096   -1.370825473043    4.029278059309
+              H     -2.745280229315    2.617466139846   -3.382315124594
+$End
+$SCF_Energy
+   &GeometryIndex 4
+   &Method [&Type "String"] "SCF"
+   &totalEnergy [&Type "ArrayOfDoubles", &Dim (1,1)] "Total energy of each state"
+                                                         0
+
+0                                     -1.1981468751338368e+03
+   &Mult [&Type "ArrayOfIntegers", &Dim (1,1)] "Multiplicity of each state"
+                                                         0
+
+0                                                        1
+$End
+$DFT_Energy
+   &GeometryIndex 4
+   &nAlphaEl [&Type "Integer"] 49
+   &nBetaEl [&Type "Integer"] 49
+   &nTotalEl [&Type "Integer"] 98
+   &finalEn [&Type "Double"]      -1.1981468751338368e+03  "No Van der Waals correction"
+   &eExchange [&Type "Double"]      -8.2996843435764731e+01
+   &eCorr [&Type "Double"]      -3.5261767226161371e+00
+   &eXC [&Type "Double"]      -8.6523020158380874e+01
+   &eCNL [&Type "Double"]       0.0000000000000000e+00
+$End
+$SCF_Timings
+   &GeometryIndex 4
+   &TOTAL [&Type "Double"]       1.3877000000000001e+01
+   &PREP [&Type "Double"]       2.0699999999999999e-01
+   &FOCK [&Type "Double"]       1.1964999999999998e+01
+   &DENS [&Type "Double"]       2.5000000000000000e-01
+   &ETOT [&Type "Double"]       1.2699999999999934e-01
+   &TRAFO [&Type "Double"]       5.0000000000000266e-02
+   &DIIS [&Type "Double"]       2.7800000000000002e-01
+   &SOSCF [&Type "Double"]       2.6300000000000168e-01
+   &XC [&Type "Double"]       2.4779999999999971e+00
+   &FOCKSTART [&Type "Double"]       3.2999999999999696e-02
+   &INT_BF [&Type "Double"]       8.0100000000002458e-01
+   &INT_DENS [&Type "Double"]       3.7399999999999789e-01
+   &INT_DENSIO [&Type "Double"]       2.0267492999999984e+04
+   &INT_FUNC [&Type "Double"]       9.7999999999996534e-02
+   &INT_POT [&Type "Double"]       5.8999999999998276e-01
+   &INT_POTIO [&Type "Double"]       5.3999999999994497e-02
+   &INT_SUM [&Type "Double"]       4.0999999999998371e-02
+   &SPLITRIJ [&Type "Double"]       1.0649999999999997e+00
+   &COSX [&Type "Double"]       8.8410000000000011e+00
+$End
+$VdW_Correction
+   &GeometryIndex 4
+   &vdW [&Type "Double"]      -1.0216571091738741e-02
+$End
+$Single_Point_Data
+   &GeometryIndex 4
+   &FinalEnergy [&Type "Double"]      -1.1981570917049285e+03  "Final single point energy"
+   &Converged [&Type "Boolean"] true
+$End
+$SCF_Nuc_Gradient
+   &GeometryIndex 4
+   &NAtoms [&Type "Integer"] 12
+   &gradNorm [&Type "Double"]       6.4296746891367206e-03
+   &grad [&Type "ArrayOfDoubles", &Dim (36,1)] 
+                                                         0
+
+0                                      3.1388598714105014e-03
+1                                      1.5892433560649780e-03
+2                                      1.1495821028704331e-04
+3                                     -1.4161994541415238e-03
+4                                      8.3181386810979427e-04
+5                                     -1.5252588615381025e-04
+6                                     -2.0059688890430033e-04
+7                                     -1.8190529256310864e-03
+8                                     -5.8425774390721006e-04
+9                                     -5.7734821105582591e-04
+10                                    -1.0083428090959282e-03
+11                                     2.4044450247851553e-04
+12                                     1.3911550587579866e-03
+13                                     2.8034094849230994e-04
+14                                    -9.6882927990177520e-04
+15                                    -7.0334589052675723e-04
+16                                    -1.2261915783510008e-04
+17                                     9.9506014347769682e-04
+18                                    -5.2321191714507212e-04
+19                                     9.1564065155094439e-04
+20                                    -6.0368085162314309e-06
+21                                    -5.9299476073995482e-05
+22                                     1.2087570545592351e-03
+23                                     2.7314542467184030e-03
+24                                     4.5504736920445909e-04
+25                                    -8.5777467083742571e-04
+26                                    -1.0033080608232163e-03
+27                                    -9.3568031331931064e-04
+28                                    -6.2297285996402443e-04
+29                                    -3.7610673701953987e-04
+30                                     6.5368817628926458e-04
+31                                     3.6319976851711499e-04
+32                                    -7.8232156517131675e-04
+33                                    -1.2230683724284066e-03
+34                                    -7.5823327822929418e-04
+35                                    -2.0853096084027183e-04
+   &Method [&Type "String"] "SCF"
+   &Level [&Type "String"] "Relaxed density"
+   &Mult [&Type "Integer"] 1
+   &State [&Type "Integer"] 0
+   &Irrep [&Type "Integer"] 0
+$End
+$Geometry
+   &GeometryIndex 5
+   &NAtoms [&Type "Integer"] 12
+   &NCorelessECP [&Type "Integer"] 0
+   &NGhostAtoms [&Type "Integer"] 0
+   &CartesianCoordinates [&Type "Coordinates", &Dim(12,4), &Units "Bohr"] 
+              O     -2.677962090618    2.287487768537   -1.536568088948
+              S     -2.222752657720   -0.696825848299   -1.180546121689
+              O     -3.599495104497   -1.511625480304    1.015122693465
+              O     -2.403454816635   -1.896145154026   -3.627549487722
+              C      1.208820418519   -0.660384432466   -0.363105863993
+              F      2.369606900007    0.815749718993   -2.038789521472
+              F      2.019812651907   -3.024684224569   -0.598633408201
+              C      1.811442571343    0.292092718952    2.336099145503
+              F      0.693559014037    2.492296807399    2.745161855831
+              F      4.290031881988    0.587803064046    2.540848021048
+              F      1.043178148834   -1.362290890410    4.032191231375
+              H     -2.532785027439    2.676529731598   -3.324230455197
+$End
+$SCF_Energy
+   &GeometryIndex 5
+   &Method [&Type "String"] "SCF"
+   &totalEnergy [&Type "ArrayOfDoubles", &Dim (1,1)] "Total energy of each state"
+                                                         0
+
+0                                     -1.1981472784694868e+03
+   &Mult [&Type "ArrayOfIntegers", &Dim (1,1)] "Multiplicity of each state"
+                                                         0
+
+0                                                        1
+$End
+$DFT_Energy
+   &GeometryIndex 5
+   &nAlphaEl [&Type "Integer"] 49
+   &nBetaEl [&Type "Integer"] 49
+   &nTotalEl [&Type "Integer"] 98
+   &finalEn [&Type "Double"]      -1.1981472784694868e+03  "No Van der Waals correction"
+   &eExchange [&Type "Double"]      -8.2993941858557605e+01
+   &eCorr [&Type "Double"]      -3.5257466942440736e+00
+   &eXC [&Type "Double"]      -8.6519688552801682e+01
+   &eCNL [&Type "Double"]       0.0000000000000000e+00
+$End
+$SCF_Timings
+   &GeometryIndex 5
+   &TOTAL [&Type "Double"]       1.2677000000000001e+01
+   &PREP [&Type "Double"]       1.9400000000000001e-01
+   &FOCK [&Type "Double"]       1.0891000000000000e+01
+   &DENS [&Type "Double"]       2.7700000000000102e-01
+   &ETOT [&Type "Double"]       1.1499999999999955e-01
+   &TRAFO [&Type "Double"]       4.5000000000000373e-02
+   &DIIS [&Type "Double"]       2.6000000000000068e-01
+   &SOSCF [&Type "Double"]       2.9899999999999949e-01
+   &XC [&Type "Double"]       2.2530000000000019e+00
+   &FOCKSTART [&Type "Double"]       2.0000000000000684e-02
+   &INT_BF [&Type "Double"]       7.7300000000001323e-01
+   &INT_DENS [&Type "Double"]       3.6400000000000565e-01
+   &INT_DENSIO [&Type "Double"]       1.8315522000000001e+04
+   &INT_FUNC [&Type "Double"]       8.4999999999999520e-02
+   &INT_POT [&Type "Double"]       5.1899999999997704e-01
+   &INT_POTIO [&Type "Double"]       3.6000000000003363e-02
+   &INT_SUM [&Type "Double"]       1.6000000000002013e-02
+   &SPLITRIJ [&Type "Double"]       9.1799999999999926e-01
+   &COSX [&Type "Double"]       8.0319999999999965e+00
+$End
+$VdW_Correction
+   &GeometryIndex 5
+   &vdW [&Type "Double"]      -1.0220208100693275e-02
+$End
+$Single_Point_Data
+   &GeometryIndex 5
+   &FinalEnergy [&Type "Double"]      -1.1981574986775875e+03  "Final single point energy"
+   &Converged [&Type "Boolean"] true
+$End
+$SCF_Nuc_Gradient
+   &GeometryIndex 5
+   &NAtoms [&Type "Integer"] 12
+   &gradNorm [&Type "Double"]       4.8077276212880257e-03
+   &grad [&Type "ArrayOfDoubles", &Dim (36,1)] 
+                                                         0
+
+0                                      1.1089694207768314e-03
+1                                      8.6063226255818977e-04
+2                                     -7.5611502341683913e-04
+3                                     -2.0490114708421985e-03
+4                                     -2.7553421508777135e-04
+5                                     -1.2799476006739426e-04
+6                                     -4.8025120076114404e-05
+7                                     -1.3720991333200081e-03
+8                                      2.3082594177954946e-05
+9                                     -3.8925322064814867e-04
+10                                     3.3873048515108481e-04
+11                                    -6.0786920314410140e-06
+12                                     2.4706530705217301e-03
+13                                     1.0126778080823409e-03
+14                                    -1.2895232596464915e-03
+15                                    -2.6003832537823800e-04
+16                                     1.0040574813195672e-04
+17                                     3.9253371638637571e-04
+18                                    -8.3657586328135698e-04
+19                                    -7.9978870486804442e-04
+20                                     2.9580119048009984e-04
+21                                     1.0357854308114106e-03
+22                                     1.7602873418681432e-04
+23                                     1.3737152652761725e-03
+24                                    -4.0473610468142254e-04
+25                                     2.8811520582704912e-04
+26                                     7.6717380012540821e-05
+27                                    -8.2287045593793179e-05
+28                                    -3.5714045552361915e-05
+29                                    -1.4088002853561481e-04
+30                                    -6.3059120308288933e-05
+31                                     4.6093931451124707e-05
+32                                     2.2065501617529130e-04
+33                                    -4.8242164270538015e-04
+34                                    -3.3954815937137564e-04
+35                                    -6.1913319230201249e-05
+   &Method [&Type "String"] "SCF"
+   &Level [&Type "String"] "Relaxed density"
+   &Mult [&Type "Integer"] 1
+   &State [&Type "Integer"] 0
+   &Irrep [&Type "Integer"] 0
+$End
+$Geometry
+   &GeometryIndex 6
+   &NAtoms [&Type "Integer"] 12
+   &NCorelessECP [&Type "Integer"] 0
+   &NGhostAtoms [&Type "Integer"] 0
+   &CartesianCoordinates [&Type "Coordinates", &Dim(12,4), &Units "Bohr"] 
+              O     -2.717213054969    2.271919590054   -1.536154538865
+              S     -2.232764477037   -0.705213393027   -1.175746651809
+              O     -3.603998226991   -1.503407733172    1.028609479451
+              O     -2.405170655741   -1.914975799902   -3.617639793955
+              C      1.196611750370   -0.660567075149   -0.367595688267
+              F      2.348971843127    0.816396154692   -2.051421513823
+              F      2.018674316828   -3.021214183854   -0.603440921885
+              C      1.803715147302    0.294019925097    2.326495209789
+              F      0.667925863324    2.483023266316    2.749381358760
+              F      4.280170784447    0.615181182955    2.520848958240
+              F      1.059946730051   -1.371965067020    4.022857238317
+              H     -2.416868130985    2.696806912462   -3.296193135953
+$End
+$SCF_Energy
+   &GeometryIndex 6
+   &Method [&Type "String"] "SCF"
+   &totalEnergy [&Type "ArrayOfDoubles", &Dim (1,1)] "Total energy of each state"
+                                                         0
+
+0                                     -1.1981473683808749e+03
+   &Mult [&Type "ArrayOfIntegers", &Dim (1,1)] "Multiplicity of each state"
+                                                         0
+
+0                                                        1
+$End
+$DFT_Energy
+   &GeometryIndex 6
+   &nAlphaEl [&Type "Integer"] 49
+   &nBetaEl [&Type "Integer"] 49
+   &nTotalEl [&Type "Integer"] 98
+   &finalEn [&Type "Double"]      -1.1981473683808749e+03  "No Van der Waals correction"
+   &eExchange [&Type "Double"]      -8.2994654890974942e+01
+   &eCorr [&Type "Double"]      -3.5258861225291480e+00
+   &eXC [&Type "Double"]      -8.6520541013504086e+01
+   &eCNL [&Type "Double"]       0.0000000000000000e+00
+$End
+$SCF_Timings
+   &GeometryIndex 6
+   &TOTAL [&Type "Double"]       1.0937000000000001e+01
+   &PREP [&Type "Double"]       1.7699999999999999e-01
+   &FOCK [&Type "Double"]       9.1849999999999987e+00
+   &DENS [&Type "Double"]       2.1900000000000119e-01
+   &ETOT [&Type "Double"]       1.2700000000000067e-01
+   &TRAFO [&Type "Double"]       3.3000000000000362e-02
+   &DIIS [&Type "Double"]       2.6700000000000013e-01
+   &SOSCF [&Type "Double"]       2.1599999999999930e-01
+   &XC [&Type "Double"]       1.8919999999999988e+00
+   &FOCKSTART [&Type "Double"]       2.8000000000000580e-02
+   &INT_BF [&Type "Double"]       6.2200000000000855e-01
+   &INT_DENS [&Type "Double"]       3.2999999999999097e-01
+   &INT_DENSIO [&Type "Double"]       1.2785980000000003e+04
+   &INT_FUNC [&Type "Double"]       9.1999999999997195e-02
+   &INT_POT [&Type "Double"]       4.0900000000000047e-01
+   &INT_POTIO [&Type "Double"]       3.0000000000002247e-02
+   &INT_SUM [&Type "Double"]       5.1000000000000156e-02
+   &SPLITRIJ [&Type "Double"]       7.7599999999999969e-01
+   &COSX [&Type "Double"]       6.9950000000000010e+00
+$End
+$VdW_Correction
+   &GeometryIndex 6
+   &vdW [&Type "Double"]      -1.0232555073735165e-02
+$End
+$Single_Point_Data
+   &GeometryIndex 6
+   &FinalEnergy [&Type "Double"]      -1.1981576009359487e+03  "Final single point energy"
+   &Converged [&Type "Boolean"] true
+$End
+$SCF_Nuc_Gradient
+   &GeometryIndex 6
+   &NAtoms [&Type "Integer"] 12
+   &gradNorm [&Type "Double"]       3.2912866928063041e-03
+   &grad [&Type "ArrayOfDoubles", &Dim (36,1)] 
+                                                         0
+
+0                                     -1.0827399630342513e-04
+1                                      3.6601365887345156e-04
+2                                     -7.0017481682940373e-04
+3                                     -1.1235828276210075e-03
+4                                     -4.7605847053809369e-04
+5                                      3.0320182314237112e-04
+6                                      2.4344373908071531e-04
+7                                     -5.9338917045696207e-04
+8                                      1.4475546080769026e-04
+9                                     -2.6270346319251411e-04
+10                                     6.3826129092861919e-04
+11                                    -3.8849941446798326e-04
+12                                     1.6887461560771185e-03
+13                                     1.2250190452691677e-03
+14                                    -6.1587629837057652e-04
+15                                    -1.0257885018729508e-04
+16                                    -2.6642645669570415e-04
+17                                     2.0622671889352717e-04
+18                                    -5.2443466937441576e-04
+19                                    -8.9954197925320805e-04
+20                                     2.6860345796554929e-04
+21                                     8.3185402096093756e-04
+22                                    -3.5703609233877766e-04
+23                                     8.8023525925826171e-05
+24                                    -3.5521097149126602e-04
+25                                     4.4730318083080034e-04
+26                                     3.9415806507571622e-04
+27                                    -1.0485317336384506e-04
+28                                     1.6592665604938886e-04
+29                                    -2.3451207044696779e-05
+30                                    -1.4906609072331552e-04
+31                                    -5.3209339287231704e-05
+32                                     3.5996377692582129e-04
+33                                    -3.3339889628200466e-05
+34                                    -1.9686241482901512e-04
+35                                    -3.6931016387892280e-05
+   &Method [&Type "String"] "SCF"
+   &Level [&Type "String"] "Relaxed density"
+   &Mult [&Type "Integer"] 1
+   &State [&Type "Integer"] 0
+   &Irrep [&Type "Integer"] 0
+$End
+$Geometry
+   &GeometryIndex 7
+   &NAtoms [&Type "Integer"] 12
+   &NCorelessECP [&Type "Integer"] 0
+   &NGhostAtoms [&Type "Integer"] 0
+   &CartesianCoordinates [&Type "Coordinates", &Dim(12,4), &Units "Bohr"] 
+              O     -2.723325378622    2.266059189657   -1.549966896515
+              S     -2.235275442921   -0.706867086587   -1.168448147362
+              O     -3.606014250038   -1.475878284137    1.046260670605
+              O     -2.408268640227   -1.944004749253   -3.596268698680
+              C      1.190677427278   -0.653789850578   -0.370670392797
+              F      2.331058327127    0.840688344035   -2.049936172489
+              F      2.032257244555   -3.004765413121   -0.624418993328
+              C      1.798214119204    0.288186710780    2.324427679728
+              F      0.662014736613    2.474217872229    2.757514915182
+              F      4.274996090793    0.610371569334    2.519404612402
+              F      1.057578773318   -1.387191772240    4.012673980398
+              H     -2.373911117354    2.692977249333   -3.300572557143
+$End
+$SCF_Energy
+   &GeometryIndex 7
+   &Method [&Type "String"] "SCF"
+   &totalEnergy [&Type "ArrayOfDoubles", &Dim (1,1)] "Total energy of each state"
+                                                         0
+
+0                                     -1.1981473864874595e+03
+   &Mult [&Type "ArrayOfIntegers", &Dim (1,1)] "Multiplicity of each state"
+                                                         0
+
+0                                                        1
+$End
+$DFT_Energy
+   &GeometryIndex 7
+   &nAlphaEl [&Type "Integer"] 49
+   &nBetaEl [&Type "Integer"] 49
+   &nTotalEl [&Type "Integer"] 98
+   &finalEn [&Type "Double"]      -1.1981473864874595e+03  "No Van der Waals correction"
+   &eExchange [&Type "Double"]      -8.2995864087682506e+01
+   &eCorr [&Type "Double"]      -3.5261115081628578e+00
+   &eXC [&Type "Double"]      -8.6521975595845362e+01
+   &eCNL [&Type "Double"]       0.0000000000000000e+00
+$End
+$SCF_Timings
+   &GeometryIndex 7
+   &TOTAL [&Type "Double"]       1.0353999999999999e+01
+   &PREP [&Type "Double"]       2.0200000000000001e-01
+   &FOCK [&Type "Double"]       8.7259999999999991e+00
+   &DENS [&Type "Double"]       1.6600000000000126e-01
+   &ETOT [&Type "Double"]       9.0000000000001190e-02
+   &TRAFO [&Type "Double"]       4.6999999999999709e-02
+   &DIIS [&Type "Double"]       2.2499999999999987e-01
+   &SOSCF [&Type "Double"]       1.7399999999999949e-01
+   &XC [&Type "Double"]       1.7659999999999980e+00
+   &FOCKSTART [&Type "Double"]       2.7000000000000579e-02
+   &INT_BF [&Type "Double"]       5.8599999999999941e-01
+   &INT_DENS [&Type "Double"]       2.7300000000001212e-01
+   &INT_DENSIO [&Type "Double"]       1.0553905999999997e+04
+   &INT_FUNC [&Type "Double"]       8.3999999999995412e-02
+   &INT_POT [&Type "Double"]       3.8199999999999945e-01
+   &INT_POTIO [&Type "Double"]       3.0999999999999694e-02
+   &INT_SUM [&Type "Double"]       5.2999999999999936e-02
+   &SPLITRIJ [&Type "Double"]       7.3399999999999976e-01
+   &COSX [&Type "Double"]       6.7440000000000007e+00
+$End
+$VdW_Correction
+   &GeometryIndex 7
+   &vdW [&Type "Double"]      -1.0242524568087059e-02
+$End
+$Single_Point_Data
+   &GeometryIndex 7
+   &FinalEnergy [&Type "Double"]      -1.1981576290120277e+03  "Final single point energy"
+   &Converged [&Type "Boolean"] true
+$End
+$SCF_Nuc_Gradient
+   &GeometryIndex 7
+   &NAtoms [&Type "Integer"] 12
+   &gradNorm [&Type "Double"]       1.8091644771239680e-03
+   &grad [&Type "ArrayOfDoubles", &Dim (36,1)] 
+                                                         0
+
+0                                     -4.0399601473692706e-04
+1                                      1.9079643306449737e-04
+2                                     -2.6932300032106926e-04
+3                                     -5.9539749056093736e-05
+4                                     -3.0539089355516638e-04
+5                                      3.5345872022858431e-04
+6                                      3.0872885630047701e-04
+7                                     -8.2833090188682922e-05
+8                                      1.4701096404643027e-04
+9                                     -1.3147835251417581e-04
+10                                     4.0232338853648982e-04
+11                                    -4.5353650045621758e-04
+12                                     3.5682047789483735e-04
+13                                     9.4580701245979080e-04
+14                                     2.1585287561623887e-05
+15                                     3.0332263637403893e-05
+16                                    -3.9228806996766683e-04
+17                                     8.4074373132873647e-05
+18                                    -1.4961844536114463e-04
+19                                    -4.9964988732175450e-04
+20                                     1.3219461927891792e-04
+21                                     2.5632643478366640e-04
+22                                    -4.7003982199480578e-04
+23                                    -4.6238313501344988e-04
+24                                    -1.5012543268751481e-04
+25                                     2.5886733713800152e-04
+26                                     3.0111180362506836e-04
+27                                    -2.7952523960273233e-05
+28                                     1.7245730044068949e-04
+29                                     1.8530043749519660e-05
+30                                    -9.8460663526240628e-05
+31                                    -4.7497928738588140e-05
+32                                     1.8757297481153062e-04
+33                                     6.8963161886489860e-05
+34                                    -1.7255186593783460e-04
+35                                    -6.0296046689626388e-05
+   &Method [&Type "String"] "SCF"
+   &Level [&Type "String"] "Relaxed density"
+   &Mult [&Type "Integer"] 1
+   &State [&Type "Integer"] 0
+   &Irrep [&Type "Integer"] 0
+$End
+$Geometry
+   &GeometryIndex 8
+   &NAtoms [&Type "Integer"] 12
+   &NCorelessECP [&Type "Integer"] 0
+   &NGhostAtoms [&Type "Integer"] 0
+   &CartesianCoordinates [&Type "Coordinates", &Dim(12,4), &Units "Bohr"] 
+              O     -2.719624428409    2.262386654366   -1.566078630400
+              S     -2.237341041969   -0.707790112018   -1.161280029539
+              O     -3.610568529081   -1.448262261617    1.061548208657
+              O     -2.411830281947   -1.973981351661   -3.573547136448
+              C      1.187065416014   -0.645589794562   -0.372939638454
+              F      2.312581593124    0.872597787499   -2.043535238275
+              F      2.048929801256   -2.985271835218   -0.649713531311
+              C      1.795319932410    0.281183748212    2.325799518527
+              F      0.665522358995    2.468044002670    2.765732522697
+              F      4.273337545298    0.594541524041    2.523793869800
+              F      1.049580287702   -1.400497416236    4.004993245266
+              H     -2.352970763666    2.682642833976   -3.314773160519
+$End
+$SCF_Energy
+   &GeometryIndex 8
+   &Method [&Type "String"] "SCF"
+   &totalEnergy [&Type "ArrayOfDoubles", &Dim (1,1)] "Total energy of each state"
+                                                         0
+
+0                                     -1.1981474053683667e+03
+   &Mult [&Type "ArrayOfIntegers", &Dim (1,1)] "Multiplicity of each state"
+                                                         0
+
+0                                                        1
+$End
+$DFT_Energy
+   &GeometryIndex 8
+   &nAlphaEl [&Type "Integer"] 49
+   &nBetaEl [&Type "Integer"] 49
+   &nTotalEl [&Type "Integer"] 98
+   &finalEn [&Type "Double"]      -1.1981474053683667e+03  "No Van der Waals correction"
+   &eExchange [&Type "Double"]      -8.2996819945059457e+01
+   &eCorr [&Type "Double"]      -3.5262811472067686e+00
+   &eXC [&Type "Double"]      -8.6523101092266231e+01
+   &eCNL [&Type "Double"]       0.0000000000000000e+00
+$End
+$SCF_Timings
+   &GeometryIndex 8
+   &TOTAL [&Type "Double"]       9.2840000000000007e+00
+   &PREP [&Type "Double"]       1.6300000000000001e-01
+   &FOCK [&Type "Double"]       7.8150000000000004e+00
+   &DENS [&Type "Double"]       2.2900000000000009e-01
+   &ETOT [&Type "Double"]       8.1999999999998741e-02
+   &TRAFO [&Type "Double"]       3.8000000000000700e-02
+   &DIIS [&Type "Double"]       2.0600000000000041e-01
+   &SOSCF [&Type "Double"]       1.6799999999999971e-01
+   &XC [&Type "Double"]       1.5519999999999996e+00
+   &FOCKSTART [&Type "Double"]       1.5999999999998682e-02
+   &INT_BF [&Type "Double"]       4.8899999999999788e-01
+   &INT_DENS [&Type "Double"]       2.5399999999999556e-01
+   &INT_DENSIO [&Type "Double"]       9.5495500000000011e+03
+   &INT_FUNC [&Type "Double"]       7.7000000000002400e-02
+   &INT_POT [&Type "Double"]       3.2400000000000784e-01
+   &INT_POTIO [&Type "Double"]       2.4999999999998579e-02
+   &INT_SUM [&Type "Double"]       1.2000000000000011e-02
+   &SPLITRIJ [&Type "Double"]       6.2200000000000011e-01
+   &COSX [&Type "Double"]       6.0230000000000015e+00
+$End
+$VdW_Correction
+   &GeometryIndex 8
+   &vdW [&Type "Double"]      -1.0248399697546220e-02
+$End
+$Single_Point_Data
+   &GeometryIndex 8
+   &FinalEnergy [&Type "Double"]      -1.1981576537680642e+03  "Final single point energy"
+   &Converged [&Type "Boolean"] true
+$End
+$SCF_Nuc_Gradient
+   &GeometryIndex 8
+   &NAtoms [&Type "Integer"] 12
+   &gradNorm [&Type "Double"]       1.2063523908474672e-03
+   &grad [&Type "ArrayOfDoubles", &Dim (36,1)] 
+                                                         0
+
+0                                     -2.0513286852396411e-04
+1                                      1.1871264745962266e-04
+2                                      1.0857473440977760e-04
+3                                      5.3438588620090754e-04
+4                                     -1.0261912220769522e-04
+5                                      1.0220053666739853e-04
+6                                      2.3574202784020030e-04
+7                                      1.5710556483629963e-04
+8                                      1.2281202512212744e-04
+9                                      1.0499289230920758e-05
+10                                     8.8137187537525290e-05
+11                                    -2.3159079512923215e-04
+12                                    -6.5619575241331702e-04
+13                                     3.6284417135417707e-04
+14                                     2.5102643048505034e-04
+15                                     6.6595420932342823e-05
+16                                    -2.3725300337913040e-04
+17                                    -4.5593998236365552e-06
+18                                     8.5435131658473319e-05
+19                                    -8.5551446959702710e-05
+20                                     5.2650993402727746e-06
+21                                    -1.5464744209609866e-04
+22                                    -2.5534437533254625e-04
+23                                    -3.0465819423012300e-04
+24                                     3.4330289522238139e-05
+25                                    -6.1449083521146366e-06
+26                                     7.1358307355410806e-05
+27                                     2.9630674106152029e-05
+28                                     8.0273455277909538e-05
+29                                     4.6283415169242617e-06
+30                                    -1.0399867248235458e-05
+31                                     1.6225646658032441e-05
+32                                    -5.9933358850873303e-05
+33                                     2.9757220897802213e-05
+34                                    -1.3638589540202069e-04
+35                                    -6.5123612871849766e-05
+   &Method [&Type "String"] "SCF"
+   &Level [&Type "String"] "Relaxed density"
+   &Mult [&Type "Integer"] 1
+   &State [&Type "Integer"] 0
+   &Irrep [&Type "Integer"] 0
+$End
+$Geometry
+   &GeometryIndex 9
+   &NAtoms [&Type "Integer"] 12
+   &NCorelessECP [&Type "Integer"] 0
+   &NGhostAtoms [&Type "Integer"] 0
+   &CartesianCoordinates [&Type "Coordinates", &Dim(12,4), &Units "Bohr"] 
+              O     -2.719560482009    2.260380310356   -1.568834105075
+              S     -2.239350418943   -0.709440994534   -1.160092291731
+              O     -3.614955492024   -1.445418612529    1.062786784206
+              O     -2.412759425814   -1.981327069814   -3.569198393795
+              C      1.186545757284   -0.644015043426   -0.373395492245
+              F      2.306783084201    0.881367884726   -2.041678046250
+              F      2.053404433006   -2.980591564286   -0.656151422224
+              C      1.795777268872    0.280356544779    2.326516624964
+              F      0.669647390856    2.468994631456    2.765756498531
+              F      4.274318358965    0.588666500429    2.525228698797
+              F      1.046433204793   -1.400522990478    4.004876587489
+              H     -2.346281789460    2.681554182775   -3.315815442667
+$End
+$SCF_Mulliken_Population_Analysis
+   &GeometryIndex 9
+   &NAtoms [&Type "Integer"] 12
+   &ATNO [&Type "ArrayOfIntegers", &Dim (12,1)] 
+                                                         0
+
+0                                                        8
+1                                                       16
+2                                                        8
+3                                                        8
+4                                                        6
+5                                                        9
+6                                                        9
+7                                                        6
+8                                                        9
+9                                                        9
+10                                                       9
+11                                                       1
+   &AtomicCharges [&Type "ArrayOfDoubles", &Dim (12,1)] 
+                                                         0
+
+0                                     -3.1921359853806308e-01
+1                                      8.9642922249705848e-01
+2                                     -3.9498082747851626e-01
+3                                     -4.1492366838724593e-01
+4                                      2.3380694806042701e-01
+5                                     -1.7394799443308351e-01
+6                                     -1.5530904465158812e-01
+7                                      5.5332833869976294e-01
+8                                     -1.5165358044983357e-01
+9                                     -1.5650609158813999e-01
+10                                    -1.4241666425890465e-01
+11                                     2.2538696052828722e-01
+   &Method [&Type "String"] "SCF"
+   &Level [&Type "String"] "Relaxed density"
+   &Mult [&Type "Integer"] 1
+   &State [&Type "Integer"] -1
+   &Irrep [&Type "Integer"] 0
+$End
+$SCF_Loewdin_Population_Analysis
+   &GeometryIndex 9
+   &NAtoms [&Type "Integer"] 12
+   &ATNO [&Type "ArrayOfIntegers", &Dim (12,1)] 
+                                                         0
+
+0                                                        8
+1                                                       16
+2                                                        8
+3                                                        8
+4                                                        6
+5                                                        9
+6                                                        9
+7                                                        6
+8                                                        9
+9                                                        9
+10                                                       9
+11                                                       1
+   &AtomicCharges [&Type "ArrayOfDoubles", &Dim (12,1)] 
+                                                         0
+
+0                                     -2.2133503388244335e-01
+1                                      1.1334872428073712e+00
+2                                     -4.3920439864773897e-01
+3                                     -4.5835483199819649e-01
+4                                     -4.3229346769622978e-02
+5                                     -5.0642155416653623e-02
+6                                     -3.2533986005226723e-02
+7                                      9.8439492791880134e-02
+8                                     -3.1044279355665338e-02
+9                                     -3.2896135564302043e-02
+10                                    -2.0710766160631167e-02
+11                                     9.8024198201433821e-02
+   &Method [&Type "String"] "SCF"
+   &Level [&Type "String"] "Relaxed density"
+   &Mult [&Type "Integer"] 1
+   &State [&Type "Integer"] -1
+   &Irrep [&Type "Integer"] 0
+$End
+$SCF_Mayer_Population_Analysis
+   &GeometryIndex 9
+   &NAtoms [&Type "Integer"] 12 "Total number of atoms"
+   &NBondOrdersPrint [&Type "Integer"] 11 "The number of bond orders larger than threshold"
+   &bondThresh [&Type "Double"]       1.0000000000000001e-01  "The threshold for printing"
+   &components [&Type "ArrayOfIntegers", &Dim (11,4)] "The indices and atomic numbers of the bonding atoms"
+                                                         0                           1                           2                           3
+
+0                                                        0                           8                           1                          16
+1                                                        0                           8                          11                           1
+2                                                        1                          16                           2                           8
+3                                                        1                          16                           3                           8
+4                                                        1                          16                           4                           6
+5                                                        4                           6                           5                           9
+6                                                        4                           6                           6                           9
+7                                                        4                           6                           7                           6
+8                                                        7                           6                           8                           9
+9                                                        7                           6                           9                           9
+10                                                       7                           6                          10                           9
+   &BondOrders [&Type "ArrayOfDoubles", &Dim (11,1)] "The bond orders"
+                                                         0
+
+0                                      9.7519263806901302e-01
+1                                      9.2937347752844068e-01
+2                                      1.8003536055924754e+00
+3                                      1.7588679883624980e+00
+4                                      7.6764731493637683e-01
+5                                      1.0686630698204462e+00
+6                                      1.1052151750062316e+00
+7                                      8.5024991403605965e-01
+8                                      1.1454941097597793e+00
+9                                      1.1398678531270632e+00
+10                                     1.1530393239768406e+00
+   &ATNO [&Type "ArrayOfIntegers", &Dim (12,1)] "Atomic number of the elements"
+                                                         0
+
+0                                                        8
+1                                                       16
+2                                                        8
+3                                                        8
+4                                                        6
+5                                                        9
+6                                                        9
+7                                                        6
+8                                                        9
+9                                                        9
+10                                                       9
+11                                                       1
+   &NA [&Type "ArrayOfDoubles", &Dim (12,1)] "Mulliken gross atomic population"
+                                                         0
+
+0                                      8.3192135985380595e+00
+1                                      1.5103570777502942e+01
+2                                      8.3949808274785145e+00
+3                                      8.4149236683872424e+00
+4                                      5.7661930519395757e+00
+5                                      9.1739479944330817e+00
+6                                      9.1553090446515846e+00
+7                                      5.4466716613002326e+00
+8                                      9.1516535804498282e+00
+9                                      9.1565060915881453e+00
+10                                     9.1424166642589046e+00
+11                                     7.7461303947171212e-01
+   &ZA [&Type "ArrayOfDoubles", &Dim (12,1)] "Total nuclear charge"
+                                                         0
+
+0                                      8.0000000000000000e+00
+1                                      1.6000000000000000e+01
+2                                      8.0000000000000000e+00
+3                                      8.0000000000000000e+00
+4                                      6.0000000000000000e+00
+5                                      9.0000000000000000e+00
+6                                      9.0000000000000000e+00
+7                                      6.0000000000000000e+00
+8                                      9.0000000000000000e+00
+9                                      9.0000000000000000e+00
+10                                     9.0000000000000000e+00
+11                                     1.0000000000000000e+00
+   &QA [&Type "ArrayOfDoubles", &Dim (12,1)] "Mulliken gross atomic charge"
+                                                         0
+
+0                                     -3.1921359853805953e-01
+1                                      8.9642922249705848e-01
+2                                     -3.9498082747851448e-01
+3                                     -4.1492366838724237e-01
+4                                      2.3380694806042435e-01
+5                                     -1.7394799443308173e-01
+6                                     -1.5530904465158457e-01
+7                                      5.5332833869976739e-01
+8                                     -1.5165358044982824e-01
+9                                     -1.5650609158814532e-01
+10                                    -1.4241666425890465e-01
+11                                     2.2538696052828788e-01
+   &VA [&Type "ArrayOfDoubles", &Dim (12,1)] "Mayer's total valence"
+                                                         0
+
+0                                      2.0699315687196620e+00
+1                                      5.3760707090163660e+00
+2                                      2.0328543262916057e+00
+3                                      2.0053382765273806e+00
+4                                      4.0496257302370751e+00
+5                                      1.1548693952163784e+00
+6                                      1.1858163911399213e+00
+7                                      4.3490761613064404e+00
+8                                      1.1983428560210205e+00
+9                                      1.1956412481913636e+00
+10                                     1.2051631942736556e+00
+11                                     1.0013201488927015e+00
+   &BVA [&Type "ArrayOfDoubles", &Dim (12,1)] "Mayer's bonded valence"
+                                                         0
+
+0                                      2.0699315687196407e+00
+1                                      5.3760707090162887e+00
+2                                      2.0328543262915577e+00
+3                                      2.0053382765273096e+00
+4                                      4.0496257302370138e+00
+5                                      1.1548693952163127e+00
+6                                      1.1858163911399071e+00
+7                                      4.3490761613064493e+00
+8                                      1.1983428560210720e+00
+9                                      1.1956412481913814e+00
+10                                     1.2051631942736512e+00
+11                                     1.0013201488926966e+00
+   &FA [&Type "ArrayOfDoubles", &Dim (12,1)] "Mayer's free valence"
+                                                         0
+
+0                                      0.0000000000000000e+00
+1                                      0.0000000000000000e+00
+2                                      0.0000000000000000e+00
+3                                      0.0000000000000000e+00
+4                                      0.0000000000000000e+00
+5                                      0.0000000000000000e+00
+6                                      0.0000000000000000e+00
+7                                      0.0000000000000000e+00
+8                                      0.0000000000000000e+00
+9                                      0.0000000000000000e+00
+10                                     0.0000000000000000e+00
+11                                     0.0000000000000000e+00
+   &Method [&Type "String"] "SCF"
+   &Level [&Type "String"] "Relaxed density"
+   &Mult [&Type "Integer"] 1
+   &State [&Type "Integer"] -1
+   &Irrep [&Type "Integer"] 0
+$End
+$SCF_Energy
+   &GeometryIndex 9
+   &Method [&Type "String"] "SCF"
+   &totalEnergy [&Type "ArrayOfDoubles", &Dim (1,1)] "Total energy of each state"
+                                                         0
+
+0                                     -1.1981474152493652e+03
+   &Mult [&Type "ArrayOfIntegers", &Dim (1,1)] "Multiplicity of each state"
+                                                         0
+
+0                                                        1
+$End
+$DFT_Energy
+   &GeometryIndex 9
+   &nAlphaEl [&Type "Integer"] 49
+   &nBetaEl [&Type "Integer"] 49
+   &nTotalEl [&Type "Integer"] 98
+   &finalEn [&Type "Double"]      -1.1981474152493652e+03  "No Van der Waals correction"
+   &eExchange [&Type "Double"]      -8.2996771220013272e+01
+   &eCorr [&Type "Double"]      -3.5262641168412654e+00
+   &eXC [&Type "Double"]      -8.6523035336854534e+01
+   &eCNL [&Type "Double"]       0.0000000000000000e+00
+$End
+$SCF_Timings
+   &GeometryIndex 9
+   &TOTAL [&Type "Double"]       9.7970000000000006e+00
+   &PREP [&Type "Double"]       2.0399999999999999e-01
+   &FOCK [&Type "Double"]       8.3790000000000013e+00
+   &DENS [&Type "Double"]       9.9000000000001087e-02
+   &ETOT [&Type "Double"]       7.0999999999999508e-02
+   &POP [&Type "Double"]       8.2000000000000739e-02
+   &TRAFO [&Type "Double"]       2.7999999999998693e-02
+   &DIIS [&Type "Double"]       3.8999999999999924e-02
+   &SOSCF [&Type "Double"]       3.0099999999999949e-01
+   &XC [&Type "Double"]       1.4329999999999992e+00
+   &FOCKSTART [&Type "Double"]       2.9000000000000331e-02
+   &INT_BF [&Type "Double"]       5.0800000000000134e-01
+   &INT_DENS [&Type "Double"]       2.2699999999999809e-01
+   &INT_DENSIO [&Type "Double"]       9.4211769999999942e+03
+   &INT_FUNC [&Type "Double"]       5.7999999999997831e-02
+   &INT_POT [&Type "Double"]       3.3500000000000107e-01
+   &INT_POTIO [&Type "Double"]       2.1999999999998243e-02
+   &INT_SUM [&Type "Double"]       2.1000000000000130e-02
+   &SPLITRIJ [&Type "Double"]       5.9299999999999842e-01
+   &COSX [&Type "Double"]       6.8280000000000012e+00
+$End
+$VdW_Correction
+   &GeometryIndex 9
+   &vdW [&Type "Double"]      -1.0247637351106606e-02
+$End
+$Single_Point_Data
+   &GeometryIndex 9
+   &FinalEnergy [&Type "Double"]      -1.1981576628867163e+03  "Final single point energy"
+   &Converged [&Type "Boolean"] true
+$End
+$SCF_Dipole_Moment
+   &GeometryIndex 9
+   &dipoleMagnitude [&Type "Double", &Units "a.u."]       1.0511661517971733e+00
+   &dipoleElecContrib [&Type "ArrayOfDoubles", &Dim (3,1)] "Electronic contribution"
+                                                         0
+
+0                                      6.5371712037812708e+00
+1                                     -2.5818250929649855e-01
+2                                      3.9429230070225691e+00
+   &dipoleNucContrib [&Type "ArrayOfDoubles", &Dim (3,1)] "Nuclear contribution"
+                                                         0
+
+0                                     -6.0952846305732988e+00
+1                                      1.0489558926755995e+00
+2                                     -4.4761809101442793e+00
+   &dipoleTotal [&Type "ArrayOfDoubles", &Dim (3,1)] "Total"
+                                                         0
+
+0                                      4.4188657320797198e-01
+1                                      7.9077338337910097e-01
+2                                     -5.3325790312171018e-01
+   &doAtomicDipole [&Type "Boolean"] false
+   &Method [&Type "String"] "SCF"
+   &Level [&Type "String"] "Relaxed density"
+   &Mult [&Type "Integer"] 1
+   &State [&Type "Integer"] -1
+   &Irrep [&Type "Integer"] 0
+$End
+$THERMOCHEMISTRY_Energies
+   &GeometryIndex 9
+   &temperature [&Type "Double"]       2.9814999999999998e+02
+   &pressure [&Type "Double"]       1.0000000000000000e+00
+   &totalMass [&Type "Double"]       2.0007700000000000e+02
+   &spinDegeneracy [&Type "Integer"] 1
+   &elEnergy [&Type "Double"]      -1.1981576628867163e+03
+   &transEnergy [&Type "Double"]       1.4162714244859817e-03
+   &rotEnergy [&Type "Double"]       1.4162714244859817e-03
+   &vibEnergy [&Type "Double"]       7.5828836478130908e-03
+   &numOfFreqs [&Type "Integer"] 36
+   &freqScalingFactor [&Type "Double"]       1.0000000000000000e+00
+   &FREQ [&Type "ArrayOfDoubles", &Units "cm^-1", &Dim (36,1)] 
+                                                         0
+
+0                                      0.0000000000000000e+00
+1                                      0.0000000000000000e+00
+2                                      0.0000000000000000e+00
+3                                      0.0000000000000000e+00
+4                                      0.0000000000000000e+00
+5                                      0.0000000000000000e+00
+6                                      4.6842285478497203e+01
+7                                      6.5049904514056919e+01
+8                                      1.3553782347062406e+02
+9                                      1.8379167282793452e+02
+10                                     2.1977524998083453e+02
+11                                     2.3389607493739922e+02
+12                                     2.7985940575633867e+02
+13                                     3.0551901020002811e+02
+14                                     3.1199480117253148e+02
+15                                     3.3712137838795820e+02
+16                                     3.7641385657059698e+02
+17                                     4.3775098426602023e+02
+18                                     4.4980693675913454e+02
+19                                     5.0785534798152645e+02
+20                                     5.4369579478902733e+02
+21                                     6.0945861158552725e+02
+22                                     6.1305909343759618e+02
+23                                     6.6429483792136341e+02
+24                                     7.8053792655516736e+02
+25                                     8.6073742633921995e+02
+26                                     1.0320358935991776e+03
+27                                     1.1157826996130884e+03
+28                                     1.1910639231173780e+03
+29                                     1.2341516974186425e+03
+30                                     1.2742243835111462e+03
+31                                     1.2896460776168935e+03
+32                                     1.3179180226782210e+03
+33                                     1.3975001545721484e+03
+34                                     1.4611461240630758e+03
+35                                     3.8043326308695296e+03
+   &zpe [&Type "Double"]       5.2581931492151950e-02
+   &innerEnergyU [&Type "Double"]      -1.1980946655287275e+03
+   &enthalpyH [&Type "Double"]      -1.1980937213196853e+03
+   &qEl [&Type "Double"]       0.0000000000000000e+00
+   &qRot [&Type "Double"]       1.4296181347032448e-02
+   &qVib [&Type "Double"]       1.2992383956873653e-02
+   &qTrans [&Type "Double"]       1.9853471823911156e-02
+   &entropyS [&Type "Double"]       4.7142037127817255e-02
+   &freeEnergyG [&Type "Double"]      -1.1981408633568130e+03
+   &isLinear [&Type "Boolean"] false
+$End
+$Hessian
+   &GeometryIndex 9
+   &HESSIAN [&Type "ArrayOfDoubles", &Dim (36,36)] "The Hessian"
+                                                         0                           1                           2                           3                           4                           5                           6                           7
+
+0                                      7.9549532200065082e-02        -3.0157666267308651e-02        -1.0221210001869907e-01        -7.3228204051912354e-02         3.5740186847662024e-02         2.0701174454222883e-03         1.1299145019059884e-02        -1.7216452709966482e-02
+1                                     -3.0157666267308651e-02         3.3838503875930703e-01        -1.3069480932880476e-01         4.2319785066680736e-02        -2.4611706580313142e-01         7.6401008637313576e-03         3.8302286506788422e-03        -7.2398030803201147e-03
+2                                     -1.0221210001869907e-01        -1.3069480932880476e-01         5.5597931134101997e-01        -4.3585356367922719e-03         4.0203463342574006e-02        -9.4951631252785926e-02         1.0893830624752760e-03         3.7261150423636549e-02
+3                                     -7.3228204051912354e-02         4.2319785066680736e-02        -4.3585356367922719e-03         5.8612745647577436e-01         7.4916893440774374e-02        -1.8546061160164817e-01        -2.6028916928950591e-01        -8.2800233123739117e-02
+4                                      3.5740186847662024e-02        -2.4611706580313142e-01         4.0203463342574006e-02         7.4916893440774374e-02         6.5132346544426978e-01         5.6469897094194865e-02        -8.7666413010268396e-02        -1.1998133327750449e-01
+5                                      2.0701174454222883e-03         7.6401008637313576e-03        -9.4951631252785926e-02        -1.8546061160164817e-01         5.6469897094194865e-02         1.1974308395505642e+00         2.6011748826529113e-01         1.2572398245863808e-01
+6                                      1.1299145019059884e-02         3.8302286506788422e-03         1.0893830624752760e-03        -2.6028916928950591e-01        -8.7666413010268396e-02         2.6011748826529113e-01         2.3404472363834472e-01         9.6669235604608550e-02
+7                                     -1.7216452709966482e-02        -7.2398030803201147e-03         3.7261150423636549e-02        -8.2800233123739117e-02        -1.1998133327750449e-01         1.2572398245863808e-01         9.6669235604608550e-02         1.1306956355290269e-01
+8                                      7.5898692335825916e-03         4.6753584678168592e-03        -7.8741859086988511e-03         2.5322739508977221e-01         1.2755585686462609e-01        -4.8853529562631509e-01        -2.7882407865480807e-01        -1.4826504943759145e-01
+9                                      1.5142026684372444e-02         5.9328690716388237e-03         5.7728461787603476e-03        -9.2896499019962941e-02        -2.4714277757887058e-02        -4.4716941215371349e-02         2.0477288616036569e-02         6.9469768869041409e-03
+10                                    -2.2180381177444326e-03        -2.2370968512791169e-02        -3.1485275730958183e-02        -2.1716253967514042e-02        -2.0846698168914318e-01        -2.3617822325508947e-01        -3.6902519419110894e-03         1.5076377445043074e-02
+11                                     1.1794448992426057e-03         1.5362846990256418e-04         9.6433657097537949e-03        -3.8990934187829993e-02        -2.3277648483855315e-01        -5.3973126613434064e-01        -4.6006849872795991e-03        -1.7927014961322152e-02
+12                                     3.7809826887404956e-03        -1.5610757180440041e-02         7.3675463319884012e-03        -1.4182319203954791e-01        -2.6517034207859357e-03        -4.5684598872181882e-02         1.4319084150162750e-02         2.9548234890908985e-03
+13                                     1.5878521940526722e-02        -1.6837689021141262e-02         1.0420483528469412e-02        -2.2667478847090434e-03        -2.4425424903092824e-02        -8.3640761589961060e-03        -1.0517516408195466e-02         1.9277325882603325e-03
+14                                    -3.4009958846763057e-03         8.7859186185503708e-03         2.9394136201048703e-03        -1.0638433751617077e-02        -1.2603895046042545e-02        -5.7172407329499207e-02         2.1870127399643370e-02         6.6658280464771784e-03
+15                                    -1.1341827730104433e-04         3.9808268429496153e-03        -3.9269150707495265e-03        -1.4800790095187933e-02        -2.5270564576788015e-02         3.6399905554514903e-02        -1.3609244215744033e-02        -1.5416598904802480e-03
+16                                     3.6664671667443831e-03         7.8852242798124021e-03        -3.8266972518296669e-03        -5.8019840415385500e-03        -1.4975452851648169e-02         1.6382025866831358e-02        -5.5807200033138995e-03         5.9527498661465913e-04
+17                                    -1.6535387640061422e-03        -5.4643020494019208e-03         3.3840082748790440e-03         2.1279636278640698e-03         1.1850562227741394e-02        -1.1749836336034044e-02         3.3118602380200757e-03        -3.6261416786385610e-04
+18                                    -7.8549027446759949e-03         6.2961153112185845e-03        -5.4834095182181523e-03        -4.7647800264168927e-03         3.7887191360853063e-02         8.2603700031116216e-03        -5.0505163937407446e-03        -4.8711043928042676e-03
+19                                     5.8029915745458783e-03        -1.9051628648298915e-03         2.7360562849625993e-03         4.2464643795827456e-03        -2.6443443863737367e-02        -5.6087455263259620e-03         6.1756712074159496e-03         4.7261487084022096e-03
+20                                    -6.7872962920503572e-04         8.7361091322444467e-04        -2.1011826126539649e-04        -4.1286675572829966e-03         1.3680239072563442e-03         1.1789220193339466e-03        -1.5783456561037647e-03        -2.8578146071607047e-04
+21                                    -9.8379820334909942e-04         2.4465953826912734e-03         4.1960247835439324e-03         7.2424409346998758e-04        -1.2456039183344533e-02        -4.1320032996660760e-02         1.5791942251405962e-04         2.1359331395945065e-03
+22                                    -1.1121569286468630e-03        -9.0690628551309202e-03        -2.6703247456657760e-04        -8.5273013544263261e-03         2.2712671625772857e-02        -3.6840688184017305e-03         3.4750608224312154e-03        -4.8887160937798914e-03
+23                                     5.9625449496861849e-03        -5.5981814415675089e-03         8.5237711876403732e-04        -3.5622507192389512e-02        -1.1449396762875184e-03         5.1877235138503251e-03         7.2403383624450200e-03         1.4927184447155644e-03
+24                                    -7.4022885693617382e-04        -1.9016551999621110e-03        -2.8061956186396062e-03        -3.0313060090295281e-03         5.0502982253849867e-03         5.4111293151252043e-03         2.7148249500886113e-04        -1.9050655536492725e-03
+25                                    -1.6764743511372363e-04         4.8322371493881534e-03         1.2112921835469997e-04         4.8539494699405515e-03        -8.0760843732015086e-03         2.8820842807349752e-04        -2.4282598820482230e-03         1.1859853389724253e-03
+26                                    -3.2780686882983349e-03         7.2301843942577373e-04        -2.7453698548934643e-03         5.2356276581858926e-03         1.3611513774137037e-03        -6.9693588590360816e-04        -1.6369664303034484e-03        -3.3934401456218967e-04
+27                                    -1.0558160601776153e-03         2.2815724344143196e-03        -1.2690598635849513e-03         7.5866745962479311e-03        -1.4230702823602196e-03         1.4027239234777238e-03        -1.6111045769654445e-03        -2.0388450829744199e-04
+28                                    -3.5285793106021768e-04         1.8614015841601616e-03        -1.2230756576435951e-04         3.6056827547403638e-03        -3.3296730087509227e-03        -1.2324013695837245e-03        -7.8471482374518442e-04         5.0445900919109457e-04
+29                                    -1.4492192146175645e-03         2.3627535818402548e-03        -1.5933711552844213e-04         9.0445298073099922e-03        -2.4374974654129875e-03        -4.8278618429560740e-03        -1.7902270138310870e-03        -1.1261672060474190e-04
+30                                     7.0090987809775216e-04         4.9693105162752511e-04        -7.5234991827511288e-04        -4.0778516499937016e-03        -1.3392794746383250e-03         6.4785234523470781e-03        -2.0010275924214112e-03         7.4782500744106342e-04
+31                                     9.2404391966574703e-04         1.7551416014645179e-03        -1.8920621016921095e-04        -2.8629137544299160e-03        -4.7838152989948656e-03         3.5043260938809810e-03         1.9435015869940023e-04         1.8066776821723772e-03
+32                                    -1.6004884897141919e-03         3.7904711496635065e-04        -1.9750283455508867e-05         7.6504481555491957e-03         9.5799280255247929e-04        -2.8482633616158663e-03        -3.9683950174230140e-03        -6.7610274583747168e-04
+33                                    -2.6496228275983368e-02        -1.9979744517204322e-02         1.0240470997439320e-01         4.7341701606494566e-04         2.3487547762327090e-03        -3.1311145344127302e-03         1.9914187272507093e-03        -1.1474344092392030e-03
+34                                    -1.0722492706288979e-02        -5.1179291236787459e-02         7.5843774076881754e-02        -6.3893179301964748e-03        -1.7436862000837910e-02         4.5087086084969363e-02         5.5437008618519374e-04        -6.7823668599543540e-03
+35                                     9.7449219475080520e-02         1.1616312803752993e-01        -4.6683808338789423e-01         2.0867668498635488e-03         9.1677576480147863e-03        -3.2839873142980966e-03        -1.6111449349228944e-03        -3.0209798201275189e-03
+                                                         8                           9                          10                          11                          12                          13                          14                          15
+
+0                                      7.5898692335825916e-03         1.5142026684372444e-02        -2.2180381177444326e-03         1.1794448992426057e-03         3.7809826887404956e-03         1.5878521940526722e-02        -3.4009958846763057e-03        -1.1341827730104433e-04
+1                                      4.6753584678168592e-03         5.9328690716388237e-03        -2.2370968512791169e-02         1.5362846990256418e-04        -1.5610757180440041e-02        -1.6837689021141262e-02         8.7859186185503708e-03         3.9808268429496153e-03
+2                                     -7.8741859086988511e-03         5.7728461787603476e-03        -3.1485275730958183e-02         9.6433657097537949e-03         7.3675463319884012e-03         1.0420483528469412e-02         2.9394136201048703e-03        -3.9269150707495265e-03
+3                                      2.5322739508977221e-01        -9.2896499019962941e-02        -2.1716253967514042e-02        -3.8990934187829993e-02        -1.4182319203954791e-01        -2.2667478847090434e-03        -1.0638433751617077e-02        -1.4800790095187933e-02
+4                                      1.2755585686462609e-01        -2.4714277757887058e-02        -2.0846698168914318e-01        -2.3277648483855315e-01        -2.6517034207859357e-03        -2.4425424903092824e-02        -1.2603895046042545e-02        -2.5270564576788015e-02
+5                                     -4.8853529562631509e-01        -4.4716941215371349e-02        -2.3617822325508947e-01        -5.3973126613434064e-01        -4.5684598872181882e-02        -8.3640761589961060e-03        -5.7172407329499207e-02         3.6399905554514903e-02
+6                                     -2.7882407865480807e-01         2.0477288616036569e-02        -3.6902519419110894e-03        -4.6006849872795991e-03         1.4319084150162750e-02        -1.0517516408195466e-02         2.1870127399643370e-02        -1.3609244215744033e-02
+7                                     -1.4826504943759145e-01         6.9469768869041409e-03         1.5076377445043074e-02        -1.7927014961322152e-02         2.9548234890908985e-03         1.9277325882603325e-03         6.6658280464771784e-03        -1.5416598904802480e-03
+8                                      5.0302268707180198e-01         2.1133160137138063e-02         1.3275564113340937e-02        -1.0503239890943705e-02        -8.8772480241245677e-03         5.5094781812449825e-03        -6.1113343742423554e-04         1.0871271834279063e-03
+9                                      2.1133160137138063e-02         5.9240505622421391e-02         2.3985896249276349e-02         3.9821748357318935e-02         5.2268796467625396e-03        -1.2059761943699057e-02        -2.6124111620400667e-02         5.1896840305498530e-04
+10                                     1.3275564113340937e-02         2.3985896249276349e-02         2.0584711139843420e-01         2.6625538044721442e-01         7.3474490860159919e-03        -4.7283270234529939e-03        -9.7660047698301007e-03         1.2913830282255071e-03
+11                                    -1.0503239890943705e-02         3.9821748357318935e-02         2.6625538044721442e-01         5.5119074325647688e-01         1.5754315027774843e-02        -1.3243201534069413e-02        -1.9273922096500213e-02        -6.8062545240917816e-03
+12                                    -8.8772480241245677e-03         5.2268796467625396e-03         7.3474490860159919e-03         1.5754315027774843e-02         4.7103108335817823e-01        -1.4283282404221942e-02        -3.8228973970337213e-02        -1.3300212221058685e-01
+13                                     5.5094781812449825e-03        -1.2059761943699057e-02        -4.7283270234529939e-03        -1.3243201534069413e-02        -1.4283282404221942e-02         5.6650877068249816e-01         1.0524046984800778e-02        -6.9850991905037713e-02
+14                                    -6.1113343742423554e-04        -2.6124111620400667e-02        -9.7660047698301007e-03        -1.9273922096500213e-02        -3.8228973970337213e-02         1.0524046984800778e-02         5.6666247529286473e-01         9.4315841917865503e-02
+15                                     1.0871271834279063e-03         5.1896840305498530e-04         1.2913830282255071e-03        -6.8062545240917816e-03        -1.3300212221058685e-01        -6.9850991905037713e-02         9.4315841917865503e-02         1.3952012903078106e-01
+16                                     2.4690147219547879e-04        -3.8736936311174969e-04         1.9770652841454408e-03        -4.0165867668444750e-03        -6.5437184037701254e-02        -1.3790665682507844e-01         9.5151882979331179e-02         9.5022854115477284e-02
+17                                     1.6565669968067170e-03         1.0474269283292958e-03        -6.5510867965468123e-05         7.1220865067087025e-03         7.9624268081587263e-02         8.3503203820903329e-02        -1.9993857317977470e-01        -1.1167155609647614e-01
+18                                     2.1552814033425757e-03         7.7133097059685091e-04        -3.8849825069095386e-03        -1.6322084509225671e-03        -1.1678155465143396e-01         1.0322124360731112e-01         1.9897673106093600e-02         1.8987971656061829e-02
+19                                    -3.4898651071504725e-03        -6.9238042351454270e-04         7.2905558868143101e-03         5.3144165846447707e-03         9.5129830608255056e-02        -2.9017384496481546e-01        -5.4525460637457383e-02        -8.1598861902291986e-04
+20                                     1.5606196631437969e-03         3.6764121673426848e-04         2.3558482204287193e-03         2.8264802669893895e-03         1.8249491344551762e-02        -4.2818467904316870e-02        -8.6466608470098821e-02        -8.5721715537678614e-03
+21                                     1.0639593596078566e-02        -6.8275716509328954e-03        -5.1081614265390419e-04         5.6536141370036250e-04        -6.7610125780407607e-02        -1.5541234586034914e-02        -5.2292828172150793e-02        -5.0086598804316967e-03
+22                                     1.8917710819261659e-03         3.6997120668542634e-03        -1.7550174546173713e-03         3.1001354180868381e-03        -3.6779759498346363e-03        -5.6765797998425460e-02        -4.5075511452111486e-02        -7.8627480809243394e-03
+23                                    -8.9966115802617326e-03         1.0304552090119580e-02         3.2781206840758140e-03         6.2061605137811171e-03        -1.7637947138742088e-02        -4.7290859180482397e-02        -1.7639523178098129e-01         1.6148367964183147e-03
+24                                    -2.2236851477364424e-03         1.4821844023916874e-03        -4.6050959683128449e-04        -3.6068902850177990e-04         3.3538155863277394e-03         6.2168189102701568e-03         3.2096861928378878e-04         1.0782259799312994e-03
+25                                    -1.4959035276810098e-04        -1.7212354895412966e-03         7.7399499823020863e-04        -6.7822655775630694e-04         1.7955453762172321e-02        -3.0164597316977841e-02        -1.9293769970764318e-04         4.4010148095663566e-04
+26                                     1.4982529663348483e-03        -1.2382213015406927e-03        -4.4396368818377116e-04        -5.9393223494011351e-04         1.6629067607134392e-02        -3.1598519006911269e-02         2.9425057963619692e-03        -9.6612890557425568e-04
+27                                    -4.9797419614918195e-04        -2.6252342713925345e-03        -1.2737751211776612e-03        -3.4384820974186752e-03        -4.7668700821094014e-02        -5.4724393436836223e-03        -5.8959269489566937e-03         6.5386292864036567e-03
+28                                     3.3306970919150638e-04        -1.4733742693165243e-03         2.2648603813736319e-05        -1.1604529569576836e-03        -1.9484948054100261e-02         1.3260621517005196e-03        -3.3037280176667783e-03         2.7401668840842676e-03
+29                                     2.3612129258278021e-03        -3.5635875652149794e-03        -9.0549142665807781e-04        -2.1478994895088397e-03        -4.0706594913208487e-02        -4.6839757502539509e-03        -6.7422136039237517e-03        -1.6475191694065713e-03
+30                                    -5.6014475750279452e-03         1.4331303862727977e-03         3.0033295754056566e-04        -5.4153658084493336e-04         6.6553526216936720e-03        -1.1780949739907415e-03         3.3833061329996764e-03         1.3273735484434553e-03
+31                                    -2.5601730737009280e-03         9.3508918363892921e-04         9.4879543476196655e-04         9.1070249510827317e-05        -2.9813689926623532e-03        -7.7440208738471794e-03         5.6672759399631623e-03         1.3318252519612453e-03
+32                                     2.2087138972070545e-03        -2.5077793723283807e-03        -9.5345317505737522e-04        -1.2139134523107917e-03         1.5218921783312276e-02         3.8207923960826562e-02        -2.6313303532066609e-02        -6.2733324739388369e-04
+33                                     5.7265232130130229e-04        -1.9430097896208924e-03         7.0179382675434167e-04        -1.1773412338284446e-03         2.5184974512049690e-03         5.4207327919289445e-03        -3.1091685795901682e-03        -1.4370632254247489e-03
+34                                     8.2250203602700443e-04        -3.2437196431308419e-04         5.3847456287617716e-03        -4.9761801647057033e-03         1.1724152937477215e-03        -1.0162064956275843e-03        -1.3804766419810645e-03         3.4900407904171586e-04
+35                                     4.2124129225213931e-03        -6.9472440863398090e-05        -5.5034739404680455e-03        -3.5246629551655383e-03        -1.8057255059117151e-03        -1.1297524554071821e-04         3.6899872093728702e-04         9.4519856716657798e-04
+                                                        16                          17                          18                          19                          20                          21                          22                          23
+
+0                                      3.6664671667443831e-03        -1.6535387640061422e-03        -7.8549027446759949e-03         5.8029915745458783e-03        -6.7872962920503572e-04        -9.8379820334909942e-04        -1.1121569286468630e-03         5.9625449496861849e-03
+1                                      7.8852242798124021e-03        -5.4643020494019208e-03         6.2961153112185845e-03        -1.9051628648298915e-03         8.7361091322444467e-04         2.4465953826912734e-03        -9.0690628551309202e-03        -5.5981814415675089e-03
+2                                     -3.8266972518296669e-03         3.3840082748790440e-03        -5.4834095182181523e-03         2.7360562849625993e-03        -2.1011826126539649e-04         4.1960247835439324e-03        -2.6703247456657760e-04         8.5237711876403732e-04
+3                                     -5.8019840415385500e-03         2.1279636278640698e-03        -4.7647800264168927e-03         4.2464643795827456e-03        -4.1286675572829966e-03         7.2424409346998758e-04        -8.5273013544263261e-03        -3.5622507192389512e-02
+4                                     -1.4975452851648169e-02         1.1850562227741394e-02         3.7887191360853063e-02        -2.6443443863737367e-02         1.3680239072563442e-03        -1.2456039183344533e-02         2.2712671625772857e-02        -1.1449396762875184e-03
+5                                      1.6382025866831358e-02        -1.1749836336034044e-02         8.2603700031116216e-03        -5.6087455263259620e-03         1.1789220193339466e-03        -4.1320032996660760e-02        -3.6840688184017305e-03         5.1877235138503251e-03
+6                                     -5.5807200033138995e-03         3.3118602380200757e-03        -5.0505163937407446e-03         6.1756712074159496e-03        -1.5783456561037647e-03         1.5791942251405962e-04         3.4750608224312154e-03         7.2403383624450200e-03
+7                                      5.9527498661465913e-04        -3.6261416786385610e-04        -4.8711043928042676e-03         4.7261487084022096e-03        -2.8578146071607047e-04         2.1359331395945065e-03        -4.8887160937798914e-03         1.4927184447155644e-03
+8                                      2.4690147219547879e-04         1.6565669968067170e-03         2.1552814033425757e-03        -3.4898651071504725e-03         1.5606196631437969e-03         1.0639593596078566e-02         1.8917710819261659e-03        -8.9966115802617326e-03
+9                                     -3.8736936311174969e-04         1.0474269283292958e-03         7.7133097059685091e-04        -6.9238042351454270e-04         3.6764121673426848e-04        -6.8275716509328954e-03         3.6997120668542634e-03         1.0304552090119580e-02
+10                                     1.9770652841454408e-03        -6.5510867965468123e-05        -3.8849825069095386e-03         7.2905558868143101e-03         2.3558482204287193e-03        -5.1081614265390419e-04        -1.7550174546173713e-03         3.2781206840758140e-03
+11                                    -4.0165867668444750e-03         7.1220865067087025e-03        -1.6322084509225671e-03         5.3144165846447707e-03         2.8264802669893895e-03         5.6536141370036250e-04         3.1001354180868381e-03         6.2061605137811171e-03
+12                                    -6.5437184037701254e-02         7.9624268081587263e-02        -1.1678155465143396e-01         9.5129830608255056e-02         1.8249491344551762e-02        -6.7610125780407607e-02        -3.6779759498346363e-03        -1.7637947138742088e-02
+13                                    -1.3790665682507844e-01         8.3503203820903329e-02         1.0322124360731112e-01        -2.9017384496481546e-01        -4.2818467904316870e-02        -1.5541234586034914e-02        -5.6765797998425460e-02        -4.7290859180482397e-02
+14                                     9.5151882979331179e-02        -1.9993857317977470e-01         1.9897673106093600e-02        -5.4525460637457383e-02        -8.6466608470098821e-02        -5.2292828172150793e-02        -4.5075511452111486e-02        -1.7639523178098129e-01
+15                                     9.5022854115477284e-02        -1.1167155609647614e-01         1.8987971656061829e-02        -8.1598861902291986e-04        -8.5721715537678614e-03        -5.0086598804316967e-03        -7.8627480809243394e-03         1.6148367964183147e-03
+16                                     2.0411689386671461e-01        -1.4570441160119663e-01        -1.5166196871791649e-02        -6.5045210175048593e-02         3.7396127375009663e-02        -5.2252890920121940e-03        -5.6980389053085546e-03         5.7636540309219282e-03
+17                                    -1.4570441160119663e-01         2.2911469862155281e-01        -3.3228307306748354e-03         2.5318664835258207e-02         9.0443322630200627e-03         3.0454703321599982e-02         3.7771110837340700e-02        -2.7339295201458030e-02
+18                                    -1.5166196871791649e-02        -3.3228307306748354e-03         1.0909239051059284e-01        -1.2494664577459660e-01        -2.0457496912051142e-02        -1.0141682677646952e-03         4.0337370202836662e-03        -2.3326253988035853e-03
+19                                    -6.5045210175048593e-02         2.5318664835258207e-02        -1.2494664577459660e-01         4.0486365571141320e-01         4.1210838696181237e-02         2.0744879228355599e-02        -3.9768769972006471e-02         1.5158460266398686e-03
+20                                     3.7396127375009663e-02         9.0443322630200627e-03        -2.0457496912051142e-02         4.1210838696181237e-02         7.7620828889812060e-02         1.8461507982877517e-02        -3.2450177149674311e-02         1.4433741438099681e-03
+21                                    -5.2252890920121940e-03         3.0454703321599982e-02        -1.0141682677646952e-03         2.0744879228355599e-02         1.8461507982877517e-02         5.9362861169368064e-01         3.1426379823614667e-03         5.5151278633426420e-03
+22                                    -5.6980389053085546e-03         3.7771110837340700e-02         4.0337370202836662e-03        -3.9768769972006471e-02        -3.2450177149674311e-02         3.1426379823614667e-03         6.1953486900940757e-01        -5.5084228240565719e-05
+23                                     5.7636540309219282e-03        -2.7339295201458030e-02        -2.3326253988035853e-03         1.5158460266398686e-03         1.4433741438099681e-03         5.5151278633426420e-03        -5.5084228240565719e-05         6.3511749329529466e-01
+24                                    -5.3774270001339698e-04        -8.8926687157888902e-04         1.5852926978095273e-03        -6.1597806888395636e-04         2.6710403022137900e-04        -1.1772096652614500e-01         8.4745028402833211e-02         2.4968339081595368e-02
+25                                     5.0542665168713512e-03        -5.1557518021726739e-03        -1.5763087024817501e-03        -3.8949108168167619e-03        -7.8868101477443091e-03         8.2404167442701654e-02        -2.6565923820252041e-01        -6.5524811077453837e-02
+26                                     9.6328930407191607e-04         2.0528551749987058e-04        -2.3315161413770468e-04        -8.1045454212049714e-03        -8.8354194674613532e-03         2.2571040587654124e-02        -6.1761258541016169e-02        -1.0880479230132366e-01
+27                                     2.1876179091290205e-03        -4.4900415602323017e-04         5.5733108943901693e-03        -3.3270084948883380e-03        -9.0638485439778916e-04        -2.9958836807654488e-01        -3.6268452685485335e-02        -4.7337605881834638e-02
+28                                     1.9352034571531176e-03        -1.5653679924714761e-03        -2.4561578291556400e-04         3.7214663201810020e-03         1.7134264501490293e-03        -3.6322797190365859e-02        -8.5067639995263011e-02        -9.7703392774825225e-03
+29                                    -1.6523223911041206e-03         2.7102419504596766e-03         1.6506401528697287e-03        -5.2691068026291393e-04         7.2105575053097695e-04        -4.3746286009493304e-02        -8.2820160568513618e-03        -9.3737777643247824e-02
+30                                     4.2321209187249275e-04        -1.6034302980598534e-03         6.6917745341252169e-04        -1.0809968422477809e-03        -1.0866391755404556e-03        -9.6133560728873121e-02        -4.1606313995195141e-02         4.7248034549969550e-02
+31                                     1.8877320268089665e-03         3.8013086468843913e-04        -7.9365646797816772e-04         6.5250764522613008e-03        -1.5637531317507052e-03        -4.1521793927046524e-02        -1.7378605320518903e-01         1.1634339104286574e-01
+32                                    -3.3261240902575655e-04        -1.4066370576640870e-02        -3.0576991552873703e-06        -2.6781620428265440e-03         1.1001218651003051e-03         4.5869790853545832e-02         1.0857359616196122e-01        -2.3223663763540708e-01
+33                                    -2.9778737841835269e-03         2.8783732674852224e-03        -1.2135520988314449e-03        -3.7927700230588673e-04         1.1037667664593332e-04         3.7644390478425117e-04         3.6231249661876417e-04        -2.7631683464815959e-04
+34                                     1.7369833896325538e-04        -4.2762569661513586e-04        -1.9533857288408070e-04         1.0443957818253788e-04         6.7727912505120250e-05         3.0021714888348662e-04         2.1079404706059071e-04         1.1668365166255909e-03
+35                                    -4.4933901660576363e-04        -1.4314483701926249e-04         1.4531297458639306e-03        -1.1427466930107252e-03         1.6411337085027672e-05        -5.6077447119677560e-04         6.2183357217109568e-05        -1.2967824428204364e-03
+                                                        24                          25                          26                          27                          28                          29                          30                          31
+
+0                                     -7.4022885693617382e-04        -1.6764743511372363e-04        -3.2780686882983349e-03        -1.0558160601776153e-03        -3.5285793106021768e-04        -1.4492192146175645e-03         7.0090987809775216e-04         9.2404391966574703e-04
+1                                     -1.9016551999621110e-03         4.8322371493881534e-03         7.2301843942577373e-04         2.2815724344143196e-03         1.8614015841601616e-03         2.3627535818402548e-03         4.9693105162752511e-04         1.7551416014645179e-03
+2                                     -2.8061956186396062e-03         1.2112921835469997e-04        -2.7453698548934643e-03        -1.2690598635849513e-03        -1.2230756576435951e-04        -1.5933711552844213e-04        -7.5234991827511288e-04        -1.8920621016921095e-04
+3                                     -3.0313060090295281e-03         4.8539494699405515e-03         5.2356276581858926e-03         7.5866745962479311e-03         3.6056827547403638e-03         9.0445298073099922e-03        -4.0778516499937016e-03        -2.8629137544299160e-03
+4                                      5.0502982253849867e-03        -8.0760843732015086e-03         1.3611513774137037e-03        -1.4230702823602196e-03        -3.3296730087509227e-03        -2.4374974654129875e-03        -1.3392794746383250e-03        -4.7838152989948656e-03
+5                                      5.4111293151252043e-03         2.8820842807349752e-04        -6.9693588590360816e-04         1.4027239234777238e-03        -1.2324013695837245e-03        -4.8278618429560740e-03         6.4785234523470781e-03         3.5043260938809810e-03
+6                                      2.7148249500886113e-04        -2.4282598820482230e-03        -1.6369664303034484e-03        -1.6111045769654445e-03        -7.8471482374518442e-04        -1.7902270138310870e-03        -2.0010275924214112e-03         1.9435015869940023e-04
+7                                     -1.9050655536492725e-03         1.1859853389724253e-03        -3.3934401456218967e-04        -2.0388450829744199e-04         5.0445900919109457e-04        -1.1261672060474190e-04         7.4782500744106342e-04         1.8066776821723772e-03
+8                                     -2.2236851477364424e-03        -1.4959035276810098e-04         1.4982529663348483e-03        -4.9797419614918195e-04         3.3306970919150638e-04         2.3612129258278021e-03        -5.6014475750279452e-03        -2.5601730737009280e-03
+9                                      1.4821844023916874e-03        -1.7212354895412966e-03        -1.2382213015406927e-03        -2.6252342713925345e-03        -1.4733742693165243e-03        -3.5635875652149794e-03         1.4331303862727977e-03         9.3508918363892921e-04
+10                                    -4.6050959683128449e-04         7.7399499823020863e-04        -4.4396368818377116e-04        -1.2737751211776612e-03         2.2648603813736319e-05        -9.0549142665807781e-04         3.0033295754056566e-04         9.4879543476196655e-04
+11                                    -3.6068902850177990e-04        -6.7822655775630694e-04        -5.9393223494011351e-04        -3.4384820974186752e-03        -1.1604529569576836e-03        -2.1478994895088397e-03        -5.4153658084493336e-04         9.1070249510827317e-05
+12                                     3.3538155863277394e-03         1.7955453762172321e-02         1.6629067607134392e-02        -4.7668700821094014e-02        -1.9484948054100261e-02        -4.0706594913208487e-02         6.6553526216936720e-03        -2.9813689926623532e-03
+13                                     6.2168189102701568e-03        -3.0164597316977841e-02        -3.1598519006911269e-02        -5.4724393436836223e-03         1.3260621517005196e-03        -4.6839757502539509e-03        -1.1780949739907415e-03        -7.7440208738471794e-03
+14                                     3.2096861928378878e-04        -1.9293769970764318e-04         2.9425057963619692e-03        -5.8959269489566937e-03        -3.3037280176667783e-03        -6.7422136039237517e-03         3.3833061329996764e-03         5.6672759399631623e-03
+15                                     1.0782259799312994e-03         4.4010148095663566e-04        -9.6612890557425568e-04         6.5386292864036567e-03         2.7401668840842676e-03        -1.6475191694065713e-03         1.3273735484434553e-03         1.3318252519612453e-03
+16                                    -5.3774270001339698e-04         5.0542665168713512e-03         9.6328930407191607e-04         2.1876179091290205e-03         1.9352034571531176e-03        -1.6523223911041206e-03         4.2321209187249275e-04         1.8877320268089665e-03
+17                                    -8.8926687157888902e-04        -5.1557518021726739e-03         2.0528551749987058e-04        -4.4900415602323017e-04        -1.5653679924714761e-03         2.7102419504596766e-03        -1.6034302980598534e-03         3.8013086468843913e-04
+18                                     1.5852926978095273e-03        -1.5763087024817501e-03        -2.3315161413770468e-04         5.5733108943901693e-03        -2.4561578291556400e-04         1.6506401528697287e-03         6.6917745341252169e-04        -7.9365646797816772e-04
+19                                    -6.1597806888395636e-04        -3.8949108168167619e-03        -8.1045454212049714e-03        -3.3270084948883380e-03         3.7214663201810020e-03        -5.2691068026291393e-04        -1.0809968422477809e-03         6.5250764522613008e-03
+20                                     2.6710403022137900e-04        -7.8868101477443091e-03        -8.8354194674613532e-03        -9.0638485439778916e-04         1.7134264501490293e-03         7.2105575053097695e-04        -1.0866391755404556e-03        -1.5637531317507052e-03
+21                                    -1.1772096652614500e-01         8.2404167442701654e-02         2.2571040587654124e-02        -2.9958836807654488e-01        -3.6322797190365859e-02        -4.3746286009493304e-02        -9.6133560728873121e-02        -4.1521793927046524e-02
+22                                     8.4745028402833211e-02        -2.6565923820252041e-01        -6.1761258541016169e-02        -3.6268452685485335e-02        -8.5067639995263011e-02        -8.2820160568513618e-03        -4.1606313995195141e-02        -1.7378605320518903e-01
+23                                     2.4968339081595368e-02        -6.5524811077453837e-02        -1.0880479230132366e-01        -4.7337605881834638e-02        -9.7703392774825225e-03        -9.3737777643247824e-02         4.7248034549969550e-02         1.1634339104286574e-01
+24                                     1.5966098344531213e-01        -1.4682767831636745e-01        -3.0912268937615586e-02        -6.0939599192463861e-02         5.3693811274597908e-02         1.1433480967039009e-02         1.5322334218424914e-02         2.9803605039965021e-03
+25                                    -1.4682767831636745e-01         3.6911941247535801e-01         5.7890733785849004e-02         3.5319922159958189e-02        -1.6847653236271021e-05        -3.6434257902616743e-04         1.1909350243847348e-02        -7.3052371641585401e-02
+26                                    -3.0912268937615586e-02         5.7890733785849004e-02         8.7328219698766252e-02         3.4054757348185843e-03         2.7106676687195671e-03         1.5791134787798370e-02        -9.4536108287325143e-03         3.8768918213300779e-02
+27                                    -6.0939599192463861e-02         3.5319922159958189e-02         3.4054757348185843e-03         4.3843147612403621e-01         4.4189030213801800e-02         2.8794747782695290e-02        -4.4383100839645168e-02        -3.5303887544818675e-02
+28                                     5.3693811274597908e-02        -1.6847653236271021e-05         2.7106676687195671e-03         4.4189030213801800e-02         8.7806257749860298e-02        -2.8059111018087241e-04        -4.5491998183423782e-02        -8.5636022147105306e-03
+29                                     1.1433480967039009e-02        -3.6434257902616743e-04         1.5791134787798370e-02         2.8794747782695290e-02        -2.8059111018087241e-04         7.8032854920528305e-02         4.1983410234887615e-02         1.7310049519468795e-02
+30                                     1.5322334218424914e-02         1.1909350243847348e-02        -9.4536108287325143e-03        -4.4383100839645168e-02        -4.5491998183423782e-02         4.1983410234887615e-02         1.2064054932257132e-01         7.7067681353652939e-02
+31                                     2.9803605039965021e-03        -7.3052371641585401e-02         3.8768918213300779e-02        -3.5303887544818675e-02        -8.5636022147105306e-03         1.7310049519468795e-02         7.7067681353652939e-02         2.5493520595703062e-01
+32                                    -5.3590444701250572e-03         2.1893939138033794e-02         1.3613614641215258e-02         2.5570841366383545e-02         1.2553534113686891e-02         7.6301207526848942e-03        -8.0388184470076729e-02        -1.7761000525114889e-01
+33                                    -3.2221824063158571e-04        -2.3058660394647537e-04        -3.7418148408288913e-05        -2.5816706279438483e-04        -1.3214686581924695e-04         6.1755268055348244e-06        -1.5328661798303148e-04        -2.4104124484245924e-04
+34                                    -3.6891601145306913e-04        -1.0184647448194858e-04        -3.5491597337644252e-04        -6.4586276306972858e-04        -1.9973600409920540e-04        -4.2002097899965528e-04         2.2662323677189659e-05         7.1234079827313260e-05
+35                                     6.4751327750442282e-05        -5.6772497207894720e-05         2.9743633654563846e-04         6.1109860515483685e-04         1.1747240640622375e-04         3.6846860733492177e-04         6.5400978920002531e-05        -1.3974079628699832e-04
+                                                        32                          33                          34                          35
+
+0                                     -1.6004884897141919e-03        -2.6496228275983368e-02        -1.0722492706288979e-02         9.7449219475080520e-02
+1                                      3.7904711496635065e-04        -1.9979744517204322e-02        -5.1179291236787459e-02         1.1616312803752993e-01
+2                                     -1.9750283455508867e-05         1.0240470997439320e-01         7.5843774076881754e-02        -4.6683808338789423e-01
+3                                      7.6504481555491957e-03         4.7341701606494566e-04        -6.3893179301964748e-03         2.0867668498635488e-03
+4                                      9.5799280255247929e-04         2.3487547762327090e-03        -1.7436862000837910e-02         9.1677576480147863e-03
+5                                     -2.8482633616158663e-03        -3.1311145344127302e-03         4.5087086084969363e-02        -3.2839873142980966e-03
+6                                     -3.9683950174230140e-03         1.9914187272507093e-03         5.5437008618519374e-04        -1.6111449349228944e-03
+7                                     -6.7610274583747168e-04        -1.1474344092392030e-03        -6.7823668599543540e-03        -3.0209798201275189e-03
+8                                      2.2087138972070545e-03         5.7265232130130229e-04         8.2250203602700443e-04         4.2124129225213931e-03
+9                                     -2.5077793723283807e-03        -1.9430097896208924e-03        -3.2437196431308419e-04        -6.9472440863398090e-05
+10                                    -9.5345317505737522e-04         7.0179382675434167e-04         5.3847456287617716e-03        -5.5034739404680455e-03
+11                                    -1.2139134523107917e-03        -1.1773412338284446e-03        -4.9761801647057033e-03        -3.5246629551655383e-03
+12                                     1.5218921783312276e-02         2.5184974512049690e-03         1.1724152937477215e-03        -1.8057255059117151e-03
+13                                     3.8207923960826562e-02         5.4207327919289445e-03        -1.0162064956275843e-03        -1.1297524554071821e-04
+14                                    -2.6313303532066609e-02        -3.1091685795901682e-03        -1.3804766419810645e-03         3.6899872093728702e-04
+15                                    -6.2733324739388369e-04        -1.4370632254247489e-03         3.4900407904171586e-04         9.4519856716657798e-04
+16                                    -3.3261240902575655e-04        -2.9778737841835269e-03         1.7369833896325538e-04        -4.4933901660576363e-04
+17                                    -1.4066370576640870e-02         2.8783732674852224e-03        -4.2762569661513586e-04        -1.4314483701926249e-04
+18                                    -3.0576991552873703e-06        -1.2135520988314449e-03        -1.9533857288408070e-04         1.4531297458639306e-03
+19                                    -2.6781620428265440e-03        -3.7927700230588673e-04         1.0443957818253788e-04        -1.1427466930107252e-03
+20                                     1.1001218651003051e-03         1.1037667664593332e-04         6.7727912505120250e-05         1.6411337085027672e-05
+21                                     4.5869790853545832e-02         3.7644390478425117e-04         3.0021714888348662e-04        -5.6077447119677560e-04
+22                                     1.0857359616196122e-01         3.6231249661876417e-04         2.1079404706059071e-04         6.2183357217109568e-05
+23                                    -2.3223663763540708e-01        -2.7631683464815959e-04         1.1668365166255909e-03        -1.2967824428204364e-03
+24                                    -5.3590444701250572e-03        -3.2221824063158571e-04        -3.6891601145306913e-04         6.4751327750442282e-05
+25                                     2.1893939138033794e-02        -2.3058660394647537e-04        -1.0184647448194858e-04        -5.6772497207894720e-05
+26                                     1.3613614641215258e-02        -3.7418148408288913e-05        -3.5491597337644252e-04         2.9743633654563846e-04
+27                                     2.5570841366383545e-02        -2.5816706279438483e-04        -6.4586276306972858e-04         6.1109860515483685e-04
+28                                     1.2553534113686891e-02        -1.3214686581924695e-04        -1.9973600409920540e-04         1.1747240640622375e-04
+29                                     7.6301207526848942e-03         6.1755268055348244e-06        -4.2002097899965528e-04         3.6846860733492177e-04
+30                                    -8.0388184470076729e-02        -1.5328661798303148e-04         2.2662323677189659e-05         6.5400978920002531e-05
+31                                    -1.7761000525114889e-01        -2.4104124484245924e-04         7.1234079827313260e-05        -1.3974079628699832e-04
+32                                     2.5177532658241747e-01         4.1280410485932209e-04        -3.1798112875324630e-04         3.7034110287175771e-04
+33                                     4.1280410485932209e-04         2.6463748211964587e-02         1.6251070776338236e-02        -9.8641090368753903e-02
+34                                    -3.1798112875324630e-04         1.6251070776338236e-02         7.0771397398992977e-02        -1.1509761974124899e-01
+35                                     3.7034110287175771e-04        -9.8641090368753903e-02        -1.1509761974124899e-01         4.6945259190990157e-01
+   &MODES [&Type "ArrayOfDoubles", &Dim (36,36)] "The modes of vibrations"
+                                                         0                           1                           2                           3                           4                           5                           6                           7
+
+0                                      0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         3.9709542157707653e-02         1.9784809848375058e-02
+1                                      0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         1.1876613421317992e-02         2.6093159402394307e-02
+2                                      0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00        -8.9532797001801973e-02         7.1841503671066967e-02
+3                                      0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         6.2027021276764857e-04         3.7129507446983416e-03
+4                                      0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         1.8471727791911828e-02         1.1749349698373492e-02
+5                                      0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         3.2118574083713687e-03        -9.5157002189474958e-03
+6                                      0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00        -6.7319292362752279e-03         1.7817759232302750e-03
+7                                      0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         1.0690367423733763e-01        -4.9768419607622558e-02
+8                                      0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         2.8270960015560842e-02        -3.0926446554090534e-02
+9                                      0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00        -1.9705841245869462e-02        -1.2591187534967841e-03
+10                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00        -5.6684590561100173e-02         8.6329695112081675e-02
+11                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         4.4347184960973403e-02        -4.8762317357657368e-02
+12                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         4.1594417372979751e-03        -3.4055516347311883e-03
+13                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00        -1.2294231510402488e-03        -3.0617597688365274e-02
+14                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00        -2.9540019234580096e-03         7.1755723652803596e-03
+15                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         1.1050638308510418e-02         3.0650752017193503e-02
+16                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         3.1082654455456067e-03        -8.3447479970846949e-02
+17                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         6.1552579806014775e-03        -1.6882693197675481e-02
+18                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00        -4.1407092348098896e-03        -4.2154272649893555e-02
+19                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00        -2.0901209639285689e-03        -5.2050699697303283e-02
+20                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00        -1.6276515684730198e-02         5.8457900467993214e-02
+21                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00        -3.5026003457075180e-03        -2.5306631630533268e-03
+22                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00        -1.8302611811179387e-02         1.1906660743135457e-02
+23                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         5.1727666493511853e-03        -5.0255100599181524e-03
+24                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00        -7.7636309404854137e-02        -6.3434071082125398e-02
+25                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00        -6.4912412061749886e-02        -1.9612006720605483e-02
+26                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         4.7501673098197091e-02        -4.0381020821988111e-03
+27                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00        -1.3130633990582652e-02        -1.0039141077305925e-02
+28                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         6.6933079854332792e-02         9.0378642308721210e-02
+29                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00        -8.7749503806481381e-03        -3.4609795721041413e-02
+30                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         6.8580240870422512e-02         6.6154276706742801e-02
+31                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00        -7.1686972637183752e-02         7.2865588327652140e-04
+32                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00        -1.5799741793592736e-02         1.4514517906571104e-02
+33                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         4.9720121046629859e-02        -1.4928044693794726e-02
+34                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00        -4.6523440838587039e-02         6.1082815681111985e-02
+35                                     0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00         0.0000000000000000e+00        -1.0147553929872244e-01         7.2854594063321787e-02
+                                                         8                           9                          10                          11                          12                          13                          14                          15
+
+0                                      3.4719579859283659e-02         1.2249725149982629e-01        -1.2930973591194148e-02         7.1348436043592575e-02        -4.1646011754469497e-02         6.4217552726496582e-02        -1.0266332743013444e-01        -7.4152383529787522e-02
+1                                      1.0863191892740130e-02         6.8571957665962318e-03        -1.1782819366928335e-03        -4.7103720721551915e-03        -4.9873819709895877e-04         1.1639703693113193e-02         9.9137008359331275e-03        -4.7458137539290422e-03
+2                                      4.8548778866985193e-02         5.7903150836433499e-02        -1.5099582523451682e-02        -2.7750407759697913e-02        -3.3042475257545563e-02        -4.8620313579215695e-02         8.6695611414614869e-04        -2.0844357206313301e-02
+3                                      2.2677710745880184e-02        -7.9794915785341008e-03        -1.8784299818678965e-03        -6.7902496962323321e-03        -4.1010168526507809e-02         2.7711520634243814e-02        -3.4879565027982617e-03         9.1580941440612268e-03
+4                                      4.8349909805127681e-03        -2.1116244868774330e-02         4.1365284718679731e-03        -2.1114048480839646e-02         8.9572480457655564e-04         1.3189879914547143e-02         2.6908499854271680e-02         9.7374953895997575e-03
+5                                      2.3982755889184436e-02         1.3942351192142117e-02        -5.8517494646732459e-03        -4.1158050874015854e-02        -6.2230280218406103e-03         1.9894838732238039e-02         5.1873399185652681e-03        -3.8596268396667917e-02
+6                                      9.2982779800043755e-02        -9.3515371471062453e-02         1.1042894561279860e-02         5.7521984410575704e-02        -8.0810431028774263e-02         4.3430689112658204e-02        -3.4807991509573886e-03         9.3858513134599530e-02
+7                                      6.2330942257515310e-03         2.0673072747499383e-02        -3.1422528675981369e-03        -1.9786854226833551e-02        -8.6468807378732929e-04        -1.3268441590585253e-02         6.1495763251111189e-02         2.7943634192031729e-02
+8                                      6.8461796123249097e-02        -2.6035079042341744e-02         8.3174426825466266e-04        -4.3684532188038394e-04        -3.0419474696693496e-02         2.1375561120232804e-02         1.7089636771457861e-02         1.7621701656137471e-02
+9                                     -7.4172073606986258e-02        -2.4990245814840110e-03        -1.2138219099846203e-02        -1.4969967665802372e-01        -7.8554741512708290e-02         6.0221056057918013e-02         3.9718863797239816e-02        -1.9786231944942608e-02
+10                                     1.6307210137609364e-02        -2.4581475013455811e-04         8.0019779284411039e-03         8.5154164771543868e-03         3.2781422697013805e-02         5.7262532914684090e-02         3.4210870460797141e-02         3.9976838624627073e-03
+11                                     2.5236887280528125e-02         4.1831312306832551e-03        -7.8035742092749218e-03        -4.7220198750314454e-02        -2.3618538289760457e-02        -9.2011477266465049e-03        -1.5790174686234840e-03        -3.1791935346502702e-02
+12                                     3.6546096113477873e-02        -3.1564630113595431e-03        -1.9216007307337666e-03        -1.3401184666075882e-02         3.9433431723707349e-02        -1.9345999060520647e-02         1.1497921179197138e-02        -9.7305734498249318e-03
+13                                    -1.2000637924632785e-02        -3.6496805136181781e-02        -3.3069979730360279e-02         2.4964421150986554e-04        -1.4046572710217819e-02        -1.1984233940727012e-02        -2.1187882857156583e-02        -1.3118770731915795e-02
+14                                    -3.5925768535854358e-02         7.9267400538745262e-03         1.4084725910311563e-02         2.4120535167925258e-03         5.5137073225139206e-03         1.1541062106895731e-02         9.0960001252055993e-03        -7.6870640002613079e-03
+15                                     4.5262084466916257e-02        -8.3657668120420081e-02         3.0649348508262016e-02         5.9014690027466019e-03         4.8155604519238369e-03        -1.2692939215649848e-01         4.5416063604697713e-03        -6.3866430366929877e-02
+16                                    -1.3783573512307823e-02         1.6144885999081104e-02         4.3017084220132694e-02         1.7925293597127676e-02        -2.3845267272266542e-02        -5.9710662072603553e-03        -1.1805759794714489e-02        -2.4030953800745911e-02
+17                                    -2.8580813280649202e-02        -7.7018691023276213e-03         1.0396521381012155e-01         3.3297154813918164e-02        -1.9969961929576147e-02        -4.5488966822560171e-02         1.3439423664849947e-02        -6.8966018367770707e-02
+18                                     3.9325842307764418e-02         8.1624604989640845e-02        -2.9537950228756923e-02         5.7623786186540335e-02         7.1625026758992197e-02        -3.2682459237627212e-03         1.1857638867746388e-01        -2.3867164510329414e-04
+19                                    -1.0393374670323417e-02         2.9478562214236958e-03        -2.8212286165618782e-02         1.9521567276922270e-02        -1.3156528074567333e-03        -5.9454791939948298e-03         1.0693463808628231e-02        -8.0068160817613528e-03
+20                                    -3.6602101084468687e-02        -2.1632744107468623e-02        -9.4720714070415518e-02         4.7230631256773382e-02         1.0806742800835922e-03        -1.1930939936221995e-04         7.8621696396511440e-02        -1.3179476777788449e-02
+21                                    -2.6830790598730930e-02        -3.9710910505251114e-03         1.3300749433303920e-03        -2.8516759918844843e-02         5.5316710565909491e-02        -3.1325385822140706e-03        -2.1247211774928262e-02         4.0330076785947957e-03
+22                                    -5.6034875903813383e-03        -6.4236667390444469e-03        -3.5719723887311275e-02         8.2492326941808834e-03        -2.8872684303970879e-03        -1.4021974297402068e-02        -3.0948181292700726e-02        -9.6552289142650960e-03
+23                                    -2.4563096674932613e-02        -6.4099527197010809e-03         1.5343294875940555e-02         1.6637417938614528e-02         1.6577357753947870e-02         1.1135876180382762e-02        -1.5077354089379748e-02         3.0425482381945427e-02
+24                                    -5.8328573647471987e-02        -1.6803705737157008e-02        -2.3993176165902970e-02         1.0493653065640597e-02         2.9020397028419170e-02        -1.7040454653312845e-02        -3.6394936340926283e-02        -1.4572958495090570e-03
+25                                    -1.0152182867392548e-02        -7.4071194430859926e-03        -2.3483639530998912e-02         1.4997938230074547e-02        -7.7860882130655401e-03        -1.7133303821455882e-02        -3.4995483001730977e-02        -1.1262101317206560e-02
+26                                    -7.4948787938385525e-02        -4.0435026896466247e-02        -9.1967299492115462e-02         6.5570088964996040e-02        -2.9889225200307370e-02        -8.9923341891267640e-03        -4.8028195905952760e-02         2.2841741230249152e-02
+27                                    -3.8030049417191923e-02        -6.4506358328161977e-03         5.6152468603635846e-04        -1.5735604790085348e-02         4.5058403486471006e-02        -4.2278991004924271e-03        -1.4182842015964698e-02         2.7691390302180281e-03
+28                                     1.3272490246787769e-02         1.0698925431178724e-02        -3.1935500763526502e-03        -2.3886840019327556e-02         3.0467262042735508e-02        -2.0165242938275353e-02        -5.4868140167359816e-02        -8.3216640765880357e-03
+29                                     6.1594262362304392e-02        -9.0069316005008584e-03        -1.5678078220802884e-02        -6.0141834512692470e-02         1.1826898557766376e-01         1.0617002623625133e-02        -7.6482031199685760e-02         6.2057928376106561e-02
+30                                    -7.4373378548180782e-02        -1.5393293897334556e-05         4.0498639447108437e-02         2.3610290529405254e-03         4.1972685793362413e-02         1.8981263251419101e-03        -1.9190546809293013e-03         2.5749939039313330e-02
+31                                    -4.2600192143460785e-03         1.3281344675997182e-02         4.6166647433063424e-02         1.7752807029922695e-02        -1.0639228250418466e-02         6.2770410504657554e-03        -1.2615512479158843e-02         1.8559366762581717e-02
+32                                    -4.4857528020211306e-02         1.6846727969311189e-02         1.0971348489216677e-01         3.8893280865953797e-02         5.6216594549882894e-03         3.7756727409712074e-02         1.2651443081466308e-02         7.0364408364953765e-02
+33                                    -6.3099061335823853e-02         3.9527272206986519e-01        -5.3193409411183813e-02        -9.6926509421292259e-02        -2.6214725322120480e-01        -4.5902006351556590e-01        -4.9603612672880895e-02         4.7604713389684061e-01
+34                                     2.9530864466858408e-03         7.7777767257047450e-02        -1.6672276202422148e-02        -4.8891443974651311e-02        -7.8121843806002525e-02        -1.8338787142352908e-01         4.1398856085500001e-02         1.5314346396688475e-01
+35                                     2.5878034425052907e-02         1.3348220460308263e-01        -2.7429809576844336e-02        -7.4126663213040941e-02        -9.8814543697667526e-02        -2.0714782245872673e-01         1.9471344785418988e-02         1.3430240560230244e-01
+                                                        16                          17                          18                          19                          20                          21                          22                          23
+
+0                                      1.0895158594808944e-02        -2.4536166808930258e-02         1.6235253372407502e-02        -2.0257059051411445e-02         2.2066370096707130e-02         2.4701605847194708e-02         3.8977315979152986e-02         4.8291666977843921e-03
+1                                     -2.8009800024726113e-03        -4.5928268042003811e-02         1.8717739466417208e-02         9.8157851036304200e-02         1.9675280369297370e-02         5.5344184803225553e-02         1.7466295116432419e-02         2.3190893188207752e-02
+2                                     -3.2645011833522850e-02        -7.6229546490338723e-02        -9.7669343958192559e-02        -1.4186007335162957e-02        -1.0483735192647425e-03         2.7335328924086378e-03         7.9506131713396669e-03        -8.3195923208973354e-03
+3                                      1.4733466187320495e-03        -8.2648386695104228e-03        -1.7722493255721956e-02         5.1942692438608305e-03        -3.3594671517997506e-02        -7.9927869901105716e-02        -7.6714747273144063e-02        -3.3775847543770041e-02
+4                                      1.4271237577799792e-03        -1.5945355906855002e-02         2.6991311809655111e-02         6.7293151332544349e-02         2.7355125101618254e-03         3.3841488892866552e-03        -1.3521729607181281e-02         5.2492879607829368e-03
+5                                     -7.2270767649432631e-03         3.3548722708323493e-02         5.0663091765434223e-02        -1.2593193258670567e-02        -3.7073274539112760e-03        -2.5074389949117808e-02        -1.7014924925317115e-02         8.2294690246821015e-03
+6                                      4.3235894941251268e-02         5.3963823880760018e-03        -2.2842875408042442e-02         2.8292723270618249e-02         1.8128456691287341e-02         4.2770852306783687e-02         2.3502937297149088e-02        -1.1910334619037632e-02
+7                                     -2.5776333665538234e-02         4.3814847768739191e-03        -1.2480514662575333e-01        -8.3853411177012852e-02        -1.4352974364566107e-02        -1.5525396903281429e-02        -2.8541037740601270e-03        -1.7815540993784452e-02
+8                                      8.3628888580687885e-03         5.2871761847925934e-02         7.3828727463492690e-04        -5.4617588489112599e-02         2.7947373707290848e-02         5.4085761815067322e-02         6.0962006106502112e-02         2.3282201557399247e-02
+9                                     -2.7533627088617566e-02         1.4957480923436331e-02        -1.3338811743313006e-02        -1.4938461515191511e-02         3.7058329843162680e-02         5.3697885654691545e-02         4.9302957320716524e-02         2.9235315811984814e-02
+10                                     1.3556559850387354e-02         1.0717355079094934e-01         4.4136969395116646e-02        -7.6291789788381040e-02        -7.1522678018373755e-03        -3.1157531063855121e-02        -1.2797715466598379e-02         1.6547163821819184e-03
+11                                    -1.1343343943036051e-02        -3.3571560604723598e-02         4.7715778536754204e-02         7.1211188837107794e-02        -4.5288319563516243e-03        -2.7775415586203726e-02        -3.8625967059855257e-02         4.3902098241062138e-03
+12                                    -2.0011601814416892e-02         5.3066172509679042e-04         1.0965462667443983e-02         9.4248609035871083e-04        -5.5696363732519100e-02        -2.7816369842444375e-02        -2.1088610014356669e-02         4.1792311976858031e-02
+13                                     9.5736468371513846e-03        -5.5175703808944841e-02         4.1294930090574049e-02        -4.5306731815118004e-02         6.4504331057750339e-03        -3.1486936819340408e-02         3.6425449853466296e-02        -3.6911685099540452e-02
+14                                     2.9001455617692778e-02         2.3294701863742093e-02        -4.4810508162431749e-03         1.9995324082998419e-02         6.0053150366544059e-03         9.5683069346550048e-03        -1.6306967059422500e-02        -8.9149776593205901e-02
+15                                    -5.2990179691382776e-02        -1.2598929425312985e-02         4.6447134670311904e-02        -4.1130336716704609e-02         1.8094156863109858e-02        -1.1496164649517863e-02         3.2405220911396602e-02         2.6999806163277507e-02
+16                                     7.1834149965245064e-02        -2.6598447197690434e-02        -9.9113028898279807e-03        -2.3521465473995119e-02        -6.1286293106763264e-02        -2.7259772913436071e-02         9.4036042889028854e-03         1.0779549904764342e-01
+17                                     6.2165567674078145e-02         5.6820055735844616e-02        -4.1561101090292984e-02         2.8383790424421500e-02         8.8590436656955287e-03         5.5380753077136476e-02        -3.1652451470865123e-02        -4.6511957927324203e-02
+18                                    -4.7782749272674355e-02         2.9358407005418280e-02         4.5473301793103917e-04         4.1476920811456000e-02         2.4592250948438851e-02         2.7829127776089459e-02        -8.9892957290808387e-03         1.3471701381906023e-02
+19                                    -7.5206583377005554e-03        -4.7008127365273655e-02         4.8026788323612263e-02        -3.5277734936111846e-02         5.2013486029099658e-02        -2.2155627523482300e-02         5.5691814277259610e-02        -1.1546056460260720e-01
+20                                     1.0467418697645714e-01        -4.5900511919928583e-02         4.4939608302512176e-03        -1.1342126887027446e-02        -3.0421571275667591e-02        -1.7313245391833137e-02         2.8378037384681642e-02         3.3461025417150556e-02
+21                                     2.0557386718825364e-02        -7.5902561458180882e-04         5.0811348460398113e-03         1.8150916329868233e-03        -6.7274563995545128e-02         2.8405247135011181e-02         2.0797713498215832e-02        -3.4961437248581306e-02
+22                                    -9.2231537137195917e-03         4.1470064345806102e-03         1.6342673621021846e-03        -2.4563453669916430e-02         6.5313912652118413e-03         4.4905111665095990e-02        -6.1545647906219483e-02        -1.1880782922310934e-02
+23                                    -1.8934729756703982e-02        -3.3596984230435255e-04        -1.9338524923719375e-03         9.1206680493476772e-03         1.3339707361330749e-02        -3.2434065238068320e-02         5.9728023044416587e-03        -4.2462833277928921e-02
+24                                     1.4339274582855256e-02         4.9710887832455260e-02        -4.8753566958111116e-02         4.8022844370642102e-02         4.2152477996935105e-02        -6.3389710534493673e-02         5.7861894677136975e-02         3.1362670698317878e-02
+25                                     3.5397526710554691e-04         2.4900988790840996e-02        -2.2133153003338624e-02        -4.8148758666237525e-03         9.3354529023542604e-02         3.7560789833832983e-03        -8.0316489068937999e-02         9.4523266479021231e-03
+26                                    -9.7349020061655925e-02         3.4944838365042807e-02        -6.0361115886253328e-03         3.9994968651264140e-03        -3.6191686759658906e-02         3.2845696079069661e-02        -2.6934370209895329e-02         3.0745937134385316e-02
+27                                     1.7876224564682297e-02        -7.8131900331528427e-03         1.1083174825186511e-02        -6.6628045124097193e-03        -9.5149768687264505e-02         5.7166998660714265e-02         1.7934134757939996e-02        -7.5204478245355894e-02
+28                                     2.5462692953801898e-03         6.9732943945778017e-02        -5.0344124265494013e-02         5.9541622053418730e-02        -1.6924686228264086e-02        -4.3729457037286611e-02         6.9543589718515167e-02        -5.5240184071100170e-03
+29                                     3.1728233206380047e-02        -2.8098210607335944e-02        -1.1071360378735242e-02        -2.1225642469630927e-02         2.0719599487984870e-02         2.8310204359161217e-02        -1.4085875616251919e-02         2.0205787542373302e-02
+30                                     3.2586914606503439e-02        -5.3392800010136444e-02         9.6296259907096213e-03        -4.5227130151878035e-02         7.9580945706256470e-02         2.2952373856541152e-02        -6.3556074619411609e-02         3.7238227231309283e-02
+31                                    -5.7578923619200598e-02        -1.0598560193291801e-02         1.9698845028340170e-02        -1.8877466921243129e-02        -7.8433010675494658e-02         6.5265965801248091e-02        -1.7146854691983165e-02         2.1409284164066993e-02
+32                                    -6.5944383873130438e-02        -3.8817793013467349e-02         1.7532476470054514e-02         1.7637243853861515e-03         1.2798897027487481e-02        -6.6500778437311572e-02         5.4338580764195878e-02         1.6343602372613737e-02
+33                                     2.0242530470620210e-01         2.3275166350286022e-01         3.3357860902970382e-01        -2.2151892151021351e-02         2.0665429270939292e-03        -1.1223788247617187e-02        -2.8186893958140921e-03         2.9176014711693953e-03
+34                                     7.2534826662419118e-03        -1.2299123327307834e-01        -1.1036937499806361e-01         1.0866128924517778e-01        -1.2568705755112804e-04         4.9654995925624404e-02        -6.7186647800840168e-05        -3.0220804428236443e-02
+35                                     1.0529699051649402e-02        -4.0256033348451667e-02        -6.3181337471469742e-02        -1.4380884725729227e-02        -1.0879265471288304e-02        -7.7499762788488117e-03        -5.7027888904361002e-03        -2.3014364459796887e-02
+                                                        24                          25                          26                          27                          28                          29                          30                          31
+
+0                                      8.4959851945186609e-04         3.7798666106483393e-02        -1.2424229646338278e-02         2.3047491498387612e-02         2.5267689921953285e-03        -1.7870547598328539e-03         3.4462969193512685e-03         5.4923833069013908e-04
+1                                     -3.9997916894253950e-02        -1.7143670060215097e-01         3.5561969813681572e-02        -3.5694470458640666e-02        -2.2033759220018989e-02        -1.1734743868288537e-02        -1.0613348222026578e-02        -1.3270998098990046e-03
+2                                      3.2026539228868999e-03         2.7135549083578625e-02        -5.2436739471823472e-03        -6.4937856118977608e-02         4.1908474579174316e-04        -1.6340227819209524e-03         3.0860648479281777e-03         7.8002771433232092e-04
+3                                      1.9332670494782059e-02        -4.3727095349085220e-02         2.6649301024091687e-02         1.9485755235714513e-03         2.0321078460021416e-02         4.9331689814729629e-02         1.0637147375818832e-02        -5.5425239780790584e-03
+4                                      1.5291163500594316e-02         8.9227526641528609e-02        -2.7327649439555846e-02        -1.6708923982347933e-02         4.5533083946780607e-02         5.3200597730657509e-02         1.5093088907523250e-02        -3.6164799944325252e-03
+5                                      4.5498274078099518e-03        -2.0886099614996961e-02         1.4894487836291190e-02         2.0719015474489530e-03         7.4937422812040811e-03         9.2285888372722735e-03         3.2554626632297716e-03        -1.1121231800816218e-02
+6                                      3.3104379719802292e-03         3.0443112930447724e-02        -4.6298001645943255e-04        -1.6523834823728198e-02        -4.2921142615524287e-02        -6.2726297989427096e-02        -1.8638005487877158e-02         3.0969992473350665e-04
+7                                      4.1652819019335511e-03        -1.4558512780065902e-03         8.2043055161829682e-03        -1.9126168719510079e-02        -2.5584605991582750e-02        -3.4722650380141530e-02        -8.6358778483927642e-03        -1.1947342045226107e-03
+8                                     -2.4162562019218223e-02        -3.6076853567544385e-02        -2.2298381375009540e-02         2.7014508663157182e-02         6.2484117555488300e-02         8.9005870237010620e-02         2.2103721214584239e-02        -5.1981229575990565e-05
+9                                     -6.2770720790130399e-03         1.2002845169513741e-02         2.0142419228621105e-03         2.9476698101373682e-03        -5.7929743095832351e-03        -1.3459915577464506e-02        -3.3929694812446991e-03         5.0419459485176428e-03
+10                                     1.0317823824428293e-02         7.8967710482454306e-03         1.9557162085295912e-02         3.2834920206473175e-02        -4.3123450261958483e-02        -5.7142150249309048e-02        -1.5822329137219145e-02         1.3200518254311615e-02
+11                                     2.3404569756670018e-02         4.8461577595149956e-02         2.8985816864143383e-02         3.1004673302145003e-02        -7.4100265543294505e-02        -1.0075094347975734e-01        -2.6825660527733972e-02         2.5268367683590892e-02
+12                                    -6.6271813853800404e-02        -3.7074086120516027e-02        -1.7042214375530584e-01        -7.1557003641116524e-03         1.2549966665927106e-01        -1.1776816704087674e-01        -2.3853701570790128e-02         4.0324775559821009e-02
+13                                    -4.5237963574212619e-03        -1.6254142586797884e-02        -3.7193218194918679e-02         6.9986939655705691e-03        -3.1250291400504344e-02        -5.8607485008865617e-02         2.2471899408857279e-01        -1.4781041212784148e-02
+14                                    -2.1630799299712136e-02        -1.2856347866942798e-02        -1.4610387497241559e-01        -3.8848517380755962e-03        -1.0277254676764552e-01         4.6354568271995640e-02        -7.2348289917790340e-02         1.2499273930503117e-02
+15                                    -6.2550406420163783e-03         8.6820891262245712e-03         1.8599147515097166e-02         2.4680323018934913e-03        -3.7390921636300374e-02         3.3221020475413740e-02        -2.5673963687112073e-02        -1.0567748950240463e-03
+16                                    -3.4540675829163724e-02         1.0797955560354880e-02         4.7021488767787639e-03         1.3020211429813687e-03        -3.2833076534969759e-02         3.2598705554766849e-02        -4.0887908467083123e-02         2.3051157292685240e-03
+17                                     4.0394792919920104e-02        -8.6034449247655541e-03         1.6653100029513236e-02        -1.3058547981985738e-03         4.7392234158322617e-02        -3.8549645675325969e-02         3.7931645402722376e-02        -6.9134239879442673e-03
+18                                     1.9671908013857015e-03         1.4704348875458859e-02         1.8501835696760977e-02         2.2634440328828326e-03        -2.7160682593302204e-02         1.2897802872948070e-02         3.3905456687231203e-02        -5.0648017226487697e-03
+19                                     5.0479618760820799e-02        -1.6721140733856353e-02         3.8676711577524500e-03        -4.7356721569488548e-03         5.2309193668852748e-02        -7.4138558979421603e-03        -8.4840495933298885e-02         1.5653067942015162e-03
+20                                     8.7926606113483269e-03         1.2712719029945251e-03         1.5650161966320984e-02        -1.3585702161247862e-04         1.5890356259425448e-02        -4.2815985815360374e-03        -7.8495156208764575e-03        -4.4234748545946808e-03
+21                                    -1.2050160415738463e-02         4.8913648930574869e-03        -2.5550816658723441e-02        -2.3810233182400792e-03        -3.5041351377442069e-02        -4.9281765559973092e-03        -1.5373667810098178e-02        -2.3939162170636108e-01
+22                                    -3.1399345019307932e-02        -3.9340304531918892e-03        -1.6337994003264338e-02        -1.7057809582059411e-03        -4.8498037479717315e-02         1.8397219622958823e-02        -1.5923130591247687e-02         4.8855507035179872e-02
+23                                    -9.2545919974751326e-02         4.4401258507209881e-03        -5.1861937577901612e-02        -6.4664952854036912e-03        -8.8428866163924230e-02         7.1284478238187732e-02         5.1756966152801939e-02         4.5970601389226623e-02
+24                                     6.1011109676357755e-02        -1.5964610643018469e-02        -1.6088492999000937e-02        -6.7008040492268369e-04        -1.0575214470367562e-02         6.7595542434567149e-03         5.3559394721359897e-03         3.5561570983168860e-02
+25                                    -9.8977618729624239e-02         2.5698270440357961e-02         3.1105488553888713e-02         1.2922702500743758e-03         3.5262815876788943e-02        -1.7800014022120145e-02        -1.2434590158918126e-02        -4.7072415073556508e-02
+26                                     1.6457201840728224e-02         2.1004018935741682e-03         9.5425949595748290e-03         4.5870151974104236e-04         1.8180105297464041e-02        -9.2701069904574038e-03        -1.1589411590823646e-02        -1.4129670053351221e-02
+27                                    -7.8556240620967277e-02         3.0031326291412384e-02         8.0303389605642345e-02         2.5871888087515690e-03         2.5215956852617467e-02         2.7791110588788765e-03         2.6639697669639268e-03         7.9647022987565860e-02
+28                                     5.6364221539380492e-03         2.7001284053856669e-03         1.6020275712373171e-02         5.4117909426020980e-04         5.6959132612938819e-03         9.8118615512789105e-05         1.7181164447151638e-03         6.5557185106599235e-03
+29                                     3.9446671136950655e-02        -2.3691517596525631e-04         2.3193387102816022e-02         7.9427461842456891e-04         7.7357936871344443e-03        -8.9564277439729671e-04        -2.6464172873352579e-03         6.6791811256657297e-03
+30                                     4.0492027235533898e-02        -9.6783849311898804e-03        -1.3793568518363575e-02        -6.3877385123339392e-04        -3.3292797536373145e-03         5.1240017754869841e-03         4.6204830629781772e-03         2.1132508113126464e-02
+31                                     9.6664854779337658e-02        -1.7976662110248814e-02        -2.6768211749653416e-02        -1.5933380936811864e-03        -1.2169824754538774e-02         1.3673230652673868e-02         9.2618385135916602e-03         1.3285149424809252e-02
+32                                    -4.3137085871341047e-02         1.0487811277900697e-02         3.4904436627215436e-02         2.5380330040521851e-03         2.7654699687115477e-02        -2.5820304201010058e-02        -7.3581141387557281e-03        -2.1081322072743103e-02
+33                                     3.0327856324080201e-04        -2.2878429807201561e-02         1.0577755448186820e-02        -2.1193639167215084e-01         1.2320426027714234e-02        -1.4980781424169514e-02         3.0699579278010664e-02         3.6350854940715504e-04
+34                                    -1.6370320681195382e-02        -6.3343594036780249e-02        -4.3240147011079581e-02         8.7751518947810492e-01         3.2644775615047722e-02         3.2656990019294098e-02        -1.4284076125880710e-02        -2.0196115175385967e-02
+35                                     9.3157767601094559e-03         4.2715685056270360e-02        -2.1407432600512494e-02         1.2298093525929266e-01         1.5313215945506466e-02         2.5714714060125904e-03         7.8036112768304130e-03        -4.1923230295593007e-03
+                                                        32                          33                          34                          35
+
+0                                      1.4095548886683629e-04         1.7605106169588966e-03        -4.1365507857944782e-03         1.1790717644235541e-02
+1                                      6.7672563308419590e-03        -3.0191843458687918e-03         4.6834549578017564e-03         1.5379527248866303e-02
+2                                      7.7624863884669028e-05        -8.7006463259248191e-04         1.3135254153938717e-02        -5.7145493469209677e-02
+3                                     -2.4375891869903941e-03        -6.8374812498471858e-03         3.2811965035807140e-02         2.2607849428600999e-04
+4                                     -1.0795262114795113e-02        -2.9549322625135595e-03        -6.9481576410334910e-03         4.0024533935129606e-04
+5                                     -4.9060235757474478e-03        -6.3828346805875208e-03        -1.1486581860060809e-01        -4.6533871479992268e-04
+6                                      2.5521254786619934e-03         1.0901923788346735e-03        -6.8379016281448837e-02        -2.6665948336494132e-04
+7                                      3.6775233223951200e-03        -4.5742427616462307e-04        -3.2862818477442816e-02        -4.1983093325778041e-04
+8                                     -4.9586072985325037e-03        -1.5362421755319314e-03         1.1069512769191628e-01         5.6200740310705100e-04
+9                                      1.1891490618614706e-03         8.3833320380572243e-03         6.1815811530705565e-03         3.3062748662302992e-05
+10                                     9.3066882135512535e-03         1.2011262826207059e-02         5.0911366625895231e-02        -5.9409527425664517e-04
+11                                     1.4145164909016579e-02         2.3057357178576026e-02         1.0307718085816098e-01        -2.9043845814569799e-04
+12                                    -3.9351501286803519e-04         3.2366902972374045e-02        -4.3933632092555320e-05        -5.1136916998777821e-04
+13                                    -7.1062620115944376e-03        -7.0539140003290798e-02         6.6640606455558469e-03        -2.5131344967424318e-04
+14                                     1.9589351364862308e-02        -1.5796150118905836e-01         9.0179126554736037e-03         2.2095271818723240e-04
+15                                     6.6519679906956852e-03        -1.5477275858309141e-02        -3.1663166785912949e-03         1.4113669798837165e-04
+16                                     7.6751770659715651e-03        -1.1822181998522675e-02        -2.1564774944714134e-03         6.0227840302091836e-05
+17                                    -1.7149329433239085e-02         2.7161043950798283e-02         2.1254553051903921e-03        -9.8319821025753411e-05
+18                                    -3.0868848696858305e-03        -1.5404541460820861e-02        -6.2076674729099802e-05         1.9483432419031444e-04
+19                                     1.2097010281065797e-02         3.6371545680593392e-02        -8.5679181775418845e-04        -1.1541028062447324e-04
+20                                     4.9346761313052651e-03         1.4329301538421914e-02        -2.7197268554074081e-04        -3.7779314360532000e-06
+21                                    -2.8190519411789374e-02         5.2074794288713651e-02         2.1903038914612077e-02        -1.4460545845514135e-04
+22                                    -2.3623818444838221e-01         4.9580268825823892e-02         6.4453072980573812e-04        -3.1412458011776092e-05
+23                                     7.5247453450375187e-02         1.8821484528210428e-01        -2.0971733763050494e-02        -2.5878343583708659e-04
+24                                    -2.1847035971564392e-02         6.3463322918594954e-03        -3.2062009130565247e-03         3.1971041281514559e-05
+25                                     6.2542972247649029e-02        -2.3125776401661510e-02         3.3640619794649755e-03         9.1931891481164843e-06
+26                                     9.9142518308813852e-03        -1.6953759847769180e-02         2.2622193842195136e-03         5.1453365142333304e-05
+27                                     1.6243519222723289e-02        -3.1926439570020677e-02        -4.6498146859129301e-03         9.4972735934797204e-05
+28                                     1.5384410781101058e-02        -7.6717738858498195e-03        -3.5629866908832599e-04         2.3014557018362807e-05
+29                                    -1.9020888077730133e-03        -1.5963015905950236e-02         1.1272294125641046e-03         5.1205581129893639e-05
+30                                     2.1222637268662845e-02         5.1545229597842529e-03        -3.6324819796342144e-03         1.2827392060228583e-05
+31                                     5.8102040628914560e-02         1.6861988160102492e-02        -4.3848982774140205e-03        -8.1712555846201982e-06
+32                                    -5.5051912130382581e-02        -3.4507297407116194e-02         6.2233186812724771e-03         3.5671889266255621e-05
+33                                    -5.0608652770456610e-03        -1.4768978219516000e-05         2.6158355128199740e-02        -1.9177548893796137e-01
+34                                    -6.9608040049261308e-03         8.2194399808521515e-03        -1.4415275221970006e-01        -2.3678530258909172e-01
+35                                    -4.2661361454811378e-03         3.5253644707885076e-03        -2.1780183927744889e-02         9.1727252608862830e-01
+$End
+$Calculation_Info
+   &GeometryIndex 9
+   &Mult [&Type "Integer"] 1
+   &Charge [&Type "Integer"] 0
+   &NumOfAtoms [&Type "Integer"] 12
+   &NumOfElectrons [&Type "Integer"] 98
+   &NumOfBasisFuncts [&Type "Integer"] 163
+   &NumOfAuxCBasisFuncts [&Type "Integer"] 0
+   &NumOfAuxJBasisFuncts [&Type "Integer"] 552
+   &NumOfAuxJKBasisFuncts [&Type "Integer"] 0
+   &NumOfCABSBasisFuncts [&Type "Integer"] 0
+$End
+$Calculation_Timings
+   &GeometryIndex 9
+   &GTOINT [&Type "Double"]       1.1960000000000012e+01
+   &SCF [&Type "Double"]       1.1584600000000002e+02
+   &SCFGRAD [&Type "Double"]       6.8910999999999987e+01
+   &GSTEP [&Type "Double"]       1.4000000000001386e-01
+   &PROPINT [&Type "Double"]       2.6738000000000014e+01
+   &RESPONSE [&Type "Double"]       4.7674000000000035e+01
+   &PROP [&Type "Double"]       9.5652999999999963e+01
+   &SUM [&Type "Double"]       3.6692200000000003e+02
+$End

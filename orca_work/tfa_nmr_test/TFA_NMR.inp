@@ -1,0 +1,23 @@
+# TFA (Trifluoroacetic acid) - NMR shielding tensors
+# Uses optimised geometry from previous Opt+Freq run
+# PBE0/def2-TZVP with GIAO method gives reliable 1H, 13C and 19F chemical shifts
+# Note: larger basis set (def2-TZVP) than opt run - this is standard for NMR
+
+! PBE0 def2-TZVP def2/J RIJCOSX D3BJ TightSCF NMR
+
+%pal
+  nprocs 4
+End
+
+%maxcore 3000
+
+* xyz 0 1
+  C       0.570037       0.313005       0.007115
+  O       1.006485       1.417615       0.124568
+  C      -0.932533      -0.021253       0.058198
+  F      -1.324135      -0.542706      -1.101036
+  F      -1.175295      -0.905710       1.020848
+  F      -1.633349       1.070876       0.294281
+  O       1.276148      -0.792143      -0.187035
+  H       2.212643      -0.539683      -0.216940
+*

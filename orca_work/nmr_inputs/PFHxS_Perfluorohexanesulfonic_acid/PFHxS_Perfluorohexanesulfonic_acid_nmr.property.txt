@@ -1,0 +1,1344 @@
+*************************************************
+******************* ORCA 6.1.1 ******************
+*************************************************
+$Calculation_Status
+   &GeometryIndex 1
+   &version [&Type "String"] "6.1.1"
+   &progName [&Type "String"] "LeanSCF"
+   &Status [&Type "String"] "NORMAL TERMINATION"
+$End
+$Geometry
+   &GeometryIndex 1
+   &NAtoms [&Type "Integer"] 24
+   &NCorelessECP [&Type "Integer"] 0
+   &NGhostAtoms [&Type "Integer"] 0
+   &CartesianCoordinates [&Type "Coordinates", &Dim(24,4), &Units "Bohr"] 
+              C      2.719102367660    1.092169108826   -2.392130613612
+              C      0.179493747104   -0.070294032730   -1.461062547429
+              C     -1.219784204376    1.312454484257    0.696054165264
+              C     -3.648089845369   -0.018336012677    1.689641930862
+              F     -3.023352054673   -2.153460092624    2.866572815698
+              F     -4.702488997956    1.560806072229    3.334871518124
+              S     -6.090685595387   -0.831341548918   -0.707696767975
+              O     -6.740040848430    1.448344690547   -2.029025406157
+              O     -5.329798705921   -3.169065057408   -1.896982682276
+              O     -8.363181426913   -1.437694194057    1.219090674885
+              F      0.308871957137    1.482567630833    2.706987333415
+              F     -1.839340366013    3.622353665151   -0.076167301554
+              F     -1.344022359324   -0.029245401649   -3.480106420146
+              F      0.590386349034   -2.468063589125   -0.783113848254
+              C      5.054505292457    1.288230084946   -0.614176111333
+              C      5.923647033231   -1.131919498053    0.778298826065
+              F      8.161247181968   -0.694992139177    1.803051955063
+              F      4.314171064423   -1.738068052770    2.595270503830
+              F      6.117793716778   -3.042389155746   -0.824190825227
+              F      6.968229058553    2.007614809060   -2.104198711765
+              F      4.649693829227    3.090488355033    1.102201664871
+              F      3.408574616799   -0.326225312225   -4.366353961885
+              F      2.245075905322    3.440631930935   -3.190585258621
+              H     -8.340007715332   -3.234561075483    1.591820257539
+$End
+$SCF_Mulliken_Population_Analysis
+   &GeometryIndex 1
+   &NAtoms [&Type "Integer"] 24
+   &ATNO [&Type "ArrayOfIntegers", &Dim (24,1)] 
+                                                         0
+
+0                                                        6
+1                                                        6
+2                                                        6
+3                                                        6
+4                                                        9
+5                                                        9
+6                                                       16
+7                                                        8
+8                                                        8
+9                                                        8
+10                                                       9
+11                                                       9
+12                                                       9
+13                                                       9
+14                                                       6
+15                                                       6
+16                                                       9
+17                                                       9
+18                                                       9
+19                                                       9
+20                                                       9
+21                                                       9
+22                                                       9
+23                                                       1
+   &AtomicCharges [&Type "ArrayOfDoubles", &Dim (24,1)] 
+                                                         0
+
+0                                      3.1720617973747256e-01
+1                                      2.2904782968427195e-01
+2                                      2.5605517464749106e-01
+3                                      2.3607268193885922e-01
+4                                     -1.2670563189190531e-01
+5                                     -1.1406386380942912e-01
+6                                      7.5630720226573978e-01
+7                                     -3.5809343967116192e-01
+8                                     -3.7885367753024290e-01
+9                                     -3.6930934590239950e-01
+10                                    -1.3855919936787586e-01
+11                                    -1.2387142362353387e-01
+12                                    -1.2934269074247773e-01
+13                                    -1.4056352041529330e-01
+14                                     2.3304353528878430e-01
+15                                     4.0366858125354543e-01
+16                                    -1.2646780406556779e-01
+17                                    -1.3196114553571903e-01
+18                                    -1.3091336825361743e-01
+19                                    -1.3102788091410034e-01
+20                                    -1.3339166847875461e-01
+21                                    -1.2841749935850544e-01
+22                                    -1.2874982071488894e-01
+23                                     3.5889079545915881e-01
+   &Method [&Type "String"] "SCF"
+   &Level [&Type "String"] "Relaxed density"
+   &Mult [&Type "Integer"] 1
+   &State [&Type "Integer"] -1
+   &Irrep [&Type "Integer"] 0
+$End
+$SCF_Loewdin_Population_Analysis
+   &GeometryIndex 1
+   &NAtoms [&Type "Integer"] 24
+   &ATNO [&Type "ArrayOfIntegers", &Dim (24,1)] 
+                                                         0
+
+0                                                        6
+1                                                        6
+2                                                        6
+3                                                        6
+4                                                        9
+5                                                        9
+6                                                       16
+7                                                        8
+8                                                        8
+9                                                        8
+10                                                       9
+11                                                       9
+12                                                       9
+13                                                       9
+14                                                       6
+15                                                       6
+16                                                       9
+17                                                       9
+18                                                       9
+19                                                       9
+20                                                       9
+21                                                       9
+22                                                       9
+23                                                       1
+   &AtomicCharges [&Type "ArrayOfDoubles", &Dim (24,1)] 
+                                                         0
+
+0                                      5.8068950100632151e-04
+1                                      6.2589846116728226e-04
+2                                      2.6047918779380453e-04
+3                                      1.7704905756439986e-05
+4                                      8.1951413494744951e-04
+5                                      1.3912017868251475e-03
+6                                      1.0019710134415700e-05
+7                                      1.3116522291903270e-05
+8                                      7.6633515840289337e-06
+9                                      5.6605909536016739e-06
+10                                     7.4356983973180482e-02
+11                                     8.7561724454530615e-02
+12                                     2.7568186138000259e-02
+13                                     3.6173831980375903e-01
+14                                     5.2773382229986791e-04
+15                                     1.1564203269164537e-04
+16                                     1.2278141298766566e-03
+17                                     2.4185261497987028e-03
+18                                     2.8587840766322002e-02
+19                                     3.4463582744508085e-03
+20                                     1.9918038806707961e-01
+21                                     1.7217063908465552e-01
+22                                     3.7367873729293316e-02
+23                                     2.1421599493761177e-08
+   &Method [&Type "String"] "SCF"
+   &Level [&Type "String"] "Relaxed density"
+   &Mult [&Type "Integer"] 1
+   &State [&Type "Integer"] -1
+   &Irrep [&Type "Integer"] 0
+$End
+$SCF_Mayer_Population_Analysis
+   &GeometryIndex 1
+   &NAtoms [&Type "Integer"] 24 "Total number of atoms"
+   &NBondOrdersPrint [&Type "Integer"] 23 "The number of bond orders larger than threshold"
+   &bondThresh [&Type "Double"]       1.0000000000000001e-01  "The threshold for printing"
+   &components [&Type "ArrayOfIntegers", &Dim (23,4)] "The indices and atomic numbers of the bonding atoms"
+                                                         0                           1                           2                           3
+
+0                                                        0                           6                           1                           6
+1                                                        0                           6                          14                           6
+2                                                        0                           6                          21                           9
+3                                                        0                           6                          22                           9
+4                                                        1                           6                           2                           6
+5                                                        1                           6                          12                           9
+6                                                        1                           6                          13                           9
+7                                                        2                           6                           3                           6
+8                                                        2                           6                          10                           9
+9                                                        2                           6                          11                           9
+10                                                       3                           6                           4                           9
+11                                                       3                           6                           5                           9
+12                                                       3                           6                           6                          16
+13                                                       6                          16                           7                           8
+14                                                       6                          16                           8                           8
+15                                                       6                          16                           9                           8
+16                                                       9                           8                          23                           1
+17                                                      14                           6                          15                           6
+18                                                      14                           6                          19                           9
+19                                                      14                           6                          20                           9
+20                                                      15                           6                          16                           9
+21                                                      15                           6                          17                           9
+22                                                      15                           6                          18                           9
+   &BondOrders [&Type "ArrayOfDoubles", &Dim (23,1)] "The bond orders"
+                                                         0
+
+0                                      9.4174559331019936e-01
+1                                      9.5970286194680177e-01
+2                                      1.1293621355200729e+00
+3                                      1.1328526426662697e+00
+4                                      9.4746569109384304e-01
+5                                      1.0989415336202728e+00
+6                                      1.0976739299335099e+00
+7                                      9.2456260728762718e-01
+8                                      1.0907529868931740e+00
+9                                      1.1536844086089946e+00
+10                                     1.1528878593585596e+00
+11                                     1.1456743197433525e+00
+12                                     8.1205730740865800e-01
+13                                     1.9668530165216072e+00
+14                                     1.9033547747258490e+00
+15                                     1.1231410715276917e+00
+16                                     8.4053991428509089e-01
+17                                     9.7530564548526222e-01
+18                                     1.1223418863350443e+00
+19                                     1.1234274664805357e+00
+20                                     1.1745002556625934e+00
+21                                     1.1543438788275588e+00
+22                                     1.1717407519238332e+00
+   &ATNO [&Type "ArrayOfIntegers", &Dim (24,1)] "Atomic number of the elements"
+                                                         0
+
+0                                                        6
+1                                                        6
+2                                                        6
+3                                                        6
+4                                                        9
+5                                                        9
+6                                                       16
+7                                                        8
+8                                                        8
+9                                                        8
+10                                                       9
+11                                                       9
+12                                                       9
+13                                                       9
+14                                                       6
+15                                                       6
+16                                                       9
+17                                                       9
+18                                                       9
+19                                                       9
+20                                                       9
+21                                                       9
+22                                                       9
+23                                                       1
+   &NA [&Type "ArrayOfDoubles", &Dim (24,1)] "Mulliken gross atomic population"
+                                                         0
+
+0                                      5.6827938202625505e+00
+1                                      5.7709521703157289e+00
+2                                      5.7439448253525018e+00
+3                                      5.7639273180611381e+00
+4                                      9.1267056318919053e+00
+5                                      9.1140638638094273e+00
+6                                      1.5243692797734225e+01
+7                                      8.3580934396711726e+00
+8                                      8.3788536775302447e+00
+9                                      8.3693093459023977e+00
+10                                     9.1385591993678776e+00
+11                                     9.1238714236235303e+00
+12                                     9.1293426907424955e+00
+13                                     9.1405635204152951e+00
+14                                     5.7669564647112228e+00
+15                                     5.5963314187464679e+00
+16                                     9.1264678040655749e+00
+17                                     9.1319611455357244e+00
+18                                     9.1309133682536192e+00
+19                                     9.1310278809141110e+00
+20                                     9.1333916684787440e+00
+21                                     9.1284174993585143e+00
+22                                     9.1287498207149227e+00
+23                                     6.4110920454084108e-01
+   &ZA [&Type "ArrayOfDoubles", &Dim (24,1)] "Total nuclear charge"
+                                                         0
+
+0                                      6.0000000000000000e+00
+1                                      6.0000000000000000e+00
+2                                      6.0000000000000000e+00
+3                                      6.0000000000000000e+00
+4                                      9.0000000000000000e+00
+5                                      9.0000000000000000e+00
+6                                      1.6000000000000000e+01
+7                                      8.0000000000000000e+00
+8                                      8.0000000000000000e+00
+9                                      8.0000000000000000e+00
+10                                     9.0000000000000000e+00
+11                                     9.0000000000000000e+00
+12                                     9.0000000000000000e+00
+13                                     9.0000000000000000e+00
+14                                     6.0000000000000000e+00
+15                                     6.0000000000000000e+00
+16                                     9.0000000000000000e+00
+17                                     9.0000000000000000e+00
+18                                     9.0000000000000000e+00
+19                                     9.0000000000000000e+00
+20                                     9.0000000000000000e+00
+21                                     9.0000000000000000e+00
+22                                     9.0000000000000000e+00
+23                                     1.0000000000000000e+00
+   &QA [&Type "ArrayOfDoubles", &Dim (24,1)] "Mulliken gross atomic charge"
+                                                         0
+
+0                                      3.1720617973744947e-01
+1                                      2.2904782968427106e-01
+2                                      2.5605517464749816e-01
+3                                      2.3607268193886188e-01
+4                                     -1.2670563189190531e-01
+5                                     -1.1406386380942735e-01
+6                                      7.5630720226577530e-01
+7                                     -3.5809343967117258e-01
+8                                     -3.7885367753024468e-01
+9                                     -3.6930934590239772e-01
+10                                    -1.3855919936787764e-01
+11                                    -1.2387142362353032e-01
+12                                    -1.2934269074249549e-01
+13                                    -1.4056352041529507e-01
+14                                     2.3304353528877719e-01
+15                                     4.0366858125353211e-01
+16                                    -1.2646780406557490e-01
+17                                    -1.3196114553572436e-01
+18                                    -1.3091336825361921e-01
+19                                    -1.3102788091411099e-01
+20                                    -1.3339166847874395e-01
+21                                    -1.2841749935851432e-01
+22                                    -1.2874982071492269e-01
+23                                     3.5889079545915892e-01
+   &VA [&Type "ArrayOfDoubles", &Dim (24,1)] "Mayer's total valence"
+                                                         0
+
+0                                      4.3429088499827717e+00
+1                                      4.2949242732033328e+00
+2                                      4.2845755126163052e+00
+3                                      4.3532857587182452e+00
+4                                      1.1947827430804008e+00
+5                                      1.2059741160012489e+00
+6                                      5.9214946663628911e+00
+7                                      2.1387307737994563e+00
+8                                      2.0919318514608474e+00
+9                                      2.0900200522181063e+00
+10                                     1.1873203185676111e+00
+11                                     1.2118369380049714e+00
+12                                     1.1995301578132995e+00
+13                                     1.1863076150243383e+00
+14                                     4.3616229009519962e+00
+15                                     4.5651945952033426e+00
+16                                     1.1972682992817081e+00
+17                                     1.1869690964778741e+00
+18                                     1.1956530667423682e+00
+19                                     1.1902527341269007e+00
+20                                     1.1861282349003623e+00
+21                                     1.1945813151445996e+00
+22                                     1.1985707585326786e+00
+23                                     8.9885799243704723e-01
+   &BVA [&Type "ArrayOfDoubles", &Dim (24,1)] "Mayer's bonded valence"
+                                                         0
+
+0                                      4.3429088499827548e+00
+1                                      4.2949242732033248e+00
+2                                      4.2845755126162048e+00
+3                                      4.3532857587182345e+00
+4                                      1.1947827430804931e+00
+5                                      1.2059741160012845e+00
+6                                      5.9214946663629711e+00
+7                                      2.1387307737994536e+00
+8                                      2.0919318514607959e+00
+9                                      2.0900200522180983e+00
+10                                     1.1873203185674583e+00
+11                                     1.2118369380049430e+00
+12                                     1.1995301578133013e+00
+13                                     1.1863076150242833e+00
+14                                     4.3616229009521916e+00
+15                                     4.5651945952033817e+00
+16                                     1.1972682992816566e+00
+17                                     1.1869690964779025e+00
+18                                     1.1956530667423273e+00
+19                                     1.1902527341269895e+00
+20                                     1.1861282349003854e+00
+21                                     1.1945813151445996e+00
+22                                     1.1985707585326768e+00
+23                                     8.9885799243704723e-01
+   &FA [&Type "ArrayOfDoubles", &Dim (24,1)] "Mayer's free valence"
+                                                         0
+
+0                                      0.0000000000000000e+00
+1                                      0.0000000000000000e+00
+2                                      0.0000000000000000e+00
+3                                      0.0000000000000000e+00
+4                                      0.0000000000000000e+00
+5                                      0.0000000000000000e+00
+6                                      0.0000000000000000e+00
+7                                      0.0000000000000000e+00
+8                                      0.0000000000000000e+00
+9                                      0.0000000000000000e+00
+10                                     0.0000000000000000e+00
+11                                     0.0000000000000000e+00
+12                                     0.0000000000000000e+00
+13                                     0.0000000000000000e+00
+14                                     0.0000000000000000e+00
+15                                     0.0000000000000000e+00
+16                                     0.0000000000000000e+00
+17                                     0.0000000000000000e+00
+18                                     0.0000000000000000e+00
+19                                     0.0000000000000000e+00
+20                                     0.0000000000000000e+00
+21                                     0.0000000000000000e+00
+22                                     0.0000000000000000e+00
+23                                     0.0000000000000000e+00
+   &Method [&Type "String"] "SCF"
+   &Level [&Type "String"] "Relaxed density"
+   &Mult [&Type "Integer"] 1
+   &State [&Type "Integer"] -1
+   &Irrep [&Type "Integer"] 0
+$End
+$SCF_Energy
+   &GeometryIndex 1
+   &Method [&Type "String"] "SCF"
+   &totalEnergy [&Type "ArrayOfDoubles", &Dim (1,1)] "Total energy of each state"
+                                                         0
+
+0                                     -2.1499413950757789e+03
+   &Mult [&Type "ArrayOfIntegers", &Dim (1,1)] "Multiplicity of each state"
+                                                         0
+
+0                                                        1
+$End
+$DFT_Energy
+   &GeometryIndex 1
+   &nAlphaEl [&Type "Integer"] 97
+   &nBetaEl [&Type "Integer"] 97
+   &nTotalEl [&Type "Integer"] 193
+   &finalEn [&Type "Double"]      -2.1499413950757789e+03  "No Van der Waals correction"
+   &eExchange [&Type "Double"]      -1.5901621572586726e+02
+   &eCorr [&Type "Double"]      -6.9093774875771121e+00
+   &eXC [&Type "Double"]      -1.6592559321344436e+02
+   &eCNL [&Type "Double"]       0.0000000000000000e+00
+$End
+$SCF_Timings
+   &GeometryIndex 1
+   &TOTAL [&Type "Double"]       1.0959239100000001e+02
+   &PREP [&Type "Double"]       5.1833400000000007e-01
+   &FOCK [&Type "Double"]       9.9388748999999976e+01
+   &DENS [&Type "Double"]       4.6564699999997572e-01
+   &ETOT [&Type "Double"]       1.0788499999999246e-01
+   &POP [&Type "Double"]       9.9568500000000881e-01
+   &TRAFO [&Type "Double"]       4.1350700000000629e-01
+   &DIIS [&Type "Double"]       1.6283179999999984e+00
+   &SOSCF [&Type "Double"]       9.4678399999999741e-01
+   &XC [&Type "Double"]       8.5115689999999855e+00
+   &FOCKSTART [&Type "Double"]       3.0226200000000891e-01
+   &INT_PREP [&Type "Double"]       3.0000000137420102e-06
+   &INT_BF [&Type "Double"]       2.0480999999999145e+00
+   &INT_DENS [&Type "Double"]       2.5822440000003901e+00
+   &INT_DENSIO [&Type "Double"]       2.7331011223500065e+05
+   &INT_FUNC [&Type "Double"]       1.6685699999958459e-01
+   &INT_POT [&Type "Double"]       3.2449019999998683e+00
+   &INT_POTIO [&Type "Double"]       2.4642000000298481e-02
+   &INT_SUM [&Type "Double"]       4.6299999999099839e-04
+   &SPLITRIJ [&Type "Double"]       8.6970119999999902e+00
+   &COSX [&Type "Double"]       8.6728147000000007e+01
+$End
+$Single_Point_Data
+   &GeometryIndex 1
+   &FinalEnergy [&Type "Double"]      -2.1499413950757789e+03  "Final single point energy"
+   &Converged [&Type "Boolean"] true
+$End
+$Calculation_Info
+   &GeometryIndex 1
+   &Mult [&Type "Integer"] 1
+   &Charge [&Type "Integer"] 0
+   &NumOfAtoms [&Type "Integer"] 24
+   &NumOfElectrons [&Type "Integer"] 194
+   &NumOfBasisFuncts [&Type "Integer"] 725
+   &NumOfAuxCBasisFuncts [&Type "Integer"] 0
+   &NumOfAuxJBasisFuncts [&Type "Integer"] 1140
+   &NumOfAuxJKBasisFuncts [&Type "Integer"] 0
+   &NumOfCABSBasisFuncts [&Type "Integer"] 0
+$End
+$SCF_Dipole_Moment
+   &GeometryIndex 1
+   &dipoleMagnitude [&Type "Double", &Units "a.u."]       1.0894142259356585e+00
+   &dipoleElecContrib [&Type "ArrayOfDoubles", &Dim (3,1)] "Electronic contribution"
+                                                         0
+
+0                                      1.5663932410975784e+01
+1                                      2.7094349980945811e+00
+2                                      1.1483678428517059e+00
+   &dipoleNucContrib [&Type "ArrayOfDoubles", &Dim (3,1)] "Nuclear contribution"
+                                                         0
+
+0                                     -1.5874287706348790e+01
+1                                     -3.3678704400878945e+00
+2                                     -3.0632462893296908e-01
+   &dipoleTotal [&Type "ArrayOfDoubles", &Dim (3,1)] "Total"
+                                                         0
+
+0                                     -2.1035529537300590e-01
+1                                     -6.5843544199331339e-01
+2                                      8.4204321391873682e-01
+   &doAtomicDipole [&Type "Boolean"] false
+   &Method [&Type "String"] "SCF"
+   &Level [&Type "String"] "Relaxed density"
+   &Mult [&Type "Integer"] 1
+   &State [&Type "Integer"] -1
+   &Irrep [&Type "Integer"] 0
+$End
+$SCF_Chemical_Shift
+   &GeometryIndex 1
+   &numOfNucs [&Type "Integer"] 24
+   &Method [&Type "String"] "SCF"
+   &Level [&Type "String"] "Relaxed density"
+   &Mult [&Type "Integer"] 1
+   &State [&Type "Integer"] -1
+   &Irrep [&Type "Integer"] 0
+   &NUC [&Type "Integer"] 0 "Index of the nuclei"
+   &NUC [&Type "Integer"] 1 "Index of the nuclei"
+   &NUC [&Type "Integer"] 2 "Index of the nuclei"
+   &NUC [&Type "Integer"] 3 "Index of the nuclei"
+   &NUC [&Type "Integer"] 4 "Index of the nuclei"
+   &NUC [&Type "Integer"] 5 "Index of the nuclei"
+   &NUC [&Type "Integer"] 6 "Index of the nuclei"
+   &NUC [&Type "Integer"] 7 "Index of the nuclei"
+   &NUC [&Type "Integer"] 8 "Index of the nuclei"
+   &NUC [&Type "Integer"] 9 "Index of the nuclei"
+   &NUC [&Type "Integer"] 10 "Index of the nuclei"
+   &NUC [&Type "Integer"] 11 "Index of the nuclei"
+   &NUC [&Type "Integer"] 12 "Index of the nuclei"
+   &NUC [&Type "Integer"] 13 "Index of the nuclei"
+   &NUC [&Type "Integer"] 14 "Index of the nuclei"
+   &NUC [&Type "Integer"] 15 "Index of the nuclei"
+   &NUC [&Type "Integer"] 16 "Index of the nuclei"
+   &NUC [&Type "Integer"] 17 "Index of the nuclei"
+   &NUC [&Type "Integer"] 18 "Index of the nuclei"
+   &NUC [&Type "Integer"] 19 "Index of the nuclei"
+   &NUC [&Type "Integer"] 20 "Index of the nuclei"
+   &NUC [&Type "Integer"] 21 "Index of the nuclei"
+   &NUC [&Type "Integer"] 22 "Index of the nuclei"
+   &NUC [&Type "Integer"] 23 "Index of the nuclei"
+   &Elems [&Type "Integer"] 6 "Atomic number of the nuclei"
+   &Elems [&Type "Integer"] 6 "Atomic number of the nuclei"
+   &Elems [&Type "Integer"] 6 "Atomic number of the nuclei"
+   &Elems [&Type "Integer"] 6 "Atomic number of the nuclei"
+   &Elems [&Type "Integer"] 9 "Atomic number of the nuclei"
+   &Elems [&Type "Integer"] 9 "Atomic number of the nuclei"
+   &Elems [&Type "Integer"] 16 "Atomic number of the nuclei"
+   &Elems [&Type "Integer"] 8 "Atomic number of the nuclei"
+   &Elems [&Type "Integer"] 8 "Atomic number of the nuclei"
+   &Elems [&Type "Integer"] 8 "Atomic number of the nuclei"
+   &Elems [&Type "Integer"] 9 "Atomic number of the nuclei"
+   &Elems [&Type "Integer"] 9 "Atomic number of the nuclei"
+   &Elems [&Type "Integer"] 9 "Atomic number of the nuclei"
+   &Elems [&Type "Integer"] 9 "Atomic number of the nuclei"
+   &Elems [&Type "Integer"] 6 "Atomic number of the nuclei"
+   &Elems [&Type "Integer"] 6 "Atomic number of the nuclei"
+   &Elems [&Type "Integer"] 9 "Atomic number of the nuclei"
+   &Elems [&Type "Integer"] 9 "Atomic number of the nuclei"
+   &Elems [&Type "Integer"] 9 "Atomic number of the nuclei"
+   &Elems [&Type "Integer"] 9 "Atomic number of the nuclei"
+   &Elems [&Type "Integer"] 9 "Atomic number of the nuclei"
+   &Elems [&Type "Integer"] 9 "Atomic number of the nuclei"
+   &Elems [&Type "Integer"] 9 "Atomic number of the nuclei"
+   &Elems [&Type "Integer"] 1 "Atomic number of the nuclei"
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      2.4973398094187360e+02         3.3248353495177261e+00        -1.5116959422885703e+00
+1                                      3.0915023135364428e+00         2.4298815227997076e+02         1.6404956745990260e-01
+2                                      2.7104160029337838e+00         1.8931029038046328e+00         2.4529619725374985e+02
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      2.5100783656166698e+02        -2.2023097979125308e+00         3.0459232322988694e-01
+1                                      1.5917670477583765e-01         2.5232435848886306e+02        -1.3839511923897985e+00
+2                                      1.5733856542643974e+00        -1.0573370059408320e+00         2.5989097188472988e+02
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      2.5056878403664089e+02        -2.0995984129960026e+00        -5.6589129458133025e-01
+1                                     -3.2835355236641739e-01         2.5104098243676250e+02        -1.3461450893016189e+00
+2                                     -5.4630480088845734e-01         6.8044251313624060e-01         2.5789807262961040e+02
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      2.5003247942546798e+02         1.4250087339681043e+00        -7.5405008691784059e-01
+1                                      5.3125107723465126e-01         2.4715126288454175e+02         1.1384965955607673e+00
+2                                     -1.0581374036453761e+00         1.7859950172725021e+00         2.4935661239381929e+02
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      4.6073692249169778e+02        -8.2969936197734526e+00         8.0677883467993112e+00
+1                                      6.4558038666015696e+00         4.8607996932183477e+02        -2.0458161277480077e+01
+2                                     -2.9871788274045716e+00        -1.4305072272668221e+01         4.7622880819083878e+02
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      4.6198305763969586e+02        -9.5009803595320026e+00        -1.2709189745644736e+01
+1                                     -1.7398393424162411e+01         4.6126851731252873e+02         2.0279036850164957e+01
+2                                     -2.2652855203835166e+01         1.7008284873717177e+01         4.7195014057121477e+02
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      1.0503594868758114e+03         8.5995097002600118e-01        -2.6614568615439871e-02
+1                                      3.7069519117201972e+00         1.0450859277458169e+03         7.5048636034584770e-01
+2                                     -6.4993114777145500e-01         1.0871003209465291e+00         1.0468012302031957e+03
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      3.8957637159355380e+02        -5.9482574302376738e+00         2.0518228582243698e+00
+1                                     -1.4879877146332333e+01         4.1033550420873075e+02        -1.7375094057304921e+01
+2                                      1.1914819800317950e+01        -7.6797133651410983e+00         3.9855401441797727e+02
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      3.8990373191475766e+02        -8.6705291012455721e+00        -6.3487131478437604e+00
+1                                      4.8665606367871961e+00         4.1363604134590719e+02         1.4588829012114500e+01
+2                                      7.6245134992120214e+00         1.3521685969280083e+01         4.0461049535912889e+02
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      3.9342307888134826e+02         5.9613366216435368e+00        -1.7410054820562113e+01
+1                                      1.1869660357920386e+01         3.8537723779007376e+02        -1.2433868733544552e+01
+2                                     -3.1133625166657598e+01        -1.4654858380146695e+01         3.5736671003664674e+02
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      4.7523014555167924e+02         4.2247828847721012e+00         1.9524767555525226e+01
+1                                      1.8460918631405052e-01         4.6301213771525977e+02         5.1823576308045871e-01
+2                                      1.1444256848622684e+01         1.4657324470266038e+00         4.8578603942000734e+02
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      4.5774838808318543e+02        -8.6341463193183952e+00         5.9859232239963078e-01
+1                                     -1.2243173609846206e+01         4.9102542955294888e+02        -7.6545543712772695e+00
+2                                      8.8025367843892821e-01        -1.1907834113505643e+01         4.6406893046816680e+02
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      4.7069322862908882e+02        -9.5093912148312565e-01         1.8652021426195152e+01
+1                                     -1.7224698525800741e+00         4.5950764020726251e+02         3.7289398574290278e-01
+2                                      1.9113875140642200e+01         8.4467547668309551e-01         4.8901063403217603e+02
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      4.6496167351063411e+02        -5.7810490680036386e+00         3.9560356760080423e-01
+1                                     -4.4767404662105585e+00         4.9121970610829084e+02        -6.7626303933877265e+00
+2                                      1.7971125192661661e+00        -1.0289165730589524e+01         4.6863934042200640e+02
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      2.4873507213433749e+02        -5.6625977638726710e-01        -1.2250504550658905e+00
+1                                     -3.5118414716218789e+00         2.4382395891868140e+02        -2.5340192133685471e+00
+2                                      6.9197857986843803e-01         2.0366531860843315e-01         2.4828142112622626e+02
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      2.4872320861165767e+02         5.1221525850784355e-01        -2.3178680064409929e-01
+1                                      6.7319513099300590e+00         2.4268691153200939e+02         1.7487775740992331e+00
+2                                     -1.4773674412893965e+00         1.7720321808203177e+00         2.4653950909690451e+02
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      4.8718494875107001e+02         2.5043216658922249e+00         1.5909430049464062e+01
+1                                      4.5742160234858025e+00         4.3803851980975696e+02         2.5276006975318421e+00
+2                                      1.8917782610943039e+01        -1.2148994088973692e+00         4.5085742033069658e+02
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      4.7252011502207586e+02         9.0381033072064394e+00        -1.7583459416641546e+01
+1                                      3.4503237100961979e+00         4.7386406554686539e+02        -4.9535840766854011e-01
+2                                      3.6861567235861075e+00        -9.9835544734301092e+00         4.8699751746092301e+02
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      4.5737230287104359e+02        -2.2216361618202058e+00        -1.6509939015218529e+00
+1                                     -1.4244820192849959e+01         4.7723548733547307e+02         1.1357328426370543e+01
+2                                     -1.8235838076452570e+01         1.8866630527663460e+01         4.7650264457254485e+02
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      4.7709021048027569e+02         1.1275937359840569e+01        -1.8956213610428929e+01
+1                                      1.5814379919616229e+01         4.4541612836283844e+02        -5.1431298084775596e+00
+2                                     -1.8573728050650580e+01        -9.9809674521689953e+00         4.5545156910732868e+02
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      4.5847861939063438e+02        -7.6205300024090414e+00        -2.9227465451300496e+00
+1                                      6.4078484720990510e+00         4.8220349189668036e+02         1.0103280516796827e+01
+2                                      9.5173949918432488e+00         1.3354230616399697e+01         4.7866817426146241e+02
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      4.6091584139342558e+02        -4.6575990709662198e+00        -1.1662575571782897e+01
+1                                     -1.0861189657072043e+01         4.5852485568337380e+02         1.9613438798768374e+01
+2                                     -1.1943798072749425e+01         1.2690740426049297e+01         4.8161163466217590e+02
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      4.5924384613275220e+02        -1.1308776645639101e+01         3.6632440455096509e+00
+1                                      3.3538911380783407e+00         4.9078079561014903e+02        -1.5875790079931178e+01
+2                                      2.5262496922240940e+00        -1.0728326306735152e+01         4.6332330971158797e+02
+   &SDSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Diamagnetic contribution"
+                                                         0                           1                           2
+
+0                                      2.4074658839961923e+01         4.9136112087777546e+00        -4.8506132591711353e+00
+1                                      1.3159427652731988e+01         3.8997011645205554e+01        -2.7390832079219267e+00
+2                                     -9.5204409206277063e+00        -7.5095256395309420e+00         1.3713363810704791e+01
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                     -1.9446894682580864e+02        -7.6993886857919787e+00        -1.5443915223170743e+00
+1                                     -7.9904725650340760e+00        -1.6215556970914682e+02         1.3490323023050432e+00
+2                                     -6.0157792746069507e+00        -1.2370904598361130e+00        -1.6971876739848742e+02
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                     -1.8750933090046931e+02         3.3341953186947548e+00         1.2208408570495466e+01
+1                                      2.7372997289196248e+00        -1.7475213043405029e+02        -1.0231683959126765e+00
+2                                      1.2493899773058486e+01        -1.1557783171490459e+00        -1.8824185097565947e+02
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                     -1.8646756463875695e+02         1.4567984030781862e+00         1.2779747930580461e+01
+1                                      1.1050192443643438e+00        -1.7282072191931420e+02         1.7715339548879949e-01
+2                                      1.3973924201872544e+01        -9.4910052569090264e-01        -1.8710230908767238e+02
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                     -1.9316402516538216e+02        -8.4218757544006397e+00        -1.9967050839711280e+00
+1                                     -6.8412166501851086e+00        -1.7836231568556292e+02        -1.6813737382760872e+00
+2                                     -1.0633595777349916e+00        -4.0050194082724166e+00        -1.7776321850548814e+02
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                     -2.3061266856156317e+02        -1.7661140682189458e+01        -2.4200222545120166e+01
+1                                     -4.6487669328878113e+01        -1.5445351187202601e+02         1.6181273109901653e+01
+2                                     -4.8481212957190971e+00         1.6324549366877317e+01        -1.5482823474614960e+02
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                     -2.1212819807465283e+02        -4.0825549833165361e+01         4.7595467195336755e-01
+1                                     -3.1865319998898734e+01        -1.3626988723716008e+02        -1.8944136851286817e+01
+2                                      5.3297580322479208e+00        -2.0499427146397689e+01        -1.4255564754122221e+02
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                     -1.0401049758995678e+03        -1.2651936958293750e+02        -2.9948279534175688e+00
+1                                     -1.1837983734377870e+02        -7.1691795773622027e+02        -2.6161866032326987e+01
+2                                     -3.4554011652098147e+01        -2.5515189601876187e+01        -9.6034018765623443e+02
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                     -2.7453389302773434e+02        -2.0918714802702270e+00        -5.2753499009169138e+00
+1                                     -5.5690802482909412e+00        -2.9341008370907247e+02        -9.7427541008678560e+00
+2                                     -1.4931221445898807e+01        -4.6992110591321481e+00        -3.1662395791373456e+02
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                     -3.0724535833269971e+02        -7.2515945166538200e+00        -2.8018086636957491e+01
+1                                     -1.1795438167502146e+01        -2.9220402708497477e+02         1.6663299055951775e+00
+2                                     -3.2311486287409856e+01        -4.0592500254204626e+00        -3.3692514453782883e+02
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                     -2.1592435794026886e+02         3.2861732691427932e+01        -8.5739585128772305e+01
+1                                      1.6375997098818473e+01        -3.3912980262902789e+02         3.4953621625315723e+00
+2                                     -6.8501671057429704e+01        -1.9111443033402228e+01        -1.8877866317228938e+02
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                     -2.0092151199223932e+02        -1.2252256490295265e+01         3.4367898028582985e+01
+1                                      6.3666866583580086e+00        -1.0209592815538630e+02        -3.5452102657565057e+00
+2                                      4.4456044168890315e+01        -2.1236851677750149e+01        -1.9054855255863177e+02
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                     -1.8006651891203623e+02         2.7029804216782470e+01         6.6051730109934454e+01
+1                                      1.0442920710269821e+01        -1.6382676088280650e+02         6.9835281008315775e+00
+2                                      6.9430471346490066e+01         1.7020245749458507e+01        -1.4724324156235829e+02
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                     -2.0598816491484510e+02        -1.2289517028642716e+00         3.3675887699673318e+01
+1                                      9.4339151222445121e+00        -9.7892251807034938e+01        -3.0242055025509846e+00
+2                                      3.0939489154777476e+01        -1.8700337652104185e+01        -1.9893005585333103e+02
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                     -1.7960341502762884e+02         2.1619758773510686e+01         6.5987350438365027e+01
+1                                      7.3687338370100477e+00        -1.6447110826127559e+02         2.6292179662027868e+00
+2                                      6.9620362105227528e+01         1.0593301120295452e+01        -1.4622432263651825e+02
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                     -1.7714633748055127e+02         7.9268074425667949e+00        -1.0540465594258972e+01
+1                                      9.8305622851442855e+00        -1.7246529296597254e+02         1.1253600711836883e+01
+2                                     -1.3973529444596579e+01         7.4050336648530397e+00        -1.7342205703383959e+02
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                     -1.8068921059869200e+02         5.4804988085381154e+00        -1.8720190440108047e+00
+1                                      5.6209435626910853e-01        -1.8735537364803636e+02         5.2714078179140751e+00
+2                                     -1.2143665105854311e+00         5.2996856549279787e+00        -1.8581676592198943e+02
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                     -1.5740982763481600e+02         9.3904182657992088e+00         1.4605897290615362e+01
+1                                      7.0305921880473896e+00        -2.3083036815775489e+02         2.7536643569361686e+01
+2                                      1.6440261077582107e+01         2.9808225599809465e+01        -1.7717711404841586e+02
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                     -2.0120835515947235e+02         3.6639299815973921e+01        -2.2559782512115831e+01
+1                                      4.7676153435843808e+01        -2.4545421537400267e+02        -6.2543393763536130e+00
+2                                     -3.7193814659118459e+01         1.0048024423825259e+01        -1.9183831988872396e+02
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                     -1.8994770165133690e+02         1.4596612635189906e+01        -1.0451053525530913e+01
+1                                      2.1665874095368036e+01        -1.8475346564800662e+02         5.7169548325393372e+01
+2                                      6.2385318947368387e-02         4.0923835855698684e+01        -2.3471334687829190e+02
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                     -1.7728852908264895e+02         1.5299657632043271e+01        -3.5201905242401260e+01
+1                                      2.2132155171029336e+01        -1.1598156703959535e+02         4.9207064506648869e+01
+2                                     -3.9723234017384492e+01         5.5682389032372569e+01        -1.3235084998901146e+02
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                     -1.5205540628733158e+02         5.0540422628060412e+01        -5.6076383329841200e+01
+1                                      3.1464915974679300e+01        -1.7145128775513854e+02         1.1778837905492047e+01
+2                                     -7.1667444191836012e+01         1.5683789865467185e+01        -1.5990866077378783e+02
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                     -2.3155431091929884e+02        -2.0235205025299553e+01         1.2835200089215928e+00
+1                                     -2.2181836894368324e+01        -8.6297504738910717e+01        -2.0715579739898857e+01
+2                                     -6.2270390478346611e+00        -2.2848568764743121e+01        -1.5325970955530894e+02
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                     -2.2452800750455231e+02        -8.4232168605689282e+00        -3.3262517584456020e+01
+1                                     -3.5740049263359374e+01        -1.3780947988573010e+02         3.0383917569013089e+01
+2                                     -2.4893958405047421e+01         3.0359961870281815e+01        -1.1048733703383117e+02
+   &SPSO [&Type "ArrayOfDoubles", &Dim (3,3)] "Paramagnetic contribution"
+                                                         0                           1                           2
+
+0                                      1.1354865279091793e+00        -3.9295107056626738e-01         2.8074093491612833e+00
+1                                     -8.7762025033781832e+00        -8.3208978091650945e+00        -1.8857939092339089e+00
+2                                      7.3332272009147337e+00         2.5195263486894346e+00         9.9392930756187035e+00
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      5.5265034116064953e+01        -4.3745533362742526e+00        -3.0560874646056444e+00
+1                                     -4.8989702514976337e+00         8.0832582570823945e+01         1.5130818697649457e+00
+2                                     -3.3053632716731669e+00         6.5601244396851977e-01         7.5577429855262437e+01
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      6.3498505661197669e+01         1.1318855207822240e+00         1.2513000893725353e+01
+1                                      2.8964764336954625e+00         7.7572228054812769e+01        -2.4071195883024750e+00
+2                                      1.4067285427322883e+01        -2.2131153230898777e+00         7.1649120909070405e+01
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      6.4101219397883938e+01        -6.4280000991781638e-01         1.2213856635999131e+01
+1                                      7.7666569199792646e-01         7.8220260517448310e+01        -1.1689916938128193e+00
+2                                      1.3427619400984087e+01        -2.6865801255466204e-01         7.0795763541938015e+01
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      5.6868454260085826e+01        -6.9968670204325356e+00        -2.7507551708889686e+00
+1                                     -6.3099655729504569e+00         6.8788947198978832e+01        -5.4287714271531984e-01
+2                                     -2.1214969813803677e+00        -2.2190243909999143e+00         7.1593393888331150e+01
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      2.3012425393013461e+02        -2.5958134301962911e+01        -1.6132434198320855e+01
+1                                     -4.0031865462276542e+01         3.3162645744980875e+02        -4.2768881675784236e+00
+2                                     -7.8353001231236687e+00         2.0194770942090958e+00         3.2140057344468914e+02
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      2.4985485956504303e+02        -5.0326530192697362e+01        -1.2233235073691368e+01
+1                                     -4.9263713423061148e+01         3.2499863007536862e+02         1.3348999988781394e+00
+2                                     -1.7323097171587246e+01        -3.4911422726805128e+00         3.2939449302999253e+02
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      1.0254510976243637e+01        -1.2565941861291149e+02        -3.0214425220330088e+00
+1                                     -1.1467288543205851e+02         3.2816797000959662e+02        -2.5411379671981141e+01
+2                                     -3.5203942799869601e+01        -2.4428089280929658e+01         8.6461042546961266e+01
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      1.1504247856581947e+02        -8.0401289105079012e+00        -3.2235270426925440e+00
+1                                     -2.0448957394623275e+01         1.1692542049965829e+02        -2.7117848158172777e+01
+2                                     -3.0164016455808564e+00        -1.2378924424273247e+01         8.1930056504242714e+01
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      8.2658373582057948e+01        -1.5922123617899391e+01        -3.4366799784801252e+01
+1                                     -6.9288775307149502e+00         1.2143201426093242e+02         1.6255158917709679e+01
+2                                     -2.4686972788197835e+01         9.4624359438596208e+00         6.7685350821300062e+01
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      1.7749872094107940e+02         3.8823069313071471e+01        -1.0314963994933441e+02
+1                                      2.8245657456738861e+01         4.6247435161045871e+01        -8.9385065710129794e+00
+2                                     -9.9635296224087298e+01        -3.3766301413548923e+01         1.6858804686435735e+02
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      2.7430863355943995e+02        -8.0274736055231628e+00         5.3892665584108215e+01
+1                                      6.5512958446720591e+00         3.6091620955987344e+02        -3.0269745026760471e+00
+2                                      5.5900301017513002e+01        -1.9771119230723546e+01         2.9523748686137560e+02
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      2.7768186917114917e+02         1.8395657897464076e+01         6.6650322432334079e+01
+1                                     -1.8002528995763853e+00         3.2719866867014241e+02        -6.7102627044569196e-01
+2                                      7.0310725024928999e+01         5.1124116359528635e+00         3.1682568890580853e+02
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      2.6470506371424369e+02        -2.1798908243473973e+00         5.2327909125868473e+01
+1                                      7.7114452696644378e+00         3.6161538840022757e+02        -2.6513115168080819e+00
+2                                      5.0053364295419676e+01        -1.7855662175421088e+01         2.9008057817884503e+02
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      2.8535825848300527e+02         1.5838709705507046e+01         6.6382954005965829e+01
+1                                      2.8919933707994891e+00         3.2674859784701528e+02        -4.1334124271849397e+00
+2                                      7.1417474624493693e+01         3.0413538970592846e-01         3.2241501778548815e+02
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      7.1588734653786219e+01         7.3605476661795279e+00        -1.1765516049324862e+01
+1                                      6.3187208135224067e+00         7.1358665952708861e+01         8.7195814984683366e+00
+2                                     -1.3281550864728141e+01         7.6086989834614727e+00         7.4859364092386670e+01
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      6.8033998012965668e+01         5.9927140670459593e+00        -2.1038058446549037e+00
+1                                      7.2940456661991675e+00         5.5331537883973027e+01         7.0201853920133086e+00
+2                                     -2.6917339518748276e+00         7.0717178357482968e+00         6.0722743174915081e+01
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      3.2977512111625401e+02         1.1894739931691433e+01         3.0515327340079423e+01
+1                                      1.1604808211533193e+01         2.0720815165200207e+02         3.0064244266893528e+01
+2                                      3.5358043688525143e+01         2.8593326190912094e+01         2.7368030628228075e+02
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      2.7131175986260348e+02         4.5677403123180362e+01        -4.0143241928757377e+01
+1                                      5.1126477145940008e+01         2.2840985017286272e+02        -6.7496977840221533e+00
+2                                     -3.3507657935532350e+01         6.4469950395150022e-02         2.9515919757219905e+02
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      2.6742460121970669e+02         1.2374976473369701e+01        -1.2102047427052765e+01
+1                                      7.4210539025180768e+00         2.9248202168746644e+02         6.8526876751763922e+01
+2                                     -1.8173452757505203e+01         5.9790466383362144e+01         2.4178929769425295e+02
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      2.9980168139762674e+02         2.6575594991883840e+01        -5.4158118852830185e+01
+1                                      3.7946535090645568e+01         3.2943456132324309e+02         4.4063934698171309e+01
+2                                     -5.8296962068035072e+01         4.5701421580203572e+01         3.2310071911831722e+02
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      3.0642321310330283e+02         4.2919892625651372e+01        -5.8999129874971246e+01
+1                                      3.7872764446778348e+01         3.1075220414154182e+02         2.1882118422288876e+01
+2                                     -6.2150049199992765e+01         2.9038020481866880e+01         3.1875951348767455e+02
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      2.2936153047412674e+02        -2.4892804096265774e+01        -1.0379055562861303e+01
+1                                     -3.3043026551440363e+01         3.7222735094446307e+02        -1.1021409411304823e+00
+2                                     -1.8170837120584086e+01        -1.0157828338693824e+01         3.2835192510686693e+02
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      2.3471583862819989e+02        -1.9731993506208028e+01        -2.9599273538946370e+01
+1                                     -3.2386158125281035e+01         3.5297131572441890e+02         1.4508127489081911e+01
+2                                     -2.2367708712823326e+01         1.9631635563546663e+01         3.5283597267775679e+02
+   &STot [&Type "ArrayOfDoubles", &Dim (3,3)] "Total tensor"
+                                                         0                           1                           2
+
+0                                      2.5210145367871103e+01         4.5206601382114870e+00        -2.0432039100098520e+00
+1                                      4.3832251493538053e+00         3.0676113836040457e+01        -4.6248771171558358e+00
+2                                     -2.1872137197129726e+00        -4.9899992908415074e+00         2.3652656886323495e+01
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                     -9.7664416879636373e-01        -8.8045143650805083e-02        -1.9599545973202703e-01
+1                                     -1.6503572408825928e-01        -2.7670986170008577e-01         9.4667569009274932e-01
+2                                     -1.3758407368123524e-01         9.5691154508524356e-01         2.5571647884297155e-01
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                     -7.9202699023557843e-01        -2.0829582664317031e-01         5.7385198034110618e-01
+1                                      1.2820611600048759e-01        -9.7578162761589482e-01        -1.7723827754563892e-01
+2                                      5.9687221292202952e-01        -6.6806165960289252e-02         7.9955018456082283e-01
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                     -7.8807074461190030e-01        -1.4381668482087828e-01         5.9854929843244942e-01
+1                                      2.6816496771576159e-02        -9.7942395571057927e-01        -2.0002397476588052e-01
+2                                      6.1500030649402548e-01        -1.4158204740493652e-01         7.7571202573176679e-01
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                     -9.0302718318702113e-01         4.1789145360825153e-01        -9.9542148994765212e-02
+1                                     -4.0168028408862877e-01        -7.3924073116488109e-01         5.4053315417399683e-01
+2                                     -1.5229857451661102e-01        -5.2810025031995023e-01        -8.3541323296450953e-01
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                     -9.5032136116539334e-01        -6.6305286826233892e-02         3.0412648594235431e-01
+1                                     -2.9285282860601325e-01        -1.4064438486997680e-01        -9.4575703950962087e-01
+2                                     -1.0548237431064529e-01         9.8783741878076103e-01        -1.1423967247131017e-01
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                      8.9003538342563315e-01         1.8394131645694397e-03        -4.5588774145571842e-01
+1                                      4.3563174213120459e-01        -2.9822502681718188e-01         8.4928606407242002e-01
+2                                      1.3439494595451590e-01         9.5449381870135819e-01         2.6623213285173092e-01
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                      8.4663170645097285e-01        -4.4198581489293476e-01        -2.9641743043441621e-01
+1                                      2.9793028943049543e-01        -6.7881924508148464e-02         9.5217098620202179e-01
+2                                      4.4096745488955852e-01         8.9444987772289308e-01        -7.4209972171715613e-02
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                      1.8998138364248102e-01         7.9633836349014098e-01        -5.7424061568573526e-01
+1                                      4.7804545940600041e-01         4.3584351816314659e-01         7.6256997476721855e-01
+2                                      8.5754277596548745e-01        -4.1938721786556005e-01        -2.9788378418502559e-01
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                      6.2437797183442334e-01        -6.8516439363598125e-01         3.7510252196082461e-01
+1                                     -7.3845874277870593e-02        -5.2983516982953605e-01        -8.4487956518301710e-01
+2                                      7.7762390340065379e-01         4.9982441567529046e-01        -3.8141397241682901e-01
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                      2.6491824502505879e-01         6.5376784073681771e-01        -7.0880599170094583e-01
+1                                     -9.6421757177787426e-01         1.7187353490726476e-01        -2.0185133706086889e-01
+2                                     -1.0138921423032944e-02         7.3691729414962126e-01         6.7590687513560466e-01
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                      7.6500163872504989e-01         6.1733502421065345e-01        -1.8349376183080535e-01
+1                                     -5.1037237953000969e-02         3.4213090065518015e-01         9.3826523284144125e-01
+2                                     -6.4200287623196595e-01         7.0840942589699307e-01        -2.9323777418705071e-01
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                     -7.9730551881328326e-01         7.0570689915477783e-02         5.9943614121500466e-01
+1                                      4.0908209586682287e-02        -9.8453929272759333e-01         1.7031999138052623e-01
+2                                      6.0218803380530006e-01         1.6031892839057982e-01         7.8209169100649756e-01
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                     -7.8456907293375056e-01         6.1700340821374189e-01         6.1303866505311590e-02
+1                                      6.0504885194629821e-02         1.7458343931131282e-01        -9.8278165509222704e-01
+2                                      6.1708227057942544e-01         7.6735090862711530e-01         1.7430448750873023e-01
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                      7.9025340366237162e-01         8.6038053011332615e-03        -6.1271978304472641e-01
+1                                     -8.3653145094935266e-02         9.9205518554551453e-01        -9.3960950122805253e-02
+2                                     -6.0704341633507763e-01        -1.2550889755947489e-01        -7.8469472237147286e-01
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                      6.2128731279615568e-01         4.9538598308125159e-01        -6.0712008921230187e-01
+1                                     -5.2311515991301649e-01         8.3907721402875168e-01         1.4933170583277855e-01
+2                                      5.8339746693631667e-01         2.2481582832258512e-01         7.8045194529062389e-01
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                     -3.2135095628206778e-01        -2.7545808917367914e-01        -9.0601126041864721e-01
+1                                      7.9865395671152051e-01         4.3523497317404930e-01        -4.1559881563259621e-01
+2                                     -5.0880784224069564e-01         8.5714255479177415e-01        -8.0132517989872920e-02
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                     -3.5091675225225158e-03         4.7575740318302062e-01         8.7956954191231929e-01
+1                                     -9.3518874796277063e-01        -3.1304915595199156e-01         1.6559659308563957e-01
+2                                      3.5413230779911081e-01        -8.2198243246087310e-01         4.4602151214776808e-01
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                      5.7857849214843748e-01         4.8012591780436370e-01        -6.5933757019887618e-01
+1                                     -7.9403260022625122e-01         5.1635017528659155e-01        -3.2077207836631361e-01
+2                                      1.8643808141358550e-01         7.0912735071637434e-01         6.7998473678811167e-01
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                      2.3629613957884993e-01        -9.7162082572971564e-01         1.0821526160297914e-02
+1                                     -5.5129040085782544e-01        -1.4322696727092032e-01        -8.2192756966072933e-01
+2                                      8.0015187829695844e-01         1.8825250822945250e-01        -5.6948921394805108e-01
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                     -6.4993217779615164e-01        -6.6573630398827954e-01        -3.6658332997720455e-01
+1                                      4.6895289487961200e-01        -7.3087651939885867e-01         4.9588576887771252e-01
+2                                     -5.9805630725641745e-01         1.5038180389739242e-01         7.8721913493472906e-01
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                      6.6718525720671151e-01         2.2866449354128965e-01        -7.0892621757099672e-01
+1                                     -4.7864215236120600e-01         8.6083863963622709e-01        -1.7279619929929674e-01
+2                                      5.7075872533763927e-01         4.5460904731731394e-01         6.8378731455635977e-01
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                      9.6899925228131778e-01        -1.5598380655606653e-01        -1.9159723685514493e-01
+1                                      1.9733553593737119e-01         2.2026209434848051e-02         9.8008853291641074e-01
+2                                      1.4865777926014292e-01         9.8751399898442549e-01        -5.2124528537252093e-02
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                      9.6825871061102708e-01        -1.2321469610216990e-02        -2.4964625114853226e-01
+1                                      1.8609765913268972e-01         7.0230477940571667e-01         6.8712128339123701e-01
+2                                      1.6686141133049578e-01        -7.1176975083978689e-01         6.8230571681487673e-01
+   &orientation [&Type "ArrayOfDoubles", &Dim (3,3)] "Eigenvectors"
+                                                         0                           1                           2
+
+0                                     -6.7574169519314706e-02         8.9929721474558511e-01        -4.3208593030161035e-01
+1                                      4.7307488571105766e-01        -3.5241673791950756e-01        -8.0746677661910216e-01
+2                                      8.7842693727096322e-01         2.5897289893926423e-01         4.0162065869642333e-01
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                      5.4045655217620698e+01
+1                                      7.5558030660628887e+01
+2                                      8.2071360663901686e+01
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                      5.3305403047832932e+01
+1                                      7.7822635285167124e+01
+2                                      8.1591816292080821e+01
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                      5.4189386347604014e+01
+1                                      7.8121012359971203e+01
+2                                      8.0806844749695131e+01
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                      5.3467529964290463e+01
+1                                      7.1597165597429083e+01
+2                                      7.2186099785676134e+01
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                      2.1900734265652440e+02
+1                                      3.2246966568188219e+02
+2                                      3.4167427648622595e+02
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                      2.2327636340249151e+02
+1                                      3.2961978561421819e+02
+2                                      3.5135183365369443e+02
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                     -2.8147668288818760e+01
+1                                      8.3615009104790687e+01
+2                                      3.6941618271682944e+02
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                      7.1327137633621774e+01
+1                                      1.0899168002698228e+02
+2                                      1.3357913790911627e+02
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                      4.4719985058449119e+01
+1                                      9.4920038533113171e+01
+2                                      1.3213571507272826e+02
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                      3.8466679652168864e+01
+1                                      7.3213661525584570e+01
+2                                      2.8065386178872905e+02
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                      2.2854808104272712e+02
+1                                      3.3712736097222586e+02
+2                                      3.6478688796573607e+02
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                      2.2576879210205385e+02
+1                                      3.2638093639410550e+02
+2                                      3.6955649825094088e+02
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                      2.2412710485346321e+02
+1                                      3.2892247287733409e+02
+2                                      3.6335145256251849e+02
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                      2.3176532870977030e+02
+1                                      3.2716512986832061e+02
+2                                      3.7559141553741762e+02
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                      5.4131488858859072e+01
+1                                      7.7568705467683301e+01
+2                                      8.6106570372339320e+01
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                      4.8118452533059667e+01
+1                                      6.5052673841624653e+01
+2                                      7.0917152697169385e+01
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                      1.9611492475026930e+02
+1                                      2.6569602139485244e+02
+2                                      3.4885263290541485e+02
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                      1.9366387239800829e+02
+1                                      2.6834046801818033e+02
+2                                      3.3287646719147665e+02
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                      1.9372135749992322e+02
+1                                      2.7186289377048320e+02
+2                                      3.3611166933101970e+02
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                      2.2609984711136633e+02
+1                                      3.4894472809800237e+02
+2                                      3.7729238662981754e+02
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                      2.2558849295484077e+02
+1                                      3.3541773486939445e+02
+2                                      3.7492870290828432e+02
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                      2.2159123463666705e+02
+1                                      3.3031653232732663e+02
+2                                      3.7803303956146294e+02
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                      2.2537296362435723e+02
+1                                      3.3581428220245198e+02
+2                                      3.7933588120356626e+02
+   &sTotEigen [&Type "ArrayOfDoubles", &Dim (3,1)] "Eigenvalues"
+                                                         0
+
+0                                      2.1202519799327476e+01
+1                                      2.2854941930348737e+01
+2                                      3.5481454360558850e+01
+   &siso [&Type "Double"]       7.0558348847383769e+01
+   &siso [&Type "Double"]       7.0906618208360271e+01
+   &siso [&Type "Double"]       7.1039081152423421e+01
+   &siso [&Type "Double"]       6.5750265115798598e+01
+   &siso [&Type "Double"]       2.9438376160821082e+02
+   &siso [&Type "Double"]       3.0141599422346803e+02
+   &siso [&Type "Double"]       1.4162784117760049e+02
+   &siso [&Type "Double"]       1.0463265185657349e+02
+   &siso [&Type "Double"]       9.0591912888096800e+01
+   &siso [&Type "Double"]       1.3077806765549420e+02
+   &siso [&Type "Double"]       3.1015410999356300e+02
+   &siso [&Type "Double"]       3.0723540891570002e+02
+   &siso [&Type "Double"]       3.0546701009777206e+02
+   &siso [&Type "Double"]       3.1150729137183617e+02
+   &siso [&Type "Double"]       7.2602254899627241e+01
+   &siso [&Type "Double"]       6.1362759690617921e+01
+   &siso [&Type "Double"]       2.7022119301684558e+02
+   &siso [&Type "Double"]       2.6496026920255508e+02
+   &siso [&Type "Double"]       2.6723197353380868e+02
+   &siso [&Type "Double"]       3.1744565394639562e+02
+   &siso [&Type "Double"]       3.1197831024417303e+02
+   &siso [&Type "Double"]       3.0998026884181888e+02
+   &siso [&Type "Double"]       3.1350770901012515e+02
+   &siso [&Type "Double"]       2.6512972030078352e+01
+   &saniso [&Type "Double"]       1.7269517724776890e+01
+   &saniso [&Type "Double"]       1.6027797125580790e+01
+   &saniso [&Type "Double"]       1.4651645395907522e+01
+   &saniso [&Type "Double"]       9.6537520048163614e+00
+   &saniso [&Type "Double"]       7.0935772317022668e+01
+   &saniso [&Type "Double"]       7.4903759145339563e+01
+   &saniso [&Type "Double"]       3.4168251230884346e+02
+   &saniso [&Type "Double"]       4.3419729078814242e+01
+   &saniso [&Type "Double"]       6.2315703276947119e+01
+   &saniso [&Type "Double"]       2.2481369119985231e+02
+   &saniso [&Type "Double"]       8.1949166958259582e+01
+   &saniso [&Type "Double"]       9.3481634002861199e+01
+   &saniso [&Type "Double"]       8.6826663697119841e+01
+   &saniso [&Type "Double"]       9.6126186248372164e+01
+   &saniso [&Type "Double"]       2.0256473209068133e+01
+   &saniso [&Type "Double"]       1.4331589509827225e+01
+   &saniso [&Type "Double"]       1.1794715983285397e+02
+   &saniso [&Type "Double"]       1.0187429698338235e+02
+   &saniso [&Type "Double"]       1.0331954369581649e+02
+   &saniso [&Type "Double"]       8.9770099025133163e+01
+   &saniso [&Type "Double"]       9.4425588996166709e+01
+   &saniso [&Type "Double"]       1.0207915607946609e+02
+   &saniso [&Type "Double"]       9.8742258290161658e+01
+   &saniso [&Type "Double"]       1.3452723495720743e+01
+$End
+$Calculation_Timings
+   &GeometryIndex 1
+   &GTOINT [&Type "Double"]       6.1158560000000000e+00
+   &SCF [&Type "Double"]       1.1379353599999999e+02
+   &PROPINT [&Type "Double"]       4.7609206000000000e+01
+   &RESPONSE [&Type "Double"]       1.9794656000000003e+01
+   &PROP [&Type "Double"]       3.5297349999999881e+00
+   &SUM [&Type "Double"]       1.9084298899999999e+02
+$End
