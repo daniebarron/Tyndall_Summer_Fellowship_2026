@@ -16,7 +16,7 @@ NMR features used:
     Total: 9 NMR features per molecule
 
 IR features: full 3501-point spectra (500-4000 cm⁻¹) - same as before,
-             or PCA-reduced if you prefer (set USE_PCA=True).
+             or PCA-reduced (set USE_PCA=True).
 
 Outputs
 -------

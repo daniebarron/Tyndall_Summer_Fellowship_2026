@@ -25,7 +25,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-# PATHS - edit these to match your machine
+# PATHS - edit for the local machine
 
 OUT_DIR    = r"C:\Users\danie\Downloads\orca_work\pfas_new_ir_out"
 SMILES_CSV = r"C:\Users\danie\Downloads\orca_work\PFAS_smiles_new3.csv"

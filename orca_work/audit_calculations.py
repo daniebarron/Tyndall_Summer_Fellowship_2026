@@ -68,13 +68,13 @@ def audit_orca_runs():
     print("=============================\n")
 
     if failed_opt:
-        print("FAIL FAILED AT GEOMETRY OPTIMISATION (Needs full rerun):")
+        print("FAILED AT GEOMETRY OPTIMISATION (needs full rerun):")
         for f in failed_opt:
             print(f"  - {f}")
         print()
 
     if failed_freq:
-        print("FAIL FAILED AT FREQUENCY (Can use your restart script):")
+        print("FAILED AT FREQUENCY (restart with generate_freq_restarts.py):")
         for f in failed_freq:
             print(f"  - {f}")
         print()

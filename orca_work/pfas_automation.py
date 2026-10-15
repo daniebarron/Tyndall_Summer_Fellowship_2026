@@ -2,12 +2,12 @@
 PFAS ORCA Automation Script
 ============================
 This script:
-1. Reads a CSV file containing molecule names AND their SMILES (you supply both)
+1. Reads a CSV file containing molecule names AND their SMILES (both are supplied in the CSV)
 2. Generates 3D coordinates using RDKit (MMFF force field, same as Avogadro)
 3. Writes ORCA input files, each in their own folder
 4. Writes a batch script to run all calculations sequentially
 
-No PubChem lookup is performed - you provide verified SMILES directly,
+No PubChem lookup is performed - verified SMILES are given directly,
 since automated name-based lookups can silently return the wrong structure
 (e.g. metabolites/conjugates instead of the parent compound).
 
@@ -38,9 +38,9 @@ from rdkit.Chem import AllChem
 
 # CONFIGURATION
 
-INPUT_CSV       = "PFAS_smiles.csv"          # Your CSV with name,smiles[,charge]
+INPUT_CSV       = "PFAS_smiles.csv"          # CSV with name,smiles[,charge]
 OUTPUT_DIR      = "pfas_calculations"        # Root folder for all calculations
-ORCA_PATH       = r"C:\Orca_6.1.1\orca.exe" # Path to your ORCA executable
+ORCA_PATH       = r"C:\Orca_6.1.1\orca.exe" # Path to the ORCA executable
 NPROCS          = 4                          # Number of CPU cores to use
 MEMORY_MB       = 3000                       # Memory per core in MB
 

@@ -10,7 +10,7 @@ frequency calculation crashed (typically due to disk space), this script:
 4. Writes a run_failed.bat to rerun just these molecules
 
 Usage:
-    1. Place this script in your orca_work folder (same level as pfas_calculations/)
+    1. Place this script in the orca_work folder (same level as pfas_calculations/)
     2. Edit FAILED_MOLECULES below to list the folder names that failed
     3. Run: python generate_freq_restarts.py
     4. Then run pfas_calculations/run_failed.bat
@@ -22,7 +22,7 @@ import re
 # CONFIGURATION
 
 CALCULATIONS_DIR = "pfas_calculations"       # Root folder of all calculations
-ORCA_PATH        = r"C:\Orca_6.1.1\orca.exe" # Path to your ORCA executable
+ORCA_PATH        = r"C:\Orca_6.1.1\orca.exe" # Path to the ORCA executable
 NPROCS           = 4
 MEMORY_MB        = 3000
 

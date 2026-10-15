@@ -72,7 +72,7 @@ All results use leave-one-out cross-validation on the 68 molecules.
 
 ### Calculation status
 
-Two jobs showed imaginary frequencies in the check (`8-2_FTCA`: one at -5.6 cm^-1; `8-2_diPAP`: three, down to -43.6 cm^-1) and were re-optimised (`pfas_reopt/`, `8-2_diPAP_corrected.inp`). Ten original output files appear as `ERROR` in the check CSV because their frequency step crashed (no frequency block, no normal termination). Those frequencies were recomputed in restart runs (`generate_freq_restarts.py`, files named `*_freq.out`), and these are the files used in `pfas_out_files/`.
+The imaginary-frequency check (`check_imaginary_freqs.py`, threshold -5 cm^-1) flagged `8-2_FTCA` (one mode at -5.6 cm^-1) and `8-2_diPAP`. Both were re-run. The `8-2_FTCA` output used in `pfas_out_files/` is the re-optimised one and has no imaginary frequencies. The `8-2_diPAP` output used (`pfas_out_files/8-2_diPAP.out`, C20H9F34O4P) has a single small imaginary mode at -4.8 cm^-1, inside the threshold. The results CSV in `pfas_calculations/` predates these re-runs, so its `8-2_diPAP` row does not describe the file that was used. Ten original output files appear as `ERROR` in the check CSV because their frequency step crashed (no frequency block, no normal termination). Those frequencies were recomputed in restart runs (`generate_freq_restarts.py`, files named `*_freq.out`), and these are the files used in `pfas_out_files/`.
 
 ---
 
@@ -108,9 +108,9 @@ Each `Matlantis_Round_2/Matlantis/<surface>/<T>K/` folder holds the MD and relax
 | `scripts/*.ipynb`, `neb_info.py` | Matlantis group template notebooks (relaxation, NPT/NVT MD, etch, NEB), included for reference and not my own work |
 | `convert.py`, `make_reactant.py` | Convert reference VASP structures to ASE `.traj`, create the single-O reactant |
 
-### Results
+### Status
 
-*TODO: add the summary table from `python analyse_run.py --summary-seeds <Matlantis dir>` (PFP mean +/- spread over five seeds against the Ji et al. reference values) and one or two sentences on the main finding: PFP reproduces the qualitative oxidation trends but binds oxygen more strongly than DFT-aiMD, and polar VN(111) is the hardest case.*
+The oxidation runs are being repeated. The runs and plots in this folder come from two earlier treatments of the starting surface (first a strongly relaxed slab, then no relaxation at all), and neither is considered final. The rerun uses a partial relaxation between the two. The results, and the comparison with the Ji et al. reference values built into `analyse_run.py`, will be added once those runs are complete, so treat the logs and figures here as preliminary.
 
 ---
 

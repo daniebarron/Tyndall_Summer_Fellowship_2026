@@ -5,7 +5,7 @@ Three ML tasks on the 68-molecule PFAS dataset, run in two modes:
     Mode A - IR only       (3501-point spectra)
     Mode B - IR + NMR      (3501 IR + 9 NMR features)
 
-A comparison table is printed at the end so you can see directly whether
+A comparison table is printed at the end to show directly whether
 adding NMR improves each task.
 
 Task 1 - Spectral library matching   (cosine similarity, LOO)

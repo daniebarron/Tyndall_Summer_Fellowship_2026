@@ -19,14 +19,14 @@ The script will:
     2. Extract charge and multiplicity from the input block
     3. Extract the FINAL optimised geometry (last CARTESIAN COORDINATES block)
     4. Write a NMR .inp file ready to submit
-    5. Print a summary so you can sanity-check before submitting
+    5. Print a summary for a sanity check before submitting
 """
 
 import re
 import sys
 import os
 
-# NMR settings - matches your TFA_nmr.inp exactly
+# NMR settings - match TFA_nmr.inp exactly
 NMR_TEMPLATE = """\
 # PFAS NMR calculation: {name}
 # PBE0/def2-TZVP GIAO NMR
@@ -108,7 +108,7 @@ def format_xyz_block(atoms):
     return "\n".join(lines)
 
 def guess_nprocs(natoms):
-    """Scale nprocs with molecule size, matching your cluster setup."""
+    """Scale nprocs with molecule size, matching the cluster setup."""
     if natoms < 35:
         return 4
     elif natoms < 50:
@@ -178,7 +178,7 @@ def main():
     print()
     print("Next steps:")
     print(f"  1. Check {nmr_path} looks correct")
-    print(f"  2. Update the --job-name and paths in your submit script")
+    print(f"  2. Update the --job-name and paths in the submit script")
     print(f"  3. sbatch submit_{name}_nmr.sh")
 
 

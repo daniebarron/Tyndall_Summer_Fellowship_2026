@@ -8,9 +8,9 @@ Normal mode (no --predict flag):
 
 Prediction mode (--predict):
     1. Retrains the Task 3 Ridge+PCA model on ALL 68 molecules.
-    2. Prompts you to enter one or more SMILES strings for new molecules.
+    2. Prompts for one or more SMILES strings for new molecules.
     3. Predicts the IR spectrum for each and saves a plot.
-    4. Optionally overlays the actual DFT spectrum if you supply a .out file.
+    4. Optionally overlays the actual DFT spectrum if a .out file is supplied.
 
 Usage
 -----
@@ -60,7 +60,7 @@ except ImportError:
     RDKIT_OK = False
     print("WARNING: RDKit not available - Task 3 and prediction mode will be skipped")
 
-# PATHS - update these to match your machine
+# PATHS - edit for the local machine
 
 NPZ_PATH   = r"C:\Users\danie\Downloads\orca_work\ml_dataset\pfas_ir_dataset.npz"
 OUTPUT_DIR = r"C:\Users\danie\Downloads\orca_work\ml_dataset"

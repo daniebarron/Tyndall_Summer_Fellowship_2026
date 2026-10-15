@@ -31,7 +31,7 @@ Outputs
 
 Usage
 -----
-    # First parse references (or set REF_* manually if you have literature values)
+    # First parse references (or set REF_* manually from literature values)
     python build_pfas_nmr_dataset.py --refs path/to/ref_outputs/
     # Or skip reference conversion and just save raw shieldings:
     python build_pfas_nmr_dataset.py --no-refs
