@@ -1,5 +1,5 @@
 """
-view_local.py — View Matlantis trajectory files locally using ASE GUI
+view_local.py - View Matlantis trajectory files locally using ASE GUI
 
 Usage:
   python view_local.py /path/to/file.traj              # view single file
@@ -32,7 +32,7 @@ try:
     HAS_MPL = True
 except ImportError:
     HAS_MPL = False
-    print("Warning: matplotlib not installed — plots unavailable")
+    print("Warning: matplotlib not installed - plots unavailable")
 
 
 JI_REFERENCE = {
@@ -89,11 +89,11 @@ def load_rounds(directory):
         try:
             atoms  = io.read(path, index=-1)
             bound  = count_bound_o(atoms)
-            health = '✓' if is_healthy(atoms) else '✗'
+            health = 'OK' if is_healthy(atoms) else 'FAIL'
             labels.append(f'Round {i} | {atoms.get_chemical_formula()} | bound O: {bound} {health}')
             frames.append(atoms)
         except Exception as e:
-            print(f"  Warning: round {i} unreadable — {e}")
+            print(f"  Warning: round {i} unreadable - {e}")
         i += 1
     return frames, labels
 
@@ -111,7 +111,7 @@ def load_movie(directory):
             all_frames.extend(frames)
             print(f"  Round {i:02d}: {len(frames)} frames")
         except Exception as e:
-            print(f"  Round {i:02d}: error — {e}")
+            print(f"  Round {i:02d}: error - {e}")
         i += 1
     return all_frames
 
@@ -165,7 +165,7 @@ def plot_oxidation(directory, save=False):
 
     ax.set_xlabel('Round')
     ax.set_ylabel('O atoms')
-    ax.set_title(f'{system} {temp}K — Oxidation progression')
+    ax.set_title(f'{system} {temp}K - Oxidation progression')
     ax.legend()
     ax.grid(True, alpha=0.3)
     plt.tight_layout()
@@ -178,7 +178,7 @@ def plot_oxidation(directory, save=False):
 
 
 def plot_seeds(base_dir, save=False):
-    """Multi-seed overlay plot with mean ± std band."""
+    """Multi-seed overlay plot with mean +/- std band."""
     if not HAS_MPL:
         print("matplotlib required for plotting")
         return
@@ -235,7 +235,7 @@ def plot_seeds(base_dir, save=False):
     ax.plot(rounds, mean_b, 'o-', color='steelblue',
             linewidth=2.5, markersize=5, label='Mean', zorder=5)
     ax.fill_between(rounds, mean_b - std_b, mean_b + std_b,
-                    alpha=0.25, color='steelblue', label='±1 std')
+                    alpha=0.25, color='steelblue', label='+/-1 std')
 
     if ji_val:
         ax.axhline(ji_val, color='red', linestyle='--', linewidth=1.5,
@@ -245,7 +245,7 @@ def plot_seeds(base_dir, save=False):
     stats_txt  = (f'Final bound O:\n'
                   f'  Mean: {np.mean(final_vals):.1f}\n'
                   f'  Std:  {np.std(final_vals):.1f}\n'
-                  f'  Range: {min(final_vals)}–{max(final_vals)}')
+                  f'  Range: {min(final_vals)}-{max(final_vals)}')
     if ji_val:
         stats_txt += f'\n  Ji DFT: {ji_val}'
     ax.text(0.02, 0.97, stats_txt, transform=ax.transAxes,
@@ -254,7 +254,7 @@ def plot_seeds(base_dir, save=False):
 
     ax.set_xlabel('Round', fontsize=12)
     ax.set_ylabel('Bound O atoms', fontsize=12)
-    ax.set_title(f'{system} {temp}K — {len(all_bound)} seeds', fontsize=13)
+    ax.set_title(f'{system} {temp}K - {len(all_bound)} seeds', fontsize=13)
     ax.legend(fontsize=9, ncol=2)
     ax.grid(True, alpha=0.3)
     plt.tight_layout()
@@ -337,7 +337,7 @@ def main():
 
     path = args.path
 
-    # ── Single .traj file ──────────────────────────────────────────────────────
+    # Single .traj file
     if path.endswith('.traj') and os.path.isfile(path):
         frames = io.read(path, index=':')
         if not isinstance(frames, list):
@@ -351,7 +351,7 @@ def main():
         view(frames)
         return
 
-    # ── Directory modes ────────────────────────────────────────────────────────
+    # Directory modes
     if not os.path.isdir(path):
         print(f"ERROR: {path} is not a file or directory")
         sys.exit(1)
@@ -389,7 +389,7 @@ def main():
             print("No trajectory files found")
             sys.exit(1)
         print(f"Total frames: {len(frames)}")
-        print("Opening ASE GUI — use slider to scrub through trajectory")
+        print("Opening ASE GUI - use slider to scrub through trajectory")
         view(frames)
         return
 
@@ -407,7 +407,7 @@ def main():
         view(frames)
         return
 
-    # ── Default: slideshow of all end-of-round structures ─────────────────────
+    # Default: slideshow of all end-of-round structures
     print("Loading end-of-round snapshots...")
     frames, labels = load_rounds(path)
     if not frames:
@@ -418,7 +418,7 @@ def main():
     for i, label in enumerate(labels):
         print(f"  {label}")
 
-    print("\nOpening ASE GUI — use arrow keys to step through rounds")
+    print("\nOpening ASE GUI - use arrow keys to step through rounds")
     view(frames)
 
 

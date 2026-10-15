@@ -3,13 +3,13 @@ pfas_tasks_4_5.py
 =================
 Two new ML tasks building on the IR + NMR dataset:
 
-Task 4 — IR → NMR prediction
+Task 4 - IR -> NMR prediction
     Given only the IR spectrum, predict the 19F/1H/13C NMR features.
     Ridge regression + PCA, LOO CV.
     Scientifically interesting: IR spectrometers are far more common than NMR.
     Also tests whether IR and NMR encode the same structural information.
 
-Task 5 — Joint IR + NMR molecule identification
+Task 5 - Joint IR + NMR molecule identification
     Given an unknown molecule's IR spectrum AND NMR features, retrieve the
     correct molecule from the library using a combined similarity score.
     NMR and IR are used as independent evidence (score fusion), not concatenated.
@@ -20,12 +20,12 @@ Usage
     python pfas_tasks_4_5.py
 
 Outputs written to OUTPUT_DIR:
-    task4_ir_to_nmr_predictions.png   — per-target prediction scatter plots
-    task4_ir_to_nmr_errors.png        — which molecules are hardest to predict
-    task4_ir_to_nmr_spectra_basis.png — which spectral regions drive NMR prediction
-    task5_joint_retrieval.png         — rank distributions IR-only vs joint
-    task5_confusion_cases.png         — cases where NMR helps or hurts retrieval
-    pfas_tasks45_results.txt          — full numerical results
+    task4_ir_to_nmr_predictions.png   - per-target prediction scatter plots
+    task4_ir_to_nmr_errors.png        - which molecules are hardest to predict
+    task4_ir_to_nmr_spectra_basis.png - which spectral regions drive NMR prediction
+    task5_joint_retrieval.png         - rank distributions IR-only vs joint
+    task5_confusion_cases.png         - cases where NMR helps or hurts retrieval
+    pfas_tasks45_results.txt          - full numerical results
 """
 
 import os
@@ -46,17 +46,13 @@ from sklearn.metrics import r2_score
 from sklearn.metrics.pairwise import cosine_similarity
 from scipy.stats import pearsonr, spearmanr
 
-# =============================================================================
 # PATHS
-# =============================================================================
 
 COMBINED_NPZ = r"C:\Users\danie\Downloads\orca_work\ml_dataset\pfas_combined_dataset.npz"
 NMR_NPZ      = r"C:\Users\danie\Downloads\orca_work\ml_dataset\pfas_nmr_dataset.npz"
 OUTPUT_DIR   = r"C:\Users\danie\Downloads\orca_work\ml_dataset"
 
-# =============================================================================
 # LOAD DATA
-# =============================================================================
 
 print("=" * 65)
 print("Loading datasets...")
@@ -88,7 +84,7 @@ def normalise(s):
 norm_comb = {normalise(n): i for i, n in enumerate(mol_names)}
 norm_nmr  = {normalise(n): i for i, n in enumerate(nmr_names)}
 
-# Build alignment index: combined → nmr_full
+# Build alignment index: combined -> nmr_full
 align_idx = []
 for ck in [normalise(n) for n in mol_names]:
     if ck in norm_nmr:
@@ -116,13 +112,11 @@ def rlog(msg=""):
     print(msg)
     results_lines.append(msg)
 
-# =============================================================================
-# TASK 4 — IR SPECTRUM → NMR FEATURE PREDICTION
-# =============================================================================
+# TASK 4 - IR SPECTRUM -> NMR FEATURE PREDICTION
 
 rlog()
 rlog("=" * 65)
-rlog("TASK 4 — Predicting NMR Features from IR Spectra")
+rlog("TASK 4 - Predicting NMR Features from IR Spectra")
 rlog("=" * 65)
 rlog("""
 Scientific motivation:
@@ -132,14 +126,14 @@ Scientific motivation:
   It also directly tests whether IR and NMR are informationally redundant.
 """)
 
-# ── Dimensionality reduction of IR spectra ────────────────────────────────────
+# Dimensionality reduction of IR spectra
 N_PC_IR = 20
 pca_ir  = PCA(n_components=N_PC_IR, random_state=42)
 X_ir_pc = pca_ir.fit_transform(X_ir)
 var_exp  = pca_ir.explained_variance_ratio_.cumsum()
-rlog(f"  IR PCA: {N_PC_IR} components → {var_exp[-1]*100:.1f}% variance explained")
+rlog(f"  IR PCA: {N_PC_IR} components -> {var_exp[-1]*100:.1f}% variance explained")
 
-# ── Predict each NMR feature with Ridge + LOO CV ─────────────────────────────
+# Predict each NMR feature with Ridge + LOO CV
 loo         = LeaveOneOut()
 task4_res   = {}
 
@@ -162,7 +156,7 @@ sc_ir = StandardScaler()
 X_ir_sc = sc_ir.fit_transform(X_ir_pc)  # scale PCA scores
 
 for key, (y_true, label, nucleus) in NMR_TARGETS.items():
-    # Some molecules have 0 H atoms — mask them for H prediction
+    # Some molecules have 0 H atoms - mask them for H prediction
     if "H_mean" in key:
         mask = n_H > 0
     elif "C_mean" in key:
@@ -188,7 +182,7 @@ for key, (y_true, label, nucleus) in NMR_TARGETS.items():
         "label": label, "nucleus": nucleus
     }
 
-# ── Figure 1: scatter plots for each target ───────────────────────────────────
+# Figure 1: scatter plots for each target
 n_targets = len(NMR_TARGETS)
 ncols = 4
 nrows = int(np.ceil(n_targets / ncols))
@@ -225,7 +219,7 @@ for i, (key, res) in enumerate(task4_res.items()):
 for j in range(n_targets, len(axes_flat)):
     axes_flat[j].set_visible(False)
 
-fig.suptitle("Task 4: IR Spectrum → NMR Feature Prediction\n"
+fig.suptitle("Task 4: IR Spectrum -> NMR Feature Prediction\n"
              "Ridge + PCA(20 IR components)  |  LOO CV", fontsize=11)
 plt.tight_layout()
 plt.savefig(os.path.join(OUTPUT_DIR, "task4_ir_to_nmr_predictions.png"),
@@ -233,7 +227,7 @@ plt.savefig(os.path.join(OUTPUT_DIR, "task4_ir_to_nmr_predictions.png"),
 plt.close()
 rlog("\n  Saved: task4_ir_to_nmr_predictions.png")
 
-# ── Figure 2: which molecules are hardest to predict across all targets ────────
+# Figure 2: which molecules are hardest to predict across all targets
 # Mean normalised absolute error across all 7 targets
 norm_errors = np.zeros(N)
 counts      = np.zeros(N)
@@ -256,7 +250,7 @@ ax.barh([short_names[i] for i in order], [mean_norm_errors[i] for i in order],
         color=colors, edgecolor="white")
 ax.axvline(0.15, color="red", linestyle="--", label="High-error threshold")
 ax.set_xlabel("Mean normalised absolute error across NMR targets")
-ax.set_title("Task 4: Hardest Molecules to Predict (IR → NMR)\n"
+ax.set_title("Task 4: Hardest Molecules to Predict (IR -> NMR)\n"
              "Red = outliers with mean normalised error > 0.15")
 ax.legend()
 plt.tight_layout()
@@ -265,7 +259,7 @@ plt.savefig(os.path.join(OUTPUT_DIR, "task4_ir_to_nmr_errors.png"),
 plt.close()
 rlog("  Saved: task4_ir_to_nmr_errors.png")
 
-# ── Figure 3: spectral basis for F_mean prediction ───────────────────────────
+# Figure 3: spectral basis for F_mean prediction
 # Show which wavenumber regions drive the mean 19F shift prediction
 rlog("\n  Computing spectral importance for F_mean_ppm prediction...")
 y_Fmean = NMR_TARGETS["F_mean_ppm"][0]
@@ -279,7 +273,7 @@ ridge_full = Ridge(alpha=10.0)
 ridge_full.fit(X_sc, y_Fmean)
 
 # Project Ridge weights back through PCA to get per-wavenumber importance
-# coef shape: (N_PC,) → back-project: (n_wn,)
+# coef shape: (N_PC,) -> back-project: (n_wn,)
 importance = np.abs(pca_fit.components_.T @ ridge_full.coef_)
 importance /= importance.max()
 
@@ -288,7 +282,7 @@ fig, axes = plt.subplots(2, 1, figsize=(14, 8), sharex=True)
 axes[0].fill_between(wn, importance, alpha=0.6, color="steelblue",
                      label="Spectral importance for F_mean")
 axes[0].set_ylabel("Normalised importance")
-axes[0].set_title("Spectral regions driving ¹⁹F shift prediction (IR → F_mean_ppm)")
+axes[0].set_title("Spectral regions driving ¹⁹F shift prediction (IR -> F_mean_ppm)")
 axes[0].legend()
 
 # Overlay mean spectra coloured by F_mean quartile
@@ -313,13 +307,11 @@ plt.savefig(os.path.join(OUTPUT_DIR, "task4_ir_to_nmr_spectra_basis.png"),
 plt.close()
 rlog("  Saved: task4_ir_to_nmr_spectra_basis.png")
 
-# =============================================================================
-# TASK 5 — JOINT IR + NMR MOLECULE IDENTIFICATION
-# =============================================================================
+# TASK 5 - JOINT IR + NMR MOLECULE IDENTIFICATION
 
 rlog()
 rlog("=" * 65)
-rlog("TASK 5 — Joint IR + NMR Molecule Identification")
+rlog("TASK 5 - Joint IR + NMR Molecule Identification")
 rlog("=" * 65)
 rlog("""
 Scientific motivation:
@@ -328,12 +320,12 @@ Scientific motivation:
   For each query molecule (LOO: leave it out of the library), compute:
     S_IR(q, c)  = cosine similarity between IR spectra
     S_NMR(q, c) = cosine similarity between NMR feature vectors
-    S_joint     = α * S_IR + (1-α) * S_NMR   [α swept 0→1]
+    S_joint     = α * S_IR + (1-α) * S_NMR   [α swept 0->1]
   The correct molecule is retrieved if it ranks #1 in the library.
 """)
 
-# ── Normalise NMR features for cosine similarity ─────────────────────────────
-# Use z-scored NMR (already computed) — ensures fair weighting with IR
+# Normalise NMR features for cosine similarity
+# Use z-scored NMR (already computed) - ensures fair weighting with IR
 # For cosine similarity, also L2-normalise each row
 def l2norm(X):
     norms = np.linalg.norm(X, axis=1, keepdims=True)
@@ -343,7 +335,7 @@ def l2norm(X):
 X_ir_l2  = l2norm(X_ir)
 X_nmr_l2 = l2norm(X_nmr_sc)
 
-# ── LOO retrieval at varying alpha ────────────────────────────────────────────
+# LOO retrieval at varying alpha
 alphas      = np.linspace(0, 1, 21)
 top1_rates  = []
 top3_rates  = []
@@ -361,7 +353,7 @@ for alpha in alphas:
         # The correct answer is whichever lib_idx position == i's true match.
         # In LOO the query IS in the library; we want rank of "self" (same mol).
         # Since we excluded i, the correct answer is the molecule itself
-        # being predicted — but in identification the target IS the query mol.
+        # being predicted - but in identification the target IS the query mol.
         # Reframe: rank of the correct molecule among the other 67.
         # Here "correct" means the same molecule; since it's excluded from lib,
         # we measure retrieval of the nearest correct structural analogue.
@@ -416,7 +408,7 @@ rlog(f"  NMR-only retrieval (α=0.0): Top-1={top1_rates[0]:.3f}  Top-3={top3_rat
 rlog(f"  Best joint Top-1   (α={best_alpha_top1:.2f}): Top-1={top1_rates.max():.3f}")
 rlog(f"  Best joint Top-3   (α={best_alpha_top3:.2f}): Top-3={top3_rates.max():.3f}")
 
-# ── Per-molecule analysis at best alpha ───────────────────────────────────────
+# Per-molecule analysis at best alpha
 alpha_best   = best_alpha_top1
 S_ir_full    = X_ir_l2  @ X_ir_l2.T
 S_nmr_full   = X_nmr_l2 @ X_nmr_l2.T
@@ -457,9 +449,7 @@ rlog(f"\n  Biggest regressions (NMR hurts):")
 for i in np.argsort(delta_ranks)[-5:][::-1]:
     rlog(f"    {short_names[i]:20s}  IR rank={ir_ranks[i]}  Joint rank={joint_ranks[i]}  Δ={delta_ranks[i]:+d}")
 
-# =============================================================================
-# FIGURES — TASK 5
-# =============================================================================
+# FIGURES - TASK 5
 
 fig, axes = plt.subplots(2, 2, figsize=(15, 11))
 
@@ -522,7 +512,7 @@ plt.savefig(os.path.join(OUTPUT_DIR, "task5_joint_retrieval.png"),
 plt.close()
 rlog("\n  Saved: task5_joint_retrieval.png")
 
-# ── Figure: NMR vs IR similarity for the molecules where NMR most helps ───────
+# Figure: NMR vs IR similarity for the molecules where NMR most helps
 fig, axes = plt.subplots(1, 2, figsize=(14, 5))
 
 # Left: NMR feature fingerprints for "confusable" pairs
@@ -557,7 +547,7 @@ for pi, (i, j, sir, snmr, delt) in enumerate(top_pairs[:2]):
     ax.set_xticks(x)
     ax.set_xticklabels(feat_names, rotation=45, ha="right", fontsize=8)
     ax.set_title(f"IR-confusable pair (S_IR={sir:.3f}, S_NMR={snmr:.3f})\n"
-                 f"NMR Δ={delt:+.3f} {'← NMR helps discriminate' if delt < 0 else '← NMR does not help'}",
+                 f"NMR Δ={delt:+.3f} {'<- NMR helps discriminate' if delt < 0 else '<- NMR does not help'}",
                  fontsize=9)
     ax.legend(fontsize=8)
     ax.set_ylabel("NMR feature value (raw ppm / count)")
@@ -568,29 +558,27 @@ plt.savefig(os.path.join(OUTPUT_DIR, "task5_confusion_cases.png"),
 plt.close()
 rlog("  Saved: task5_confusion_cases.png")
 
-# =============================================================================
 # SUMMARY
-# =============================================================================
 
 rlog()
 rlog("=" * 65)
 rlog("SUMMARY")
 rlog("=" * 65)
 rlog("""
-Task 4 — IR → NMR prediction:
+Task 4 - IR -> NMR prediction:
   Key question: does the IR spectrum encode NMR shift information?
-  Answer: see Pearson r values above. High r for F_mean/n_F suggests yes —
+  Answer: see Pearson r values above. High r for F_mean/n_F suggests yes -
   the 1000-1400 cm⁻¹ C-F stretching region strongly correlates with chain
   length and fluorination pattern, which also determines 19F shifts.
   This has a practical implication: an IR spectrum alone may be sufficient
   to estimate 19F NMR shift ranges for unknown PFAS, without running NMR.
 
-Task 5 — Joint IR + NMR identification:
+Task 5 - Joint IR + NMR identification:
   Key question: does NMR provide independent discriminative power over IR?
-  The alpha sweep shows the optimal fusion weight. If best α ≈ 1.0, IR alone
+  The alpha sweep shows the optimal fusion weight. If best α ~ 1.0, IR alone
   is optimal and NMR adds no retrieval value. If best α < 1.0, there is
   genuine complementarity between the two modalities.
-  The confusion case analysis shows WHICH molecules benefit from NMR — these
+  The confusion case analysis shows WHICH molecules benefit from NMR - these
   tend to be structural isomers or chain-length neighbours that are nearly
   indistinguishable by their bulk IR fingerprint alone.
 """)
@@ -599,5 +587,5 @@ Task 5 — Joint IR + NMR identification:
 report_path = os.path.join(OUTPUT_DIR, "pfas_tasks45_results.txt")
 with open(report_path, "w", encoding="utf-8") as f:
     f.write("\n".join(results_lines))
-rlog(f"Results saved → {report_path}")
+rlog(f"Results saved -> {report_path}")
 rlog("Done.")

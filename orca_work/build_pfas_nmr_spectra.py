@@ -1,12 +1,12 @@
 """
 build_pfas_nmr_spectra.py
-─────────────────────────
+-------------------------
 Parse per-atom ¹⁹F shieldings from ORCA NMR .out files (UTF-16 encoded),
-convert to chemical shifts (δ = σ_ref − σ, σ_ref = 179.716 ppm),
+convert to chemical shifts (δ = σ_ref - σ, σ_ref = 179.716 ppm),
 and broaden onto a ¹⁹F chemical shift grid to produce a (68, 251) spectral
 matrix saved as pfas_nmr_spectra.npz.
 
-Grid: −250 to 0 ppm inclusive, 1 pt/ppm  → 251 points
+Grid: -250 to 0 ppm inclusive, 1 pt/ppm  -> 251 points
 Broadening: Lorentzian FWHM = 1 ppm
 Each spectrum is normalised so its peak height = 1.
 
@@ -26,17 +26,17 @@ import re
 import argparse
 import numpy as np
 
-# ── constants ──────────────────────────────────────────────────────────────────
+# constants
 SIGMA_REF_F  = 179.716          # CFCl₃ ¹⁹F shielding at PBE0/def2-TZVP
 GRID_START   = -250.0
 GRID_END     =    0.0
-GRID_NPTS    =  251             # −250, −249, …, 0  (1 pt/ppm)
+GRID_NPTS    =  251             # -250, -249, ..., 0  (1 pt/ppm)
 FWHM         =    1.0           # ppm
 
 SHIELDING_BLOCK = "CHEMICAL SHIELDING SUMMARY"
 
 
-# ── helpers ────────────────────────────────────────────────────────────────────
+# helpers
 
 def _try_read(path: str) -> str:
     """Try UTF-16 first (ORCA ¹⁹F outputs), then fall back to UTF-8."""
@@ -62,7 +62,7 @@ def parse_f_shieldings(path: str) -> np.ndarray:
         raise ValueError(f"No '{SHIELDING_BLOCK}' block in {path}")
 
     block = content[idx:]
-    # Match lines like:   9       F          269.346        106.314
+    # Match lines like: 9 F 269.346 106.314
     pattern = re.compile(
         r"^\s*\d+\s+F\s+([-+]?\d+\.\d+)\s+[-+]?\d+\.\d+",
         re.MULTILINE,
@@ -74,7 +74,7 @@ def parse_f_shieldings(path: str) -> np.ndarray:
 
 
 def shieldings_to_shifts(sigma: np.ndarray) -> np.ndarray:
-    """δ = σ_ref − σ  (convention for ¹⁹F NMR relative to CFCl₃)."""
+    """δ = σ_ref - σ  (convention for ¹⁹F NMR relative to CFCl₃)."""
     return SIGMA_REF_F - sigma
 
 
@@ -99,7 +99,7 @@ def lorentzian_broadening(
     return spectrum.astype(np.float32)
 
 
-# ── main ───────────────────────────────────────────────────────────────────────
+# main
 
 def build(nmr_dir: str, combined_path: str, output_path: str) -> None:
     # Load reference mol order from combined dataset
@@ -107,7 +107,7 @@ def build(nmr_dir: str, combined_path: str, output_path: str) -> None:
     mol_names = ref["mol_names"]                   # (68,) strings
     n_mols    = len(mol_names)
 
-    # Build a filename → mol_name lookup from directory
+    # Build a filename -> mol_name lookup from directory
     out_files = {}
     for fname in os.listdir(nmr_dir):
         if fname.endswith(".out"):
@@ -120,9 +120,9 @@ def build(nmr_dir: str, combined_path: str, output_path: str) -> None:
     f_shifts_list = []           # list of arrays for storage
     found_names   = []
 
-    print(f"Processing {n_mols} molecules …\n")
+    print(f"Processing {n_mols} molecules ...\n")
     for i, mol_name in enumerate(mol_names):
-        # Find the matching .out file – search by mol_name substring (case-insensitive)
+        # Find the matching .out file - search by mol_name substring (case-insensitive)
         mol_slug = mol_name.lower().replace(" ", "_").replace("/", "_")
         matched = None
         for fname, fpath in out_files.items():
@@ -136,7 +136,7 @@ def build(nmr_dir: str, combined_path: str, output_path: str) -> None:
                 matched = sorted_files[i]
 
         if matched is None:
-            print(f"  [WARN] No file for mol {i}: {mol_name!r} – filling with zeros")
+            print(f"  [WARN] No file for mol {i}: {mol_name!r} - filling with zeros")
             f_shifts_list.append(np.array([], dtype=np.float32))
             continue
 
@@ -167,12 +167,12 @@ def build(nmr_dir: str, combined_path: str, output_path: str) -> None:
         sigma_ref   = np.float32(SIGMA_REF_F),
         fwhm_ppm    = np.float32(FWHM),
     )
-    print(f"\nSaved → {output_path}")
+    print(f"\nSaved -> {output_path}")
     print(f"  spectra  : {spectra.shape}")
-    print(f"  grid_ppm : {grid[0]:.0f} … {grid[-1]:.0f} ppm  ({GRID_NPTS} pts)")
+    print(f"  grid_ppm : {grid[0]:.0f} ... {grid[-1]:.0f} ppm  ({GRID_NPTS} pts)")
 
 
-# ── CLI ────────────────────────────────────────────────────────────────────────
+# CLI
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Build ¹⁹F NMR spectral matrix from ORCA outputs")

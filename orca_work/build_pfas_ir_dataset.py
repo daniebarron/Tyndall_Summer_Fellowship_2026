@@ -10,10 +10,10 @@ Usage
     python build_pfas_ir_dataset.py
 
 Outputs (written to OUTPUT_DIR):
-    pfas_ir_dataset.npz      — main ML dataset (spectra + metadata)
-    pfas_ir_metadata.csv     — per-molecule summary table
-    pfas_ir_spectra.png      — overview plot of all 68 spectra
-    extraction_report.txt    — log of what was found / any warnings
+    pfas_ir_dataset.npz      - main ML dataset (spectra + metadata)
+    pfas_ir_metadata.csv     - per-molecule summary table
+    pfas_ir_spectra.png      - overview plot of all 68 spectra
+    extraction_report.txt    - log of what was found / any warnings
 """
 
 import os
@@ -25,17 +25,13 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-# =============================================================================
-# PATHS — edit these to match your machine
-# =============================================================================
+# PATHS - edit these to match your machine
 
 OUT_DIR    = r"C:\Users\danie\Downloads\orca_work\pfas_out_files"
 SMILES_CSV = r"C:\Users\danie\Downloads\orca_work\PFAS_smiles.csv"
 OUTPUT_DIR = r"C:\Users\danie\Downloads\orca_work\ml_dataset"
 
-# =============================================================================
 # SPECTRUM PARAMETERS
-# =============================================================================
 
 SCALE_FACTOR = 0.9614    # PBE0/def2-SVP literature scale factor
 FREQ_MIN     = 500.0     # cm-1
@@ -43,9 +39,7 @@ FREQ_MAX     = 4000.0    # cm-1
 N_POINTS     = 3501      # 1 cm-1 spacing
 LORENTZ_FWHM = 20.0      # cm-1 Lorentzian broadening FWHM
 
-# =============================================================================
 # HELPERS
-# =============================================================================
 
 def lorentzian(x, x0, fwhm):
     gamma = fwhm / 2.0
@@ -102,7 +96,7 @@ def parse_orca_ir(filepath):
                 break
             continue
 
-        # "  6:     31.37   0.000330    1.67  ..."
+        # " 6: 31.37 0.000330 1.67 ..."
         m = re.match(
             r"\s*(\d+):\s+([\d.]+)\s+([\d.eE+\-]+)\s+([\d.eE+\-]+)",
             line
@@ -156,9 +150,7 @@ def match_smiles(stem, smiles_df):
     return best_name, best_smiles
 
 
-# =============================================================================
 # MAIN
-# =============================================================================
 
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -168,19 +160,19 @@ def main():
         print(msg)
         report_lines.append(msg)
 
-    # ── load SMILES ───────────────────────────────────────────────────────────
+    # load SMILES
     smiles_df = pd.read_csv(SMILES_CSV, header=None, names=["name", "smiles"])
     smiles_df["norm"] = smiles_df["name"].apply(normalise_name)
     log(f"Loaded {len(smiles_df)} SMILES entries")
 
-    # ── find all .out files ───────────────────────────────────────────────────
+    # find all .out files
     out_files = sorted(glob.glob(os.path.join(OUT_DIR, "*.out")))
     log(f"Found {len(out_files)} .out files in {OUT_DIR}\n")
 
-    # ── wavenumber grid ───────────────────────────────────────────────────────
+    # wavenumber grid
     grid = np.linspace(FREQ_MIN, FREQ_MAX, N_POINTS)
 
-    # ── extract spectra ───────────────────────────────────────────────────────
+    # extract spectra
     records  = []
     spectra  = []
 
@@ -218,7 +210,7 @@ def main():
         log("ERROR: No spectra extracted. Check OUT_DIR path.")
         return
 
-    # ── save dataset ──────────────────────────────────────────────────────────
+    # save dataset
     spectra_array = np.array(spectra, dtype=np.float32)
     meta_df = pd.DataFrame(records)
 
@@ -238,7 +230,7 @@ def main():
     meta_df.to_csv(csv_path, index=False)
     log(f"Saved metadata    ->  {csv_path}")
 
-    # ── overview plot ─────────────────────────────────────────────────────────
+    # overview plot
     ncols = 4
     nrows = int(np.ceil(n_ok / ncols))
     fig, axes = plt.subplots(nrows=nrows, ncols=ncols,
@@ -269,13 +261,13 @@ def main():
     plt.close()
     log(f"Saved plot        ->  {plot_path}")
 
-    # ── report ────────────────────────────────────────────────────────────────
+    # report
     report_path = os.path.join(OUTPUT_DIR, "extraction_report.txt")
     with open(report_path, "w", encoding="utf-8") as f:
         f.write("\n".join(report_lines))
     log(f"Saved report      ->  {report_path}")
 
-    # ── summary ───────────────────────────────────────────────────────────────
+    # summary
     log("\n" + "=" * 55)
     log("DATASET SUMMARY")
     log("=" * 55)

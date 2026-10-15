@@ -20,9 +20,9 @@ Background
 ORCA prints imaginary frequencies as negative numbers in the
 VIBRATIONAL FREQUENCIES block, e.g.:
 
-     0:       0.00 cm**-1   ← translational/rotational (always ~0)
-     6:    -45.32 cm**-1   ← imaginary (BAD — not a true minimum)
-     7:    238.61 cm**-1   ← real mode (good)
+     0:       0.00 cm**-1   <- translational/rotational (always ~0)
+     6:    -45.32 cm**-1   <- imaginary (BAD - not a true minimum)
+     7:    238.61 cm**-1   <- real mode (good)
 
 The first 6 modes (indices 0-5) are always the 6 translational/rotational
 zero modes and are ignored. Any remaining negative frequency is flagged.
@@ -34,11 +34,10 @@ import re
 import csv
 from pathlib import Path
 
-# ── configurable thresholds ───────────────────────────────────────────────────
+# configurable thresholds
 IMAGINARY_THRESHOLD = -5.0   # cm⁻¹  (modes more negative than this are flagged;
-                              #        small numerical noise near 0 is ignored)
-LOW_FREQ_WARN       = 20.0   # cm⁻¹  (real but very low freqs — worth a look)
-# ─────────────────────────────────────────────────────────────────────────────
+                              # small numerical noise near 0 is ignored)
+LOW_FREQ_WARN       = 20.0   # cm⁻¹  (real but very low freqs - worth a look)
 
 
 def parse_frequencies(filepath: Path):
@@ -61,7 +60,7 @@ def parse_frequencies(filepath: Path):
     in_freq_block      = False
     normal_termination = False
 
-    # ORCA on Windows sometimes writes UTF-16-LE files — detect and handle both
+    # ORCA on Windows sometimes writes UTF-16-LE files - detect and handle both
     raw = filepath.read_bytes()
     if raw[:2] in (b'\xff\xfe', b'\xfe\xff') or (len(raw) > 2 and raw[1] == 0):
         text = raw.decode("utf-16-le", errors="replace")
@@ -73,7 +72,7 @@ def parse_frequencies(filepath: Path):
                 normal_termination = True
             if block_header.search(line):
                 in_freq_block = True
-                freqs = []          # reset — use LAST occurrence (opt+freq jobs)
+                freqs = []          # reset - use LAST occurrence (opt+freq jobs)
                 continue
             if in_freq_block:
                 m = freq_pattern.match(line)
@@ -157,7 +156,7 @@ def print_summary(results):
     warns  = [r for r in results if r["status"] == "WARN"]
     errors = [r for r in results if r["status"] == "ERROR"]
 
-    # ── header ───────────────────────────────────────────────────────────────
+    # header
     print("\n" + "=" * 70)
     print("  ORCA IMAGINARY FREQUENCY CHECK")
     print("=" * 70)
@@ -168,38 +167,38 @@ def print_summary(results):
     print(f"  ERROR/unread  : {len(errors)}")
     print("=" * 70)
 
-    # ── failures ─────────────────────────────────────────────────────────────
+    # failures
     if fails:
-        print("\n❌  FAIL — imaginary frequencies detected (geometry NOT a true minimum)")
+        print("\nFAIL  FAIL - imaginary frequencies detected (geometry NOT a true minimum)")
         print("-" * 70)
         for r in sorted(fails, key=lambda x: x["name"]):
             imag_str = ", ".join(f"{f:.2f}" for f in r["imaginary_freqs"])
             print(f"  {r['name']:<40}  {imag_str} cm⁻¹")
             if r["notes"]:
-                print(f"      → {r['notes']}")
+                print(f"      -> {r['notes']}")
     else:
-        print("\n✅  No imaginary frequencies found in any file.")
+        print("\nOK  No imaginary frequencies found in any file.")
 
-    # ── warnings ─────────────────────────────────────────────────────────────
+    # warnings
     if warns:
-        print("\n⚠️   WARN — job did not terminate normally")
+        print("\nWARN  WARN - job did not terminate normally")
         print("-" * 70)
         for r in sorted(warns, key=lambda x: x["name"]):
             print(f"  {r['name']:<40}  {r['notes']}")
 
-    # ── errors ───────────────────────────────────────────────────────────────
+    # errors
     if errors:
-        print("\n⚠️   ERROR — could not parse file")
+        print("\nWARN   ERROR - could not parse file")
         print("-" * 70)
         for r in sorted(errors, key=lambda x: x["name"]):
             print(f"  {r['name']:<40}  {r['notes']}")
 
-    # ── passing list ─────────────────────────────────────────────────────────
-    print("\n✅  PASS — all vibrational modes are real")
+    # passing list
+    print("\nOK  PASS - all vibrational modes are real")
     print("-" * 70)
     for r in sorted(passes, key=lambda x: x["name"]):
         low_note = (
-            f"  [⚠ low freq: {', '.join(f'{f:.2f}' for f in r['low_real_freqs'])} cm⁻¹]"
+            f"  [WARN low freq: {', '.join(f'{f:.2f}' for f in r['low_real_freqs'])} cm⁻¹]"
             if r["low_real_freqs"] else ""
         )
         print(f"  {r['name']}{low_note}")
@@ -229,7 +228,7 @@ def write_csv(results, out_path: Path):
                 "notes"                 : r["notes"],
                 "path"                  : r["path"],
             })
-    print(f"  Results saved → {out_path}\n")
+    print(f"  Results saved -> {out_path}\n")
 
 
 def main():

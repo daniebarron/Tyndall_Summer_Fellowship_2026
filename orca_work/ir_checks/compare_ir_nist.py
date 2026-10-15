@@ -19,15 +19,15 @@ as a JCAMP-DX file:
 
   TFA  (trifluoroacetic acid):
     https://webbook.nist.gov/cgi/cbook.cgi?ID=C76051&Type=IRSpec&Index=0
-    → click "Download" → save as: TFA_nist.jdx
+    -> click "Download" -> save as: TFA_nist.jdx
 
   PFBA (perfluorobutanoic acid):
     https://webbook.nist.gov/cgi/cbook.cgi?ID=C375229&Type=IRSpec&Index=0
-    → click "Download" → save as: PFBA_nist.jdx
+    -> click "Download" -> save as: PFBA_nist.jdx
 
   PFOA (perfluorooctanoic acid):
     https://webbook.nist.gov/cgi/cbook.cgi?ID=C335671&Type=IRSpec&Index=0
-    → click "Download" → save as: PFOA_nist.jdx
+    -> click "Download" -> save as: PFOA_nist.jdx
 
 Place the .jdx files in the same folder as this script, or pass their
 paths via the NIST_FILES dict below.
@@ -54,16 +54,16 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 from scipy.signal import find_peaks
 
-# ── USER CONFIGURATION ────────────────────────────────────────────────────────
+# USER CONFIGURATION
 
-# ORCA output files — adjust paths as needed
+# ORCA output files - adjust paths as needed
 ORCA_FILES = {
     "TFA" : "TFA.out",
     "PFBA": "PFBA_Perfluorobutanoic_acid.out",
     "PFOA": "PFOA_Perfluorooctanoic_acid.out",
 }
 
-# NIST JCAMP-DX files — download manually as described above
+# NIST JCAMP-DX files - download manually as described above
 NIST_FILES = {
     "TFA" : "TFA_nist.jdx",
     "PFBA": "PFBA_nist.jdx",
@@ -81,7 +81,7 @@ DISPLAY_NAMES = {
 # Source: Merrick, Moran & Radom, J. Phys. Chem. A, 2007, 111, 11683
 SCALE_FACTOR = 0.9614
 
-# Lorentzian broadening FWHM (cm⁻¹) — 8-15 is typical for gas-phase comparison
+# Lorentzian broadening FWHM (cm⁻¹) - 8-15 is typical for gas-phase comparison
 FWHM = 10.0
 
 # Frequency range for plots (cm⁻¹)
@@ -94,7 +94,6 @@ GRID_STEP = 1.0
 # Number of strongest peaks to label on computed spectrum
 N_LABEL_PEAKS = 6
 
-# ─────────────────────────────────────────────────────────────────────────────
 
 
 def parse_orca_ir(filepath):
@@ -105,8 +104,8 @@ def parse_orca_ir(filepath):
 
     Returns
     -------
-    freqs : np.ndarray   — unscaled frequencies (cm⁻¹)
-    ints  : np.ndarray   — IR intensities (km/mol)
+    freqs : np.ndarray   - unscaled frequencies (cm⁻¹)
+    ints  : np.ndarray   - IR intensities (km/mol)
     """
     with open(filepath, "rb") as f:
         raw = f.read()
@@ -117,7 +116,7 @@ def parse_orca_ir(filepath):
     else:
         text = raw.decode("utf-8", errors="replace")
 
-    # Pattern: "  6:    238.61   0.000273    1.38  ..."
+    # Pattern: " 6: 238.61 0.000273 1.38 ..."
     ir_pattern = re.compile(
         r"^\s*(\d+):\s+(-?\d+\.\d+)\s+\S+\s+(\d+\.\d+)", re.MULTILINE
     )
@@ -128,7 +127,7 @@ def parse_orca_ir(filepath):
         idx = text.find("IR SPECTRUM", block_start)
         if idx == -1:
             break
-        # Parse this block — 10000 chars handles up to ~200 modes (large PFAS)
+        # Parse this block - 10000 chars handles up to ~200 modes (large PFAS)
         block = text[idx: idx + 10000]
         freqs_tmp, ints_tmp = [], []
         for m in ir_pattern.finditer(block):
@@ -232,7 +231,7 @@ def parse_jcamp(filepath):
     x_vals = x_vals[order]
     y_vals = y_vals[order]
 
-    # Convert transmittance → absorbance
+    # Convert transmittance -> absorbance
     if data_type == "transmittance":
         # Clip to avoid log(0)
         t = np.clip(y_vals / 100.0, 1e-6, 1.0)
@@ -306,7 +305,7 @@ def plot_comparison(molecule, orca_file, nist_file, out_dir, show=True):
 
     Returns fig, axes for use in multi-panel figure.
     """
-    # ── Parse ORCA ────────────────────────────────────────────────────────────
+    # Parse ORCA
     freqs_raw, intensities = parse_orca_ir(orca_file)
     freqs_scaled = freqs_raw * SCALE_FACTOR
 
@@ -314,7 +313,7 @@ def plot_comparison(molecule, orca_file, nist_file, out_dir, show=True):
     grid = np.arange(FREQ_MIN, FREQ_MAX + GRID_STEP, GRID_STEP)
     computed = broaden_spectrum(freqs_scaled, intensities, grid, FWHM)
 
-    # ── Parse NIST ────────────────────────────────────────────────────────────
+    # Parse NIST
     has_nist = os.path.isfile(nist_file)
     if has_nist:
         nist_x, nist_y, nist_type = parse_jcamp(nist_file)
@@ -325,9 +324,9 @@ def plot_comparison(molecule, orca_file, nist_file, out_dir, show=True):
         if nist_interp.max() > 0:
             nist_interp /= nist_interp.max()
     else:
-        print(f"  ⚠  NIST file not found: {nist_file} — plotting computed only")
+        print(f"  WARN  NIST file not found: {nist_file} - plotting computed only")
 
-    # ── Plot ──────────────────────────────────────────────────────────────────
+    # Plot
     fig, axes = plt.subplots(
         2 if has_nist else 1, 1,
         figsize=(10, 6 if has_nist else 3.5),
@@ -340,7 +339,7 @@ def plot_comparison(molecule, orca_file, nist_file, out_dir, show=True):
     # Computed spectrum (top panel)
     ax_comp = axes[0]
     ax_comp.plot(grid, computed, color="steelblue", lw=1.2,
-                 label=f"Computed PBE0/def2-SVP (×{SCALE_FACTOR})")
+                 label=f"Computed PBE0/def2-SVP (x{SCALE_FACTOR})")
     # Stick spectrum
     for f, i in zip(freqs_scaled, intensities):
         if FREQ_MIN <= f <= FREQ_MAX:
@@ -381,7 +380,7 @@ def plot_comparison(molecule, orca_file, nist_file, out_dir, show=True):
     # Save
     out_path = os.path.join(out_dir, f"ir_comparison_{molecule}.png")
     fig.savefig(out_path, dpi=200, bbox_inches="tight")
-    print(f"  Saved → {out_path}")
+    print(f"  Saved -> {out_path}")
 
     if show:
         plt.show()
@@ -439,7 +438,7 @@ def plot_all_summary(molecules, orca_files, nist_files, out_dir):
 
     out_path = os.path.join(out_dir, "ir_comparison_all.png")
     fig.savefig(out_path, dpi=200, bbox_inches="tight")
-    print(f"  Saved → {out_path}")
+    print(f"  Saved -> {out_path}")
     plt.show()
 
 
@@ -457,7 +456,7 @@ def main():
     print(f"\nIR Comparison: ORCA PBE0/def2-SVP vs NIST")
     print(f"  Scaling factor : {SCALE_FACTOR}  (Merrick et al. 2007)")
     print(f"  Lorentzian FWHM: {FWHM} cm⁻¹")
-    print(f"  Frequency range: {FREQ_MIN}–{FREQ_MAX} cm⁻¹")
+    print(f"  Frequency range: {FREQ_MIN}-{FREQ_MAX} cm⁻¹")
     print()
 
     for mol in molecules:
@@ -466,12 +465,12 @@ def main():
         nist_f = NIST_FILES[mol]
 
         if not os.path.isfile(orca_f):
-            print(f"  ⚠  ORCA file not found: {orca_f} — skipping")
+            print(f"  WARN  ORCA file not found: {orca_f} - skipping")
             continue
 
         freqs, ints = parse_orca_ir(orca_f)
         print(f"  Parsed {len(freqs)} IR modes from ORCA")
-        print(f"  Frequency range: {freqs.min():.1f}–{freqs.max():.1f} cm⁻¹ (unscaled)")
+        print(f"  Frequency range: {freqs.min():.1f}-{freqs.max():.1f} cm⁻¹ (unscaled)")
         print(f"  Strongest mode : {freqs[np.argmax(ints)]:.1f} cm⁻¹ "
               f"({freqs[np.argmax(ints)] * SCALE_FACTOR:.1f} scaled), "
               f"{np.max(ints):.1f} km/mol")

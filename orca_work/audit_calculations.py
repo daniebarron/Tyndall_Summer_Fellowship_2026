@@ -57,24 +57,24 @@ def audit_orca_runs():
         elif has_opt_success and not has_freq_success:
             failed_freq.append(folder_name)
 
-    # ─── PRINT SUMMARY REPORT ──────────────────────────────────────────────────
+    # PRINT SUMMARY REPORT
     print(f"=== ORCA RUN AUDIT REPORT ===")
     print(f"Total Folders Scanned: {len(folders)}")
     print(f" Success (Opt + Freq done): {len(successful)}")
-    print(f"❌ Failed during Geometry Opt: {len(failed_opt)}")
-    print(f"❌ Failed during Freq Only:     {len(failed_freq)}")
+    print(f"FAIL Failed during Geometry Opt: {len(failed_opt)}")
+    print(f"FAIL Failed during Freq Only:     {len(failed_freq)}")
     print(f"⏳ Incomplete / Cut Off mid-run: {len(incomplete)}")
-    print(f"⚪ No .out files found:         {len(no_output)}")
+    print(f" No .out files found:         {len(no_output)}")
     print("=============================\n")
 
     if failed_opt:
-        print("❌ FAILED AT GEOMETRY OPTIMISATION (Needs full rerun):")
+        print("FAIL FAILED AT GEOMETRY OPTIMISATION (Needs full rerun):")
         for f in failed_opt:
             print(f"  - {f}")
         print()
 
     if failed_freq:
-        print("❌ FAILED AT FREQUENCY (Can use your restart script):")
+        print("FAIL FAILED AT FREQUENCY (Can use your restart script):")
         for f in failed_freq:
             print(f"  - {f}")
         print()
@@ -86,7 +86,7 @@ def audit_orca_runs():
         print()
 
     if no_output:
-        print("⚪ NEVER STARTED (Input file exists, but batch script didn't reach it):")
+        print(" NEVER STARTED (Input file exists, but batch script didn't reach it):")
         for f in no_output:
             print(f"  - {f}")
 

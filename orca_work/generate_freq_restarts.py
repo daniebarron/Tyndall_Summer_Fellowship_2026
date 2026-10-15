@@ -19,7 +19,7 @@ Usage:
 import os
 import re
 
-# ─── CONFIGURATION ────────────────────────────────────────────────────────────
+# CONFIGURATION
 
 CALCULATIONS_DIR = "pfas_calculations"       # Root folder of all calculations
 ORCA_PATH        = r"C:\Orca_6.1.1\orca.exe" # Path to your ORCA executable
@@ -48,7 +48,7 @@ FAILED_MOLECULES = [
     "3-3_FTCA_Fluorotelomer_carboxylic_acid",
 ]
 
-# ─── FUNCTIONS ────────────────────────────────────────────────────────────────
+# FUNCTIONS
 
 def extract_optimised_geometry(out_text):
     """
@@ -78,7 +78,7 @@ def extract_optimised_geometry(out_text):
         if in_coords:
             if stripped == '':
                 break
-            # Should be "  SYMBOL   X   Y   Z"
+            # Should be " SYMBOL X Y Z"
             parts = stripped.split()
             if len(parts) == 4:
                 coord_lines.append(f"  {parts[0]:<3} {parts[1]:>14} {parts[2]:>14} {parts[3]:>14}")
@@ -147,7 +147,7 @@ def write_batch_script(output_dir, jobs):
     return bat_path
 
 
-# ─── MAIN ─────────────────────────────────────────────────────────────────────
+# MAIN
 
 def main():
     if not os.path.isdir(CALCULATIONS_DIR):

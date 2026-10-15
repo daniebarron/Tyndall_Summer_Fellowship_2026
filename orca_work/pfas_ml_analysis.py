@@ -3,21 +3,21 @@ pfas_ml_analysis.py
 ===================
 Three ML tasks on the 68-molecule PFAS IR spectral dataset.
 
-Task 1 — Spectral library matching (cosine similarity)
-Task 2 — Functional group classification (random forest on spectra)
-Task 3 — Spectrum prediction from RDKit molecular descriptors (ridge regression)
+Task 1 - Spectral library matching (cosine similarity)
+Task 2 - Functional group classification (random forest on spectra)
+Task 3 - Spectrum prediction from RDKit molecular descriptors (ridge regression)
 
 Usage
 -----
     python pfas_ml_analysis.py
 
 Outputs written to OUTPUT_DIR:
-    task1_library_matching.png      — cosine similarity heatmap + top-N accuracy
-    task2_functional_groups.png     — per-group classifier performance
-    task2_feature_importance.png    — which spectral regions matter per group
-    task3_spectrum_prediction.png   — predicted vs actual spectra for test set
-    task3_pca_variance.png          — PCA variance explained
-    pfas_ml_results.txt             — summary of all results
+    task1_library_matching.png      - cosine similarity heatmap + top-N accuracy
+    task2_functional_groups.png     - per-group classifier performance
+    task2_feature_importance.png    - which spectral regions matter per group
+    task3_spectrum_prediction.png   - predicted vs actual spectra for test set
+    task3_pca_variance.png          - PCA variance explained
+    pfas_ml_results.txt             - summary of all results
 """
 
 import os
@@ -46,18 +46,14 @@ try:
     RDKIT_OK = True
 except ImportError:
     RDKIT_OK = False
-    print("WARNING: RDKit not available — Task 3 will be skipped")
+    print("WARNING: RDKit not available - Task 3 will be skipped")
 
-# =============================================================================
 # PATHS
-# =============================================================================
 
 NPZ_PATH   = r"C:\Users\danie\Downloads\orca_work\ml_dataset\pfas_ir_dataset.npz"
 OUTPUT_DIR = r"C:\Users\danie\Downloads\orca_work\ml_dataset"
 
-# =============================================================================
 # LOAD DATA
-# =============================================================================
 
 print("=" * 60)
 print("Loading dataset...")
@@ -78,13 +74,11 @@ def rlog(msg=""):
     print(msg)
     results_lines.append(msg)
 
-# =============================================================================
-# TASK 1 — SPECTRAL LIBRARY MATCHING
-# =============================================================================
+# TASK 1 - SPECTRAL LIBRARY MATCHING
 
 rlog()
 rlog("=" * 60)
-rlog("TASK 1 — Spectral Library Matching (Cosine Similarity)")
+rlog("TASK 1 - Spectral Library Matching (Cosine Similarity)")
 rlog("=" * 60)
 
 # Compute full pairwise cosine similarity matrix
@@ -92,7 +86,7 @@ sim_matrix = cosine_similarity(X)   # (68, 68)
 
 # Leave-one-out evaluation: for each molecule, remove it from the library,
 # find the most similar remaining molecule, check if it's the correct one.
-# "Correct" here means same molecule — since each molecule appears once,
+# "Correct" here means same molecule - since each molecule appears once,
 # we check top-1, top-3, top-5 retrieval.
 
 top1_correct = 0
@@ -141,7 +135,7 @@ rlog(f"  Least similar pair: {names[i_min]}  <->  {names[j_min]}")
 rlog(f"    cosine similarity = {sim_matrix[i_min, j_min]:.4f}")
 np.fill_diagonal(sim_matrix, 1)  # restore diagonal
 
-# ── Plot: similarity heatmap + NN similarity distribution ────────────────────
+# Plot: similarity heatmap + NN similarity distribution
 fig, axes = plt.subplots(1, 2, figsize=(16, 7))
 
 # Heatmap
@@ -171,19 +165,17 @@ plt.savefig(os.path.join(OUTPUT_DIR, "task1_library_matching.png"), dpi=150, bbo
 plt.close()
 rlog("  Saved: task1_library_matching.png")
 
-# =============================================================================
-# TASK 2 — FUNCTIONAL GROUP CLASSIFICATION
-# =============================================================================
+# TASK 2 - FUNCTIONAL GROUP CLASSIFICATION
 
 rlog()
 rlog("=" * 60)
-rlog("TASK 2 — Functional Group Classification")
+rlog("TASK 2 - Functional Group Classification")
 rlog("=" * 60)
 
 if not RDKIT_OK:
-    rlog("  SKIPPED — RDKit not available")
+    rlog("  SKIPPED - RDKit not available")
 else:
-    # ── Build functional group labels from SMILES ─────────────────────────────
+    # Build functional group labels from SMILES
     def get_fg_labels(smi):
         """Return dict of binary functional group labels for a SMILES string."""
         try:
@@ -195,29 +187,29 @@ else:
 
         labels = {}
 
-        # Carboxylic acid  C(=O)O
+        # Carboxylic acid C(=O)O
         labels["carboxylic_acid"] = int(
             mol.HasSubstructMatch(Chem.MolFromSmarts("C(=O)[OH]")) or
             mol.HasSubstructMatch(Chem.MolFromSmarts("C(=O)[O-]"))
         )
-        # Sulfonic acid  S(=O)(=O)O
+        # Sulfonic acid S(=O)(=O)O
         labels["sulfonic_acid"] = int(
             mol.HasSubstructMatch(Chem.MolFromSmarts("S(=O)(=O)[OH]")) or
             mol.HasSubstructMatch(Chem.MolFromSmarts("S(=O)(=O)[O-]"))
         )
-        # Sulfonamide  S(=O)(=O)N
+        # Sulfonamide S(=O)(=O)N
         labels["sulfonamide"] = int(
             mol.HasSubstructMatch(Chem.MolFromSmarts("S(=O)(=O)N"))
         )
-        # Ether linkage  C-O-C
+        # Ether linkage C-O-C
         labels["ether"] = int(
             mol.HasSubstructMatch(Chem.MolFromSmarts("[#6]-O-[#6]"))
         )
-        # Alcohol  C-OH
+        # Alcohol C-OH
         labels["alcohol"] = int(
             mol.HasSubstructMatch(Chem.MolFromSmarts("[#6][OH]"))
         )
-        # Phosphate ester  P(=O)(O)O
+        # Phosphate ester P(=O)(O)O
         labels["phosphate"] = int(
             mol.HasSubstructMatch(Chem.MolFromSmarts("P(=O)([OH,O-])O"))
         )
@@ -246,7 +238,7 @@ else:
         pos = fg_df[col].sum()
         rlog(f"    {col:20s}  {pos:2d} positive  /  {len(valid_idx)-pos:2d} negative")
 
-    # ── Train random forest classifier per functional group (LOO CV) ──────────
+    # Train random forest classifier per functional group (LOO CV)
     rlog("\n  Random Forest LOO cross-validation accuracy:")
 
     fg_results = {}
@@ -261,7 +253,7 @@ else:
             rlog(f"    {fg:20s}  SKIPPED (too few samples: {n_pos}+/{n_neg}-)")
             continue
 
-        # Use PCA to reduce dimensionality before RF 
+        # Use PCA to reduce dimensionality before RF
         pipe = Pipeline([
             ("pca",  PCA(n_components=20, random_state=42)),
             ("rf",   RandomForestClassifier(
@@ -287,7 +279,7 @@ else:
             "y": y, "preds": loo_preds
         }
 
-    # ── Feature importance: which spectral regions matter? ───────────────────
+    # Feature importance: which spectral regions matter?
     # Train on full data and extract importances per FG
     fig, axes = plt.subplots(len(fg_results), 1,
                              figsize=(14, 3 * len(fg_results)),
@@ -331,7 +323,7 @@ else:
     plt.close()
     rlog("\n  Saved: task2_feature_importance.png")
 
-    # ── Summary bar chart ─────────────────────────────────────────────────────
+    # Summary bar chart
     fig, ax = plt.subplots(figsize=(10, 5))
     fgs      = list(fg_results.keys())
     bal_accs = [fg_results[fg]["bal_acc"] for fg in fgs]
@@ -351,19 +343,17 @@ else:
     plt.close()
     rlog("  Saved: task2_functional_groups.png")
 
-# =============================================================================
-# TASK 3 — SPECTRUM PREDICTION FROM MOLECULAR DESCRIPTORS
-# =============================================================================
+# TASK 3 - SPECTRUM PREDICTION FROM MOLECULAR DESCRIPTORS
 
 rlog()
 rlog("=" * 60)
-rlog("TASK 3 — Spectrum Prediction from Molecular Descriptors")
+rlog("TASK 3 - Spectrum Prediction from Molecular Descriptors")
 rlog("=" * 60)
 
 if not RDKIT_OK:
-    rlog("  SKIPPED — RDKit not available")
+    rlog("  SKIPPED - RDKit not available")
 else:
-    # ── Build descriptor matrix ───────────────────────────────────────────────
+    # Build descriptor matrix
     def get_descriptors(smi):
         """
         Simple, interpretable PFAS-relevant descriptors from RDKit.
@@ -418,7 +408,7 @@ else:
     rlog(f"\n  Descriptor matrix: {X_desc.shape[0]} molecules x {X_desc.shape[1]} descriptors")
     rlog(f"  Descriptors: {list(desc_df.columns)}")
 
-    # ── PCA on spectra (target compression) ───────────────────────────────────
+    # PCA on spectra (target compression)
     # Predicting 3501 values directly is impossible at n=68.
     # Instead: compress spectra to N_PC PCA components, predict those,
     # then reconstruct.
@@ -433,7 +423,7 @@ else:
     for k in [1, 2, 5, 10, N_PC]:
         rlog(f"    Top-{k:2d} PCs: {pca_spec.explained_variance_ratio_[:k].sum()*100:.1f}%")
 
-    # ── Ridge regression: descriptors -> PCA coefficients (LOO CV) ───────────
+    # Ridge regression: descriptors -> PCA coefficients (LOO CV)
     scaler = StandardScaler()
     X_desc_sc = scaler.fit_transform(X_desc)
 
@@ -452,7 +442,7 @@ else:
     X_spec_pred = pca_spec.inverse_transform(Y_pred_pca)
     X_spec_pred = np.clip(X_spec_pred, 0, None)
 
-    # ── Evaluate: cosine similarity between predicted and actual ──────────────
+    # Evaluate: cosine similarity between predicted and actual
     cos_sims = np.array([
         cosine_similarity(X_spec[i:i+1], X_spec_pred[i:i+1])[0, 0]
         for i in range(len(desc_idx))
@@ -470,7 +460,7 @@ else:
     rlog(f"    Best predicted molecule:  {names[desc_idx[cos_sims.argmax()]]}  (r={pearson_rs.max():.3f})")
     rlog(f"    Worst predicted molecule: {names[desc_idx[cos_sims.argmin()]]}  (r={pearson_rs.min():.3f})")
 
-    # ── PCA variance plot ─────────────────────────────────────────────────────
+    # PCA variance plot
     fig, axes = plt.subplots(1, 2, figsize=(13, 5))
 
     axes[0].bar(range(1, N_PC+1),
@@ -499,7 +489,7 @@ else:
     plt.close()
     rlog("  Saved: task3_pca_variance.png")
 
-    # ── Plot best and worst predicted spectra ─────────────────────────────────
+    # Plot best and worst predicted spectra
     n_show = min(6, len(desc_idx))
     # Show 3 best + 3 worst
     order  = np.argsort(pearson_rs)
@@ -538,9 +528,7 @@ else:
     plt.close()
     rlog("  Saved: task3_spectrum_prediction.png")
 
-# =============================================================================
 # WRITE RESULTS SUMMARY
-# =============================================================================
 
 report_path = os.path.join(OUTPUT_DIR, "pfas_ml_results.txt")
 with open(report_path, "w", encoding="utf-8") as f:

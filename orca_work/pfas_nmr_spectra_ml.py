@@ -1,19 +1,19 @@
 """
 pfas_nmr_spectra_ml.py
-──────────────────────
+----------------------
 ML pipeline for ¹⁹F NMR spectra using LOO-CV (Leave-One-Out Cross-Validation).
 
 Three prediction tasks (analogous to existing IR tasks):
 
-  Task A │ RDKit descriptors  →  ¹⁹F NMR spectrum      (Ridge + PCA)
-  Task B │ IR spectrum        →  ¹⁹F NMR spectrum      (Ridge + PCA)  [cross-modal]
-  Task C │ ¹⁹F NMR spectrum  →  IR spectrum            (Ridge + PCA)  [reverse cross-modal]
+  Task A - RDKit descriptors  ->  ¹⁹F NMR spectrum      (Ridge + PCA)
+  Task B - IR spectrum        ->  ¹⁹F NMR spectrum      (Ridge + PCA)  [cross-modal]
+  Task C - ¹⁹F NMR spectrum  ->  IR spectrum            (Ridge + PCA)  [reverse cross-modal]
 
 Inputs
 ------
-  pfas_nmr_spectra.npz      – output of build_pfas_nmr_spectra.py
-  pfas_combined_dataset.npz – X_ir, mol_names
-  PFAS_smiles.csv           – for RDKit descriptor generation (Task A)
+  pfas_nmr_spectra.npz      - output of build_pfas_nmr_spectra.py
+  pfas_combined_dataset.npz - X_ir, mol_names
+  PFAS_smiles.csv           - for RDKit descriptor generation (Task A)
 
 Usage
 -----
@@ -42,7 +42,7 @@ from scipy.stats import pearsonr
 
 warnings.filterwarnings("ignore")
 
-# ── try RDKit ──────────────────────────────────────────────────────────────────
+# try RDKit
 try:
     from rdkit import Chem
     from rdkit.Chem import Descriptors, rdMolDescriptors
@@ -50,10 +50,10 @@ try:
     RDKIT_OK = True
 except ImportError:
     RDKIT_OK = False
-    print("[WARN] RDKit not found – Task A will be skipped.")
+    print("[WARN] RDKit not found - Task A will be skipped.")
 
 
-# ── metrics ───────────────────────────────────────────────────────────────────
+# metrics
 
 def pearson_r(y_true: np.ndarray, y_pred: np.ndarray) -> float:
     """Mean per-sample Pearson r between true and predicted spectra."""
@@ -79,7 +79,7 @@ def rmse(y_true: np.ndarray, y_pred: np.ndarray) -> float:
     return float(np.sqrt(np.mean((y_true - y_pred) ** 2)))
 
 
-# ── LOO-CV with Ridge + PCA pipeline ──────────────────────────────────────────
+# LOO-CV with Ridge + PCA pipeline
 
 def loo_predict(X: np.ndarray, Y: np.ndarray,
                 n_components: int = 30,
@@ -87,7 +87,7 @@ def loo_predict(X: np.ndarray, Y: np.ndarray,
     """
     Leave-One-Out cross-validated predictions.
 
-    Pipeline: StandardScaler → PCA(n_components) → Ridge(alpha)
+    Pipeline: StandardScaler -> PCA(n_components) -> Ridge(alpha)
 
     Returns Y_pred with shape == Y.shape.
     """
@@ -109,7 +109,7 @@ def loo_predict(X: np.ndarray, Y: np.ndarray,
     return Y_pred
 
 
-# ── RDKit descriptor matrix ───────────────────────────────────────────────────
+# RDKit descriptor matrix
 
 def build_descriptor_matrix(smiles_list: list[str]) -> np.ndarray:
     """Compute all 200 RDKit 2D descriptors for each SMILES."""
@@ -132,7 +132,7 @@ def build_descriptor_matrix(smiles_list: list[str]) -> np.ndarray:
     return X
 
 
-# ── plotting helpers ──────────────────────────────────────────────────────────
+# plotting helpers
 
 def plot_example_spectra(grid, Y_true, Y_pred, mol_names, n=6, title="", outpath=""):
     """Plot n overlay examples of true vs predicted spectra."""
@@ -169,7 +169,7 @@ def plot_scatter(r_values: dict, title: str, outpath: str):
     print(f"  Saved: {outpath}")
 
 
-# ── main ──────────────────────────────────────────────────────────────────────
+# main
 
 def run(nmr_spectra_path: str,
         combined_path:    str,
@@ -178,8 +178,8 @@ def run(nmr_spectra_path: str,
 
     os.makedirs(output_dir, exist_ok=True)
 
-    # ── Load data ────────────────────────────────────────────────────────────
-    print("Loading data …")
+    # Load data
+    print("Loading data ...")
     nmr_data  = np.load(nmr_spectra_path, allow_pickle=True)
     comb_data = np.load(combined_path,    allow_pickle=True)
 
@@ -196,13 +196,11 @@ def run(nmr_spectra_path: str,
 
     summary_rows = []
 
-    # ════════════════════════════════════════════════════════════════════════════
-    # Task A: RDKit descriptors → ¹⁹F NMR spectrum
-    # ════════════════════════════════════════════════════════════════════════════
+    # Task A: RDKit descriptors -> ¹⁹F NMR spectrum
     if RDKIT_OK and os.path.isfile(smiles_csv_path):
-        print("─" * 60)
-        print("Task A: RDKit descriptors → ¹⁹F NMR spectrum (LOO-CV)")
-        print("─" * 60)
+        print("-" * 60)
+        print("Task A: RDKit descriptors -> ¹⁹F NMR spectrum (LOO-CV)")
+        print("-" * 60)
 
         smiles_df = pd.read_csv(smiles_csv_path)
         # Align SMILES to mol_names order
@@ -223,24 +221,22 @@ def run(nmr_spectra_path: str,
         print(f"    Mean Pearson r   : {r_A:.4f}")
         print(f"    Mean cosine sim  : {cos_A:.4f}")
         print(f"    RMSE             : {rmse_A:.6f}")
-        summary_rows.append({"Task": "A: Descriptors→NMR", "Pearson r": r_A,
+        summary_rows.append({"Task": "A: Descriptors->NMR", "Pearson r": r_A,
                               "Cosine sim": cos_A, "RMSE": rmse_A})
 
         plot_example_spectra(
             grid_nmr, Y_nmr, Y_pred_A, mol_names,
-            title="Task A: RDKit Descriptors → ¹⁹F NMR Spectrum (LOO-CV)",
+            title="Task A: RDKit Descriptors -> ¹⁹F NMR Spectrum (LOO-CV)",
             outpath=os.path.join(output_dir, "taskA_examples.png"),
         )
     else:
         print("Task A skipped (RDKit unavailable or SMILES CSV missing).")
 
-    # ════════════════════════════════════════════════════════════════════════════
-    # Task B: IR spectrum → ¹⁹F NMR spectrum
-    # ════════════════════════════════════════════════════════════════════════════
-    print("\n" + "─" * 60)
-    print("Task B: IR spectrum → ¹⁹F NMR spectrum (LOO-CV)")
-    print("─" * 60)
-    print("  [Expected to perform poorly — ¹⁹F NMR is orthogonal to IR]\n")
+    # Task B: IR spectrum -> ¹⁹F NMR spectrum
+    print("\n" + "-" * 60)
+    print("Task B: IR spectrum -> ¹⁹F NMR spectrum (LOO-CV)")
+    print("-" * 60)
+    print("  [Expected to perform poorly - ¹⁹F NMR is orthogonal to IR]\n")
 
     Y_pred_B = loo_predict(X_ir, Y_nmr, n_components=30, alpha=1.0)
 
@@ -251,24 +247,22 @@ def run(nmr_spectra_path: str,
     print(f"    Mean Pearson r   : {r_B:.4f}")
     print(f"    Mean cosine sim  : {cos_B:.4f}")
     print(f"    RMSE             : {rmse_B:.6f}")
-    summary_rows.append({"Task": "B: IR→NMR", "Pearson r": r_B,
+    summary_rows.append({"Task": "B: IR->NMR", "Pearson r": r_B,
                           "Cosine sim": cos_B, "RMSE": rmse_B})
 
     plot_example_spectra(
         grid_nmr, Y_nmr, Y_pred_B, mol_names,
-        title="Task B: IR → ¹⁹F NMR Spectrum (LOO-CV) [cross-modal]",
+        title="Task B: IR -> ¹⁹F NMR Spectrum (LOO-CV) [cross-modal]",
         outpath=os.path.join(output_dir, "taskB_examples.png"),
     )
 
-    # ════════════════════════════════════════════════════════════════════════════
-    # Task C: ¹⁹F NMR spectrum → IR spectrum
-    # ════════════════════════════════════════════════════════════════════════════
-    print("\n" + "─" * 60)
-    print("Task C: ¹⁹F NMR spectrum → IR spectrum (LOO-CV)")
-    print("─" * 60)
-    print("  [Reverse cross-modal — also expected to perform poorly]\n")
+    # Task C: ¹⁹F NMR spectrum -> IR spectrum
+    print("\n" + "-" * 60)
+    print("Task C: ¹⁹F NMR spectrum -> IR spectrum (LOO-CV)")
+    print("-" * 60)
+    print("  [Reverse cross-modal - also expected to perform poorly]\n")
 
-    # IR wavenumber grid (500–4000, 3501 pts)
+    # IR wavenumber grid (500-4000, 3501 pts)
     grid_ir = np.linspace(500, 4000, X_ir.shape[1])
 
     Y_pred_C = loo_predict(Y_nmr, X_ir, n_components=30, alpha=1.0)
@@ -280,58 +274,56 @@ def run(nmr_spectra_path: str,
     print(f"    Mean Pearson r   : {r_C:.4f}")
     print(f"    Mean cosine sim  : {cos_C:.4f}")
     print(f"    RMSE             : {rmse_C:.6f}")
-    summary_rows.append({"Task": "C: NMR→IR", "Pearson r": r_C,
+    summary_rows.append({"Task": "C: NMR->IR", "Pearson r": r_C,
                           "Cosine sim": cos_C, "RMSE": rmse_C})
 
     plot_example_spectra(
         grid_ir, X_ir, Y_pred_C, mol_names,
-        title="Task C: ¹⁹F NMR → IR Spectrum (LOO-CV) [reverse cross-modal]",
+        title="Task C: ¹⁹F NMR -> IR Spectrum (LOO-CV) [reverse cross-modal]",
         outpath=os.path.join(output_dir, "taskC_examples.png"),
     )
 
-    # ════════════════════════════════════════════════════════════════════════════
     # Summary
-    # ════════════════════════════════════════════════════════════════════════════
     summary_df = pd.DataFrame(summary_rows)
     summary_path = os.path.join(output_dir, "nmr_spectra_ml_summary.csv")
     summary_df.to_csv(summary_path, index=False)
-    print(f"\n{'═'*60}")
+    print(f"\n{'='*60}")
     print("SUMMARY (LOO-CV)")
-    print("═"*60)
+    print("="*60)
     print(summary_df.to_string(index=False))
-    print(f"\nSaved CSV → {summary_path}")
+    print(f"\nSaved CSV -> {summary_path}")
 
     # Bar chart
     r_dict = {row["Task"]: row["Pearson r"] for row in summary_rows}
     plot_scatter(
         r_dict,
-        title="¹⁹F NMR Spectra ML – LOO-CV Mean Pearson r",
+        title="¹⁹F NMR Spectra ML - LOO-CV Mean Pearson r",
         outpath=os.path.join(output_dir, "summary_pearson_r.png"),
     )
 
-    # ── Scientific interpretation ─────────────────────────────────────────────
+    # Scientific interpretation
     print("""
 SCIENTIFIC INTERPRETATION
-─────────────────────────
-Task A (Descriptors → ¹⁹F NMR):
+-------------------------
+Task A (Descriptors -> ¹⁹F NMR):
   Analogous to IR Task 3 (r=0.913). If r is similar, molecular topology
   encoded in RDKit descriptors is a sufficient proxy for ¹⁹F shielding
   patterns. If r is lower, ¹⁹F NMR encodes finer electronic structure
   detail that 2D descriptors miss.
 
-Task B (IR → ¹⁹F NMR):
+Task B (IR -> ¹⁹F NMR):
   Expected poor performance (r ~ 0.15 from Task 4 summary feature analysis).
-  Directly confirms ¹⁹F NMR orthogonality to IR — the two spectroscopic
+  Directly confirms ¹⁹F NMR orthogonality to IR - the two spectroscopic
   probes sample non-redundant molecular information.
 
-Task C (¹⁹F NMR → IR):
+Task C (¹⁹F NMR -> IR):
   Reverse probe. If also poor, it confirms the orthogonality is symmetric:
   neither modality is a surrogate for the other. This is the key scientific
   result justifying combined IR + ¹⁹F NMR for real-world PFAS identification.
 """)
 
 
-# ── CLI ───────────────────────────────────────────────────────────────────────
+# CLI
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(

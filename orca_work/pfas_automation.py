@@ -36,7 +36,7 @@ import csv
 from rdkit import Chem
 from rdkit.Chem import AllChem
 
-# ─── CONFIGURATION ────────────────────────────────────────────────────────────
+# CONFIGURATION
 
 INPUT_CSV       = "PFAS_smiles.csv"          # Your CSV with name,smiles[,charge]
 OUTPUT_DIR      = "pfas_calculations"        # Root folder for all calculations
@@ -59,7 +59,7 @@ TOLMAXG         = "3e-2"    # Max gradient
 TOLRMSD         = "1e-3"    # RMS displacement
 TOLMAXD         = "3e-3"    # Max displacement
 
-# ─── FUNCTIONS ────────────────────────────────────────────────────────────────
+# FUNCTIONS
 
 def sanitize_folder_name(name):
     """Convert molecule name to a safe folder name, valid on Windows/Mac/Linux."""
@@ -139,7 +139,7 @@ def strip_counterions(smiles):
         return smiles, False, []
 
     # If more than one non-counterion fragment remains, keep the largest by atom count
-    # and flag the rest as unrecognised 
+    # and flag the rest as unrecognised
     if len(kept_fragments) > 1:
         mols = [(f, Chem.MolFromSmiles(f)) for f in kept_fragments]
         mols = [(f, m) for f, m in mols if m is not None]
@@ -244,7 +244,7 @@ def write_batch_script(output_dir, jobs):
         f.write('\n'.join(lines))
     return bat_path
 
-# ─── MAIN ─────────────────────────────────────────────────────────────────────
+# MAIN
 
 def main():
     # Read molecule + SMILES list

@@ -5,17 +5,17 @@ Merges the IR dataset (pfas_ir_dataset.npz) and NMR dataset (pfas_nmr_dataset.np
 into a single aligned feature matrix for ML.
 
 NMR features used:
-    - Mean 19F shift (1 feature) — most informative for PFAS
-    - Std  19F shift (1 feature) — encodes chain environment diversity
-    - Min/max 19F shift (2 features) — chain-end vs chain-middle F
+    - Mean 19F shift (1 feature) - most informative for PFAS
+    - Std  19F shift (1 feature) - encodes chain environment diversity
+    - Min/max 19F shift (2 features) - chain-end vs chain-middle F
     - n_F count (1 feature)
-    - Mean 1H shift (1 feature, NaN→0 for perfluorinated)
+    - Mean 1H shift (1 feature, NaN->0 for perfluorinated)
     - n_H count (1 feature)
     - Mean 13C shift (1 feature)
     - n_C count (1 feature)
     Total: 9 NMR features per molecule
 
-IR features: full 3501-point spectra (500–4000 cm⁻¹) — same as before,
+IR features: full 3501-point spectra (500-4000 cm⁻¹) - same as before,
              or PCA-reduced if you prefer (set USE_PCA=True).
 
 Outputs
@@ -36,18 +36,14 @@ import os
 import numpy as np
 import pandas as pd
 
-# =============================================================================
 # PATHS
-# =============================================================================
 
 ML_DIR       = r"C:\Users\danie\Downloads\orca_work\ml_dataset"
 IR_NPZ       = os.path.join(ML_DIR, "pfas_ir_dataset.npz")
 NMR_NPZ      = os.path.join(ML_DIR, "pfas_nmr_dataset.npz")
 OUT_NPZ      = os.path.join(ML_DIR, "pfas_combined_dataset.npz")
 
-# =============================================================================
 # LOAD DATASETS
-# =============================================================================
 
 def load_ir(path):
     d = np.load(path, allow_pickle=True)
@@ -68,15 +64,13 @@ def load_nmr(path):
     n_C      = d["n_C"]
     return names, F_shifts, H_shifts, C_shifts, n_F, n_H, n_C
 
-# =============================================================================
 # BUILD NMR FEATURE VECTOR
-# =============================================================================
 
 def build_nmr_features(F_shifts, H_shifts, C_shifts, n_F, n_H, n_C):
     """
     Collapse per-atom shieldings into a fixed-length feature vector per molecule.
     NaN atoms (padding) are excluded from statistics via np.nanmean etc.
-    Missing nuclei (n=0) get 0.0 — the model can learn this as 'absent'.
+    Missing nuclei (n=0) get 0.0 - the model can learn this as 'absent'.
     """
     N = F_shifts.shape[0]
     features = np.zeros((N, 9), dtype=np.float32)
@@ -103,9 +97,7 @@ def build_nmr_features(F_shifts, H_shifts, C_shifts, n_F, n_H, n_C):
     ])
     return features, feature_names
 
-# =============================================================================
 # ALIGN DATASETS ON MOLECULE NAMES
-# =============================================================================
 
 def normalise_name(name):
     """
@@ -169,9 +161,7 @@ def align_datasets(ir_names, ir_spectra, nmr_names, nmr_features):
     aligned_nmr = np.array([nmr_features[nmr_norm[matched_ir[ik]][0]] for ik in common_ir_keys])
     return mol_names, aligned_ir, aligned_nmr
 
-# =============================================================================
 # MAIN
-# =============================================================================
 
 def main():
     print("Loading IR dataset...")
@@ -216,14 +206,14 @@ def main():
         nmr_mean          = nmr_mean,
         nmr_std           = nmr_std,
     )
-    print(f"\nSaved combined dataset → {OUT_NPZ}")
+    print(f"\nSaved combined dataset -> {OUT_NPZ}")
 
     # Quick CSV preview
     df = pd.DataFrame(X_nmr, columns=feat_names, index=mol_names)
     df.index.name = "molecule"
     preview_path = os.path.join(ML_DIR, "pfas_nmr_features.csv")
     df.to_csv(preview_path, float_format="%.3f")
-    print(f"Saved NMR feature table → {preview_path}")
+    print(f"Saved NMR feature table -> {preview_path}")
 
     print("\n--- NMR feature summary ---")
     print(df.describe().round(2).to_string())

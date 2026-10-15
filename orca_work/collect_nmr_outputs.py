@@ -30,16 +30,12 @@ import os
 import glob
 import shutil
 
-# =============================================================================
-# PATHS — adjust if needed
-# =============================================================================
+# PATHS - adjust if needed
 
 NMR_INPUTS_DIR  = r"C:\Users\danie\Downloads\orca_work\nmr_inputs"
 NMR_OUTPUTS_DIR = r"C:\Users\danie\Downloads\orca_work\nmr_outputs"
 
-# =============================================================================
 # COLLECT
-# =============================================================================
 
 def main():
     os.makedirs(NMR_OUTPUTS_DIR, exist_ok=True)
@@ -64,7 +60,7 @@ def main():
 
         # Check the job actually finished (file non-empty)
         if os.path.getsize(src) < 1000:
-            print(f"  [SKIP — too small, likely empty] {fname}")
+            print(f"  [SKIP - too small, likely empty] {fname}")
             missing.append(fname)
             skipped += 1
             continue

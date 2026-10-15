@@ -44,36 +44,30 @@ import argparse
 import numpy as np
 import pandas as pd
 
-# =============================================================================
 # PATHS
-# =============================================================================
 
 NMR_OUT_DIR  = r"C:\Users\danie\Downloads\orca_work\nmr_outputs"   # folder of mol subdirs
 REF_OUT_DIR  = r"C:\Users\danie\Downloads\orca_work\ref_nmr_outputs"  # cfcl3 + tms .out files
 ML_DIR       = r"C:\Users\danie\Downloads\orca_work\ml_dataset"
 
-# =============================================================================
 # REFERENCE SHIELDINGS (PBE0/def2-TZVP GIAO, computed on cluster)
 #
-# CFCl3 19F : 179.716 ppm  (from cfcl3_nmr.out)
-# TMS   1H  :  31.00  ppm  (mean of all 12 H in tms_nmr.out: 30.869×8, 32.142×4)
-# TMS   13C : 197.342 ppm  (mean of all 4 C in tms_nmr.out)
+# CFCl3 19F : 179.716 ppm (from cfcl3_nmr.out)
+# TMS 1H : 31.00 ppm (mean of all 12 H in tms_nmr.out: 30.869x8, 32.142x4)
+# TMS 13C : 197.342 ppm (mean of all 4 C in tms_nmr.out)
 #
 # Convention for all nuclei: δ = σ_ref - σ_molecule
-#   19F: CFCl3 is 0 ppm; PFAS CF2 groups (σ~310) → δ = 179.7-310 = -130 ppm ✓
-#   1H:  TMS   is 0 ppm; PFAS H (σ~6)    → δ = 31.0-6   =  +25 ppm ✓
-#   13C: TMS   is 0 ppm; PFAS C (σ~70)   → δ = 197.3-70 = +127 ppm ✓
+# 19F: CFCl3 is 0 ppm; PFAS CF2 groups (σ~310) -> δ = 179.7-310 = -130 ppm OK
+# 1H: TMS is 0 ppm; PFAS H (σ~6) -> δ = 31.0-6 = +25 ppm OK
+# 13C: TMS is 0 ppm; PFAS C (σ~70) -> δ = 197.3-70 = +127 ppm OK
 #
 # These are used as fallbacks if computed ref .out files are not found.
-# =============================================================================
 
-LIT_REF_F  = 179.716  # 19F in CFCl3 (ppm) — computed PBE0/def2-TZVP GIAO
-LIT_REF_H  =  31.00   # 1H  in TMS   (ppm) — computed PBE0/def2-TZVP GIAO
-LIT_REF_C  = 197.342  # 13C in TMS   (ppm) — computed PBE0/def2-TZVP GIAO
+LIT_REF_F  = 179.716  # 19F in CFCl3 (ppm) - computed PBE0/def2-TZVP GIAO
+LIT_REF_H  =  31.00   # 1H  in TMS   (ppm) - computed PBE0/def2-TZVP GIAO
+LIT_REF_C  = 197.342  # 13C in TMS   (ppm) - computed PBE0/def2-TZVP GIAO
 
-# =============================================================================
 # PARSER: extract shieldings from ORCA NMR .out file
-# =============================================================================
 
 def parse_nmr_out(filepath):
     """
@@ -102,8 +96,8 @@ def parse_nmr_out(filepath):
 
     # Find CHEMICAL SHIELDING SUMMARY block
     # Format:
-    #   Nucleus  Element    Isotropic     Anisotropy
-    #       0       C           23.616        -70.681
+    # Nucleus Element Isotropic Anisotropy
+    # 0 C 23.616 -70.681
     summary_match = re.search(
         r"CHEMICAL SHIELDING SUMMARY \(ppm\).*?Nucleus\s+Element\s+Isotropic\s+Anisotropy\s*\n"
         r"\s*-+\s*-+\s*-+\s*-+\s*\n(.*?)\n\s*\n",
@@ -155,7 +149,7 @@ def get_reference_shieldings(ref_dir):
         ref_F = float(np.mean(cfcl3["F"]))
         print(f"  CFCl3 19F reference shielding: {ref_F:.3f} ppm (computed)")
     else:
-        print(f"  CFCl3 not found or failed — using literature fallback: {ref_F} ppm")
+        print(f"  CFCl3 not found or failed - using literature fallback: {ref_F} ppm")
 
     # TMS
     tms = parse_reference(ref_dir, "tms_nmr.out")
@@ -164,21 +158,19 @@ def get_reference_shieldings(ref_dir):
             ref_H = float(np.mean(tms["H"]))
             print(f"  TMS 1H  reference shielding: {ref_H:.3f} ppm (computed)")
         else:
-            print(f"  TMS 1H  not found — using literature fallback: {ref_H} ppm")
+            print(f"  TMS 1H  not found - using literature fallback: {ref_H} ppm")
         if "C" in tms:
             ref_C = float(np.mean(tms["C"]))
             print(f"  TMS 13C reference shielding: {ref_C:.3f} ppm (computed)")
         else:
-            print(f"  TMS 13C not found — using literature fallback: {ref_C} ppm")
+            print(f"  TMS 13C not found - using literature fallback: {ref_C} ppm")
     else:
-        print(f"  TMS not found or failed — using literature fallbacks: H={ref_H}, C={ref_C} ppm")
+        print(f"  TMS not found or failed - using literature fallbacks: H={ref_H}, C={ref_C} ppm")
 
     return ref_F, ref_H, ref_C
 
 
-# =============================================================================
 # MAIN
-# =============================================================================
 
 def main():
     parser = argparse.ArgumentParser()
@@ -194,22 +186,18 @@ def main():
 
     os.makedirs(ML_DIR, exist_ok=True)
 
-    # -------------------------------------------------------------------------
     # 1. Get reference shieldings
-    # -------------------------------------------------------------------------
     if use_refs:
         print("\n--- Reference shieldings ---")
         ref_F, ref_H, ref_C = get_reference_shieldings(ref_dir)
     else:
         ref_F = ref_H = ref_C = None
-        print("Skipping reference conversion — saving raw shieldings only.")
+        print("Skipping reference conversion - saving raw shieldings only.")
 
-    # -------------------------------------------------------------------------
     # 2. Parse all molecule NMR outputs
-    # -------------------------------------------------------------------------
     # Support two layouts:
-    #   nmr_outputs/<mol_name>/<mol_name>_nmr.out   (subdirectory per molecule)
-    #   nmr_outputs/<mol_name>_nmr.out               (flat)
+    # nmr_outputs/<mol_name>/<mol_name>_nmr.out (subdirectory per molecule)
+    # nmr_outputs/<mol_name>_nmr.out (flat)
     out_files = sorted(
         glob.glob(os.path.join(NMR_OUT_DIR, "*", "*_nmr.out")) +
         glob.glob(os.path.join(NMR_OUT_DIR, "*_nmr.out"))
@@ -251,22 +239,20 @@ def main():
             print(f"\n  [SANITY] TFA 19F shifts: {[f'{d:.1f}' for d in tfa_delta]} ppm")
             print(f"           Expected experimentally: ~-76.5 ppm (all three F equivalent)")
             if all(-95 < d < -65 for d in tfa_delta):
-                print(f"           ✓ Reference looks correct")
+                print(f"  OK Reference looks correct")
             else:
-                print(f"           ✗ WARNING: shifts outside expected range (-65 to -95 ppm) — check ref_F value")
+                print(f"  FAIL WARNING: shifts outside expected range (-65 to -95 ppm) - check ref_F value")
 
     if not results:
         print("No results to save. Exiting.")
         return
 
-    # -------------------------------------------------------------------------
     # 3. Build padded arrays
-    # -------------------------------------------------------------------------
     mol_names = [r["mol_name"] for r in results]
     N = len(mol_names)
 
     def build_padded(key):
-        """key e.g. 'F_shields' → padded (N, max_count) array"""
+        """key e.g. 'F_shields' -> padded (N, max_count) array"""
         lists = [r.get(key, []) for r in results]
         max_n = max(len(x) for x in lists) if lists else 0
         arr = np.full((N, max_n), np.nan)
@@ -279,9 +265,7 @@ def main():
     H_shield, n_H = build_padded("H_shields")
     C_shield, n_C = build_padded("C_shields")
 
-    # -------------------------------------------------------------------------
-    # 4. Convert shieldings → chemical shifts  δ = σ_ref - σ
-    # -------------------------------------------------------------------------
+    # 4. Convert shieldings -> chemical shifts δ = σ_ref - σ
     def to_shifts(shield_arr, sigma_ref):
         if sigma_ref is None:
             return np.full_like(shield_arr, np.nan)
@@ -291,9 +275,7 @@ def main():
     H_shifts = to_shifts(H_shield, ref_H)
     C_shifts = to_shifts(C_shield, ref_C)
 
-    # -------------------------------------------------------------------------
     # 5. Save .npz
-    # -------------------------------------------------------------------------
     npz_path = os.path.join(ML_DIR, "pfas_nmr_dataset.npz")
     np.savez(
         npz_path,
@@ -311,13 +293,11 @@ def main():
         ref_H     = np.array([ref_H if ref_H else np.nan]),
         ref_C     = np.array([ref_C if ref_C else np.nan]),
     )
-    print(f"\nSaved NMR dataset → {npz_path}")
+    print(f"\nSaved NMR dataset -> {npz_path}")
     print(f"  Shape: {N} molecules")
     print(f"  Max F atoms: {F_shield.shape[1]},  H: {H_shield.shape[1]},  C: {C_shield.shape[1]}")
 
-    # -------------------------------------------------------------------------
     # 6. Save human-readable CSV summary
-    # -------------------------------------------------------------------------
     rows = []
     for i, name in enumerate(mol_names):
         f_vals = F_shifts[i, :n_F[i]] if use_refs else F_shield[i, :n_F[i]]
@@ -340,7 +320,7 @@ def main():
     df = pd.DataFrame(rows)
     csv_path = os.path.join(ML_DIR, "pfas_nmr_summary.csv")
     df.to_csv(csv_path, index=False, float_format="%.3f")
-    print(f"Saved summary CSV  → {csv_path}")
+    print(f"Saved summary CSV  -> {csv_path}")
 
     # Quick sanity print
     label = "δ (ppm)" if use_refs else "σ (ppm, raw shielding)"

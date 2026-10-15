@@ -5,14 +5,14 @@ Generates ORCA NMR input files for all 68 PFAS molecules using their
 already-optimised geometries from the pfas_out_files folder.
 
 Targets:
-    - 19F NMR (primary — most sensitive to PFAS chain length and environment)
+    - 19F NMR (primary - most sensitive to PFAS chain length and environment)
     - 1H NMR (for fluorotelomer/sulfonamide compounds with H atoms)
     - 13C NMR (optional, add to NMR_NUCLEI if wanted)
 
 Level of theory: PBE0/def2-TZVP GIAO
     - def2-TZVP is the standard for NMR; def2-SVP is too small for chemical shifts
     - GIAO (gauge-including atomic orbitals) is the standard gauge for NMR in ORCA
-    - No frequency calculation needed — single point only, much faster than opt+freq
+    - No frequency calculation needed - single point only, much faster than opt+freq
 
 Usage
 -----
@@ -30,32 +30,26 @@ import os
 import re
 import glob
 
-# =============================================================================
 # PATHS
-# =============================================================================
 
 OUT_FILES_DIR = r"C:\Users\danie\Downloads\orca_work\pfas_out_files"
 NMR_DIR       = r"C:\Users\danie\Downloads\orca_work\nmr_inputs"
 ORCA_PATH     = "/home/Daniel.Barron/software/orca_j5sY/orca"
 PARTITION     = "cpuq-tyndall"
 
-# =============================================================================
 # NMR SETTINGS
-# =============================================================================
 
 # Nuclei to calculate shifts for
 NMR_NUCLEI = ["19F", "1H"]
 
-# Memory per core in MB — NMR with def2-TZVP needs more than opt+freq
+# Memory per core in MB - NMR with def2-TZVP needs more than opt+freq
 MEM_MB = 4000   # per core
 N_CORES = 4
 TOTAL_MEM_GB = (MEM_MB * N_CORES) // 1000  # = 16 GB
 
 WALLTIME = "12:00:00"  
 
-# =============================================================================
 # ORCA NMR INPUT TEMPLATE
-# =============================================================================
 
 def make_nmr_inp(mol_name, charge, mult, coords_block, nuclei_str):
     """
@@ -89,9 +83,7 @@ end
 
 """
 
-# =============================================================================
 # SLURM SUBMIT SCRIPT TEMPLATE
-# =============================================================================
 
 def make_submit(job_name, inp_path, out_path, log_name):
     return f"""#!/bin/bash
@@ -106,9 +98,7 @@ ORCA={ORCA_PATH}
 $ORCA {inp_path} > {out_path}
 """
 
-# =============================================================================
 # PARSE XYZ COORDINATES FROM ORCA .out FILE
-# =============================================================================
 
 def parse_final_coords(out_filepath):
     """
@@ -166,9 +156,7 @@ def parse_final_coords(out_filepath):
 
     return charge, mult, "\n".join(coords) + "\n"
 
-# =============================================================================
 # MAIN
-# =============================================================================
 
 def main():
     # Handle Windows paths when run on Windows
@@ -198,7 +186,7 @@ def main():
             failed.append(mol_name)
             continue
 
-        # Determine nuclei — skip 1H for fully perfluorinated molecules
+        # Determine nuclei - skip 1H for fully perfluorinated molecules
         # (they have no H atoms so 1H NMR would be empty)
         has_H = "H" in coords
         if not has_H:
@@ -218,7 +206,7 @@ def main():
         with open(inp_path_local, "w", encoding="utf-8") as f:
             f.write(inp_content)
 
-        # Write submit.sh (paths are cluster paths — adjust prefix)
+        # Write submit.sh (paths are cluster paths - adjust prefix)
         cluster_base = f"/home/Daniel.Barron/nmr_inputs/{mol_name}"
         inp_path_cluster  = f"{cluster_base}/{inp_name}"
         out_path_cluster  = f"{cluster_base}/{mol_name}_nmr.out"

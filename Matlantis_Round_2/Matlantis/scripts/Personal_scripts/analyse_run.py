@@ -1,5 +1,5 @@
 """
-analyse_run.py — Analysis of Matlantis ZrN/VN oxidation runs
+analyse_run.py - Analysis of Matlantis ZrN/VN oxidation runs
 
 Usage:
   python analyse_run.py /path/to/run/directory         # single run (or seed dir)
@@ -26,7 +26,7 @@ except ImportError:
     sys.exit(1)
 
 
-# ── Ji reference values (Table 1) ─────────────────────────────────────────────
+# Ji reference values (Table 1)
 JI_REFERENCE = {
     'ZrN_100': {'295': 8,  '363': 12, '1023': 28},
     'ZrN_110': {'295': 18, '363': 20, '1023': 32},
@@ -52,7 +52,7 @@ def count_bound_o(atoms, bond_cutoff=3.5):
 
 
 def is_healthy(atoms, min_atoms=55):
-    """Check slab is intact — not exploded."""
+    """Check slab is intact - not exploded."""
     syms = atoms.get_chemical_symbols()
     pos  = atoms.get_positions()
     if len(atoms) < min_atoms:
@@ -69,7 +69,7 @@ def is_healthy(atoms, min_atoms=55):
 
 
 def analyse_md_log(log_path):
-    """Parse MD.log — return per-round stats for most recent run only."""
+    """Parse MD.log - return per-round stats for most recent run only."""
     with open(log_path) as f:
         content = f.read()
 
@@ -112,7 +112,7 @@ def analyse_md_log(log_path):
 
 
 def analyse_structures(directory):
-    """Read all round _MD.traj files — return bound O progression."""
+    """Read all round _MD.traj files - return bound O progression."""
     results = []
     i = 0
     while True:
@@ -233,7 +233,7 @@ def find_seed_dirs(base_dir, max_seeds=10):
     return seeds
 
 
-# ── Single run analysis ────────────────────────────────────────────────────────
+# Single run analysis
 def main(directory):
     system, temp = guess_system(directory)
 
@@ -275,7 +275,7 @@ def main(directory):
         for r in structs:
             bond_str = (f"{r['bond_min']:.3f}-{r['bond_max']:.3f}"
                         if r['bond_min'] else 'none')
-            h = '✓' if r['healthy'] else '✗'
+            h = 'OK' if r['healthy'] else 'FAIL'
             print(f"  {r['round']:>4} {r['formula']:>18} {r['n_O']:>7} "
                   f"{r['bound_O']:>7} {r['N_lost']:>6} {h:>8} {bond_str:>12}")
 
@@ -304,7 +304,7 @@ def main(directory):
         pct   = abs(diff) / ji_val * 100
         match = 'GOOD' if pct <= 25 else 'MODERATE' if pct <= 50 else 'POOR'
         print(f"  Ji: {ji_val}  |  PFP: {your_val}  |  "
-              f"Diff: {diff:+d} ({pct:.0f}%)  —  {match}")
+              f"Diff: {diff:+d} ({pct:.0f}%)  -  {match}")
     elif ji_val:
         print(f"  Ji: {ji_val}  |  PFP: could not determine")
     else:
@@ -313,9 +313,9 @@ def main(directory):
     print(f"\n{'='*60}\n")
 
 
-# ── Seed analysis ──────────────────────────────────────────────────────────────
+# Seed analysis
 def analyse_seeds(base_dir):
-    """Analyse all seed runs under base_dir and print mean ± std."""
+    """Analyse all seed runs under base_dir and print mean +/- std."""
     system, temp = guess_system(base_dir)
     seed_dirs    = find_seed_dirs(base_dir)
 
@@ -358,13 +358,13 @@ def analyse_seeds(base_dir):
             print(f"\n  Seed {n}: no data")
 
     if all_best:
-        print(f"\n{'─'*65}")
+        print(f"\n{'-'*65}")
         print(f"SUMMARY ACROSS {len(all_best)} SEEDS:")
         print(f"  Best bound O per seed:  {all_best}")
-        print(f"  Mean ± std (best):      {np.mean(all_best):.1f} ± {np.std(all_best):.1f}")
-        print(f"  Range:                  {min(all_best)} – {max(all_best)}")
+        print(f"  Mean +/- std (best):      {np.mean(all_best):.1f} +/- {np.std(all_best):.1f}")
+        print(f"  Range:                  {min(all_best)} - {max(all_best)}")
         print(f"  Final bound O per seed: {all_final}")
-        print(f"  Mean ± std (final):     {np.mean(all_final):.1f} ± {np.std(all_final):.1f}")
+        print(f"  Mean +/- std (final):     {np.mean(all_final):.1f} +/- {np.std(all_final):.1f}")
 
         ji_val = JI_REFERENCE.get(system, {}).get(temp)
         if ji_val:
@@ -373,7 +373,7 @@ def analyse_seeds(base_dir):
             pct    = abs(diff) / ji_val * 100
             match  = 'GOOD' if pct <= 25 else 'MODERATE' if pct <= 50 else 'POOR'
             print(f"\n  Ji DFT reference:       {ji_val} bound O")
-            print(f"  PFP mean vs Ji:         {diff:+.1f} ({pct:.0f}%)  —  {match}")
+            print(f"  PFP mean vs Ji:         {diff:+.1f} ({pct:.0f}%)  -  {match}")
 
         # Print aligned bound O table across seeds
         if seed_data:
@@ -391,7 +391,7 @@ def analyse_seeds(base_dir):
                         row += f"{hist[rnd]:>6}"
                         vals.append(hist[rnd])
                     else:
-                        row += f"{'—':>6}"
+                        row += f"{'-':>6}"
                 if vals:
                     row += f"  {np.mean(vals):>6.1f} {np.std(vals):>5.1f}"
                 print(row)
@@ -399,7 +399,7 @@ def analyse_seeds(base_dir):
     print(f"\n{'='*65}\n")
 
 
-# ── Full summary table ─────────────────────────────────────────────────────────
+# Full summary table
 def summary(base_dir, use_seeds=False):
     systems = [
         ('ZrN_100', '295'), ('ZrN_100', '363'), ('ZrN_100', '1023'),
@@ -409,7 +409,7 @@ def summary(base_dir, use_seeds=False):
 
     mode = "SEED-AVERAGED" if use_seeds else "SINGLE RUN"
     print(f"\n{'='*75}")
-    print(f"FULL SUMMARY ({mode}) — PFP vs Ji et al. J. Phys. Chem. C 2025")
+    print(f"FULL SUMMARY ({mode}) - PFP vs Ji et al. J. Phys. Chem. C 2025")
     print(f"{'='*75}")
 
     if use_seeds:
@@ -425,7 +425,7 @@ def summary(base_dir, use_seeds=False):
         ji_val    = JI_REFERENCE.get(sys_name, {}).get(temp)
 
         if not os.path.exists(temp_dir):
-            row = f"{sys_name:>10} {temp:>5}K {str(ji_val or '—'):>5}"
+            row = f"{sys_name:>10} {temp:>5}K {str(ji_val or '-'):>5}"
             print(row + "  not found")
             continue
 
@@ -451,25 +451,25 @@ def summary(base_dir, use_seeds=False):
                               f"{mean_b:>7.1f} {std_b:>5.1f} {diff:>+7.1f} "
                               f"{match:>10}  {len(all_best)} seeds")
                     else:
-                        print(f"{sys_name:>10} {temp:>5}K {'—':>5} "
-                              f"{mean_b:>7.1f} {std_b:>5.1f} {'—':>7} "
-                              f"{'—':>10}  {len(all_best)} seeds")
+                        print(f"{sys_name:>10} {temp:>5}K {'-':>5} "
+                              f"{mean_b:>7.1f} {std_b:>5.1f} {'-':>7} "
+                              f"{'-':>10}  {len(all_best)} seeds")
                 else:
-                    print(f"{sys_name:>10} {temp:>5}K {str(ji_val or '—'):>5}"
+                    print(f"{sys_name:>10} {temp:>5}K {str(ji_val or '-'):>5}"
                           f"  no data in seed dirs")
             else:
                 # Fall back to non-seed run
                 structs  = analyse_structures(temp_dir)
                 your_val = best_bound_o(structs) if structs else None
-                status   = 'no seeds found — using base dir'
+                status   = 'no seeds found - using base dir'
                 if ji_val and your_val is not None:
                     diff  = your_val - ji_val
                     pct   = abs(diff) / ji_val * 100
                     match = 'GOOD' if pct<=25 else 'MODERATE' if pct<=50 else 'POOR'
                     print(f"{sys_name:>10} {temp:>5}K {ji_val:>5} "
-                          f"{your_val:>7} {'—':>5} {diff:>+7} {match:>10}  {status}")
+                          f"{your_val:>7} {'-':>5} {diff:>+7} {match:>10}  {status}")
                 else:
-                    print(f"{sys_name:>10} {temp:>5}K {str(ji_val or '—'):>5}"
+                    print(f"{sys_name:>10} {temp:>5}K {str(ji_val or '-'):>5}"
                           f"  {status}")
         else:
             structs  = analyse_structures(temp_dir)
@@ -487,16 +487,16 @@ def summary(base_dir, use_seeds=False):
                 print(f"{sys_name:>10} {temp:>5}K {ji_val:>5} {your_val:>5} "
                       f"{diff:>+6} {match:>10}  {status}")
             elif your_val is not None:
-                print(f"{sys_name:>10} {temp:>5}K {'—':>5} {your_val:>5} "
-                      f"{'—':>6} {'—':>10}  {status}")
+                print(f"{sys_name:>10} {temp:>5}K {'-':>5} {your_val:>5} "
+                      f"{'-':>6} {'-':>10}  {status}")
             else:
-                print(f"{sys_name:>10} {temp:>5}K {str(ji_val or '—'):>5} "
-                      f"{'—':>5} {'—':>6} {'—':>10}  {status}")
+                print(f"{sys_name:>10} {temp:>5}K {str(ji_val or '-'):>5} "
+                      f"{'-':>5} {'-':>6} {'-':>10}  {status}")
 
     print(f"{'='*75}\n")
 
 
-# ── Entry point ────────────────────────────────────────────────────────────────
+# Entry point
 if __name__ == '__main__':
     if len(sys.argv) < 2:
         print(__doc__)

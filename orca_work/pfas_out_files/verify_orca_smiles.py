@@ -129,7 +129,7 @@ def run_verification():
         if os.path.exists("PFAS_smiles.csv"):
             csv_path = "PFAS_smiles.csv"
         else:
-            print(f"❌ Error: Could not locate CSV file at '{CSV_FILE}' or './PFAS_smiles.csv'")
+            print(f"FAIL Error: Could not locate CSV file at '{CSV_FILE}' or './PFAS_smiles.csv'")
             return
 
     ref_dict = load_reference_smiles(csv_path)
@@ -152,7 +152,7 @@ def run_verification():
                 break
 
         if not matched_key:
-            print(f"⚠️  [SKIP] {out_file}: No matching CSV reference.")
+            print(f"WARN  [SKIP] {out_file}: No matching CSV reference.")
             skipped += 1
             continue
 
@@ -160,20 +160,20 @@ def run_verification():
         xyz_data = parse_orca_final_xyz(out_file)
 
         if not xyz_data:
-            print(f"❌ [FAIL] {out_file}: Unable to parse Cartesian coordinates.")
+            print(f"FAIL [FAIL] {out_file}: Unable to parse Cartesian coordinates.")
             failed += 1
             continue
 
         actual_mol = build_mol_from_coords(xyz_data)
         if actual_mol is None:
-            print(f"❌ [FAIL] {out_file}: RDKit could not reconstruct 3D bonds.")
+            print(f"FAIL [FAIL] {out_file}: RDKit could not reconstruct 3D bonds.")
             failed += 1
             continue
 
         actual_inchikey = Chem.MolToInchiKey(actual_mol)
         
         if actual_inchikey == ref_info["inchikey"]:
-            print(f"✅ [PASS] {out_file} (Matched: {ref_info['raw_name']})")
+            print(f"OK [PASS] {out_file} (Matched: {ref_info['raw_name']})")
             passed += 1
         else:
             ref_mol = Chem.MolFromSmiles(ref_info["canon_smiles"])
@@ -184,10 +184,10 @@ def run_verification():
             norm_act_formula = normalize_formula(raw_act_formula)
 
             if norm_ref_formula == norm_act_formula:
-                print(f"✅ [PASS - Formula Match] {out_file} (Matched: {ref_info['raw_name']} | Formula: {raw_act_formula})")
+                print(f"OK [PASS - Formula Match] {out_file} (Matched: {ref_info['raw_name']} | Formula: {raw_act_formula})")
                 passed += 1
             else:
-                print(f"\n❌ [MISMATCH DETECTED] {out_file}")
+                print(f"\nFAIL [MISMATCH DETECTED] {out_file}")
                 print(f"   Matched CSV Reference: {ref_info['raw_name']}")
                 print(f"   Expected Formula: {raw_ref_formula}")
                 print(f"   Actual Formula:   {raw_act_formula}\n")

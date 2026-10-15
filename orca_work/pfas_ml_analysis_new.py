@@ -2,15 +2,15 @@
 pfas_ml_analysis.py
 ===================
 Three ML tasks on the 68-molecule PFAS dataset, run in two modes:
-    Mode A — IR only       (3501-point spectra)
-    Mode B — IR + NMR      (3501 IR + 9 NMR features)
+    Mode A - IR only       (3501-point spectra)
+    Mode B - IR + NMR      (3501 IR + 9 NMR features)
 
 A comparison table is printed at the end so you can see directly whether
 adding NMR improves each task.
 
-Task 1 — Spectral library matching   (cosine similarity, LOO)
-Task 2 — Functional group classification (RF + PCA, LOO)
-Task 3 — Spectrum prediction from RDKit descriptors [+ NMR features] (Ridge + PCA, LOO)
+Task 1 - Spectral library matching   (cosine similarity, LOO)
+Task 2 - Functional group classification (RF + PCA, LOO)
+Task 3 - Spectrum prediction from RDKit descriptors [+ NMR features] (Ridge + PCA, LOO)
 
 Usage
 -----
@@ -23,7 +23,7 @@ Outputs written to OUTPUT_DIR:
     task2_feature_importance.png
     task3_pca_variance.png
     task3_spectrum_prediction.png
-    pfas_ml_results.txt                 — full log + comparison table
+    pfas_ml_results.txt                 - full log + comparison table
 """
 
 import os
@@ -51,19 +51,15 @@ try:
     RDKIT_OK = True
 except ImportError:
     RDKIT_OK = False
-    print("WARNING: RDKit not available — Task 3 will be skipped")
+    print("WARNING: RDKit not available - Task 3 will be skipped")
 
-# =============================================================================
 # PATHS
-# =============================================================================
 
 IR_NPZ       = r"C:\Users\danie\Downloads\orca_work\ml_dataset\pfas_ir_dataset.npz"
 COMBINED_NPZ = r"C:\Users\danie\Downloads\orca_work\ml_dataset\pfas_combined_dataset.npz"
 OUTPUT_DIR   = r"C:\Users\danie\Downloads\orca_work\ml_dataset"
 
-# =============================================================================
 # LOAD DATA
-# =============================================================================
 
 print("=" * 60)
 print("Loading datasets...")
@@ -76,7 +72,7 @@ wn       = ir_data['wavenumbers'].astype(np.float64)
 names    = ir_data['csv_names'].tolist()
 smiles   = ir_data['smiles'].tolist()
 
-# Combined IR+NMR dataset — aligned to IR names
+# Combined IR+NMR dataset - aligned to IR names
 comb_data    = np.load(COMBINED_NPZ, allow_pickle=True)
 X_combined   = comb_data['X_combined'].astype(np.float64)   # (68, 3510)
 X_nmr_scaled = comb_data['X_nmr_scaled'].astype(np.float64) # (68, 9)
@@ -132,13 +128,11 @@ def rlog(msg=""):
     print(msg)
     results_lines.append(msg)
 
-# =============================================================================
-# TASK 1 — SPECTRAL LIBRARY MATCHING
-# =============================================================================
+# TASK 1 - SPECTRAL LIBRARY MATCHING
 
 rlog()
 rlog("=" * 60)
-rlog("TASK 1 — Spectral Library Matching (Cosine Similarity)")
+rlog("TASK 1 - Spectral Library Matching (Cosine Similarity)")
 rlog("=" * 60)
 
 def run_library_matching(X, label):
@@ -157,11 +151,11 @@ def run_library_matching(X, label):
 mean_ir,   nn_ir,   sim_ir   = run_library_matching(X_ir_aln,   "IR only")
 mean_comb, nn_comb, sim_comb = run_library_matching(X_comb_aln, "IR + NMR")
 
-comparison["Task 1 — Library matching"] = {
+comparison["Task 1 - Library matching"] = {
     "Mean NN cosine sim": {"IR only": f"{mean_ir:.4f}", "IR + NMR": f"{mean_comb:.4f}"}
 }
 
-# ── Plot: side-by-side heatmaps ───────────────────────────────────────────────
+# Plot: side-by-side heatmaps
 fig, axes = plt.subplots(2, 2, figsize=(16, 14))
 
 short_names = [n.split("(")[0].strip()[:12] for n in names_aln]
@@ -170,7 +164,7 @@ for ax, sim, title in zip(axes[0], [sim_ir, sim_comb],
                            ["IR only", "IR + NMR"]):
     np.fill_diagonal(sim, 1)
     im = ax.imshow(sim, cmap="viridis", vmin=0, vmax=1, aspect="auto")
-    ax.set_title(f"Cosine Similarity — {title}", fontsize=10)
+    ax.set_title(f"Cosine Similarity - {title}", fontsize=10)
     ax.set_xticks(range(N)); ax.set_xticklabels(short_names, rotation=90, fontsize=3.5)
     ax.set_yticks(range(N)); ax.set_yticklabels(short_names, fontsize=3.5)
     plt.colorbar(im, ax=ax)
@@ -181,7 +175,7 @@ for ax, nn_sims, mean_sim, title in zip(axes[1],
     ax.axvline(mean_sim, color="red", linestyle="--", label=f"Mean={mean_sim:.3f}")
     ax.set_xlabel("Cosine similarity to nearest neighbour")
     ax.set_ylabel("Count")
-    ax.set_title(f"NN Similarity Distribution — {title}")
+    ax.set_title(f"NN Similarity Distribution - {title}")
     ax.legend()
 
 plt.tight_layout()
@@ -189,17 +183,15 @@ plt.savefig(os.path.join(OUTPUT_DIR, "task1_library_matching.png"), dpi=150, bbo
 plt.close()
 rlog("\n  Saved: task1_library_matching.png")
 
-# =============================================================================
-# TASK 2 — FUNCTIONAL GROUP CLASSIFICATION
-# =============================================================================
+# TASK 2 - FUNCTIONAL GROUP CLASSIFICATION
 
 rlog()
 rlog("=" * 60)
-rlog("TASK 2 — Functional Group Classification")
+rlog("TASK 2 - Functional Group Classification")
 rlog("=" * 60)
 
 if not RDKIT_OK:
-    rlog("  SKIPPED — RDKit not available")
+    rlog("  SKIPPED - RDKit not available")
 else:
     def get_fg_labels(smi):
         try:
@@ -257,19 +249,19 @@ else:
 
     # IR-only: use spectra features
     res_ir  = run_fg_classification(X_ir_aln,   "IR only",   n_pca=20)
-    # IR+NMR: spectra + scaled NMR — use more PCA components since feature space larger
+    # IR+NMR: spectra + scaled NMR - use more PCA components since feature space larger
     res_nmr = run_fg_classification(X_comb_aln, "IR + NMR",  n_pca=20)
 
     # Comparison for Task 2
-    comparison["Task 2 — FG classification"] = {}
+    comparison["Task 2 - FG classification"] = {}
     for fg in res_ir:
         if fg in res_nmr:
-            comparison["Task 2 — FG classification"][fg] = {
+            comparison["Task 2 - FG classification"][fg] = {
                 "IR only":  f"{res_ir[fg]['bal_acc']:.3f}",
                 "IR + NMR": f"{res_nmr[fg]['bal_acc']:.3f}",
             }
 
-    # ── Bar chart comparison ──────────────────────────────────────────────────
+    # Bar chart comparison
     fgs_common = [fg for fg in res_ir if fg in res_nmr]
     x = np.arange(len(fgs_common))
     w = 0.35
@@ -281,7 +273,7 @@ else:
         bars = ax.barh(fgs_common, vals, color="steelblue", edgecolor="white")
         ax.axvline(0.5, color="red", linestyle="--", label="Random baseline")
         ax.set_xlabel("Balanced accuracy (LOO CV)")
-        ax.set_title(f"Functional Group Classification — {suffix}\nRF + PCA  |  LOO CV")
+        ax.set_title(f"Functional Group Classification - {suffix}\nRF + PCA  |  LOO CV")
         ax.set_xlim(0, 1.05)
         for bar, val in zip(bars, vals):
             ax.text(val + 0.01, bar.get_y() + bar.get_height()/2,
@@ -310,7 +302,7 @@ else:
     plt.close()
     rlog("\n  Saved: task2_functional_groups.png, task2_functional_groups_nmr.png, task2_comparison.png")
 
-    # ── Feature importance (IR only, for interpretability) ────────────────────
+    # Feature importance (IR only, for interpretability)
     fig, axes = plt.subplots(len(res_ir), 1,
                              figsize=(14, 3 * len(res_ir)), sharex=True)
     if len(res_ir) == 1: axes = [axes]
@@ -339,17 +331,15 @@ else:
     plt.close()
     rlog("  Saved: task2_feature_importance.png")
 
-# =============================================================================
-# TASK 3 — SPECTRUM PREDICTION FROM MOLECULAR DESCRIPTORS
-# =============================================================================
+# TASK 3 - SPECTRUM PREDICTION FROM MOLECULAR DESCRIPTORS
 
 rlog()
 rlog("=" * 60)
-rlog("TASK 3 — Spectrum Prediction from Molecular Descriptors")
+rlog("TASK 3 - Spectrum Prediction from Molecular Descriptors")
 rlog("=" * 60)
 
 if not RDKIT_OK:
-    rlog("  SKIPPED — RDKit not available")
+    rlog("  SKIPPED - RDKit not available")
 else:
     def get_descriptors(smi):
         try:
@@ -420,8 +410,8 @@ else:
             for i in range(len(desc_idx))
         ])
         rlog(f"\n  [{label}]")
-        rlog(f"    Mean cosine sim:  {cos_sims.mean():.4f} ± {cos_sims.std():.4f}")
-        rlog(f"    Mean Pearson r:   {pearson_rs.mean():.4f} ± {pearson_rs.std():.4f}")
+        rlog(f"    Mean cosine sim:  {cos_sims.mean():.4f} +/- {cos_sims.std():.4f}")
+        rlog(f"    Mean Pearson r:   {pearson_rs.mean():.4f} +/- {pearson_rs.std():.4f}")
         rlog(f"    Best:  {names_aln[desc_idx[pearson_rs.argmax()]].split('(')[0].strip()}  r={pearson_rs.max():.3f}")
         rlog(f"    Worst: {names_aln[desc_idx[pearson_rs.argmin()]].split('(')[0].strip()}  r={pearson_rs.min():.3f}")
         return cos_sims, pearson_rs, X_pred
@@ -434,12 +424,12 @@ else:
     rlog(f"\n  Combined descriptor matrix (RDKit + NMR): {X_desc_nmr.shape}")
     cos_nmr, r_nmr, Xpred_nmr = run_spectrum_prediction(X_desc_nmr, "RDKit + NMR descriptors")
 
-    comparison["Task 3 — Spectrum prediction"] = {
+    comparison["Task 3 - Spectrum prediction"] = {
         "Mean cosine sim":  {"IR only": f"{cos_ir.mean():.4f}", "IR + NMR": f"{cos_nmr.mean():.4f}"},
         "Mean Pearson r":   {"IR only": f"{r_ir.mean():.4f}",   "IR + NMR": f"{r_nmr.mean():.4f}"},
     }
 
-    # ── PCA variance plot + scatter ───────────────────────────────────────────
+    # PCA variance plot + scatter
     fig, axes = plt.subplots(1, 3, figsize=(18, 5))
 
     axes[0].bar(range(1, N_PC+1), pca_spec.explained_variance_ratio_*100,
@@ -455,7 +445,7 @@ else:
     ]:
         ax.scatter(cos_s, pears, c=col, s=40, alpha=0.7)
         ax.set_xlabel("Cosine similarity"); ax.set_ylabel("Pearson r")
-        ax.set_title(f"Prediction quality — {lbl}\n(Ridge + PCA, LOO CV)")
+        ax.set_title(f"Prediction quality - {lbl}\n(Ridge + PCA, LOO CV)")
         for i in [pears.argmax(), pears.argmin()]:
             ax.annotate(names_aln[desc_idx[i]].split("(")[0].strip()[:15],
                         (cos_s[i], pears[i]), fontsize=6, ha="center", va="bottom")
@@ -465,7 +455,7 @@ else:
     plt.close()
     rlog("\n  Saved: task3_pca_variance.png")
 
-    # ── Best/worst spectra for both modes ─────────────────────────────────────
+    # Best/worst spectra for both modes
     for pears, Xpred, suffix in [(r_ir, Xpred_ir, "rdkit"), (r_nmr, Xpred_nmr, "rdkit_nmr")]:
         order    = np.argsort(pears)
         show_idx = list(order[:3]) + list(order[-3:][::-1])
@@ -488,9 +478,7 @@ else:
         plt.close()
     rlog("  Saved: task3_spectrum_prediction_rdkit.png, task3_spectrum_prediction_rdkit_nmr.png")
 
-# =============================================================================
 # COMPARISON TABLE
-# =============================================================================
 
 rlog()
 rlog("=" * 60)
@@ -509,17 +497,15 @@ for task, metrics in comparison.items():
         try:
             delta = float(nmr_val) - float(ir_val)
             delta_str = f"{delta:+.4f}"
-            arrow = "▲" if delta > 0.001 else ("▼" if delta < -0.001 else "≈")
+            arrow = "▲" if delta > 0.001 else ("▼" if delta < -0.001 else "~")
             delta_str = f"{arrow} {delta_str}"
         except:
-            delta_str = "—"
+            delta_str = "-"
         rlog(f"    {metric:{col_w}}  {ir_val:>12}  {nmr_val:>12}  {delta_str:>10}")
 
 rlog()
 
-# =============================================================================
 # SAVE REPORT
-# =============================================================================
 
 report_path = os.path.join(OUTPUT_DIR, "pfas_ml_results.txt")
 with open(report_path, "w", encoding="utf-8") as f:

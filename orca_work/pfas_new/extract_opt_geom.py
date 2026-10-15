@@ -26,7 +26,7 @@ import re
 import sys
 import os
 
-# ── NMR settings — matches your TFA_nmr.inp exactly ──────────────────────────
+# NMR settings - matches your TFA_nmr.inp exactly
 NMR_TEMPLATE = """\
 # PFAS NMR calculation: {name}
 # PBE0/def2-TZVP GIAO NMR
@@ -70,7 +70,7 @@ def get_job_name(out_path):
 
 def extract_final_geometry(content):
     """
-    Extract the LAST 'CARTESIAN COORDINATES (ANGSTROEM)' block —
+    Extract the LAST 'CARTESIAN COORDINATES (ANGSTROEM)' block -
     this is the final optimised geometry after the last step.
     Returns a list of (element, x, y, z) tuples.
     """
@@ -134,29 +134,29 @@ def main():
     print(f"Reading: {out_path}")
     content = read_out(out_path)
 
-    # ── Check job finished ────────────────────────────────────────────────────
+    # Check job finished
     if not check_normal_termination(content):
         print("WARNING: 'ORCA TERMINATED NORMALLY' not found in .out file.")
         print("         The job may not have finished or may have crashed.")
-        print("         Proceeding anyway — check the geometry carefully.\n")
+        print("         Proceeding anyway - check the geometry carefully.\n")
     else:
-        print("  ✓ ORCA terminated normally")
+        print("  OK ORCA terminated normally")
 
-    # ── Extract info ──────────────────────────────────────────────────────────
+    # Extract info
     charge, mult = get_charge_mult(content)
-    print(f"  ✓ Charge={charge}, Multiplicity={mult}")
+    print(f"  OK Charge={charge}, Multiplicity={mult}")
 
     atoms = extract_final_geometry(content)
     natoms = len(atoms)
-    print(f"  ✓ Extracted {natoms} atoms from final optimised geometry")
+    print(f"  OK Extracted {natoms} atoms from final optimised geometry")
 
     # Count elements for sanity check
     from collections import Counter
     elem_counts = Counter(a[0] for a in atoms)
     formula = "".join(f"{e}{n}" for e, n in sorted(elem_counts.items()))
-    print(f"  ✓ Formula: {formula}")
+    print(f"  OK Formula: {formula}")
 
-    # ── Write NMR inp ─────────────────────────────────────────────────────────
+    # Write NMR inp
     name     = get_job_name(out_path)
     nprocs   = guess_nprocs(natoms)
     xyz_block = format_xyz_block(atoms)
@@ -173,7 +173,7 @@ def main():
     with open(nmr_path, "w") as f:
         f.write(nmr_content)
 
-    print(f"\n  ✓ NMR input written to: {nmr_path}")
+    print(f"\n  OK NMR input written to: {nmr_path}")
     print(f"    nprocs = {nprocs}  (adjust in file if needed)")
     print()
     print("Next steps:")

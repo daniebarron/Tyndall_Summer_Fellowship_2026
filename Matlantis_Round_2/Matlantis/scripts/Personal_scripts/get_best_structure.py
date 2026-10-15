@@ -1,5 +1,5 @@
 """
-get_best_structure.py — Find and save the last healthy structure before slab explosion
+get_best_structure.py - Find and save the last healthy structure before slab explosion
 Usage: python get_best_structure.py /path/to/run/directory
 
 Saves best_structure.traj and prints which round it came from.
@@ -85,7 +85,7 @@ def main():
             healthy, reason = is_healthy(atoms, min_atoms=min_atoms)
             bound = count_bound_o(atoms)
             
-            status = '✓' if healthy else f'✗ ({reason})'
+            status = 'OK' if healthy else f'FAIL ({reason})'
             print(f"  Round {i:02d}: {atoms.get_chemical_formula():20s}  bound O: {bound:3d}  {status}")
             
             if healthy:

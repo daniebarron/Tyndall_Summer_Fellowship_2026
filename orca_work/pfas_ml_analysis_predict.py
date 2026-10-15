@@ -58,11 +58,9 @@ try:
     RDKIT_OK = True
 except ImportError:
     RDKIT_OK = False
-    print("WARNING: RDKit not available — Task 3 and prediction mode will be skipped")
+    print("WARNING: RDKit not available - Task 3 and prediction mode will be skipped")
 
-# =============================================================================
-# PATHS  — update these to match your machine
-# =============================================================================
+# PATHS - update these to match your machine
 
 NPZ_PATH   = r"C:\Users\danie\Downloads\orca_work\ml_dataset\pfas_ir_dataset.npz"
 OUTPUT_DIR = r"C:\Users\danie\Downloads\orca_work\ml_dataset"
@@ -74,9 +72,7 @@ FREQ_MAX     = 4000.0
 # Lorentzian broadening FWHM used when building the dataset (cm-1)
 LORENTZ_FWHM = 20.0
 
-# =============================================================================
-# DESCRIPTOR FUNCTION  (identical to pfas_ml_analysis_new.py)
-# =============================================================================
+# DESCRIPTOR FUNCTION (identical to pfas_ml_analysis_new.py)
 
 def get_descriptors(smi):
     """
@@ -114,9 +110,7 @@ def get_descriptors(smi):
     return d
 
 
-# =============================================================================
-# ORCA .out PARSER  (for optional DFT comparison)
-# =============================================================================
+# ORCA .out PARSER (for optional DFT comparison)
 
 def parse_orca_ir(out_path, wn_grid, fwhm=LORENTZ_FWHM, scale=SCALE_FACTOR):
     """
@@ -182,9 +176,7 @@ def parse_orca_ir(out_path, wn_grid, fwhm=LORENTZ_FWHM, scale=SCALE_FACTOR):
     return spectrum.astype(np.float32)
 
 
-# =============================================================================
 # TRAIN FULL MODEL ON 68 MOLECULES
-# =============================================================================
 
 def train_model(X_spec, X_desc, N_PC=15, alpha=10.0):
     """
@@ -236,9 +228,7 @@ def find_nearest_neighbours(pred_spec, X_train, names_train, n=3):
     return [(names_train[i], float(sims[i])) for i in top]
 
 
-# =============================================================================
 # PREDICTION MODE
-# =============================================================================
 
 def run_prediction_mode(args, data, wn, names, smiles_train,
                         X_spec, X_desc, desc_columns):
@@ -246,7 +236,7 @@ def run_prediction_mode(args, data, wn, names, smiles_train,
     Train on all 68, then predict IR spectrum for one or more new molecules.
     """
     print("\n" + "=" * 60)
-    print("PREDICTION MODE — Training on all 68 molecules...")
+    print("PREDICTION MODE - Training on all 68 molecules...")
     print("=" * 60)
 
     N_PC  = 15
@@ -258,7 +248,7 @@ def run_prediction_mode(args, data, wn, names, smiles_train,
     print(f"  PCA: {N_PC} components explain {var_exp[-1]*100:.1f}% of spectral variance")
     print(f"  Model trained. Ready to predict.\n")
 
-    # ── Collect molecules to predict ─────────────────────────────────────────
+    # Collect molecules to predict
     molecules = []  # list of (name, smiles, out_file_or_None)
 
     if args.smiles:
@@ -285,7 +275,7 @@ def run_prediction_mode(args, data, wn, names, smiles_train,
         print("No molecules entered. Exiting prediction mode.")
         return
 
-    # ── Predict each molecule ─────────────────────────────────────────────────
+    # Predict each molecule
     print(f"\nPredicting {len(molecules)} molecule(s)...\n")
 
     results = []
@@ -296,13 +286,13 @@ def run_prediction_mode(args, data, wn, names, smiles_train,
         # Validate SMILES
         mol = Chem.MolFromSmiles(smi)
         if mol is None:
-            print(f"    [ERROR] Invalid SMILES — skipping\n")
+            print(f"    [ERROR] Invalid SMILES - skipping\n")
             continue
 
         # Predict
         pred_spec = predict_spectrum(smi, pca, scaler, ridges, desc_columns)
         if pred_spec is None:
-            print(f"    [ERROR] Descriptor calculation failed — skipping\n")
+            print(f"    [ERROR] Descriptor calculation failed - skipping\n")
             continue
 
         # Nearest neighbours in training set
@@ -328,7 +318,7 @@ def run_prediction_mode(args, data, wn, names, smiles_train,
         results.append((mol_name, smi, pred_spec, dft_spec, nn))
         print()
 
-    # ── Plot ──────────────────────────────────────────────────────────────────
+    # Plot
     if not results:
         print("No valid predictions to plot.")
         return
@@ -371,7 +361,7 @@ def run_prediction_mode(args, data, wn, names, smiles_train,
 
     fig.suptitle(
         f"ML-Predicted IR Spectra (Ridge+PCA, {N_PC} PCs, α={alpha})\n"
-        f"Trained on 68 PFAS molecules  |  LOO-CV Pearson r ≈ 0.913",
+        f"Trained on 68 PFAS molecules  |  LOO-CV Pearson r ~ 0.913",
         fontsize=11, fontweight="bold"
     )
     plt.tight_layout(rect=[0, 0, 1, 0.96])
@@ -379,12 +369,10 @@ def run_prediction_mode(args, data, wn, names, smiles_train,
     out_png = os.path.join(OUTPUT_DIR, "predicted_IR_new_molecules.png")
     plt.savefig(out_png, dpi=150, bbox_inches="tight")
     plt.close()
-    print(f"Plot saved → {out_png}")
+    print(f"Plot saved -> {out_png}")
 
 
-# =============================================================================
-# TASKS 1–3  (unchanged from pfas_ml_analysis_new.py)
-# =============================================================================
+# TASKS 1-3 (unchanged from pfas_ml_analysis_new.py)
 
 def run_tasks(data, wn, names, smiles, X_spec, X_desc, desc_columns,
               X_nmr_raw=None, nmr_feat_names=None):
@@ -396,10 +384,10 @@ def run_tasks(data, wn, names, smiles, X_spec, X_desc, desc_columns,
         print(msg)
         results_lines.append(msg)
 
-    # ── Task 1 ────────────────────────────────────────────────────────────────
+    # Task 1
     rlog()
     rlog("=" * 60)
-    rlog("TASK 1 — Spectral Library Matching (Cosine Similarity)")
+    rlog("TASK 1 - Spectral Library Matching (Cosine Similarity)")
     rlog("=" * 60)
 
     sim = cosine_similarity(X_spec)
@@ -410,7 +398,7 @@ def run_tasks(data, wn, names, smiles, X_spec, X_desc, desc_columns,
     mean_sim = np.mean(nn_sims)
     rlog(f"  Mean NN cosine similarity : {mean_sim:.4f}")
     rlog(f"  Min / Max : {np.min(nn_sims):.4f} / {np.max(nn_sims):.4f}")
-    comparison["Task 1 — Library matching"] = {
+    comparison["Task 1 - Library matching"] = {
         "Mean NN cosine sim": {"IR only": f"{mean_sim:.4f}"}
     }
 
@@ -432,10 +420,10 @@ def run_tasks(data, wn, names, smiles, X_spec, X_desc, desc_columns,
     plt.close()
     rlog("  Saved: task1_library_matching.png")
 
-    # ── Task 2 ────────────────────────────────────────────────────────────────
+    # Task 2
     rlog()
     rlog("=" * 60)
-    rlog("TASK 2 — Functional Group Classification (RF + PCA, LOO)")
+    rlog("TASK 2 - Functional Group Classification (RF + PCA, LOO)")
     rlog("=" * 60)
 
     # Assign functional group labels from SMILES
@@ -469,7 +457,7 @@ def run_tasks(data, wn, names, smiles, X_spec, X_desc, desc_columns,
         fg_scores[fg] = balanced_accuracy_score(y, pred)
         rlog(f"  {fg:20s}: balanced accuracy = {fg_scores[fg]:.3f}")
 
-    comparison["Task 2 — FG classification"] = {
+    comparison["Task 2 - FG classification"] = {
         fg: {"IR only": f"{sc:.4f}"} for fg, sc in fg_scores.items()
     }
 
@@ -484,17 +472,17 @@ def run_tasks(data, wn, names, smiles, X_spec, X_desc, desc_columns,
     plt.close()
     rlog("  Saved: task2_functional_groups.png")
 
-    # ── Task 3 ────────────────────────────────────────────────────────────────
+    # Task 3
     rlog()
     rlog("=" * 60)
-    rlog("TASK 3 — Spectrum Prediction from Molecular Descriptors (LOO-CV)")
+    rlog("TASK 3 - Spectrum Prediction from Molecular Descriptors (LOO-CV)")
     rlog("=" * 60)
 
     N_PC  = 15
     pca3  = PCA(n_components=N_PC, random_state=42)
     Y_pca = pca3.fit_transform(X_spec)
     var_exp = pca3.explained_variance_ratio_.cumsum()
-    rlog(f"  PCA: {N_PC} components → {var_exp[-1]*100:.1f}% variance explained")
+    rlog(f"  PCA: {N_PC} components -> {var_exp[-1]*100:.1f}% variance explained")
 
     def eval_prediction(X_input, label):
         sc   = StandardScaler()
@@ -508,14 +496,14 @@ def run_tasks(data, wn, names, smiles, X_spec, X_desc, desc_columns,
                           for i in range(len(X_spec))])
         prs   = np.array([np.corrcoef(X_spec[i], X_p[i])[0,1] for i in range(len(X_spec))])
         rlog(f"\n  [{label}]")
-        rlog(f"    Mean cosine sim : {cos_s.mean():.4f} ± {cos_s.std():.4f}")
-        rlog(f"    Mean Pearson r  : {prs.mean():.4f} ± {prs.std():.4f}")
+        rlog(f"    Mean cosine sim : {cos_s.mean():.4f} +/- {cos_s.std():.4f}")
+        rlog(f"    Mean Pearson r  : {prs.mean():.4f} +/- {prs.std():.4f}")
         rlog(f"    Best : {names[prs.argmax()].split('(')[0].strip()}  r={prs.max():.3f}")
         rlog(f"    Worst: {names[prs.argmin()].split('(')[0].strip()}  r={prs.min():.3f}")
         return cos_s, prs, X_p
 
     cos_ir, r_ir, Xpred_ir = eval_prediction(X_desc, "RDKit descriptors")
-    comparison["Task 3 — Spectrum prediction"] = {
+    comparison["Task 3 - Spectrum prediction"] = {
         "Mean cosine sim": {"IR only": f"{cos_ir.mean():.4f}"},
         "Mean Pearson r":  {"IR only": f"{r_ir.mean():.4f}"},
     }
@@ -563,9 +551,7 @@ def run_tasks(data, wn, names, smiles, X_spec, X_desc, desc_columns,
     rlog(f"\nResults saved to {report_path}")
 
 
-# =============================================================================
 # MAIN
-# =============================================================================
 
 def main():
     parser = argparse.ArgumentParser(description="PFAS IR ML analysis + prediction mode")
@@ -587,7 +573,7 @@ def main():
     OUTPUT_DIR = args.outdir if args.outdir else OUTPUT_DIR
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-    # ── Load dataset ──────────────────────────────────────────────────────────
+    # Load dataset
     print("=" * 60)
     print("Loading dataset...")
     print("=" * 60)
@@ -597,13 +583,13 @@ def main():
     names  = data['csv_names'].tolist()
     smiles = data['smiles'].tolist()
     print(f"  {len(names)} molecules, {X.shape[1]} wavenumber points")
-    print(f"  Grid: {wn[0]:.0f} – {wn[-1]:.0f} cm⁻¹")
+    print(f"  Grid: {wn[0]:.0f} - {wn[-1]:.0f} cm⁻¹")
 
     if not RDKIT_OK:
-        print("RDKit not available — cannot continue.")
+        print("RDKit not available - cannot continue.")
         sys.exit(1)
 
-    # ── Build descriptor matrix ───────────────────────────────────────────────
+    # Build descriptor matrix
     desc_data, desc_idx = [], []
     for i, smi in enumerate(smiles):
         d = get_descriptors(smi)
@@ -617,9 +603,9 @@ def main():
     smiles_sub  = [smiles[i] for i in desc_idx]
     desc_columns = list(desc_df.columns)
 
-    print(f"  Descriptor matrix: {X_desc.shape[0]} × {X_desc.shape[1]}")
+    print(f"  Descriptor matrix: {X_desc.shape[0]} x {X_desc.shape[1]}")
 
-    # ── Dispatch ──────────────────────────────────────────────────────────────
+    # Dispatch
     if args.predict:
         run_prediction_mode(args, data, wn, names_sub, smiles_sub,
                             X_spec, X_desc, desc_columns)
