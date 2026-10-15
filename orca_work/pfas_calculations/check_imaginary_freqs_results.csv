@@ -25,7 +25,6 @@ name,status,n_imaginary,imaginary_freqs_cm-1,n_low_real,low_real_freqs_cm-1,n_mo
 8-2_FTUCA_2H-Perfluoro-2-decenoic_acid,ERROR,0,,0,,0,False,No VIBRATIONAL FREQUENCIES block found,pfas_calculations\8-2_FTUCA_2H-Perfluoro-2-decenoic_acid\8-2_FTUCA_2H-Perfluoro-2-decenoic_acid.out
 8-2_FTUCA_2H-Perfluoro-2-decenoic_acid_freq,PASS,0,,1,19.10,90,True,1 low real freq(s) (<20.0 cm⁻¹): 19.10,pfas_calculations\8-2_FTUCA_2H-Perfluoro-2-decenoic_acid\8-2_FTUCA_2H-Perfluoro-2-decenoic_acid_freq.out
 8-2_diPAP_Fluorotelomer_phosphate_diester,ERROR,0,,0,,0,False,No VIBRATIONAL FREQUENCIES block found,pfas_calculations\8-2_diPAP_Fluorotelomer_phosphate_diester\8-2_diPAP_Fluorotelomer_phosphate_diester.out
-8-2_diPAP_restart,FAIL,3,-43.63; -36.60; -6.37,4,6.47; 7.47; 13.00; 17.10,201,True,"4 low real freq(s) (<20.0 cm⁻¹): 6.47, 7.47, 13.00, 17.10",pfas_calculations\8-2_diPAP_Fluorotelomer_phosphate_diester\8-2_diPAP_restart.out
 C6O4_Perfluoro5-methoxy13dioxolan4yloxyHAc,PASS,0,,1,12.44,66,True,1 low real freq(s) (<20.0 cm⁻¹): 12.44,pfas_calculations\C6O4_Perfluoro5-methoxy13dioxolan4yloxyHAc\C6O4_Perfluoro5-methoxy13dioxolan4yloxyHAc.out
 DONA_Dodecafluoro-3H-48-dioxanonanoate,PASS,0,,1,13.50,75,True,1 low real freq(s) (<20.0 cm⁻¹): 13.50,pfas_calculations\DONA_Dodecafluoro-3H-48-dioxanonanoate\DONA_Dodecafluoro-3H-48-dioxanonanoate.out
 DPOSA_Capstone_A_6-2_FTNO,PASS,0,,1,13.53,147,True,1 low real freq(s) (<20.0 cm⁻¹): 13.53,pfas_calculations\DPOSA_Capstone_A_6-2_FTNO\DPOSA_Capstone_A_6-2_FTNO.out
